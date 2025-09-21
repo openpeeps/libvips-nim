@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/openpeeps/libvips">API reference</a><br>
+  <a href="https://openpeeps.github.io/libvips-nim/">API reference</a><br>
   <img src="https://github.com/openpeeps/libvips-nim/workflows/test/badge.svg" alt="Github Actions">  <img src="https://github.com/openpeeps/libvips-nim/workflows/docs/badge.svg" alt="Github Actions">
 </p>
 
