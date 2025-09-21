@@ -1,0 +1,14 @@
+nimTitle	vips	libvips/bindings/vips.html	module libvips/bindings/vips		0
+nim	vips_max_coord_get	libvips/bindings/vips.html#vips_max_coord_get	proc vips_max_coord_get(): cint		21
+nim	vips_init	libvips/bindings/vips.html#vips_init,cstring	proc vips_init(argv0: cstring): cint		22
+nim	vips_get_argv0	libvips/bindings/vips.html#vips_get_argv0	proc vips_get_argv0(): cstring		23
+nim	vips_get_prgname	libvips/bindings/vips.html#vips_get_prgname	proc vips_get_prgname(): cstring		24
+nim	vips_shutdown	libvips/bindings/vips.html#vips_shutdown	proc vips_shutdown()		25
+nim	vips_thread_shutdown	libvips/bindings/vips.html#vips_thread_shutdown	proc vips_thread_shutdown()		26
+nim	vips_add_option_entries	libvips/bindings/vips.html#vips_add_option_entries,pointer	proc vips_add_option_entries(option_group: pointer)		28
+nim	vips_leak_set	libvips/bindings/vips.html#vips_leak_set,bool	proc vips_leak_set(leak: bool)		30
+nim	vips_block_untrusted_set	libvips/bindings/vips.html#vips_block_untrusted_set,bool	proc vips_block_untrusted_set(state: bool)		31
+nim	vips_version_string	libvips/bindings/vips.html#vips_version_string	proc vips_version_string(): cstring		33
+nim	vips_version	libvips/bindings/vips.html#vips_version,cint	proc vips_version(flag: cint): cint		34
+nim	vips_guess_prefix	libvips/bindings/vips.html#vips_guess_prefix,cstring,cstring	proc vips_guess_prefix(argv0, env_name: cstring): cstring		36
+nim	vips_guess_libdir	libvips/bindings/vips.html#vips_guess_libdir,cstring,cstring	proc vips_guess_libdir(argv0, env_name: cstring): cstring		37

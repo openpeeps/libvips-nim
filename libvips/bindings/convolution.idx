@@ -1,0 +1,21 @@
+nimTitle	convolution	libvips/bindings/convolution.html	module libvips/bindings/convolution		0
+nim	VIPS_COMBINE_MAX	libvips/bindings/convolution.html#VIPS_COMBINE_MAX	VipsCombine.VIPS_COMBINE_MAX		11
+nim	VIPS_COMBINE_SUM	libvips/bindings/convolution.html#VIPS_COMBINE_SUM	VipsCombine.VIPS_COMBINE_SUM		11
+nim	VIPS_COMBINE_MIN	libvips/bindings/convolution.html#VIPS_COMBINE_MIN	VipsCombine.VIPS_COMBINE_MIN		11
+nim	VIPS_COMBINE_LAST	libvips/bindings/convolution.html#VIPS_COMBINE_LAST	VipsCombine.VIPS_COMBINE_LAST		11
+nim	VipsCombine	libvips/bindings/convolution.html#VipsCombine	enum VipsCombine		11
+nim	vips_conv	libvips/bindings/convolution.html#vips_conv,ptr.VipsImage,ptr.ptr.VipsImage,ptr.VipsImage,varargs[pointer]	proc vips_conv(input: ptr VipsImage; output: ptr ptr VipsImage; mask: ptr VipsImage;\n          args: varargs[pointer]): cint		19
+nim	vips_convf	libvips/bindings/convolution.html#vips_convf,ptr.VipsImage,ptr.ptr.VipsImage,ptr.VipsImage,varargs[pointer]	proc vips_convf(input: ptr VipsImage; output: ptr ptr VipsImage; mask: ptr VipsImage;\n           args: varargs[pointer]): cint		20
+nim	vips_convi	libvips/bindings/convolution.html#vips_convi,ptr.VipsImage,ptr.ptr.VipsImage,ptr.VipsImage,varargs[pointer]	proc vips_convi(input: ptr VipsImage; output: ptr ptr VipsImage; mask: ptr VipsImage;\n           args: varargs[pointer]): cint		21
+nim	vips_conva	libvips/bindings/convolution.html#vips_conva,ptr.VipsImage,ptr.ptr.VipsImage,ptr.VipsImage,varargs[pointer]	proc vips_conva(input: ptr VipsImage; output: ptr ptr VipsImage; mask: ptr VipsImage;\n           args: varargs[pointer]): cint		22
+nim	vips_convsep	libvips/bindings/convolution.html#vips_convsep,ptr.VipsImage,ptr.ptr.VipsImage,ptr.VipsImage,varargs[pointer]	proc vips_convsep(input: ptr VipsImage; output: ptr ptr VipsImage;\n             mask: ptr VipsImage; args: varargs[pointer]): cint		23
+nim	vips_convasep	libvips/bindings/convolution.html#vips_convasep,ptr.VipsImage,ptr.ptr.VipsImage,ptr.VipsImage,varargs[pointer]	proc vips_convasep(input: ptr VipsImage; output: ptr ptr VipsImage;\n              mask: ptr VipsImage; args: varargs[pointer]): cint		24
+nim	vips_compass	libvips/bindings/convolution.html#vips_compass,ptr.VipsImage,ptr.ptr.VipsImage,ptr.VipsImage,varargs[pointer]	proc vips_compass(input: ptr VipsImage; output: ptr ptr VipsImage;\n             mask: ptr VipsImage; args: varargs[pointer]): cint		25
+nim	vips_gaussblur	libvips/bindings/convolution.html#vips_gaussblur,ptr.VipsImage,ptr.ptr.VipsImage,cdouble,varargs[pointer]	proc vips_gaussblur(input: ptr VipsImage; output: ptr ptr VipsImage; sigma: cdouble;\n               args: varargs[pointer]): cint		26
+nim	vips_sharpen	libvips/bindings/convolution.html#vips_sharpen,ptr.VipsImage,ptr.ptr.VipsImage,varargs[pointer]	proc vips_sharpen(input: ptr VipsImage; output: ptr ptr VipsImage;\n             args: varargs[pointer]): cint		27
+nim	vips_spcor	libvips/bindings/convolution.html#vips_spcor,ptr.VipsImage,ptr.VipsImage,ptr.ptr.VipsImage,varargs[pointer]	proc vips_spcor(input: ptr VipsImage; reference: ptr VipsImage;\n           output: ptr ptr VipsImage; args: varargs[pointer]): cint		28
+nim	vips_fastcor	libvips/bindings/convolution.html#vips_fastcor,ptr.VipsImage,ptr.VipsImage,ptr.ptr.VipsImage,varargs[pointer]	proc vips_fastcor(input: ptr VipsImage; reference: ptr VipsImage;\n             output: ptr ptr VipsImage; args: varargs[pointer]): cint		29
+nim	vips_sobel	libvips/bindings/convolution.html#vips_sobel,ptr.VipsImage,ptr.ptr.VipsImage,varargs[pointer]	proc vips_sobel(input: ptr VipsImage; output: ptr ptr VipsImage;\n           args: varargs[pointer]): cint		30
+nim	vips_scharr	libvips/bindings/convolution.html#vips_scharr,ptr.VipsImage,ptr.ptr.VipsImage,varargs[pointer]	proc vips_scharr(input: ptr VipsImage; output: ptr ptr VipsImage;\n            args: varargs[pointer]): cint		31
+nim	vips_prewitt	libvips/bindings/convolution.html#vips_prewitt,ptr.VipsImage,ptr.ptr.VipsImage,varargs[pointer]	proc vips_prewitt(input: ptr VipsImage; output: ptr ptr VipsImage;\n             args: varargs[pointer]): cint		32
+nim	vips_canny	libvips/bindings/convolution.html#vips_canny,ptr.VipsImage,ptr.ptr.VipsImage,varargs[pointer]	proc vips_canny(input: ptr VipsImage; output: ptr ptr VipsImage;\n           args: varargs[pointer]): cint		33

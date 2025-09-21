@@ -1,0 +1,45 @@
+nimTitle	error	libvips/bindings/error.html	module libvips/bindings/error		0
+nim	vips_error_buffer	libvips/bindings/error.html#vips_error_buffer	proc vips_error_buffer(): cstring		10
+nim	vips_error_buffer_copy	libvips/bindings/error.html#vips_error_buffer_copy	proc vips_error_buffer_copy(): cstring		11
+nim	vips_error_clear	libvips/bindings/error.html#vips_error_clear	proc vips_error_clear()		12
+nim	vips_error_freeze	libvips/bindings/error.html#vips_error_freeze	proc vips_error_freeze()		14
+nim	vips_error_thaw	libvips/bindings/error.html#vips_error_thaw	proc vips_error_thaw()		15
+nim	vips_error	libvips/bindings/error.html#vips_error,cstring,cstring	proc vips_error(domain: cstring; fmt: cstring)		17
+nim	vips_verror	libvips/bindings/error.html#vips_verror,cstring,cstring,pointer	proc vips_verror(domain: cstring; fmt: cstring; ap: pointer)		18
+nim	vips_error_system	libvips/bindings/error.html#vips_error_system,int,cstring,cstring	proc vips_error_system(err: int; domain: cstring; fmt: cstring)		19
+nim	vips_verror_system	libvips/bindings/error.html#vips_verror_system,int,cstring,cstring,pointer	proc vips_verror_system(err: int; domain: cstring; fmt: cstring; ap: pointer)		20
+nim	vips_error_g	libvips/bindings/error.html#vips_error_g,pointer	proc vips_error_g(error: pointer)		21
+nim	vips_g_error	libvips/bindings/error.html#vips_g_error,pointer	proc vips_g_error(error: pointer)		22
+nim	vips_error_exit	libvips/bindings/error.html#vips_error_exit,cstring	proc vips_error_exit(fmt: cstring)		24
+nim	vips_check_uncoded	libvips/bindings/error.html#vips_check_uncoded,cstring,pointer	proc vips_check_uncoded(domain: cstring; im: pointer): int		26
+nim	vips_check_coding	libvips/bindings/error.html#vips_check_coding,cstring,pointer,int	proc vips_check_coding(domain: cstring; im: pointer; coding: int): int		27
+nim	vips_check_coding_known	libvips/bindings/error.html#vips_check_coding_known,cstring,pointer	proc vips_check_coding_known(domain: cstring; im: pointer): int		28
+nim	vips_check_coding_noneorlabq	libvips/bindings/error.html#vips_check_coding_noneorlabq,cstring,pointer	proc vips_check_coding_noneorlabq(domain: cstring; im: pointer): int		29
+nim	vips_check_coding_same	libvips/bindings/error.html#vips_check_coding_same,cstring,pointer,pointer	proc vips_check_coding_same(domain: cstring; im1: pointer; im2: pointer): int		30
+nim	vips_check_mono	libvips/bindings/error.html#vips_check_mono,cstring,pointer	proc vips_check_mono(domain: cstring; im: pointer): int		31
+nim	vips_check_bands	libvips/bindings/error.html#vips_check_bands,cstring,pointer,int	proc vips_check_bands(domain: cstring; im: pointer; bands: int): int		32
+nim	vips_check_bands_1or3	libvips/bindings/error.html#vips_check_bands_1or3,cstring,pointer	proc vips_check_bands_1or3(domain: cstring; im: pointer): int		33
+nim	vips_check_bands_atleast	libvips/bindings/error.html#vips_check_bands_atleast,cstring,pointer,int	proc vips_check_bands_atleast(domain: cstring; im: pointer; bands: int): int		34
+nim	vips_check_bands_1orn	libvips/bindings/error.html#vips_check_bands_1orn,cstring,pointer,pointer	proc vips_check_bands_1orn(domain: cstring; im1: pointer; im2: pointer): int		35
+nim	vips_check_bands_1orn_unary	libvips/bindings/error.html#vips_check_bands_1orn_unary,cstring,pointer,int	proc vips_check_bands_1orn_unary(domain: cstring; im: pointer; n: int): int		36
+nim	vips_check_bands_same	libvips/bindings/error.html#vips_check_bands_same,cstring,pointer,pointer	proc vips_check_bands_same(domain: cstring; im1: pointer; im2: pointer): int		37
+nim	vips_check_bandno	libvips/bindings/error.html#vips_check_bandno,cstring,pointer,int	proc vips_check_bandno(domain: cstring; im: pointer; bandno: int): int		38
+nim	vips_check_int	libvips/bindings/error.html#vips_check_int,cstring,pointer	proc vips_check_int(domain: cstring; im: pointer): int		40
+nim	vips_check_uint	libvips/bindings/error.html#vips_check_uint,cstring,pointer	proc vips_check_uint(domain: cstring; im: pointer): int		41
+nim	vips_check_uintorf	libvips/bindings/error.html#vips_check_uintorf,cstring,pointer	proc vips_check_uintorf(domain: cstring; im: pointer): int		42
+nim	vips_check_noncomplex	libvips/bindings/error.html#vips_check_noncomplex,cstring,pointer	proc vips_check_noncomplex(domain: cstring; im: pointer): int		43
+nim	vips_check_complex	libvips/bindings/error.html#vips_check_complex,cstring,pointer	proc vips_check_complex(domain: cstring; im: pointer): int		44
+nim	vips_check_twocomponents	libvips/bindings/error.html#vips_check_twocomponents,cstring,pointer	proc vips_check_twocomponents(domain: cstring; im: pointer): int		45
+nim	vips_check_format	libvips/bindings/error.html#vips_check_format,cstring,pointer,int	proc vips_check_format(domain: cstring; im: pointer; fmt: int): int		46
+nim	vips_check_u8or16	libvips/bindings/error.html#vips_check_u8or16,cstring,pointer	proc vips_check_u8or16(domain: cstring; im: pointer): int		47
+nim	vips_check_8or16	libvips/bindings/error.html#vips_check_8or16,cstring,pointer	proc vips_check_8or16(domain: cstring; im: pointer): int		48
+nim	vips_check_u8or16orf	libvips/bindings/error.html#vips_check_u8or16orf,cstring,pointer	proc vips_check_u8or16orf(domain: cstring; im: pointer): int		49
+nim	vips_check_format_same	libvips/bindings/error.html#vips_check_format_same,cstring,pointer,pointer	proc vips_check_format_same(domain: cstring; im1: pointer; im2: pointer): int		50
+nim	vips_check_size_same	libvips/bindings/error.html#vips_check_size_same,cstring,pointer,pointer	proc vips_check_size_same(domain: cstring; im1: pointer; im2: pointer): int		51
+nim	vips_check_oddsquare	libvips/bindings/error.html#vips_check_oddsquare,cstring,pointer	proc vips_check_oddsquare(domain: cstring; im: pointer): int		52
+nim	vips_check_vector_length	libvips/bindings/error.html#vips_check_vector_length,cstring,int,int	proc vips_check_vector_length(domain: cstring; n: int; len: int): int		53
+nim	vips_check_vector	libvips/bindings/error.html#vips_check_vector,cstring,int,pointer	proc vips_check_vector(domain: cstring; n: int; im: pointer): int		54
+nim	vips_check_hist	libvips/bindings/error.html#vips_check_hist,cstring,pointer	proc vips_check_hist(domain: cstring; im: pointer): int		55
+nim	vips_check_matrix	libvips/bindings/error.html#vips_check_matrix,cstring,pointer,ptr.pointer	proc vips_check_matrix(domain: cstring; im: pointer; out: ptr pointer): int		56
+nim	vips_check_separable	libvips/bindings/error.html#vips_check_separable,cstring,pointer	proc vips_check_separable(domain: cstring; im: pointer): int		57
+nim	vips_check_precision_intfloat	libvips/bindings/error.html#vips_check_precision_intfloat,cstring,int	proc vips_check_precision_intfloat(domain: cstring; precision: int): int		59

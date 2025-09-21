@@ -1,0 +1,47 @@
+nimTitle	resample	libvips/bindings/resample.html	module libvips/bindings/resample		0
+nim	VIPS_KERNEL_NEAREST	libvips/bindings/resample.html#VIPS_KERNEL_NEAREST	VipsKernel.VIPS_KERNEL_NEAREST		12
+nim	VIPS_KERNEL_LINEAR	libvips/bindings/resample.html#VIPS_KERNEL_LINEAR	VipsKernel.VIPS_KERNEL_LINEAR		12
+nim	VIPS_KERNEL_CUBIC	libvips/bindings/resample.html#VIPS_KERNEL_CUBIC	VipsKernel.VIPS_KERNEL_CUBIC		12
+nim	VIPS_KERNEL_MITCHELL	libvips/bindings/resample.html#VIPS_KERNEL_MITCHELL	VipsKernel.VIPS_KERNEL_MITCHELL		12
+nim	VIPS_KERNEL_LANCZOS2	libvips/bindings/resample.html#VIPS_KERNEL_LANCZOS2	VipsKernel.VIPS_KERNEL_LANCZOS2		12
+nim	VIPS_KERNEL_LANCZOS3	libvips/bindings/resample.html#VIPS_KERNEL_LANCZOS3	VipsKernel.VIPS_KERNEL_LANCZOS3		12
+nim	VIPS_KERNEL_LAST	libvips/bindings/resample.html#VIPS_KERNEL_LAST	VipsKernel.VIPS_KERNEL_LAST		12
+nim	VipsKernel	libvips/bindings/resample.html#VipsKernel	enum VipsKernel		12
+nim	VIPS_SIZE_BOTH	libvips/bindings/resample.html#VIPS_SIZE_BOTH	VipsSize.VIPS_SIZE_BOTH		21
+nim	VIPS_SIZE_UP	libvips/bindings/resample.html#VIPS_SIZE_UP	VipsSize.VIPS_SIZE_UP		21
+nim	VIPS_SIZE_DOWN	libvips/bindings/resample.html#VIPS_SIZE_DOWN	VipsSize.VIPS_SIZE_DOWN		21
+nim	VIPS_SIZE_FORCE	libvips/bindings/resample.html#VIPS_SIZE_FORCE	VipsSize.VIPS_SIZE_FORCE		21
+nim	VIPS_SIZE_LAST	libvips/bindings/resample.html#VIPS_SIZE_LAST	VipsSize.VIPS_SIZE_LAST		21
+nim	VipsSize	libvips/bindings/resample.html#VipsSize	enum VipsSize		21
+nim	c_vips_shrink	libvips/bindings/resample.html#c_vips_shrink,ptr.VipsImage,ptr.ptr.VipsImage,cdouble,cdouble	proc c_vips_shrink(input: ptr VipsImage; output: ptr ptr VipsImage;\n              hshrink, vshrink: cdouble): cint		29
+nim	c_vips_shrinkh	libvips/bindings/resample.html#c_vips_shrinkh,ptr.VipsImage,ptr.ptr.VipsImage,cint	proc c_vips_shrinkh(input: ptr VipsImage; output: ptr ptr VipsImage; hshrink: cint): cint		30
+nim	c_vips_shrinkv	libvips/bindings/resample.html#c_vips_shrinkv,ptr.VipsImage,ptr.ptr.VipsImage,cint	proc c_vips_shrinkv(input: ptr VipsImage; output: ptr ptr VipsImage; vshrink: cint): cint		31
+nim	c_vips_reduce	libvips/bindings/resample.html#c_vips_reduce,ptr.VipsImage,ptr.ptr.VipsImage,cdouble,cdouble	proc c_vips_reduce(input: ptr VipsImage; output: ptr ptr VipsImage;\n              hshrink, vshrink: cdouble): cint		32
+nim	c_vips_reduceh	libvips/bindings/resample.html#c_vips_reduceh,ptr.VipsImage,ptr.ptr.VipsImage,cdouble	proc c_vips_reduceh(input: ptr VipsImage; output: ptr ptr VipsImage; hshrink: cdouble): cint		33
+nim	c_vips_reducev	libvips/bindings/resample.html#c_vips_reducev,ptr.VipsImage,ptr.ptr.VipsImage,cdouble	proc c_vips_reducev(input: ptr VipsImage; output: ptr ptr VipsImage; vshrink: cdouble): cint		34
+nim	c_vips_thumbnail	libvips/bindings/resample.html#c_vips_thumbnail,cstring,ptr.ptr.VipsImage,cint	proc c_vips_thumbnail(filename: cstring; output: ptr ptr VipsImage; width: cint): cint		35
+nim	c_vips_thumbnail_buffer	libvips/bindings/resample.html#c_vips_thumbnail_buffer,pointer,csize_t,ptr.ptr.VipsImage,cint	proc c_vips_thumbnail_buffer(buf: pointer; len: csize_t; output: ptr ptr VipsImage;\n                        width: cint): cint		36
+nim	c_vips_thumbnail_image	libvips/bindings/resample.html#c_vips_thumbnail_image,ptr.VipsImage,ptr.ptr.VipsImage,cint	proc c_vips_thumbnail_image(input: ptr VipsImage; output: ptr ptr VipsImage;\n                       width: cint): cint		37
+nim	c_vips_thumbnail_source	libvips/bindings/resample.html#c_vips_thumbnail_source,ptr.VipsSource,ptr.ptr.VipsImage,cint	proc c_vips_thumbnail_source(source: ptr VipsSource; output: ptr ptr VipsImage;\n                        width: cint): cint		38
+nim	c_vips_similarity	libvips/bindings/resample.html#c_vips_similarity,ptr.VipsImage,ptr.ptr.VipsImage	proc c_vips_similarity(input: ptr VipsImage; output: ptr ptr VipsImage): cint		39
+nim	c_vips_rotate	libvips/bindings/resample.html#c_vips_rotate,ptr.VipsImage,ptr.ptr.VipsImage,cdouble	proc c_vips_rotate(input: ptr VipsImage; output: ptr ptr VipsImage; angle: cdouble): cint		40
+nim	c_vips_affine	libvips/bindings/resample.html#c_vips_affine,ptr.VipsImage,ptr.ptr.VipsImage,cdouble,cdouble,cdouble,cdouble	proc c_vips_affine(input: ptr VipsImage; output: ptr ptr VipsImage;\n              a, b, c, d: cdouble): cint		41
+nim	c_vips_resize	libvips/bindings/resample.html#c_vips_resize,ptr.VipsImage,ptr.ptr.VipsImage,cdouble	proc c_vips_resize(input: ptr VipsImage; output: ptr ptr VipsImage; scale: cdouble): cint		42
+nim	c_vips_mapim	libvips/bindings/resample.html#c_vips_mapim,ptr.VipsImage,ptr.ptr.VipsImage,ptr.VipsImage	proc c_vips_mapim(input: ptr VipsImage; output: ptr ptr VipsImage;\n             index: ptr VipsImage): cint		43
+nim	c_vips_quadratic	libvips/bindings/resample.html#c_vips_quadratic,ptr.VipsImage,ptr.ptr.VipsImage,ptr.VipsImage	proc c_vips_quadratic(input: ptr VipsImage; output: ptr ptr VipsImage;\n                 coeff: ptr VipsImage): cint		44
+nim	vips_shrink	libvips/bindings/resample.html#vips_shrink,ptr.VipsImage,ptr.ptr.VipsImage,cdouble,cdouble	proc vips_shrink(input: ptr VipsImage; output: ptr ptr VipsImage;\n            hshrink, vshrink: cdouble): cint		48
+nim	vips_shrinkh	libvips/bindings/resample.html#vips_shrinkh,ptr.VipsImage,ptr.ptr.VipsImage,cint	proc vips_shrinkh(input: ptr VipsImage; output: ptr ptr VipsImage; hshrink: cint): cint		51
+nim	vips_shrinkv	libvips/bindings/resample.html#vips_shrinkv,ptr.VipsImage,ptr.ptr.VipsImage,cint	proc vips_shrinkv(input: ptr VipsImage; output: ptr ptr VipsImage; vshrink: cint): cint		54
+nim	vips_reduce	libvips/bindings/resample.html#vips_reduce,ptr.VipsImage,ptr.ptr.VipsImage,cdouble,cdouble	proc vips_reduce(input: ptr VipsImage; output: ptr ptr VipsImage;\n            hshrink, vshrink: cdouble): cint		57
+nim	vips_reduceh	libvips/bindings/resample.html#vips_reduceh,ptr.VipsImage,ptr.ptr.VipsImage,cdouble	proc vips_reduceh(input: ptr VipsImage; output: ptr ptr VipsImage; hshrink: cdouble): cint		60
+nim	vips_reducev	libvips/bindings/resample.html#vips_reducev,ptr.VipsImage,ptr.ptr.VipsImage,cdouble	proc vips_reducev(input: ptr VipsImage; output: ptr ptr VipsImage; vshrink: cdouble): cint		63
+nim	vips_thumbnail	libvips/bindings/resample.html#vips_thumbnail,cstring,ptr.ptr.VipsImage,cint	proc vips_thumbnail(filename: cstring; output: ptr ptr VipsImage; width: cint): cint		66
+nim	vips_thumbnail_buffer	libvips/bindings/resample.html#vips_thumbnail_buffer,pointer,csize_t,ptr.ptr.VipsImage,cint	proc vips_thumbnail_buffer(buf: pointer; len: csize_t; output: ptr ptr VipsImage;\n                      width: cint): cint		69
+nim	vips_thumbnail_image	libvips/bindings/resample.html#vips_thumbnail_image,ptr.VipsImage,ptr.ptr.VipsImage,cint	proc vips_thumbnail_image(input: ptr VipsImage; output: ptr ptr VipsImage;\n                     width: cint): cint		72
+nim	vips_thumbnail_source	libvips/bindings/resample.html#vips_thumbnail_source,ptr.VipsSource,ptr.ptr.VipsImage,cint	proc vips_thumbnail_source(source: ptr VipsSource; output: ptr ptr VipsImage;\n                      width: cint): cint		75
+nim	vips_similarity	libvips/bindings/resample.html#vips_similarity,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_similarity(input: ptr VipsImage; output: ptr ptr VipsImage): cint		78
+nim	vips_rotate	libvips/bindings/resample.html#vips_rotate,ptr.VipsImage,ptr.ptr.VipsImage,cdouble	proc vips_rotate(input: ptr VipsImage; output: ptr ptr VipsImage; angle: cdouble): cint		81
+nim	vips_affine	libvips/bindings/resample.html#vips_affine,ptr.VipsImage,ptr.ptr.VipsImage,cdouble,cdouble,cdouble,cdouble	proc vips_affine(input: ptr VipsImage; output: ptr ptr VipsImage; a, b, c, d: cdouble): cint		84
+nim	vips_resize	libvips/bindings/resample.html#vips_resize,ptr.VipsImage,ptr.ptr.VipsImage,cdouble	proc vips_resize(input: ptr VipsImage; output: ptr ptr VipsImage; scale: cdouble): cint		87
+nim	vips_mapim	libvips/bindings/resample.html#vips_mapim,ptr.VipsImage,ptr.ptr.VipsImage,ptr.VipsImage	proc vips_mapim(input: ptr VipsImage; output: ptr ptr VipsImage; index: ptr VipsImage): cint		90
+nim	vips_quadratic	libvips/bindings/resample.html#vips_quadratic,ptr.VipsImage,ptr.ptr.VipsImage,ptr.VipsImage	proc vips_quadratic(input: ptr VipsImage; output: ptr ptr VipsImage;\n               coeff: ptr VipsImage): cint		93

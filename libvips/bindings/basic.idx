@@ -1,0 +1,23 @@
+nimTitle	basic	libvips/bindings/basic.html	module libvips/bindings/basic		0
+nim	VipsPel	libvips/bindings/basic.html#VipsPel	type VipsPel		11
+nim	VipsCallbackFn	libvips/bindings/basic.html#VipsCallbackFn	type VipsCallbackFn		14
+nim	VipsSListMap2Fn	libvips/bindings/basic.html#VipsSListMap2Fn	type VipsSListMap2Fn		15
+nim	VipsSListMap4Fn	libvips/bindings/basic.html#VipsSListMap4Fn	type VipsSListMap4Fn		16
+nim	VipsSListFold2Fn	libvips/bindings/basic.html#VipsSListFold2Fn	type VipsSListFold2Fn		17
+nim	VipsPrecision	libvips/bindings/basic.html#VipsPrecision	enum VipsPrecision		20
+nim	VipsImage	libvips/bindings/basic.html#VipsImage	object VipsImage		28
+nim	PVipsImage	libvips/bindings/basic.html#PVipsImage	type PVipsImage		29
+nim	VipsRegion	libvips/bindings/basic.html#VipsRegion	object VipsRegion		30
+nim	PVipsRegion	libvips/bindings/basic.html#PVipsRegion	type PVipsRegion		31
+nim	VipsBuf	libvips/bindings/basic.html#VipsBuf	object VipsBuf		32
+nim	PVipsBuf	libvips/bindings/basic.html#PVipsBuf	type PVipsBuf		33
+nim	VipsSource	libvips/bindings/basic.html#VipsSource	object VipsSource		34
+nim	PVipsSource	libvips/bindings/basic.html#PVipsSource	type PVipsSource		35
+nim	VipsTarget	libvips/bindings/basic.html#VipsTarget	object VipsTarget		36
+nim	PVipsTarget	libvips/bindings/basic.html#PVipsTarget	type PVipsTarget		37
+nim	VipsInterpolate	libvips/bindings/basic.html#VipsInterpolate	object VipsInterpolate		38
+nim	PVipsInterpolate	libvips/bindings/basic.html#PVipsInterpolate	type PVipsInterpolate		39
+nim	VipsOperation	libvips/bindings/basic.html#VipsOperation	object VipsOperation		40
+nim	PVipsOperation	libvips/bindings/basic.html#PVipsOperation	type PVipsOperation		41
+nim	vips_path_filename7	libvips/bindings/basic.html#vips_path_filename7,cstring	proc vips_path_filename7(path: cstring): cstring		44
+nim	vips_path_mode7	libvips/bindings/basic.html#vips_path_mode7,cstring	proc vips_path_mode7(path: cstring): cstring		45

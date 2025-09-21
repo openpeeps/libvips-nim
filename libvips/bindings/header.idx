@@ -1,0 +1,78 @@
+nimTitle	header	libvips/bindings/header.html	module libvips/bindings/header		0
+nim	VIPS_META_EXIF_NAME	libvips/bindings/header.html#VIPS_META_EXIF_NAME	const VIPS_META_EXIF_NAME		12
+nim	VIPS_META_XMP_NAME	libvips/bindings/header.html#VIPS_META_XMP_NAME	const VIPS_META_XMP_NAME		13
+nim	VIPS_META_IPTC_NAME	libvips/bindings/header.html#VIPS_META_IPTC_NAME	const VIPS_META_IPTC_NAME		14
+nim	VIPS_META_PHOTOSHOP_NAME	libvips/bindings/header.html#VIPS_META_PHOTOSHOP_NAME	const VIPS_META_PHOTOSHOP_NAME		15
+nim	VIPS_META_ICC_NAME	libvips/bindings/header.html#VIPS_META_ICC_NAME	const VIPS_META_ICC_NAME		16
+nim	VIPS_META_IMAGEDESCRIPTION	libvips/bindings/header.html#VIPS_META_IMAGEDESCRIPTION	const VIPS_META_IMAGEDESCRIPTION		17
+nim	VIPS_META_RESOLUTION_UNIT	libvips/bindings/header.html#VIPS_META_RESOLUTION_UNIT	const VIPS_META_RESOLUTION_UNIT		18
+nim	VIPS_META_BITS_PER_SAMPLE	libvips/bindings/header.html#VIPS_META_BITS_PER_SAMPLE	const VIPS_META_BITS_PER_SAMPLE		19
+nim	VIPS_META_PALETTE	libvips/bindings/header.html#VIPS_META_PALETTE	const VIPS_META_PALETTE		20
+nim	VIPS_META_LOADER	libvips/bindings/header.html#VIPS_META_LOADER	const VIPS_META_LOADER		21
+nim	VIPS_META_SEQUENTIAL	libvips/bindings/header.html#VIPS_META_SEQUENTIAL	const VIPS_META_SEQUENTIAL		22
+nim	VIPS_META_ORIENTATION	libvips/bindings/header.html#VIPS_META_ORIENTATION	const VIPS_META_ORIENTATION		23
+nim	VIPS_META_PAGE_HEIGHT	libvips/bindings/header.html#VIPS_META_PAGE_HEIGHT	const VIPS_META_PAGE_HEIGHT		24
+nim	VIPS_META_N_PAGES	libvips/bindings/header.html#VIPS_META_N_PAGES	const VIPS_META_N_PAGES		25
+nim	VIPS_META_N_SUBIFDS	libvips/bindings/header.html#VIPS_META_N_SUBIFDS	const VIPS_META_N_SUBIFDS		26
+nim	VIPS_META_CONCURRENCY	libvips/bindings/header.html#VIPS_META_CONCURRENCY	const VIPS_META_CONCURRENCY		27
+nim	VIPS_META_TILE_WIDTH	libvips/bindings/header.html#VIPS_META_TILE_WIDTH	const VIPS_META_TILE_WIDTH		28
+nim	VIPS_META_TILE_HEIGHT	libvips/bindings/header.html#VIPS_META_TILE_HEIGHT	const VIPS_META_TILE_HEIGHT		29
+nim	VipsImageMapFn	libvips/bindings/header.html#VipsImageMapFn	type VipsImageMapFn		33
+nim	vips_format_sizeof	libvips/bindings/header.html#vips_format_sizeof,VipsBandFormat	proc vips_format_sizeof(format: VipsBandFormat): uint64		37
+nim	vips_format_sizeof_unsafe	libvips/bindings/header.html#vips_format_sizeof_unsafe,VipsBandFormat	proc vips_format_sizeof_unsafe(format: VipsBandFormat): uint64		38
+nim	vips_interpretation_max_alpha	libvips/bindings/header.html#vips_interpretation_max_alpha,VipsInterpretation	proc vips_interpretation_max_alpha(interpretation: VipsInterpretation): cdouble		40
+nim	vips_image_get_width	libvips/bindings/header.html#vips_image_get_width,ptr.VipsImage	proc vips_image_get_width(image: ptr VipsImage): cint		42
+nim	vips_image_get_height	libvips/bindings/header.html#vips_image_get_height,ptr.VipsImage	proc vips_image_get_height(image: ptr VipsImage): cint		43
+nim	vips_image_get_bands	libvips/bindings/header.html#vips_image_get_bands,ptr.VipsImage	proc vips_image_get_bands(image: ptr VipsImage): cint		44
+nim	vips_image_get_format	libvips/bindings/header.html#vips_image_get_format,ptr.VipsImage	proc vips_image_get_format(image: ptr VipsImage): VipsBandFormat		45
+nim	vips_image_get_format_max	libvips/bindings/header.html#vips_image_get_format_max,VipsBandFormat	proc vips_image_get_format_max(format: VipsBandFormat): cdouble		46
+nim	vips_image_guess_format	libvips/bindings/header.html#vips_image_guess_format,ptr.VipsImage	proc vips_image_guess_format(image: ptr VipsImage): VipsBandFormat		47
+nim	vips_image_get_coding	libvips/bindings/header.html#vips_image_get_coding,ptr.VipsImage	proc vips_image_get_coding(image: ptr VipsImage): VipsCoding		48
+nim	vips_image_get_interpretation	libvips/bindings/header.html#vips_image_get_interpretation,ptr.VipsImage	proc vips_image_get_interpretation(image: ptr VipsImage): VipsInterpretation		49
+nim	vips_image_guess_interpretation	libvips/bindings/header.html#vips_image_guess_interpretation,ptr.VipsImage	proc vips_image_guess_interpretation(image: ptr VipsImage): VipsInterpretation		50
+nim	vips_image_get_xres	libvips/bindings/header.html#vips_image_get_xres,ptr.VipsImage	proc vips_image_get_xres(image: ptr VipsImage): cdouble		51
+nim	vips_image_get_yres	libvips/bindings/header.html#vips_image_get_yres,ptr.VipsImage	proc vips_image_get_yres(image: ptr VipsImage): cdouble		52
+nim	vips_image_get_xoffset	libvips/bindings/header.html#vips_image_get_xoffset,ptr.VipsImage	proc vips_image_get_xoffset(image: ptr VipsImage): cint		53
+nim	vips_image_get_yoffset	libvips/bindings/header.html#vips_image_get_yoffset,ptr.VipsImage	proc vips_image_get_yoffset(image: ptr VipsImage): cint		54
+nim	vips_image_get_filename	libvips/bindings/header.html#vips_image_get_filename,ptr.VipsImage	proc vips_image_get_filename(image: ptr VipsImage): cstring		55
+nim	vips_image_get_mode	libvips/bindings/header.html#vips_image_get_mode,ptr.VipsImage	proc vips_image_get_mode(image: ptr VipsImage): cstring		56
+nim	vips_image_get_scale	libvips/bindings/header.html#vips_image_get_scale,ptr.VipsImage	proc vips_image_get_scale(image: ptr VipsImage): cdouble		57
+nim	vips_image_get_offset	libvips/bindings/header.html#vips_image_get_offset,ptr.VipsImage	proc vips_image_get_offset(image: ptr VipsImage): cdouble		58
+nim	vips_image_get_page_height	libvips/bindings/header.html#vips_image_get_page_height,ptr.VipsImage	proc vips_image_get_page_height(image: ptr VipsImage): cint		59
+nim	vips_image_get_n_pages	libvips/bindings/header.html#vips_image_get_n_pages,ptr.VipsImage	proc vips_image_get_n_pages(image: ptr VipsImage): cint		60
+nim	vips_image_get_n_subifds	libvips/bindings/header.html#vips_image_get_n_subifds,ptr.VipsImage	proc vips_image_get_n_subifds(image: ptr VipsImage): cint		61
+nim	vips_image_get_orientation	libvips/bindings/header.html#vips_image_get_orientation,ptr.VipsImage	proc vips_image_get_orientation(image: ptr VipsImage): cint		62
+nim	vips_image_get_orientation_swap	libvips/bindings/header.html#vips_image_get_orientation_swap,ptr.VipsImage	proc vips_image_get_orientation_swap(image: ptr VipsImage): bool		63
+nim	vips_image_get_concurrency	libvips/bindings/header.html#vips_image_get_concurrency,ptr.VipsImage,cint	proc vips_image_get_concurrency(image: ptr VipsImage; default_concurrency: cint): cint		64
+nim	vips_image_get_tile_width	libvips/bindings/header.html#vips_image_get_tile_width,ptr.VipsImage	proc vips_image_get_tile_width(image: ptr VipsImage): cint		65
+nim	vips_image_get_tile_height	libvips/bindings/header.html#vips_image_get_tile_height,ptr.VipsImage	proc vips_image_get_tile_height(image: ptr VipsImage): cint		66
+nim	vips_image_get_data	libvips/bindings/header.html#vips_image_get_data,ptr.VipsImage	proc vips_image_get_data(image: ptr VipsImage): pointer		67
+nim	vips_image_init_fields	libvips/bindings/header.html#vips_image_init_fields,ptr.VipsImage,cint,cint,cint,VipsBandFormat,VipsCoding,VipsInterpretation,cdouble,cdouble	proc vips_image_init_fields(image: ptr VipsImage; xsize, ysize, bands: cint;\n                       format: VipsBandFormat; coding: VipsCoding;\n                       interpretation: VipsInterpretation; xres, yres: cdouble)		69
+nim	vips_image_set	libvips/bindings/header.html#vips_image_set,ptr.VipsImage,cstring,ptr.GValue	proc vips_image_set(image: ptr VipsImage; name: cstring; value: ptr GValue)		75
+nim	vips_image_get	libvips/bindings/header.html#vips_image_get,ptr.VipsImage,cstring,ptr.GValue	proc vips_image_get(image: ptr VipsImage; name: cstring; value_copy: ptr GValue): cint		76
+nim	vips_image_get_as_string	libvips/bindings/header.html#vips_image_get_as_string,ptr.VipsImage,cstring,ptr.cstring	proc vips_image_get_as_string(image: ptr VipsImage; name: cstring; res: ptr cstring): cint		77
+nim	vips_image_get_typeof	libvips/bindings/header.html#vips_image_get_typeof,ptr.VipsImage,cstring	proc vips_image_get_typeof(image: ptr VipsImage; name: cstring): GType		78
+nim	vips_image_remove	libvips/bindings/header.html#vips_image_remove,ptr.VipsImage,cstring	proc vips_image_remove(image: ptr VipsImage; name: cstring): bool		79
+nim	vips_image_map	libvips/bindings/header.html#vips_image_map,ptr.VipsImage,VipsImageMapFn,pointer	proc vips_image_map(image: ptr VipsImage; fn: VipsImageMapFn; a: pointer): pointer		80
+nim	vips_image_get_fields	libvips/bindings/header.html#vips_image_get_fields,ptr.VipsImage	proc vips_image_get_fields(image: ptr VipsImage): ptr cstringArray		81
+nim	vips_image_set_area	libvips/bindings/header.html#vips_image_set_area,ptr.VipsImage,cstring,VipsCallbackFn,pointer	proc vips_image_set_area(image: ptr VipsImage; name: cstring;\n                    free_fn: VipsCallbackFn; data: pointer)		83
+nim	vips_image_get_area	libvips/bindings/header.html#vips_image_get_area,ptr.VipsImage,cstring,ptr.pointer	proc vips_image_get_area(image: ptr VipsImage; name: cstring; data: ptr pointer): cint		84
+nim	vips_image_set_blob	libvips/bindings/header.html#vips_image_set_blob,ptr.VipsImage,cstring,VipsCallbackFn,pointer,csize_t	proc vips_image_set_blob(image: ptr VipsImage; name: cstring;\n                    free_fn: VipsCallbackFn; data: pointer; length: csize_t)		85
+nim	vips_image_set_blob_copy	libvips/bindings/header.html#vips_image_set_blob_copy,ptr.VipsImage,cstring,pointer,csize_t	proc vips_image_set_blob_copy(image: ptr VipsImage; name: cstring; data: pointer;\n                         length: csize_t)		86
+nim	vips_image_get_blob	libvips/bindings/header.html#vips_image_get_blob,ptr.VipsImage,cstring,ptr.pointer,ptr.csize_t	proc vips_image_get_blob(image: ptr VipsImage; name: cstring; data: ptr pointer;\n                    length: ptr csize_t): cint		87
+nim	vips_image_get_int	libvips/bindings/header.html#vips_image_get_int,ptr.VipsImage,cstring,ptr.cint	proc vips_image_get_int(image: ptr VipsImage; name: cstring; res: ptr cint): cint		89
+nim	vips_image_set_int	libvips/bindings/header.html#vips_image_set_int,ptr.VipsImage,cstring,cint	proc vips_image_set_int(image: ptr VipsImage; name: cstring; i: cint)		90
+nim	vips_image_get_double	libvips/bindings/header.html#vips_image_get_double,ptr.VipsImage,cstring,ptr.cdouble	proc vips_image_get_double(image: ptr VipsImage; name: cstring; res: ptr cdouble): cint		91
+nim	vips_image_set_double	libvips/bindings/header.html#vips_image_set_double,ptr.VipsImage,cstring,cdouble	proc vips_image_set_double(image: ptr VipsImage; name: cstring; d: cdouble)		92
+nim	vips_image_get_string	libvips/bindings/header.html#vips_image_get_string,ptr.VipsImage,cstring,ptr.cstring	proc vips_image_get_string(image: ptr VipsImage; name: cstring; res: ptr cstring): cint		93
+nim	vips_image_set_string	libvips/bindings/header.html#vips_image_set_string,ptr.VipsImage,cstring,cstring	proc vips_image_set_string(image: ptr VipsImage; name, str: cstring)		94
+nim	vips_image_print_field	libvips/bindings/header.html#vips_image_print_field,ptr.VipsImage,cstring	proc vips_image_print_field(image: ptr VipsImage; name: cstring)		95
+nim	vips_image_get_image	libvips/bindings/header.html#vips_image_get_image,ptr.VipsImage,cstring,ptr.ptr.VipsImage	proc vips_image_get_image(image: ptr VipsImage; name: cstring; res: ptr ptr VipsImage): cint		96
+nim	vips_image_set_image	libvips/bindings/header.html#vips_image_set_image,ptr.VipsImage,cstring,ptr.VipsImage	proc vips_image_set_image(image: ptr VipsImage; name: cstring; im: ptr VipsImage)		97
+nim	vips_image_set_array_int	libvips/bindings/header.html#vips_image_set_array_int,ptr.VipsImage,cstring,ptr.cint,cint	proc vips_image_set_array_int(image: ptr VipsImage; name: cstring; array: ptr cint;\n                         n: cint)		98
+nim	vips_image_get_array_int	libvips/bindings/header.html#vips_image_get_array_int,ptr.VipsImage,cstring,ptr.ptr.cint,ptr.cint	proc vips_image_get_array_int(image: ptr VipsImage; name: cstring; res: ptr ptr cint;\n                         n: ptr cint): cint		99
+nim	vips_image_get_array_double	libvips/bindings/header.html#vips_image_get_array_double,ptr.VipsImage,cstring,ptr.ptr.cdouble,ptr.cint	proc vips_image_get_array_double(image: ptr VipsImage; name: cstring;\n                            res: ptr ptr cdouble; n: ptr cint): cint		100
+nim	vips_image_set_array_double	libvips/bindings/header.html#vips_image_set_array_double,ptr.VipsImage,cstring,ptr.cdouble,cint	proc vips_image_set_array_double(image: ptr VipsImage; name: cstring;\n                            array: ptr cdouble; n: cint)		101
+nim	vips_image_history_printf	libvips/bindings/header.html#vips_image_history_printf,ptr.VipsImage,cstring	proc vips_image_history_printf(image: ptr VipsImage; format: cstring)		103
+nim	vips_image_history_args	libvips/bindings/header.html#vips_image_history_args,ptr.VipsImage,cstring,cint,ptr.cstring	proc vips_image_history_args(image: ptr VipsImage; name: cstring; argc: cint;\n                        argv: ptr cstring): cint		104
+nim	vips_image_get_history	libvips/bindings/header.html#vips_image_get_history,ptr.VipsImage	proc vips_image_get_history(image: ptr VipsImage): cstring		105
