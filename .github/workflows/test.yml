@@ -28,8 +28,9 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y \
             pkg-config \
+            libglib2.0-dev \
             libvips-dev \
             libvips-tools
       - run: nimble install -Y
-      - run: nim c -r src/libvips.nim
+      - run: nim c --passC:"$(pkg-config --cflags vips)" --passL:"$(pkg-config --libs vips)" -r src/libvips.nim
       - run: nimble test
