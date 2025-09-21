@@ -21,7 +21,7 @@ This package wraps the core functionality of [libvips](https://github.com/libvip
 
 Libvips is generally 4-8x faster than other graphics processors such as GraphicsMagick and ImageMagick. Check the benchmark: [Speed and Memory Use](https://github.com/libvips/libvips/wiki/Speed-and-memory-use)
 
-The intent for this is to enable developers to build extremely fast image processors in Go, which is suited well for concurrent requests.
+The intent for this is to enable developers to build extremely fast image processors in Nim language, which is suited well for concurrent requests.
 
 ## Examples
 _todo_

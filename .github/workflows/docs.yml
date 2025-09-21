@@ -1,11 +1,19 @@
 name: docs
 on:
   push:
+    paths-ignore:
+      - LICENSE
+      - README.*
+      - examples
     tags:
       - '*.*.*'
     branches:
       - main
-  workflow_dispatch:
+  pull_request:
+    paths-ignore:
+      - LICENSE
+      - README.*
+      - examples
 env:
   nim-version: 'stable'
   module-name: 'libvips'
