@@ -4,5 +4,6 @@ nimblecache/
 htmldocs/
 testresults/
 /tests/*
+!/tests/data
 !/tests/*.nim
 !/tests/*.nims
