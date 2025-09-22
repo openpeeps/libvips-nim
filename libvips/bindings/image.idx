@@ -92,55 +92,43 @@ nim	vips_image_new_from_file_RW	libvips/bindings/image.html#vips_image_new_from_
 nim	vips_image_new_from_file_raw	libvips/bindings/image.html#vips_image_new_from_file_raw,cstring,cint,cint,cint,guint64	proc vips_image_new_from_file_raw(filename: cstring; xsize, ysize, bands: cint;\n                             offset: guint64): ptr VipsImage		146
 nim	vips_image_new_from_memory	libvips/bindings/image.html#vips_image_new_from_memory,pointer,csize_t,cint,cint,cint,VipsBandFormat	proc vips_image_new_from_memory(data: pointer; size: csize_t;\n                           width, height, bands: cint; format: VipsBandFormat): ptr VipsImage		147
 nim	vips_image_new_from_memory_copy	libvips/bindings/image.html#vips_image_new_from_memory_copy,pointer,csize_t,cint,cint,cint,VipsBandFormat	proc vips_image_new_from_memory_copy(data: pointer; size: csize_t;\n                                width, height, bands: cint;\n                                format: VipsBandFormat): ptr VipsImage		148
-nim	vips_image_new_from_buffer	libvips/bindings/image.html#vips_image_new_from_buffer,pointer,csize_t,cstring,varargs[pointer]	proc vips_image_new_from_buffer(buf: pointer; len: csize_t; option_string: cstring;\n                           args: varargs[pointer]): ptr VipsImage		149
-nim	vips_image_new_from_source	libvips/bindings/image.html#vips_image_new_from_source,ptr.VipsSource,cstring,varargs[pointer]	proc vips_image_new_from_source(source: ptr VipsSource; option_string: cstring;\n                           args: varargs[pointer]): ptr VipsImage		150
-nim	vips_image_new_matrix	libvips/bindings/image.html#vips_image_new_matrix,cint,cint	proc vips_image_new_matrix(width, height: cint): ptr VipsImage		151
-nim	vips_image_new_matrixv	libvips/bindings/image.html#vips_image_new_matrixv,cint,cint,varargs[cdouble]	proc vips_image_new_matrixv(width, height: cint; args: varargs[cdouble]): ptr VipsImage		152
-nim	vips_image_new_matrix_from_array	libvips/bindings/image.html#vips_image_new_matrix_from_array,cint,cint,ptr.cdouble,cint	proc vips_image_new_matrix_from_array(width, height: cint; array: ptr cdouble;\n                                 size: cint): ptr VipsImage		153
-nim	vips_image_matrix_from_array	libvips/bindings/image.html#vips_image_matrix_from_array,cint,cint,ptr.cdouble,cint	proc vips_image_matrix_from_array(width, height: cint; array: ptr cdouble; size: cint): ptr VipsImage		154
-nim	vips_image_new_from_image	libvips/bindings/image.html#vips_image_new_from_image,ptr.VipsImage,ptr.cdouble,cint	proc vips_image_new_from_image(image: ptr VipsImage; c: ptr cdouble; n: cint): ptr VipsImage		155
-nim	vips_image_new_from_image1	libvips/bindings/image.html#vips_image_new_from_image1,ptr.VipsImage,cdouble	proc vips_image_new_from_image1(image: ptr VipsImage; c: cdouble): ptr VipsImage		156
-nim	vips_image_set_delete_on_close	libvips/bindings/image.html#vips_image_set_delete_on_close,ptr.VipsImage,gboolean	proc vips_image_set_delete_on_close(image: ptr VipsImage; delete_on_close: gboolean)		157
-nim	vips_get_disc_threshold	libvips/bindings/image.html#vips_get_disc_threshold	proc vips_get_disc_threshold(): guint64		158
-nim	vips_image_new_temp_file	libvips/bindings/image.html#vips_image_new_temp_file,cstring	proc vips_image_new_temp_file(format: cstring): ptr VipsImage		159
-nim	vips_image_write	libvips/bindings/image.html#vips_image_write,ptr.VipsImage,ptr.VipsImage	proc vips_image_write(image: ptr VipsImage; outImg: ptr VipsImage): cint		160
-nim	vips_image_write_to_buffer	libvips/bindings/image.html#vips_image_write_to_buffer,ptr.VipsImage,cstring,ptr.pointer,ptr.csize_t,varargs[pointer]	proc vips_image_write_to_buffer(img: ptr VipsImage; suffix: cstring;\n                           buf: ptr pointer; size: ptr csize_t;\n                           args: varargs[pointer]): cint		161
-nim	vips_image_write_to_target	libvips/bindings/image.html#vips_image_write_to_target,ptr.VipsImage,cstring,ptr.VipsTarget,varargs[pointer]	proc vips_image_write_to_target(img: ptr VipsImage; suffix: cstring;\n                           target: ptr VipsTarget; args: varargs[pointer]): cint		162
-nim	vips_image_write_to_memory	libvips/bindings/image.html#vips_image_write_to_memory,ptr.VipsImage,ptr.csize_t	proc vips_image_write_to_memory(img: ptr VipsImage; size: ptr csize_t): pointer		163
-nim	vips_image_decode_predict	libvips/bindings/image.html#vips_image_decode_predict,ptr.VipsImage,ptr.cint,ptr.VipsBandFormat	proc vips_image_decode_predict(img: ptr VipsImage; bands: ptr cint;\n                          format: ptr VipsBandFormat): cint		164
-nim	vips_image_decode	libvips/bindings/image.html#vips_image_decode,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_image_decode(img: ptr VipsImage; outImg: ptr ptr VipsImage): cint		165
-nim	vips_image_encode	libvips/bindings/image.html#vips_image_encode,ptr.VipsImage,ptr.ptr.VipsImage,VipsCoding	proc vips_image_encode(img: ptr VipsImage; outImg: ptr ptr VipsImage;\n                  coding: VipsCoding): cint		166
-nim	vips_image_isMSBfirst	libvips/bindings/image.html#vips_image_isMSBfirst,ptr.VipsImage	proc vips_image_isMSBfirst(img: ptr VipsImage): gboolean		167
-nim	vips_image_isfile	libvips/bindings/image.html#vips_image_isfile,ptr.VipsImage	proc vips_image_isfile(img: ptr VipsImage): gboolean		168
-nim	vips_image_ispartial	libvips/bindings/image.html#vips_image_ispartial,ptr.VipsImage	proc vips_image_ispartial(img: ptr VipsImage): gboolean		169
-nim	vips_image_hasalpha	libvips/bindings/image.html#vips_image_hasalpha,ptr.VipsImage	proc vips_image_hasalpha(img: ptr VipsImage): gboolean		170
-nim	vips_image_copy_memory	libvips/bindings/image.html#vips_image_copy_memory,ptr.VipsImage	proc vips_image_copy_memory(img: ptr VipsImage): ptr VipsImage		171
-nim	vips_image_wio_input	libvips/bindings/image.html#vips_image_wio_input,ptr.VipsImage	proc vips_image_wio_input(img: ptr VipsImage): cint		172
-nim	vips_image_pio_input	libvips/bindings/image.html#vips_image_pio_input,ptr.VipsImage	proc vips_image_pio_input(img: ptr VipsImage): cint		173
-nim	vips_image_pio_output	libvips/bindings/image.html#vips_image_pio_output,ptr.VipsImage	proc vips_image_pio_output(img: ptr VipsImage): cint		174
-nim	vips_image_inplace	libvips/bindings/image.html#vips_image_inplace,ptr.VipsImage	proc vips_image_inplace(img: ptr VipsImage): cint		175
-nim	vips_image_write_prepare	libvips/bindings/image.html#vips_image_write_prepare,ptr.VipsImage	proc vips_image_write_prepare(img: ptr VipsImage): cint		176
-nim	vips_image_write_line	libvips/bindings/image.html#vips_image_write_line,ptr.VipsImage,cint,ptr.VipsPel	proc vips_image_write_line(img: ptr VipsImage; ypos: cint; linebuffer: ptr VipsPel): cint		177
-nim	vips_band_format_isint	libvips/bindings/image.html#vips_band_format_isint,VipsBandFormat	proc vips_band_format_isint(format: VipsBandFormat): gboolean		178
-nim	vips_band_format_isuint	libvips/bindings/image.html#vips_band_format_isuint,VipsBandFormat	proc vips_band_format_isuint(format: VipsBandFormat): gboolean		179
-nim	vips_band_format_is8bit	libvips/bindings/image.html#vips_band_format_is8bit,VipsBandFormat	proc vips_band_format_is8bit(format: VipsBandFormat): gboolean		180
-nim	vips_band_format_isfloat	libvips/bindings/image.html#vips_band_format_isfloat,VipsBandFormat	proc vips_band_format_isfloat(format: VipsBandFormat): gboolean		181
-nim	vips_band_format_iscomplex	libvips/bindings/image.html#vips_band_format_iscomplex,VipsBandFormat	proc vips_band_format_iscomplex(format: VipsBandFormat): gboolean		182
-nim	vips_system	libvips/bindings/image.html#vips_system,cstring,varargs[pointer]	proc vips_system(cmd_format: cstring; args: varargs[pointer]): cint		183
-nim	vips_array_image_new	libvips/bindings/image.html#vips_array_image_new,ptr.ptr.VipsImage,cint	proc vips_array_image_new(array: ptr ptr VipsImage; n: cint): ptr VipsArrayImage		184
-nim	vips_array_image_newv	libvips/bindings/image.html#vips_array_image_newv,cint,varargs[pointer]	proc vips_array_image_newv(n: cint; args: varargs[pointer]): ptr VipsArrayImage		185
-nim	vips_array_image_new_from_string	libvips/bindings/image.html#vips_array_image_new_from_string,cstring,VipsAccess	proc vips_array_image_new_from_string(str: cstring; flags: VipsAccess): ptr VipsArrayImage		186
-nim	vips_array_image_empty	libvips/bindings/image.html#vips_array_image_empty	proc vips_array_image_empty(): ptr VipsArrayImage		187
-nim	vips_array_image_append	libvips/bindings/image.html#vips_array_image_append,ptr.VipsArrayImage,ptr.VipsImage	proc vips_array_image_append(array: ptr VipsArrayImage; image: ptr VipsImage): ptr VipsArrayImage		188
-nim	vips_array_image_get	libvips/bindings/image.html#vips_array_image_get,ptr.VipsArrayImage,ptr.cint	proc vips_array_image_get(array: ptr VipsArrayImage; n: ptr cint): ptr ptr VipsImage		189
-nim	vips_value_get_array_image	libvips/bindings/image.html#vips_value_get_array_image,ptr.GValue,ptr.cint	proc vips_value_get_array_image(value: ptr GValue; n: ptr cint): ptr ptr VipsImage		190
-nim	vips_value_set_array_image	libvips/bindings/image.html#vips_value_set_array_image,ptr.GValue,cint	proc vips_value_set_array_image(value: ptr GValue; n: cint)		191
-nim	vips_reorder_prepare_many	libvips/bindings/image.html#vips_reorder_prepare_many,ptr.VipsImage,ptr.ptr.VipsRegion,ptr.VipsRect	proc vips_reorder_prepare_many(image: ptr VipsImage; regions: ptr ptr VipsRegion;\n                          r: ptr VipsRect): cint		192
-nim	vips_reorder_margin_hint	libvips/bindings/image.html#vips_reorder_margin_hint,ptr.VipsImage,cint	proc vips_reorder_margin_hint(image: ptr VipsImage; margin: cint)		193
-nim	vips_image_free_buffer	libvips/bindings/image.html#vips_image_free_buffer,ptr.VipsImage,pointer	proc vips_image_free_buffer(image: ptr VipsImage; buffer: pointer)		194
-nimgrp	vipsimagewritetotarget	libvips/bindings/image.html#vips_image_write_to_target-procs-all	proc		122
-nimgrp	vipsimagenewfrombuffer	libvips/bindings/image.html#vips_image_new_from_buffer-procs-all	proc		113
-nimgrp	vipsarrayimagenewv	libvips/bindings/image.html#vips_array_image_newv-procs-all	proc		128
-nimgrp	vipsimagewritetobuffer	libvips/bindings/image.html#vips_image_write_to_buffer-procs-all	proc		119
-nimgrp	vipsimagenewfromsource	libvips/bindings/image.html#vips_image_new_from_source-procs-all	proc		116
-nimgrp	vipssystem	libvips/bindings/image.html#vips_system-procs-all	proc		125
+nim	vips_image_new_matrix	libvips/bindings/image.html#vips_image_new_matrix,cint,cint	proc vips_image_new_matrix(width, height: cint): ptr VipsImage		149
+nim	vips_image_new_matrixv	libvips/bindings/image.html#vips_image_new_matrixv,cint,cint,varargs[cdouble]	proc vips_image_new_matrixv(width, height: cint; args: varargs[cdouble]): ptr VipsImage		150
+nim	vips_image_new_matrix_from_array	libvips/bindings/image.html#vips_image_new_matrix_from_array,cint,cint,ptr.cdouble,cint	proc vips_image_new_matrix_from_array(width, height: cint; array: ptr cdouble;\n                                 size: cint): ptr VipsImage		151
+nim	vips_image_matrix_from_array	libvips/bindings/image.html#vips_image_matrix_from_array,cint,cint,ptr.cdouble,cint	proc vips_image_matrix_from_array(width, height: cint; array: ptr cdouble; size: cint): ptr VipsImage		152
+nim	vips_image_new_from_image	libvips/bindings/image.html#vips_image_new_from_image,ptr.VipsImage,ptr.cdouble,cint	proc vips_image_new_from_image(image: ptr VipsImage; c: ptr cdouble; n: cint): ptr VipsImage		153
+nim	vips_image_new_from_image1	libvips/bindings/image.html#vips_image_new_from_image1,ptr.VipsImage,cdouble	proc vips_image_new_from_image1(image: ptr VipsImage; c: cdouble): ptr VipsImage		154
+nim	vips_image_set_delete_on_close	libvips/bindings/image.html#vips_image_set_delete_on_close,ptr.VipsImage,gboolean	proc vips_image_set_delete_on_close(image: ptr VipsImage; delete_on_close: gboolean)		155
+nim	vips_get_disc_threshold	libvips/bindings/image.html#vips_get_disc_threshold	proc vips_get_disc_threshold(): guint64		156
+nim	vips_image_new_temp_file	libvips/bindings/image.html#vips_image_new_temp_file,cstring	proc vips_image_new_temp_file(format: cstring): ptr VipsImage		157
+nim	vips_image_write	libvips/bindings/image.html#vips_image_write,ptr.VipsImage,ptr.VipsImage	proc vips_image_write(image: ptr VipsImage; outImg: ptr VipsImage): cint		158
+nim	vips_image_write_to_memory	libvips/bindings/image.html#vips_image_write_to_memory,ptr.VipsImage,ptr.csize_t	proc vips_image_write_to_memory(img: ptr VipsImage; size: ptr csize_t): pointer		159
+nim	vips_image_decode_predict	libvips/bindings/image.html#vips_image_decode_predict,ptr.VipsImage,ptr.cint,ptr.VipsBandFormat	proc vips_image_decode_predict(img: ptr VipsImage; bands: ptr cint;\n                          format: ptr VipsBandFormat): cint		160
+nim	vips_image_decode	libvips/bindings/image.html#vips_image_decode,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_image_decode(img: ptr VipsImage; outImg: ptr ptr VipsImage): cint		161
+nim	vips_image_encode	libvips/bindings/image.html#vips_image_encode,ptr.VipsImage,ptr.ptr.VipsImage,VipsCoding	proc vips_image_encode(img: ptr VipsImage; outImg: ptr ptr VipsImage;\n                  coding: VipsCoding): cint		162
+nim	vips_image_isMSBfirst	libvips/bindings/image.html#vips_image_isMSBfirst,ptr.VipsImage	proc vips_image_isMSBfirst(img: ptr VipsImage): gboolean		163
+nim	vips_image_isfile	libvips/bindings/image.html#vips_image_isfile,ptr.VipsImage	proc vips_image_isfile(img: ptr VipsImage): gboolean		164
+nim	vips_image_ispartial	libvips/bindings/image.html#vips_image_ispartial,ptr.VipsImage	proc vips_image_ispartial(img: ptr VipsImage): gboolean		165
+nim	vips_image_hasalpha	libvips/bindings/image.html#vips_image_hasalpha,ptr.VipsImage	proc vips_image_hasalpha(img: ptr VipsImage): gboolean		166
+nim	vips_image_copy_memory	libvips/bindings/image.html#vips_image_copy_memory,ptr.VipsImage	proc vips_image_copy_memory(img: ptr VipsImage): ptr VipsImage		167
+nim	vips_image_wio_input	libvips/bindings/image.html#vips_image_wio_input,ptr.VipsImage	proc vips_image_wio_input(img: ptr VipsImage): cint		168
+nim	vips_image_pio_input	libvips/bindings/image.html#vips_image_pio_input,ptr.VipsImage	proc vips_image_pio_input(img: ptr VipsImage): cint		169
+nim	vips_image_pio_output	libvips/bindings/image.html#vips_image_pio_output,ptr.VipsImage	proc vips_image_pio_output(img: ptr VipsImage): cint		170
+nim	vips_image_inplace	libvips/bindings/image.html#vips_image_inplace,ptr.VipsImage	proc vips_image_inplace(img: ptr VipsImage): cint		171
+nim	vips_image_write_prepare	libvips/bindings/image.html#vips_image_write_prepare,ptr.VipsImage	proc vips_image_write_prepare(img: ptr VipsImage): cint		172
+nim	vips_image_write_line	libvips/bindings/image.html#vips_image_write_line,ptr.VipsImage,cint,ptr.VipsPel	proc vips_image_write_line(img: ptr VipsImage; ypos: cint; linebuffer: ptr VipsPel): cint		173
+nim	vips_band_format_isint	libvips/bindings/image.html#vips_band_format_isint,VipsBandFormat	proc vips_band_format_isint(format: VipsBandFormat): gboolean		174
+nim	vips_band_format_isuint	libvips/bindings/image.html#vips_band_format_isuint,VipsBandFormat	proc vips_band_format_isuint(format: VipsBandFormat): gboolean		175
+nim	vips_band_format_is8bit	libvips/bindings/image.html#vips_band_format_is8bit,VipsBandFormat	proc vips_band_format_is8bit(format: VipsBandFormat): gboolean		176
+nim	vips_band_format_isfloat	libvips/bindings/image.html#vips_band_format_isfloat,VipsBandFormat	proc vips_band_format_isfloat(format: VipsBandFormat): gboolean		177
+nim	vips_band_format_iscomplex	libvips/bindings/image.html#vips_band_format_iscomplex,VipsBandFormat	proc vips_band_format_iscomplex(format: VipsBandFormat): gboolean		178
+nim	vips_array_image_new	libvips/bindings/image.html#vips_array_image_new,ptr.ptr.VipsImage,cint	proc vips_array_image_new(array: ptr ptr VipsImage; n: cint): ptr VipsArrayImage		179
+nim	vips_array_image_new_from_string	libvips/bindings/image.html#vips_array_image_new_from_string,cstring,VipsAccess	proc vips_array_image_new_from_string(str: cstring; flags: VipsAccess): ptr VipsArrayImage		180
+nim	vips_array_image_empty	libvips/bindings/image.html#vips_array_image_empty	proc vips_array_image_empty(): ptr VipsArrayImage		181
+nim	vips_array_image_append	libvips/bindings/image.html#vips_array_image_append,ptr.VipsArrayImage,ptr.VipsImage	proc vips_array_image_append(array: ptr VipsArrayImage; image: ptr VipsImage): ptr VipsArrayImage		182
+nim	vips_array_image_get	libvips/bindings/image.html#vips_array_image_get,ptr.VipsArrayImage,ptr.cint	proc vips_array_image_get(array: ptr VipsArrayImage; n: ptr cint): ptr ptr VipsImage		183
+nim	vips_value_get_array_image	libvips/bindings/image.html#vips_value_get_array_image,ptr.GValue,ptr.cint	proc vips_value_get_array_image(value: ptr GValue; n: ptr cint): ptr ptr VipsImage		184
+nim	vips_value_set_array_image	libvips/bindings/image.html#vips_value_set_array_image,ptr.GValue,cint	proc vips_value_set_array_image(value: ptr GValue; n: cint)		185
+nim	vips_reorder_prepare_many	libvips/bindings/image.html#vips_reorder_prepare_many,ptr.VipsImage,ptr.ptr.VipsRegion,ptr.VipsRect	proc vips_reorder_prepare_many(image: ptr VipsImage; regions: ptr ptr VipsRegion;\n                          r: ptr VipsRect): cint		186
+nim	vips_reorder_margin_hint	libvips/bindings/image.html#vips_reorder_margin_hint,ptr.VipsImage,cint	proc vips_reorder_margin_hint(image: ptr VipsImage; margin: cint)		187
+nim	vips_image_free_buffer	libvips/bindings/image.html#vips_image_free_buffer,ptr.VipsImage,pointer	proc vips_image_free_buffer(image: ptr VipsImage; buffer: pointer)		188

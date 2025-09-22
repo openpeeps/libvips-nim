@@ -8,67 +8,67 @@ nim	VipsAngle45	libvips/bindings/conversion.html#VipsAngle45	enum VipsAngle45		5
 nim	VipsInteresting	libvips/bindings/conversion.html#VipsInteresting	enum VipsInteresting		62
 nim	VipsBlendMode	libvips/bindings/conversion.html#VipsBlendMode	enum VipsBlendMode		72
 nim	vips_copy	libvips/bindings/conversion.html#vips_copy,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_copy(input: ptr VipsImage; output: ptr ptr VipsImage): cint		170
-nim	vips_tilecache	libvips/bindings/conversion.html#vips_tilecache,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_tilecache(input: ptr VipsImage; output: ptr ptr VipsImage): cint		172
-nim	vips_linecache	libvips/bindings/conversion.html#vips_linecache,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_linecache(input: ptr VipsImage; output: ptr ptr VipsImage): cint		174
-nim	vips_sequential	libvips/bindings/conversion.html#vips_sequential,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_sequential(input: ptr VipsImage; output: ptr ptr VipsImage): cint		176
-nim	vips_copy_file	libvips/bindings/conversion.html#vips_copy_file,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_copy_file(input: ptr VipsImage; output: ptr ptr VipsImage): cint		178
-nim	vips_embed	libvips/bindings/conversion.html#vips_embed,ptr.VipsImage,ptr.ptr.VipsImage,cint,cint,cint,cint	proc vips_embed(input: ptr VipsImage; output: ptr ptr VipsImage;\n           x, y, width, height: cint): cint		180
-nim	vips_gravity	libvips/bindings/conversion.html#vips_gravity,ptr.VipsImage,ptr.ptr.VipsImage,VipsCompassDirection,cint,cint	proc vips_gravity(input: ptr VipsImage; output: ptr ptr VipsImage;\n             direction: VipsCompassDirection; width, height: cint): cint		182
-nim	vips_flip	libvips/bindings/conversion.html#vips_flip,ptr.VipsImage,ptr.ptr.VipsImage,VipsDirection	proc vips_flip(input: ptr VipsImage; output: ptr ptr VipsImage;\n          direction: VipsDirection): cint		184
-nim	vips_insert	libvips/bindings/conversion.html#vips_insert,ptr.VipsImage,ptr.VipsImage,ptr.ptr.VipsImage,cint,cint	proc vips_insert(main, sub: ptr VipsImage; output: ptr ptr VipsImage; x, y: cint): cint		186
-nim	vips_join	libvips/bindings/conversion.html#vips_join,ptr.VipsImage,ptr.VipsImage,ptr.ptr.VipsImage,VipsDirection	proc vips_join(in1, in2: ptr VipsImage; output: ptr ptr VipsImage;\n          direction: VipsDirection): cint		188
-nim	vips_arrayjoin	libvips/bindings/conversion.html#vips_arrayjoin,ptr.ptr.VipsImage,ptr.ptr.VipsImage,cint	proc vips_arrayjoin(input: ptr ptr VipsImage; output: ptr ptr VipsImage; n: cint): cint		190
-nim	vips_extract_area	libvips/bindings/conversion.html#vips_extract_area,ptr.VipsImage,ptr.ptr.VipsImage,cint,cint,cint,cint	proc vips_extract_area(input: ptr VipsImage; output: ptr ptr VipsImage;\n                  left, top, width, height: cint): cint		192
-nim	vips_crop	libvips/bindings/conversion.html#vips_crop,ptr.VipsImage,ptr.ptr.VipsImage,cint,cint,cint,cint	proc vips_crop(input: ptr VipsImage; output: ptr ptr VipsImage;\n          left, top, width, height: cint): cint		194
-nim	vips_smartcrop	libvips/bindings/conversion.html#vips_smartcrop,ptr.VipsImage,ptr.ptr.VipsImage,cint,cint	proc vips_smartcrop(input: ptr VipsImage; output: ptr ptr VipsImage;\n               width, height: cint): cint		196
-nim	vips_extract_band	libvips/bindings/conversion.html#vips_extract_band,ptr.VipsImage,ptr.ptr.VipsImage,cint	proc vips_extract_band(input: ptr VipsImage; output: ptr ptr VipsImage; band: cint): cint		198
-nim	vips_replicate	libvips/bindings/conversion.html#vips_replicate,ptr.VipsImage,ptr.ptr.VipsImage,cint,cint	proc vips_replicate(input: ptr VipsImage; output: ptr ptr VipsImage;\n               across, down: cint): cint		200
-nim	vips_grid	libvips/bindings/conversion.html#vips_grid,ptr.VipsImage,ptr.ptr.VipsImage,cint,cint,cint	proc vips_grid(input: ptr VipsImage; output: ptr ptr VipsImage;\n          tile_height, across, down: cint): cint		202
-nim	vips_transpose3d	libvips/bindings/conversion.html#vips_transpose3d,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_transpose3d(input: ptr VipsImage; output: ptr ptr VipsImage): cint		204
-nim	vips_wrap	libvips/bindings/conversion.html#vips_wrap,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_wrap(input: ptr VipsImage; output: ptr ptr VipsImage): cint		206
-nim	vips_rot	libvips/bindings/conversion.html#vips_rot,ptr.VipsImage,ptr.ptr.VipsImage,VipsAngle	proc vips_rot(input: ptr VipsImage; output: ptr ptr VipsImage; angle: VipsAngle): cint		208
-nim	vips_rot90	libvips/bindings/conversion.html#vips_rot90,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_rot90(input: ptr VipsImage; output: ptr ptr VipsImage): cint		210
-nim	vips_rot180	libvips/bindings/conversion.html#vips_rot180,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_rot180(input: ptr VipsImage; output: ptr ptr VipsImage): cint		212
-nim	vips_rot270	libvips/bindings/conversion.html#vips_rot270,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_rot270(input: ptr VipsImage; output: ptr ptr VipsImage): cint		214
-nim	vips_rot45	libvips/bindings/conversion.html#vips_rot45,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_rot45(input: ptr VipsImage; output: ptr ptr VipsImage): cint		216
-nim	vips_autorot_remove_angle	libvips/bindings/conversion.html#vips_autorot_remove_angle,ptr.VipsImage	proc vips_autorot_remove_angle(image: ptr VipsImage)		218
-nim	vips_autorot	libvips/bindings/conversion.html#vips_autorot,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_autorot(input: ptr VipsImage; output: ptr ptr VipsImage): cint		220
-nim	vips_zoom	libvips/bindings/conversion.html#vips_zoom,ptr.VipsImage,ptr.ptr.VipsImage,cint,cint	proc vips_zoom(input: ptr VipsImage; output: ptr ptr VipsImage; xfac, yfac: cint): cint		222
-nim	vips_subsample	libvips/bindings/conversion.html#vips_subsample,ptr.VipsImage,ptr.ptr.VipsImage,cint,cint	proc vips_subsample(input: ptr VipsImage; output: ptr ptr VipsImage; xfac, yfac: cint): cint		224
-nim	vips_cast	libvips/bindings/conversion.html#vips_cast,ptr.VipsImage,ptr.ptr.VipsImage,VipsBandFormat	proc vips_cast(input: ptr VipsImage; output: ptr ptr VipsImage;\n          format: VipsBandFormat): cint		226
-nim	vips_cast_uchar	libvips/bindings/conversion.html#vips_cast_uchar,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_cast_uchar(input: ptr VipsImage; output: ptr ptr VipsImage): cint		228
-nim	vips_cast_char	libvips/bindings/conversion.html#vips_cast_char,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_cast_char(input: ptr VipsImage; output: ptr ptr VipsImage): cint		230
-nim	vips_cast_ushort	libvips/bindings/conversion.html#vips_cast_ushort,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_cast_ushort(input: ptr VipsImage; output: ptr ptr VipsImage): cint		232
-nim	vips_cast_short	libvips/bindings/conversion.html#vips_cast_short,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_cast_short(input: ptr VipsImage; output: ptr ptr VipsImage): cint		234
-nim	vips_cast_uint	libvips/bindings/conversion.html#vips_cast_uint,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_cast_uint(input: ptr VipsImage; output: ptr ptr VipsImage): cint		236
-nim	vips_cast_int	libvips/bindings/conversion.html#vips_cast_int,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_cast_int(input: ptr VipsImage; output: ptr ptr VipsImage): cint		238
-nim	vips_cast_float	libvips/bindings/conversion.html#vips_cast_float,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_cast_float(input: ptr VipsImage; output: ptr ptr VipsImage): cint		240
-nim	vips_cast_double	libvips/bindings/conversion.html#vips_cast_double,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_cast_double(input: ptr VipsImage; output: ptr ptr VipsImage): cint		242
-nim	vips_cast_complex	libvips/bindings/conversion.html#vips_cast_complex,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_cast_complex(input: ptr VipsImage; output: ptr ptr VipsImage): cint		244
-nim	vips_cast_dpcomplex	libvips/bindings/conversion.html#vips_cast_dpcomplex,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_cast_dpcomplex(input: ptr VipsImage; output: ptr ptr VipsImage): cint		246
-nim	vips_scale	libvips/bindings/conversion.html#vips_scale,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_scale(input: ptr VipsImage; output: ptr ptr VipsImage): cint		248
-nim	vips_msb	libvips/bindings/conversion.html#vips_msb,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_msb(input: ptr VipsImage; output: ptr ptr VipsImage): cint		250
-nim	vips_byteswap	libvips/bindings/conversion.html#vips_byteswap,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_byteswap(input: ptr VipsImage; output: ptr ptr VipsImage): cint		252
-nim	vips_bandjoin	libvips/bindings/conversion.html#vips_bandjoin,ptr.ptr.VipsImage,ptr.ptr.VipsImage,cint	proc vips_bandjoin(input: ptr ptr VipsImage; output: ptr ptr VipsImage; n: cint): cint		254
-nim	vips_bandjoin2	libvips/bindings/conversion.html#vips_bandjoin2,ptr.VipsImage,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_bandjoin2(in1, in2: ptr VipsImage; output: ptr ptr VipsImage): cint		256
-nim	vips_bandjoin_const	libvips/bindings/conversion.html#vips_bandjoin_const,ptr.VipsImage,ptr.ptr.VipsImage,ptr.cdouble,cint	proc vips_bandjoin_const(input: ptr VipsImage; output: ptr ptr VipsImage;\n                    c: ptr cdouble; n: cint): cint		258
-nim	vips_bandjoin_const1	libvips/bindings/conversion.html#vips_bandjoin_const1,ptr.VipsImage,ptr.ptr.VipsImage,cdouble	proc vips_bandjoin_const1(input: ptr VipsImage; output: ptr ptr VipsImage; c: cdouble): cint		260
-nim	vips_bandrank	libvips/bindings/conversion.html#vips_bandrank,ptr.ptr.VipsImage,ptr.ptr.VipsImage,cint	proc vips_bandrank(input: ptr ptr VipsImage; output: ptr ptr VipsImage; n: cint): cint		262
-nim	vips_bandfold	libvips/bindings/conversion.html#vips_bandfold,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_bandfold(input: ptr VipsImage; output: ptr ptr VipsImage): cint		264
-nim	vips_bandunfold	libvips/bindings/conversion.html#vips_bandunfold,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_bandunfold(input: ptr VipsImage; output: ptr ptr VipsImage): cint		266
-nim	vips_bandbool	libvips/bindings/conversion.html#vips_bandbool,ptr.VipsImage,ptr.ptr.VipsImage,VipsOperationBoolean	proc vips_bandbool(input: ptr VipsImage; output: ptr ptr VipsImage;\n              boolean: VipsOperationBoolean): cint		268
-nim	vips_bandand	libvips/bindings/conversion.html#vips_bandand,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_bandand(input: ptr VipsImage; output: ptr ptr VipsImage): cint		270
-nim	vips_bandor	libvips/bindings/conversion.html#vips_bandor,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_bandor(input: ptr VipsImage; output: ptr ptr VipsImage): cint		272
-nim	vips_bandeor	libvips/bindings/conversion.html#vips_bandeor,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_bandeor(input: ptr VipsImage; output: ptr ptr VipsImage): cint		274
-nim	vips_bandmean	libvips/bindings/conversion.html#vips_bandmean,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_bandmean(input: ptr VipsImage; output: ptr ptr VipsImage): cint		276
-nim	vips_recomb	libvips/bindings/conversion.html#vips_recomb,ptr.VipsImage,ptr.ptr.VipsImage,ptr.VipsImage	proc vips_recomb(input: ptr VipsImage; output: ptr ptr VipsImage; m: ptr VipsImage): cint		278
-nim	vips_ifthenelse	libvips/bindings/conversion.html#vips_ifthenelse,ptr.VipsImage,ptr.VipsImage,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_ifthenelse(cond, in1, in2: ptr VipsImage; output: ptr ptr VipsImage): cint		280
-nim	vips_switch	libvips/bindings/conversion.html#vips_switch,ptr.ptr.VipsImage,ptr.ptr.VipsImage,cint	proc vips_switch(tests: ptr ptr VipsImage; output: ptr ptr VipsImage; n: cint): cint		282
-nim	vips_flatten	libvips/bindings/conversion.html#vips_flatten,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_flatten(input: ptr VipsImage; output: ptr ptr VipsImage): cint		284
-nim	vips_addalpha	libvips/bindings/conversion.html#vips_addalpha,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_addalpha(input: ptr VipsImage; output: ptr ptr VipsImage): cint		286
-nim	vips_premultiply	libvips/bindings/conversion.html#vips_premultiply,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_premultiply(input: ptr VipsImage; output: ptr ptr VipsImage): cint		288
-nim	vips_unpremultiply	libvips/bindings/conversion.html#vips_unpremultiply,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_unpremultiply(input: ptr VipsImage; output: ptr ptr VipsImage): cint		290
-nim	vips_composite	libvips/bindings/conversion.html#vips_composite,ptr.ptr.VipsImage,ptr.ptr.VipsImage,cint,ptr.cint	proc vips_composite(input: ptr ptr VipsImage; output: ptr ptr VipsImage; n: cint;\n               mode: ptr cint): cint		292
-nim	vips_composite2	libvips/bindings/conversion.html#vips_composite2,ptr.VipsImage,ptr.VipsImage,ptr.ptr.VipsImage,VipsBlendMode	proc vips_composite2(base, overlay: ptr VipsImage; output: ptr ptr VipsImage;\n                mode: VipsBlendMode): cint		294
-nim	vips_falsecolour	libvips/bindings/conversion.html#vips_falsecolour,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_falsecolour(input: ptr VipsImage; output: ptr ptr VipsImage): cint		296
-nim	vips_gamma	libvips/bindings/conversion.html#vips_gamma,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_gamma(input: ptr VipsImage; output: ptr ptr VipsImage): cint		298
+nim	vips_tilecache	libvips/bindings/conversion.html#vips_tilecache,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_tilecache(input: ptr VipsImage; output: ptr ptr VipsImage): cint		173
+nim	vips_linecache	libvips/bindings/conversion.html#vips_linecache,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_linecache(input: ptr VipsImage; output: ptr ptr VipsImage): cint		176
+nim	vips_sequential	libvips/bindings/conversion.html#vips_sequential,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_sequential(input: ptr VipsImage; output: ptr ptr VipsImage): cint		179
+nim	vips_copy_file	libvips/bindings/conversion.html#vips_copy_file,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_copy_file(input: ptr VipsImage; output: ptr ptr VipsImage): cint		182
+nim	vips_embed	libvips/bindings/conversion.html#vips_embed,ptr.VipsImage,ptr.ptr.VipsImage,cint,cint,cint,cint	proc vips_embed(input: ptr VipsImage; output: ptr ptr VipsImage;\n           x, y, width, height: cint): cint		185
+nim	vips_gravity	libvips/bindings/conversion.html#vips_gravity,ptr.VipsImage,ptr.ptr.VipsImage,VipsCompassDirection,cint,cint	proc vips_gravity(input: ptr VipsImage; output: ptr ptr VipsImage;\n             direction: VipsCompassDirection; width, height: cint): cint		188
+nim	vips_flip	libvips/bindings/conversion.html#vips_flip,ptr.VipsImage,ptr.ptr.VipsImage,VipsDirection	proc vips_flip(input: ptr VipsImage; output: ptr ptr VipsImage;\n          direction: VipsDirection): cint		191
+nim	vips_insert	libvips/bindings/conversion.html#vips_insert,ptr.VipsImage,ptr.VipsImage,ptr.ptr.VipsImage,cint,cint	proc vips_insert(main, sub: ptr VipsImage; output: ptr ptr VipsImage; x, y: cint): cint		194
+nim	vips_join	libvips/bindings/conversion.html#vips_join,ptr.VipsImage,ptr.VipsImage,ptr.ptr.VipsImage,VipsDirection	proc vips_join(in1, in2: ptr VipsImage; output: ptr ptr VipsImage;\n          direction: VipsDirection): cint		197
+nim	vips_arrayjoin	libvips/bindings/conversion.html#vips_arrayjoin,ptr.ptr.VipsImage,ptr.ptr.VipsImage,cint	proc vips_arrayjoin(input: ptr ptr VipsImage; output: ptr ptr VipsImage; n: cint): cint		200
+nim	vips_extract_area	libvips/bindings/conversion.html#vips_extract_area,ptr.VipsImage,ptr.ptr.VipsImage,cint,cint,cint,cint	proc vips_extract_area(input: ptr VipsImage; output: ptr ptr VipsImage;\n                  left, top, width, height: cint): cint		203
+nim	vips_crop	libvips/bindings/conversion.html#vips_crop,ptr.VipsImage,ptr.ptr.VipsImage,cint,cint,cint,cint	proc vips_crop(input: ptr VipsImage; output: ptr ptr VipsImage;\n          left, top, width, height: cint): cint		206
+nim	vips_smartcrop	libvips/bindings/conversion.html#vips_smartcrop,ptr.VipsImage,ptr.ptr.VipsImage,cint,cint	proc vips_smartcrop(input: ptr VipsImage; output: ptr ptr VipsImage;\n               width, height: cint): cint		209
+nim	vips_extract_band	libvips/bindings/conversion.html#vips_extract_band,ptr.VipsImage,ptr.ptr.VipsImage,cint	proc vips_extract_band(input: ptr VipsImage; output: ptr ptr VipsImage; band: cint): cint		212
+nim	vips_replicate	libvips/bindings/conversion.html#vips_replicate,ptr.VipsImage,ptr.ptr.VipsImage,cint,cint	proc vips_replicate(input: ptr VipsImage; output: ptr ptr VipsImage;\n               across, down: cint): cint		215
+nim	vips_grid	libvips/bindings/conversion.html#vips_grid,ptr.VipsImage,ptr.ptr.VipsImage,cint,cint,cint	proc vips_grid(input: ptr VipsImage; output: ptr ptr VipsImage;\n          tile_height, across, down: cint): cint		218
+nim	vips_transpose3d	libvips/bindings/conversion.html#vips_transpose3d,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_transpose3d(input: ptr VipsImage; output: ptr ptr VipsImage): cint		221
+nim	vips_wrap	libvips/bindings/conversion.html#vips_wrap,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_wrap(input: ptr VipsImage; output: ptr ptr VipsImage): cint		224
+nim	vips_rot	libvips/bindings/conversion.html#vips_rot,ptr.VipsImage,ptr.ptr.VipsImage,VipsAngle	proc vips_rot(input: ptr VipsImage; output: ptr ptr VipsImage; angle: VipsAngle): cint		227
+nim	vips_rot90	libvips/bindings/conversion.html#vips_rot90,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_rot90(input: ptr VipsImage; output: ptr ptr VipsImage): cint		230
+nim	vips_rot180	libvips/bindings/conversion.html#vips_rot180,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_rot180(input: ptr VipsImage; output: ptr ptr VipsImage): cint		233
+nim	vips_rot270	libvips/bindings/conversion.html#vips_rot270,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_rot270(input: ptr VipsImage; output: ptr ptr VipsImage): cint		236
+nim	vips_rot45	libvips/bindings/conversion.html#vips_rot45,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_rot45(input: ptr VipsImage; output: ptr ptr VipsImage): cint		239
+nim	vips_autorot_remove_angle	libvips/bindings/conversion.html#vips_autorot_remove_angle,ptr.VipsImage	proc vips_autorot_remove_angle(image: ptr VipsImage)		242
+nim	vips_autorot	libvips/bindings/conversion.html#vips_autorot,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_autorot(input: ptr VipsImage; output: ptr ptr VipsImage): cint		244
+nim	vips_zoom	libvips/bindings/conversion.html#vips_zoom,ptr.VipsImage,ptr.ptr.VipsImage,cint,cint	proc vips_zoom(input: ptr VipsImage; output: ptr ptr VipsImage; xfac, yfac: cint): cint		247
+nim	vips_subsample	libvips/bindings/conversion.html#vips_subsample,ptr.VipsImage,ptr.ptr.VipsImage,cint,cint	proc vips_subsample(input: ptr VipsImage; output: ptr ptr VipsImage; xfac, yfac: cint): cint		250
+nim	vips_cast	libvips/bindings/conversion.html#vips_cast,ptr.VipsImage,ptr.ptr.VipsImage,VipsBandFormat	proc vips_cast(input: ptr VipsImage; output: ptr ptr VipsImage;\n          format: VipsBandFormat): cint		253
+nim	vips_cast_uchar	libvips/bindings/conversion.html#vips_cast_uchar,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_cast_uchar(input: ptr VipsImage; output: ptr ptr VipsImage): cint		256
+nim	vips_cast_char	libvips/bindings/conversion.html#vips_cast_char,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_cast_char(input: ptr VipsImage; output: ptr ptr VipsImage): cint		259
+nim	vips_cast_ushort	libvips/bindings/conversion.html#vips_cast_ushort,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_cast_ushort(input: ptr VipsImage; output: ptr ptr VipsImage): cint		262
+nim	vips_cast_short	libvips/bindings/conversion.html#vips_cast_short,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_cast_short(input: ptr VipsImage; output: ptr ptr VipsImage): cint		265
+nim	vips_cast_uint	libvips/bindings/conversion.html#vips_cast_uint,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_cast_uint(input: ptr VipsImage; output: ptr ptr VipsImage): cint		268
+nim	vips_cast_int	libvips/bindings/conversion.html#vips_cast_int,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_cast_int(input: ptr VipsImage; output: ptr ptr VipsImage): cint		271
+nim	vips_cast_float	libvips/bindings/conversion.html#vips_cast_float,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_cast_float(input: ptr VipsImage; output: ptr ptr VipsImage): cint		274
+nim	vips_cast_double	libvips/bindings/conversion.html#vips_cast_double,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_cast_double(input: ptr VipsImage; output: ptr ptr VipsImage): cint		277
+nim	vips_cast_complex	libvips/bindings/conversion.html#vips_cast_complex,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_cast_complex(input: ptr VipsImage; output: ptr ptr VipsImage): cint		280
+nim	vips_cast_dpcomplex	libvips/bindings/conversion.html#vips_cast_dpcomplex,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_cast_dpcomplex(input: ptr VipsImage; output: ptr ptr VipsImage): cint		283
+nim	vips_scale	libvips/bindings/conversion.html#vips_scale,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_scale(input: ptr VipsImage; output: ptr ptr VipsImage): cint		286
+nim	vips_msb	libvips/bindings/conversion.html#vips_msb,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_msb(input: ptr VipsImage; output: ptr ptr VipsImage): cint		289
+nim	vips_byteswap	libvips/bindings/conversion.html#vips_byteswap,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_byteswap(input: ptr VipsImage; output: ptr ptr VipsImage): cint		292
+nim	vips_bandjoin	libvips/bindings/conversion.html#vips_bandjoin,ptr.ptr.VipsImage,ptr.ptr.VipsImage,cint	proc vips_bandjoin(input: ptr ptr VipsImage; output: ptr ptr VipsImage; n: cint): cint		295
+nim	vips_bandjoin2	libvips/bindings/conversion.html#vips_bandjoin2,ptr.VipsImage,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_bandjoin2(in1, in2: ptr VipsImage; output: ptr ptr VipsImage): cint		298
+nim	vips_bandjoin_const	libvips/bindings/conversion.html#vips_bandjoin_const,ptr.VipsImage,ptr.ptr.VipsImage,ptr.cdouble,cint	proc vips_bandjoin_const(input: ptr VipsImage; output: ptr ptr VipsImage;\n                    c: ptr cdouble; n: cint): cint		301
+nim	vips_bandjoin_const1	libvips/bindings/conversion.html#vips_bandjoin_const1,ptr.VipsImage,ptr.ptr.VipsImage,cdouble	proc vips_bandjoin_const1(input: ptr VipsImage; output: ptr ptr VipsImage; c: cdouble): cint		304
+nim	vips_bandrank	libvips/bindings/conversion.html#vips_bandrank,ptr.ptr.VipsImage,ptr.ptr.VipsImage,cint	proc vips_bandrank(input: ptr ptr VipsImage; output: ptr ptr VipsImage; n: cint): cint		307
+nim	vips_bandfold	libvips/bindings/conversion.html#vips_bandfold,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_bandfold(input: ptr VipsImage; output: ptr ptr VipsImage): cint		310
+nim	vips_bandunfold	libvips/bindings/conversion.html#vips_bandunfold,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_bandunfold(input: ptr VipsImage; output: ptr ptr VipsImage): cint		313
+nim	vips_bandbool	libvips/bindings/conversion.html#vips_bandbool,ptr.VipsImage,ptr.ptr.VipsImage,VipsOperationBoolean	proc vips_bandbool(input: ptr VipsImage; output: ptr ptr VipsImage;\n              boolean: VipsOperationBoolean): cint		316
+nim	vips_bandand	libvips/bindings/conversion.html#vips_bandand,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_bandand(input: ptr VipsImage; output: ptr ptr VipsImage): cint		319
+nim	vips_bandor	libvips/bindings/conversion.html#vips_bandor,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_bandor(input: ptr VipsImage; output: ptr ptr VipsImage): cint		322
+nim	vips_bandeor	libvips/bindings/conversion.html#vips_bandeor,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_bandeor(input: ptr VipsImage; output: ptr ptr VipsImage): cint		325
+nim	vips_bandmean	libvips/bindings/conversion.html#vips_bandmean,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_bandmean(input: ptr VipsImage; output: ptr ptr VipsImage): cint		328
+nim	vips_recomb	libvips/bindings/conversion.html#vips_recomb,ptr.VipsImage,ptr.ptr.VipsImage,ptr.VipsImage	proc vips_recomb(input: ptr VipsImage; output: ptr ptr VipsImage; m: ptr VipsImage): cint		331
+nim	vips_ifthenelse	libvips/bindings/conversion.html#vips_ifthenelse,ptr.VipsImage,ptr.VipsImage,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_ifthenelse(cond, in1, in2: ptr VipsImage; output: ptr ptr VipsImage): cint		334
+nim	vips_switch	libvips/bindings/conversion.html#vips_switch,ptr.ptr.VipsImage,ptr.ptr.VipsImage,cint	proc vips_switch(tests: ptr ptr VipsImage; output: ptr ptr VipsImage; n: cint): cint		337
+nim	vips_flatten	libvips/bindings/conversion.html#vips_flatten,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_flatten(input: ptr VipsImage; output: ptr ptr VipsImage): cint		340
+nim	vips_addalpha	libvips/bindings/conversion.html#vips_addalpha,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_addalpha(input: ptr VipsImage; output: ptr ptr VipsImage): cint		343
+nim	vips_premultiply	libvips/bindings/conversion.html#vips_premultiply,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_premultiply(input: ptr VipsImage; output: ptr ptr VipsImage): cint		346
+nim	vips_unpremultiply	libvips/bindings/conversion.html#vips_unpremultiply,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_unpremultiply(input: ptr VipsImage; output: ptr ptr VipsImage): cint		349
+nim	vips_composite	libvips/bindings/conversion.html#vips_composite,ptr.ptr.VipsImage,ptr.ptr.VipsImage,cint,ptr.cint	proc vips_composite(input: ptr ptr VipsImage; output: ptr ptr VipsImage; n: cint;\n               mode: ptr cint): cint		352
+nim	vips_composite2	libvips/bindings/conversion.html#vips_composite2,ptr.VipsImage,ptr.VipsImage,ptr.ptr.VipsImage,VipsBlendMode	proc vips_composite2(base, overlay: ptr VipsImage; output: ptr ptr VipsImage;\n                mode: VipsBlendMode): cint		355
+nim	vips_falsecolour	libvips/bindings/conversion.html#vips_falsecolour,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_falsecolour(input: ptr VipsImage; output: ptr ptr VipsImage): cint		358
+nim	vips_gamma	libvips/bindings/conversion.html#vips_gamma,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_gamma(input: ptr VipsImage; output: ptr ptr VipsImage): cint		361
