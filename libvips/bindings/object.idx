@@ -1,0 +1,69 @@
+nimTitle	object	libvips/bindings/object.html	module libvips/bindings/object		0
+nim	VipsObject	libvips/bindings/object.html#VipsObject	object VipsObject		12
+nim	VipsObjectClass	libvips/bindings/object.html#VipsObjectClass	object VipsObjectClass		25
+nim	VipsArgumentFlags	libvips/bindings/object.html#VipsArgumentFlags	enum VipsArgumentFlags		53
+nim	VipsArgument	libvips/bindings/object.html#VipsArgument	object VipsArgument		65
+nim	VipsArgumentClass	libvips/bindings/object.html#VipsArgumentClass	object VipsArgumentClass		68
+nim	VipsArgumentInstance	libvips/bindings/object.html#VipsArgumentInstance	object VipsArgumentInstance		75
+nim	VipsArgumentTable	libvips/bindings/object.html#VipsArgumentTable	type VipsArgumentTable		83
+nim	VipsArgumentMapFn	libvips/bindings/object.html#VipsArgumentMapFn	type VipsArgumentMapFn		85
+nim	VipsArgumentClassMapFn	libvips/bindings/object.html#VipsArgumentClassMapFn	type VipsArgumentClassMapFn		89
+nim	VipsObjectSetArguments	libvips/bindings/object.html#VipsObjectSetArguments	type VipsObjectSetArguments		92
+nim	VipsTypeMapFn	libvips/bindings/object.html#VipsTypeMapFn	type VipsTypeMapFn		93
+nim	VipsTypeMap2Fn	libvips/bindings/object.html#VipsTypeMap2Fn	type VipsTypeMap2Fn		94
+nim	VipsClassMapFn	libvips/bindings/object.html#VipsClassMapFn	type VipsClassMapFn		95
+nim	VIPS_ARGUMENT_REQUIRED_INPUT	libvips/bindings/object.html#VIPS_ARGUMENT_REQUIRED_INPUT	const VIPS_ARGUMENT_REQUIRED_INPUT		99
+nim	VIPS_ARGUMENT_OPTIONAL_INPUT	libvips/bindings/object.html#VIPS_ARGUMENT_OPTIONAL_INPUT	const VIPS_ARGUMENT_OPTIONAL_INPUT		102
+nim	VIPS_ARGUMENT_REQUIRED_OUTPUT	libvips/bindings/object.html#VIPS_ARGUMENT_REQUIRED_OUTPUT	const VIPS_ARGUMENT_REQUIRED_OUTPUT		105
+nim	VIPS_ARGUMENT_OPTIONAL_OUTPUT	libvips/bindings/object.html#VIPS_ARGUMENT_OPTIONAL_OUTPUT	const VIPS_ARGUMENT_OPTIONAL_OUTPUT		108
+nim	vips_object_set_member	libvips/bindings/object.html#vips_object_set_member,ptr.VipsObject,ptr.GParamSpec,ptr.ptr.GObject,ptr.GObject	proc vips_object_set_member(obj: ptr VipsObject; pspec: ptr GParamSpec;\n                       member: ptr ptr GObject; argument: ptr GObject)		112
+nim	vips_argument_get_id	libvips/bindings/object.html#vips_argument_get_id	proc vips_argument_get_id(): cint		116
+nim	vips_argument_map	libvips/bindings/object.html#vips_argument_map,ptr.VipsObject,VipsArgumentMapFn,pointer,pointer	proc vips_argument_map(obj: ptr VipsObject; fn: VipsArgumentMapFn; a, b: pointer): pointer		117
+nim	vips_object_get_args	libvips/bindings/object.html#vips_object_get_args,ptr.VipsObject,ptr.ptr.cstringArray,ptr.ptr.cint,ptr.cint	proc vips_object_get_args(obj: ptr VipsObject; names: ptr ptr cstringArray;\n                     flags: ptr ptr cint; n_args: ptr cint): cint		118
+nim	vips_argument_class_map	libvips/bindings/object.html#vips_argument_class_map,ptr.VipsObjectClass,VipsArgumentClassMapFn,pointer,pointer	proc vips_argument_class_map(object_class: ptr VipsObjectClass;\n                        fn: VipsArgumentClassMapFn; a, b: pointer): pointer		119
+nim	vips_argument_class_needsstring	libvips/bindings/object.html#vips_argument_class_needsstring,ptr.VipsArgumentClass	proc vips_argument_class_needsstring(argument_class: ptr VipsArgumentClass): cint		120
+nim	vips_object_get_argument	libvips/bindings/object.html#vips_object_get_argument,ptr.VipsObject,cstring,ptr.ptr.GParamSpec,ptr.ptr.VipsArgumentClass,ptr.ptr.VipsArgumentInstance	proc vips_object_get_argument(obj: ptr VipsObject; name: cstring;\n                         pspec: ptr ptr GParamSpec;\n                         argument_class: ptr ptr VipsArgumentClass;\n                         argument_instance: ptr ptr VipsArgumentInstance): cint		121
+nim	vips_object_argument_isset	libvips/bindings/object.html#vips_object_argument_isset,ptr.VipsObject,cstring	proc vips_object_argument_isset(obj: ptr VipsObject; name: cstring): cint		122
+nim	vips_object_get_argument_flags	libvips/bindings/object.html#vips_object_get_argument_flags,ptr.VipsObject,cstring	proc vips_object_get_argument_flags(obj: ptr VipsObject; name: cstring): VipsArgumentFlags		123
+nim	vips_object_get_argument_priority	libvips/bindings/object.html#vips_object_get_argument_priority,ptr.VipsObject,cstring	proc vips_object_get_argument_priority(obj: ptr VipsObject; name: cstring): cint		124
+nim	vips_value_is_null	libvips/bindings/object.html#vips_value_is_null,ptr.GParamSpec,ptr.GValue	proc vips_value_is_null(pspec: ptr GParamSpec; value: ptr GValue): cint		125
+nim	vips_object_set_property	libvips/bindings/object.html#vips_object_set_property,ptr.GObject,cuint,ptr.GValue,ptr.GParamSpec	proc vips_object_set_property(obj: ptr GObject; property_id: cuint;\n                         value: ptr GValue; pspec: ptr GParamSpec)		126
+nim	vips_object_get_property	libvips/bindings/object.html#vips_object_get_property,ptr.GObject,cuint,ptr.GValue,ptr.GParamSpec	proc vips_object_get_property(obj: ptr GObject; property_id: cuint;\n                         value: ptr GValue; pspec: ptr GParamSpec)		127
+nim	vips_object_preclose	libvips/bindings/object.html#vips_object_preclose,ptr.VipsObject	proc vips_object_preclose(obj: ptr VipsObject)		128
+nim	vips_object_build	libvips/bindings/object.html#vips_object_build,ptr.VipsObject	proc vips_object_build(obj: ptr VipsObject): cint		129
+nim	vips_object_summary_class	libvips/bindings/object.html#vips_object_summary_class,ptr.VipsObjectClass,ptr.VipsBuf	proc vips_object_summary_class(klass: ptr VipsObjectClass; buf: ptr VipsBuf)		130
+nim	vips_object_summary	libvips/bindings/object.html#vips_object_summary,ptr.VipsObject,ptr.VipsBuf	proc vips_object_summary(obj: ptr VipsObject; buf: ptr VipsBuf)		131
+nim	vips_object_dump	libvips/bindings/object.html#vips_object_dump,ptr.VipsObject,ptr.VipsBuf	proc vips_object_dump(obj: ptr VipsObject; buf: ptr VipsBuf)		132
+nim	vips_object_print_summary_class	libvips/bindings/object.html#vips_object_print_summary_class,ptr.VipsObjectClass	proc vips_object_print_summary_class(klass: ptr VipsObjectClass)		133
+nim	vips_object_print_summary	libvips/bindings/object.html#vips_object_print_summary,ptr.VipsObject	proc vips_object_print_summary(obj: ptr VipsObject)		134
+nim	vips_object_print_dump	libvips/bindings/object.html#vips_object_print_dump,ptr.VipsObject	proc vips_object_print_dump(obj: ptr VipsObject)		135
+nim	vips_object_print_name	libvips/bindings/object.html#vips_object_print_name,ptr.VipsObject	proc vips_object_print_name(obj: ptr VipsObject)		136
+nim	vips_object_sanity	libvips/bindings/object.html#vips_object_sanity,ptr.VipsObject	proc vips_object_sanity(obj: ptr VipsObject): cint		137
+nim	vips_object_get_type	libvips/bindings/object.html#vips_object_get_type	proc vips_object_get_type(): GType		138
+nim	vips_object_class_install_argument	libvips/bindings/object.html#vips_object_class_install_argument,ptr.VipsObjectClass,ptr.GParamSpec,VipsArgumentFlags,cint,cuint	proc vips_object_class_install_argument(cls: ptr VipsObjectClass;\n                                   pspec: ptr GParamSpec;\n                                   flags: VipsArgumentFlags; priority: cint;\n                                   offset: cuint)		139
+nim	vips_object_set_argument_from_string	libvips/bindings/object.html#vips_object_set_argument_from_string,ptr.VipsObject,cstring,cstring	proc vips_object_set_argument_from_string(obj: ptr VipsObject; name, value: cstring): cint		140
+nim	vips_object_argument_needsstring	libvips/bindings/object.html#vips_object_argument_needsstring,ptr.VipsObject,cstring	proc vips_object_argument_needsstring(obj: ptr VipsObject; name: cstring): cint		141
+nim	vips_object_get_argument_to_string	libvips/bindings/object.html#vips_object_get_argument_to_string,ptr.VipsObject,cstring,cstring	proc vips_object_get_argument_to_string(obj: ptr VipsObject; name, arg: cstring): cint		142
+nim	vips_object_set_required	libvips/bindings/object.html#vips_object_set_required,ptr.VipsObject,cstring	proc vips_object_set_required(obj: ptr VipsObject; value: cstring): cint		143
+nim	vips_object_new	libvips/bindings/object.html#vips_object_new,GType,VipsObjectSetArguments,pointer,pointer	proc vips_object_new(typ: GType; set: VipsObjectSetArguments; a, b: pointer): ptr VipsObject		144
+nim	vips_object_set_valist	libvips/bindings/object.html#vips_object_set_valist,ptr.VipsObject,va_list	proc vips_object_set_valist(obj: ptr VipsObject; ap: va_list): cint		145
+nim	vips_object_set	libvips/bindings/object.html#vips_object_set,ptr.VipsObject	proc vips_object_set(obj: ptr VipsObject): cint		146
+nim	vips_object_set_from_string	libvips/bindings/object.html#vips_object_set_from_string,ptr.VipsObject,cstring	proc vips_object_set_from_string(obj: ptr VipsObject; str: cstring): cint		147
+nim	vips_object_new_from_string	libvips/bindings/object.html#vips_object_new_from_string,ptr.VipsObjectClass,cstring	proc vips_object_new_from_string(object_class: ptr VipsObjectClass; p: cstring): ptr VipsObject		148
+nim	vips_object_to_string	libvips/bindings/object.html#vips_object_to_string,ptr.VipsObject,ptr.VipsBuf	proc vips_object_to_string(obj: ptr VipsObject; buf: ptr VipsBuf)		149
+nim	vips_object_map	libvips/bindings/object.html#vips_object_map,VipsSListMap2Fn,pointer,pointer	proc vips_object_map(fn: VipsSListMap2Fn; a, b: pointer): pointer		150
+nim	vips_type_map	libvips/bindings/object.html#vips_type_map,GType,VipsTypeMap2Fn,pointer,pointer	proc vips_type_map(base: GType; fn: VipsTypeMap2Fn; a, b: pointer): pointer		151
+nim	vips_type_map_all	libvips/bindings/object.html#vips_type_map_all,GType,VipsTypeMapFn,pointer	proc vips_type_map_all(base: GType; fn: VipsTypeMapFn; a: pointer): pointer		152
+nim	vips_type_depth	libvips/bindings/object.html#vips_type_depth,GType	proc vips_type_depth(typ: GType): cint		153
+nim	vips_type_find	libvips/bindings/object.html#vips_type_find,cstring,cstring	proc vips_type_find(basename, nickname: cstring): GType		154
+nim	vips_nickname_find	libvips/bindings/object.html#vips_nickname_find,GType	proc vips_nickname_find(typ: GType): cstring		155
+nim	vips_class_map_all	libvips/bindings/object.html#vips_class_map_all,GType,VipsClassMapFn,pointer	proc vips_class_map_all(typ: GType; fn: VipsClassMapFn; a: pointer): pointer		156
+nim	vips_class_find	libvips/bindings/object.html#vips_class_find,cstring,cstring	proc vips_class_find(basename, nickname: cstring): ptr VipsObjectClass		157
+nim	vips_object_local_array	libvips/bindings/object.html#vips_object_local_array,ptr.VipsObject,cint	proc vips_object_local_array(parent: ptr VipsObject; n: cint): ptr ptr VipsObject		158
+nim	vips_object_local_cb	libvips/bindings/object.html#vips_object_local_cb,ptr.VipsObject,ptr.GObject	proc vips_object_local_cb(obj: ptr VipsObject; obj2: ptr GObject)		159
+nim	vips_object_set_static	libvips/bindings/object.html#vips_object_set_static,ptr.VipsObject,cint	proc vips_object_set_static(obj: ptr VipsObject; obj2: cint)		160
+nim	vips_object_print_all	libvips/bindings/object.html#vips_object_print_all	proc vips_object_print_all()		161
+nim	vips_object_sanity_all	libvips/bindings/object.html#vips_object_sanity_all	proc vips_object_sanity_all()		162
+nim	vips_object_rewind	libvips/bindings/object.html#vips_object_rewind,ptr.VipsObject	proc vips_object_rewind(obj: ptr VipsObject)		163
+nim	vips_object_unref_outputs	libvips/bindings/object.html#vips_object_unref_outputs,ptr.VipsObject	proc vips_object_unref_outputs(obj: ptr VipsObject)		164
+nim	vips_object_get_description	libvips/bindings/object.html#vips_object_get_description,ptr.VipsObject	proc vips_object_get_description(obj: ptr VipsObject): cstring		165

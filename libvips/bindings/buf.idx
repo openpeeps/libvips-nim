@@ -1,0 +1,25 @@
+nimTitle	buf	libvips/bindings/buf.html	module libvips/bindings/buf		0
+nim	VipsBuf	libvips/bindings/buf.html#VipsBuf	object VipsBuf		4
+nim	vips_buf_rewind	libvips/bindings/buf.html#vips_buf_rewind,ptr.VipsBuf	proc vips_buf_rewind(buf: ptr VipsBuf)		16
+nim	vips_buf_destroy	libvips/bindings/buf.html#vips_buf_destroy,ptr.VipsBuf	proc vips_buf_destroy(buf: ptr VipsBuf)		17
+nim	vips_buf_init	libvips/bindings/buf.html#vips_buf_init,ptr.VipsBuf	proc vips_buf_init(buf: ptr VipsBuf)		18
+nim	vips_buf_set_static	libvips/bindings/buf.html#vips_buf_set_static,ptr.VipsBuf,cstring,cint	proc vips_buf_set_static(buf: ptr VipsBuf; base: cstring; mx: cint)		19
+nim	vips_buf_set_dynamic	libvips/bindings/buf.html#vips_buf_set_dynamic,ptr.VipsBuf,cint	proc vips_buf_set_dynamic(buf: ptr VipsBuf; mx: cint)		20
+nim	vips_buf_init_static	libvips/bindings/buf.html#vips_buf_init_static,ptr.VipsBuf,cstring,cint	proc vips_buf_init_static(buf: ptr VipsBuf; base: cstring; mx: cint)		21
+nim	vips_buf_init_dynamic	libvips/bindings/buf.html#vips_buf_init_dynamic,ptr.VipsBuf,cint	proc vips_buf_init_dynamic(buf: ptr VipsBuf; mx: cint)		22
+nim	vips_buf_appendns	libvips/bindings/buf.html#vips_buf_appendns,ptr.VipsBuf,cstring,cint	proc vips_buf_appendns(buf: ptr VipsBuf; str: cstring; sz: cint): gboolean		23
+nim	vips_buf_appends	libvips/bindings/buf.html#vips_buf_appends,ptr.VipsBuf,cstring	proc vips_buf_appends(buf: ptr VipsBuf; str: cstring): gboolean		24
+nim	vips_buf_vappendf	libvips/bindings/buf.html#vips_buf_vappendf,ptr.VipsBuf,cstring,va_list	proc vips_buf_vappendf(buf: ptr VipsBuf; fmt: cstring; ap: va_list): gboolean		25
+nim	vips_buf_appendc	libvips/bindings/buf.html#vips_buf_appendc,ptr.VipsBuf,char	proc vips_buf_appendc(buf: ptr VipsBuf; ch: char): gboolean		26
+nim	vips_buf_appendgv	libvips/bindings/buf.html#vips_buf_appendgv,ptr.VipsBuf,ptr.GValue	proc vips_buf_appendgv(buf: ptr VipsBuf; value: ptr GValue): gboolean		27
+nim	vips_buf_append_size	libvips/bindings/buf.html#vips_buf_append_size,ptr.VipsBuf,csize_t	proc vips_buf_append_size(buf: ptr VipsBuf; n: csize_t): gboolean		28
+nim	vips_buf_removec	libvips/bindings/buf.html#vips_buf_removec,ptr.VipsBuf,char	proc vips_buf_removec(buf: ptr VipsBuf; ch: char): gboolean		29
+nim	vips_buf_change	libvips/bindings/buf.html#vips_buf_change,ptr.VipsBuf,cstring,cstring	proc vips_buf_change(buf: ptr VipsBuf; o: cstring; n: cstring): gboolean		30
+nim	vips_buf_is_empty	libvips/bindings/buf.html#vips_buf_is_empty,ptr.VipsBuf	proc vips_buf_is_empty(buf: ptr VipsBuf): gboolean		31
+nim	vips_buf_is_full	libvips/bindings/buf.html#vips_buf_is_full,ptr.VipsBuf	proc vips_buf_is_full(buf: ptr VipsBuf): gboolean		32
+nim	vips_buf_all	libvips/bindings/buf.html#vips_buf_all,ptr.VipsBuf	proc vips_buf_all(buf: ptr VipsBuf): cstring		33
+nim	vips_buf_firstline	libvips/bindings/buf.html#vips_buf_firstline,ptr.VipsBuf	proc vips_buf_firstline(buf: ptr VipsBuf): cstring		34
+nim	vips_buf_appendg	libvips/bindings/buf.html#vips_buf_appendg,ptr.VipsBuf,cdouble	proc vips_buf_appendg(buf: ptr VipsBuf; g: cdouble): gboolean		35
+nim	vips_buf_appendd	libvips/bindings/buf.html#vips_buf_appendd,ptr.VipsBuf,cint	proc vips_buf_appendd(buf: ptr VipsBuf; d: cint): gboolean		36
+nim	vips_buf_len	libvips/bindings/buf.html#vips_buf_len,ptr.VipsBuf	proc vips_buf_len(buf: ptr VipsBuf): cint		37
+nim	vips_buf_appendf	libvips/bindings/buf.html#vips_buf_appendf,ptr.VipsBuf,cstring	proc vips_buf_appendf(buf: ptr VipsBuf; fmt: cstring): gboolean		40

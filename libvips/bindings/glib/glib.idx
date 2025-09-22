@@ -1,0 +1,16 @@
+nimTitle	glib	libvips/bindings/glib/glib.html	module libvips/bindings/glib/glib		0
+nim	GObject	libvips/bindings/glib/glib.html#GObject	object GObject		2
+nim	GObjectClass	libvips/bindings/glib/glib.html#GObjectClass	object GObjectClass		5
+nim	GSList	libvips/bindings/glib/glib.html#GSList	object GSList		7
+nim	GType	libvips/bindings/glib/glib.html#GType	type GType		11
+nim	GMutex	libvips/bindings/glib/glib.html#GMutex	object GMutex		13
+nim	GValue	libvips/bindings/glib/glib.html#GValue	object GValue		16
+nim	GParamSpec	libvips/bindings/glib/glib.html#GParamSpec	object GParamSpec		19
+nim	GOptionGroup	libvips/bindings/glib/glib.html#GOptionGroup	object GOptionGroup		22
+nim	gboolean	libvips/bindings/glib/glib.html#gboolean	type gboolean		25
+nim	guint	libvips/bindings/glib/glib.html#guint	type guint		26
+nim	guint64	libvips/bindings/glib/glib.html#guint64	type guint64		27
+nim	guint32	libvips/bindings/glib/glib.html#guint32	type guint32		28
+nim	gint64	libvips/bindings/glib/glib.html#gint64	type gint64		29
+nim	gint32	libvips/bindings/glib/glib.html#gint32	type gint32		30
+nim	g_object_unref	libvips/bindings/glib/glib.html#g_object_unref,pointer	proc g_object_unref(obj: pointer)		33

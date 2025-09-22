@@ -25,7 +25,7 @@
   <div class="document" id="documentId">
     <div class="container">
       <h1 class="title">Index</h1>
-      Modules: <a href="index.html">libvips</a>, <a href="libvips/bindings/arithmetic.html">libvips/bindings/arithmetic</a>, <a href="libvips/bindings/basic.html">libvips/bindings/basic</a>, <a href="libvips/bindings/colour.html">libvips/bindings/colour</a>, <a href="libvips/bindings/conversion.html">libvips/bindings/conversion</a>, <a href="libvips/bindings/convolution.html">libvips/bindings/convolution</a>, <a href="libvips/bindings/error.html">libvips/bindings/error</a>, <a href="libvips/bindings/foreign.html">libvips/bindings/foreign</a>, <a href="libvips/bindings/header.html">libvips/bindings/header</a>, <a href="libvips/bindings/image.html">libvips/bindings/image</a>, <a href="libvips/bindings/resample.html">libvips/bindings/resample</a>, <a href="libvips/bindings/types.html">libvips/bindings/types</a>, <a href="libvips/bindings/vips.html">libvips/bindings/vips</a>.<br/><p /><h2>API symbols</h2>
+      Modules: <a href="index.html">libvips</a>, <a href="libvips/bindings/arithmetic.html">libvips/bindings/arithmetic</a>, <a href="libvips/bindings/basic.html">libvips/bindings/basic</a>, <a href="libvips/bindings/buf.html">libvips/bindings/buf</a>, <a href="libvips/bindings/colour.html">libvips/bindings/colour</a>, <a href="libvips/bindings/conversion.html">libvips/bindings/conversion</a>, <a href="libvips/bindings/convolution.html">libvips/bindings/convolution</a>, <a href="libvips/bindings/error.html">libvips/bindings/error</a>, <a href="libvips/bindings/foreign.html">libvips/bindings/foreign</a>, <a href="libvips/bindings/glib/glib.html">libvips/bindings/glib/glib</a>, <a href="libvips/bindings/header.html">libvips/bindings/header</a>, <a href="libvips/bindings/image.html">libvips/bindings/image</a>, <a href="libvips/bindings/object.html">libvips/bindings/object</a>, <a href="libvips/bindings/operation.html">libvips/bindings/operation</a>, <a href="libvips/bindings/resample.html">libvips/bindings/resample</a>, <a href="libvips/bindings/types.html">libvips/bindings/types</a>, <a href="libvips/bindings/vector.html">libvips/bindings/vector</a>, <a href="libvips/bindings/vips.html">libvips/bindings/vips</a>.<br/><p /><h2>API symbols</h2>
 <dl><dt><a name="c_vips_affine" href="#c_vips_affine"><span>c_vips_affine:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="resample: proc c_vips_affine(input: ptr VipsImage; output: ptr ptr VipsImage;
@@ -108,35 +108,63 @@
           </ul></dd>
 <dt><a name="gboolean" href="#gboolean"><span>gboolean:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="types: type gboolean" href="libvips/bindings/types.html#gboolean">types: type gboolean</a></li>
+          data-doc-search-tag="glib: type gboolean" href="libvips/bindings/glib/glib.html#gboolean">glib: type gboolean</a></li>
+          </ul></dd>
+<dt><a name="gint32" href="#gint32"><span>gint32:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="glib: type gint32" href="libvips/bindings/glib/glib.html#gint32">glib: type gint32</a></li>
+          </ul></dd>
+<dt><a name="gint64" href="#gint64"><span>gint64:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="glib: type gint64" href="libvips/bindings/glib/glib.html#gint64">glib: type gint64</a></li>
           </ul></dd>
 <dt><a name="GMutex" href="#GMutex"><span>GMutex:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="types: object GMutex" href="libvips/bindings/types.html#GMutex">types: object GMutex</a></li>
+          data-doc-search-tag="glib: object GMutex" href="libvips/bindings/glib/glib.html#GMutex">glib: object GMutex</a></li>
           </ul></dd>
 <dt><a name="GObject" href="#GObject"><span>GObject:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="types: object GObject" href="libvips/bindings/types.html#GObject">types: object GObject</a></li>
+          data-doc-search-tag="glib: object GObject" href="libvips/bindings/glib/glib.html#GObject">glib: object GObject</a></li>
+          </ul></dd>
+<dt><a name="GObjectClass" href="#GObjectClass"><span>GObjectClass:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="glib: object GObjectClass" href="libvips/bindings/glib/glib.html#GObjectClass">glib: object GObjectClass</a></li>
+          </ul></dd>
+<dt><a name="g_object_unref" href="#g_object_unref"><span>g_object_unref:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="glib: proc g_object_unref(obj: pointer)" href="libvips/bindings/glib/glib.html#g_object_unref%2Cpointer">glib: proc g_object_unref(obj: pointer)</a></li>
+          </ul></dd>
+<dt><a name="GOptionGroup" href="#GOptionGroup"><span>GOptionGroup:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="glib: object GOptionGroup" href="libvips/bindings/glib/glib.html#GOptionGroup">glib: object GOptionGroup</a></li>
+          </ul></dd>
+<dt><a name="GParamSpec" href="#GParamSpec"><span>GParamSpec:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="glib: object GParamSpec" href="libvips/bindings/glib/glib.html#GParamSpec">glib: object GParamSpec</a></li>
+          </ul></dd>
+<dt><a name="GSList" href="#GSList"><span>GSList:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="glib: object GSList" href="libvips/bindings/glib/glib.html#GSList">glib: object GSList</a></li>
           </ul></dd>
 <dt><a name="GType" href="#GType"><span>GType:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="types: type GType" href="libvips/bindings/types.html#GType">types: type GType</a></li>
+          data-doc-search-tag="glib: type GType" href="libvips/bindings/glib/glib.html#GType">glib: type GType</a></li>
+          </ul></dd>
+<dt><a name="guint" href="#guint"><span>guint:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="glib: type guint" href="libvips/bindings/glib/glib.html#guint">glib: type guint</a></li>
           </ul></dd>
 <dt><a name="guint32" href="#guint32"><span>guint32:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="types: type guint32" href="libvips/bindings/types.html#guint32">types: type guint32</a></li>
+          data-doc-search-tag="glib: type guint32" href="libvips/bindings/glib/glib.html#guint32">glib: type guint32</a></li>
           </ul></dd>
 <dt><a name="guint64" href="#guint64"><span>guint64:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="types: type guint64" href="libvips/bindings/types.html#guint64">types: type guint64</a></li>
+          data-doc-search-tag="glib: type guint64" href="libvips/bindings/glib/glib.html#guint64">glib: type guint64</a></li>
           </ul></dd>
 <dt><a name="GValue" href="#GValue"><span>GValue:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="types: object GValue" href="libvips/bindings/types.html#GValue">types: object GValue</a></li>
-          </ul></dd>
-<dt><a name="PVipsBuf" href="#PVipsBuf"><span>PVipsBuf:</span></a></dt><dd><ul class="simple">
-<li><a class="reference external"
-          data-doc-search-tag="basic: type PVipsBuf" href="libvips/bindings/basic.html#PVipsBuf">basic: type PVipsBuf</a></li>
+          data-doc-search-tag="glib: object GValue" href="libvips/bindings/glib/glib.html#GValue">glib: object GValue</a></li>
           </ul></dd>
 <dt><a name="PVipsImage" href="#PVipsImage"><span>PVipsImage:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -161,6 +189,10 @@
 <dt><a name="PVipsTarget" href="#PVipsTarget"><span>PVipsTarget:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="basic: type PVipsTarget" href="libvips/bindings/basic.html#PVipsTarget">basic: type PVipsTarget</a></li>
+          </ul></dd>
+<dt><a name="va_list" href="#va_list"><span>va_list:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="types: object va_list" href="libvips/bindings/types.html#va_list">types: object va_list</a></li>
           </ul></dd>
 <dt><a name="vips_abs" href="#vips_abs"><span>vips_abs:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -273,6 +305,68 @@
 <dt><a name="vips_area_unref" href="#vips_area_unref"><span>vips_area_unref:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="types: proc vips_area_unref(area: ptr VipsArea)" href="libvips/bindings/types.html#vips_area_unref%2Cptr.VipsArea">types: proc vips_area_unref(area: ptr VipsArea)</a></li>
+          </ul></dd>
+<dt><a name="VipsArgument" href="#VipsArgument"><span>VipsArgument:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: object VipsArgument" href="libvips/bindings/object.html#VipsArgument">object: object VipsArgument</a></li>
+          </ul></dd>
+<dt><a name="VipsArgumentClass" href="#VipsArgumentClass"><span>VipsArgumentClass:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: object VipsArgumentClass" href="libvips/bindings/object.html#VipsArgumentClass">object: object VipsArgumentClass</a></li>
+          </ul></dd>
+<dt><a name="vips_argument_class_map" href="#vips_argument_class_map"><span>vips_argument_class_map:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: proc vips_argument_class_map(object_class: ptr VipsObjectClass;
+                        fn: VipsArgumentClassMapFn; a, b: pointer): pointer" href="libvips/bindings/object.html#vips_argument_class_map%2Cptr.VipsObjectClass%2CVipsArgumentClassMapFn%2Cpointer%2Cpointer">object: proc vips_argument_class_map(object_class: ptr VipsObjectClass;
+                        fn: VipsArgumentClassMapFn; a, b: pointer): pointer</a></li>
+          </ul></dd>
+<dt><a name="VipsArgumentClassMapFn" href="#VipsArgumentClassMapFn"><span>VipsArgumentClassMapFn:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: type VipsArgumentClassMapFn" href="libvips/bindings/object.html#VipsArgumentClassMapFn">object: type VipsArgumentClassMapFn</a></li>
+          </ul></dd>
+<dt><a name="vips_argument_class_needsstring" href="#vips_argument_class_needsstring"><span>vips_argument_class_needsstring:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: proc vips_argument_class_needsstring(argument_class: ptr VipsArgumentClass): cint" href="libvips/bindings/object.html#vips_argument_class_needsstring%2Cptr.VipsArgumentClass">object: proc vips_argument_class_needsstring(argument_class: ptr VipsArgumentClass): cint</a></li>
+          </ul></dd>
+<dt><a name="VipsArgumentFlags" href="#VipsArgumentFlags"><span>VipsArgumentFlags:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: enum VipsArgumentFlags" href="libvips/bindings/object.html#VipsArgumentFlags">object: enum VipsArgumentFlags</a></li>
+          </ul></dd>
+<dt><a name="vips_argument_get_id" href="#vips_argument_get_id"><span>vips_argument_get_id:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: proc vips_argument_get_id(): cint" href="libvips/bindings/object.html#vips_argument_get_id">object: proc vips_argument_get_id(): cint</a></li>
+          </ul></dd>
+<dt><a name="VipsArgumentInstance" href="#VipsArgumentInstance"><span>VipsArgumentInstance:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: object VipsArgumentInstance" href="libvips/bindings/object.html#VipsArgumentInstance">object: object VipsArgumentInstance</a></li>
+          </ul></dd>
+<dt><a name="vips_argument_map" href="#vips_argument_map"><span>vips_argument_map:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: proc vips_argument_map(obj: ptr VipsObject; fn: VipsArgumentMapFn; a, b: pointer): pointer" href="libvips/bindings/object.html#vips_argument_map%2Cptr.VipsObject%2CVipsArgumentMapFn%2Cpointer%2Cpointer">object: proc vips_argument_map(obj: ptr VipsObject; fn: VipsArgumentMapFn; a, b: pointer): pointer</a></li>
+          </ul></dd>
+<dt><a name="VipsArgumentMapFn" href="#VipsArgumentMapFn"><span>VipsArgumentMapFn:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: type VipsArgumentMapFn" href="libvips/bindings/object.html#VipsArgumentMapFn">object: type VipsArgumentMapFn</a></li>
+          </ul></dd>
+<dt><a name="VIPS_ARGUMENT_OPTIONAL_INPUT" href="#VIPS_ARGUMENT_OPTIONAL_INPUT"><span>VIPS_ARGUMENT_OPTIONAL_INPUT:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: const VIPS_ARGUMENT_OPTIONAL_INPUT" href="libvips/bindings/object.html#VIPS_ARGUMENT_OPTIONAL_INPUT">object: const VIPS_ARGUMENT_OPTIONAL_INPUT</a></li>
+          </ul></dd>
+<dt><a name="VIPS_ARGUMENT_OPTIONAL_OUTPUT" href="#VIPS_ARGUMENT_OPTIONAL_OUTPUT"><span>VIPS_ARGUMENT_OPTIONAL_OUTPUT:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: const VIPS_ARGUMENT_OPTIONAL_OUTPUT" href="libvips/bindings/object.html#VIPS_ARGUMENT_OPTIONAL_OUTPUT">object: const VIPS_ARGUMENT_OPTIONAL_OUTPUT</a></li>
+          </ul></dd>
+<dt><a name="VIPS_ARGUMENT_REQUIRED_INPUT" href="#VIPS_ARGUMENT_REQUIRED_INPUT"><span>VIPS_ARGUMENT_REQUIRED_INPUT:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: const VIPS_ARGUMENT_REQUIRED_INPUT" href="libvips/bindings/object.html#VIPS_ARGUMENT_REQUIRED_INPUT">object: const VIPS_ARGUMENT_REQUIRED_INPUT</a></li>
+          </ul></dd>
+<dt><a name="VIPS_ARGUMENT_REQUIRED_OUTPUT" href="#VIPS_ARGUMENT_REQUIRED_OUTPUT"><span>VIPS_ARGUMENT_REQUIRED_OUTPUT:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: const VIPS_ARGUMENT_REQUIRED_OUTPUT" href="libvips/bindings/object.html#VIPS_ARGUMENT_REQUIRED_OUTPUT">object: const VIPS_ARGUMENT_REQUIRED_OUTPUT</a></li>
+          </ul></dd>
+<dt><a name="VipsArgumentTable" href="#VipsArgumentTable"><span>VipsArgumentTable:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: type VipsArgumentTable" href="libvips/bindings/object.html#VipsArgumentTable">object: type VipsArgumentTable</a></li>
           </ul></dd>
 <dt><a name="VipsArrayDouble" href="#VipsArrayDouble"><span>VipsArrayDouble:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -538,7 +632,99 @@
           </ul></dd>
 <dt><a name="VipsBuf" href="#VipsBuf"><span>VipsBuf:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="basic: object VipsBuf" href="libvips/bindings/basic.html#VipsBuf">basic: object VipsBuf</a></li>
+          data-doc-search-tag="buf: object VipsBuf" href="libvips/bindings/buf.html#VipsBuf">buf: object VipsBuf</a></li>
+          </ul></dd>
+<dt><a name="vips_buf_all" href="#vips_buf_all"><span>vips_buf_all:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="buf: proc vips_buf_all(buf: ptr VipsBuf): cstring" href="libvips/bindings/buf.html#vips_buf_all%2Cptr.VipsBuf">buf: proc vips_buf_all(buf: ptr VipsBuf): cstring</a></li>
+          </ul></dd>
+<dt><a name="vips_buf_appendc" href="#vips_buf_appendc"><span>vips_buf_appendc:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="buf: proc vips_buf_appendc(buf: ptr VipsBuf; ch: char): gboolean" href="libvips/bindings/buf.html#vips_buf_appendc%2Cptr.VipsBuf%2Cchar">buf: proc vips_buf_appendc(buf: ptr VipsBuf; ch: char): gboolean</a></li>
+          </ul></dd>
+<dt><a name="vips_buf_appendd" href="#vips_buf_appendd"><span>vips_buf_appendd:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="buf: proc vips_buf_appendd(buf: ptr VipsBuf; d: cint): gboolean" href="libvips/bindings/buf.html#vips_buf_appendd%2Cptr.VipsBuf%2Ccint">buf: proc vips_buf_appendd(buf: ptr VipsBuf; d: cint): gboolean</a></li>
+          </ul></dd>
+<dt><a name="vips_buf_appendf" href="#vips_buf_appendf"><span>vips_buf_appendf:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="buf: proc vips_buf_appendf(buf: ptr VipsBuf; fmt: cstring): gboolean" href="libvips/bindings/buf.html#vips_buf_appendf%2Cptr.VipsBuf%2Ccstring">buf: proc vips_buf_appendf(buf: ptr VipsBuf; fmt: cstring): gboolean</a></li>
+          </ul></dd>
+<dt><a name="vips_buf_appendg" href="#vips_buf_appendg"><span>vips_buf_appendg:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="buf: proc vips_buf_appendg(buf: ptr VipsBuf; g: cdouble): gboolean" href="libvips/bindings/buf.html#vips_buf_appendg%2Cptr.VipsBuf%2Ccdouble">buf: proc vips_buf_appendg(buf: ptr VipsBuf; g: cdouble): gboolean</a></li>
+          </ul></dd>
+<dt><a name="vips_buf_appendgv" href="#vips_buf_appendgv"><span>vips_buf_appendgv:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="buf: proc vips_buf_appendgv(buf: ptr VipsBuf; value: ptr GValue): gboolean" href="libvips/bindings/buf.html#vips_buf_appendgv%2Cptr.VipsBuf%2Cptr.GValue">buf: proc vips_buf_appendgv(buf: ptr VipsBuf; value: ptr GValue): gboolean</a></li>
+          </ul></dd>
+<dt><a name="vips_buf_appendns" href="#vips_buf_appendns"><span>vips_buf_appendns:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="buf: proc vips_buf_appendns(buf: ptr VipsBuf; str: cstring; sz: cint): gboolean" href="libvips/bindings/buf.html#vips_buf_appendns%2Cptr.VipsBuf%2Ccstring%2Ccint">buf: proc vips_buf_appendns(buf: ptr VipsBuf; str: cstring; sz: cint): gboolean</a></li>
+          </ul></dd>
+<dt><a name="vips_buf_appends" href="#vips_buf_appends"><span>vips_buf_appends:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="buf: proc vips_buf_appends(buf: ptr VipsBuf; str: cstring): gboolean" href="libvips/bindings/buf.html#vips_buf_appends%2Cptr.VipsBuf%2Ccstring">buf: proc vips_buf_appends(buf: ptr VipsBuf; str: cstring): gboolean</a></li>
+          </ul></dd>
+<dt><a name="vips_buf_append_size" href="#vips_buf_append_size"><span>vips_buf_append_size:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="buf: proc vips_buf_append_size(buf: ptr VipsBuf; n: csize_t): gboolean" href="libvips/bindings/buf.html#vips_buf_append_size%2Cptr.VipsBuf%2Ccsize_t">buf: proc vips_buf_append_size(buf: ptr VipsBuf; n: csize_t): gboolean</a></li>
+          </ul></dd>
+<dt><a name="vips_buf_change" href="#vips_buf_change"><span>vips_buf_change:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="buf: proc vips_buf_change(buf: ptr VipsBuf; o: cstring; n: cstring): gboolean" href="libvips/bindings/buf.html#vips_buf_change%2Cptr.VipsBuf%2Ccstring%2Ccstring">buf: proc vips_buf_change(buf: ptr VipsBuf; o: cstring; n: cstring): gboolean</a></li>
+          </ul></dd>
+<dt><a name="vips_buf_destroy" href="#vips_buf_destroy"><span>vips_buf_destroy:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="buf: proc vips_buf_destroy(buf: ptr VipsBuf)" href="libvips/bindings/buf.html#vips_buf_destroy%2Cptr.VipsBuf">buf: proc vips_buf_destroy(buf: ptr VipsBuf)</a></li>
+          </ul></dd>
+<dt><a name="vips_buf_firstline" href="#vips_buf_firstline"><span>vips_buf_firstline:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="buf: proc vips_buf_firstline(buf: ptr VipsBuf): cstring" href="libvips/bindings/buf.html#vips_buf_firstline%2Cptr.VipsBuf">buf: proc vips_buf_firstline(buf: ptr VipsBuf): cstring</a></li>
+          </ul></dd>
+<dt><a name="vips_buf_init" href="#vips_buf_init"><span>vips_buf_init:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="buf: proc vips_buf_init(buf: ptr VipsBuf)" href="libvips/bindings/buf.html#vips_buf_init%2Cptr.VipsBuf">buf: proc vips_buf_init(buf: ptr VipsBuf)</a></li>
+          </ul></dd>
+<dt><a name="vips_buf_init_dynamic" href="#vips_buf_init_dynamic"><span>vips_buf_init_dynamic:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="buf: proc vips_buf_init_dynamic(buf: ptr VipsBuf; mx: cint)" href="libvips/bindings/buf.html#vips_buf_init_dynamic%2Cptr.VipsBuf%2Ccint">buf: proc vips_buf_init_dynamic(buf: ptr VipsBuf; mx: cint)</a></li>
+          </ul></dd>
+<dt><a name="vips_buf_init_static" href="#vips_buf_init_static"><span>vips_buf_init_static:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="buf: proc vips_buf_init_static(buf: ptr VipsBuf; base: cstring; mx: cint)" href="libvips/bindings/buf.html#vips_buf_init_static%2Cptr.VipsBuf%2Ccstring%2Ccint">buf: proc vips_buf_init_static(buf: ptr VipsBuf; base: cstring; mx: cint)</a></li>
+          </ul></dd>
+<dt><a name="vips_buf_is_empty" href="#vips_buf_is_empty"><span>vips_buf_is_empty:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="buf: proc vips_buf_is_empty(buf: ptr VipsBuf): gboolean" href="libvips/bindings/buf.html#vips_buf_is_empty%2Cptr.VipsBuf">buf: proc vips_buf_is_empty(buf: ptr VipsBuf): gboolean</a></li>
+          </ul></dd>
+<dt><a name="vips_buf_is_full" href="#vips_buf_is_full"><span>vips_buf_is_full:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="buf: proc vips_buf_is_full(buf: ptr VipsBuf): gboolean" href="libvips/bindings/buf.html#vips_buf_is_full%2Cptr.VipsBuf">buf: proc vips_buf_is_full(buf: ptr VipsBuf): gboolean</a></li>
+          </ul></dd>
+<dt><a name="vips_buf_len" href="#vips_buf_len"><span>vips_buf_len:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="buf: proc vips_buf_len(buf: ptr VipsBuf): cint" href="libvips/bindings/buf.html#vips_buf_len%2Cptr.VipsBuf">buf: proc vips_buf_len(buf: ptr VipsBuf): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_buf_removec" href="#vips_buf_removec"><span>vips_buf_removec:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="buf: proc vips_buf_removec(buf: ptr VipsBuf; ch: char): gboolean" href="libvips/bindings/buf.html#vips_buf_removec%2Cptr.VipsBuf%2Cchar">buf: proc vips_buf_removec(buf: ptr VipsBuf; ch: char): gboolean</a></li>
+          </ul></dd>
+<dt><a name="vips_buf_rewind" href="#vips_buf_rewind"><span>vips_buf_rewind:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="buf: proc vips_buf_rewind(buf: ptr VipsBuf)" href="libvips/bindings/buf.html#vips_buf_rewind%2Cptr.VipsBuf">buf: proc vips_buf_rewind(buf: ptr VipsBuf)</a></li>
+          </ul></dd>
+<dt><a name="vips_buf_set_dynamic" href="#vips_buf_set_dynamic"><span>vips_buf_set_dynamic:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="buf: proc vips_buf_set_dynamic(buf: ptr VipsBuf; mx: cint)" href="libvips/bindings/buf.html#vips_buf_set_dynamic%2Cptr.VipsBuf%2Ccint">buf: proc vips_buf_set_dynamic(buf: ptr VipsBuf; mx: cint)</a></li>
+          </ul></dd>
+<dt><a name="vips_buf_set_static" href="#vips_buf_set_static"><span>vips_buf_set_static:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="buf: proc vips_buf_set_static(buf: ptr VipsBuf; base: cstring; mx: cint)" href="libvips/bindings/buf.html#vips_buf_set_static%2Cptr.VipsBuf%2Ccstring%2Ccint">buf: proc vips_buf_set_static(buf: ptr VipsBuf; base: cstring; mx: cint)</a></li>
+          </ul></dd>
+<dt><a name="vips_buf_vappendf" href="#vips_buf_vappendf"><span>vips_buf_vappendf:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="buf: proc vips_buf_vappendf(buf: ptr VipsBuf; fmt: cstring; ap: va_list): gboolean" href="libvips/bindings/buf.html#vips_buf_vappendf%2Cptr.VipsBuf%2Ccstring%2Cva_list">buf: proc vips_buf_vappendf(buf: ptr VipsBuf; fmt: cstring; ap: va_list): gboolean</a></li>
           </ul></dd>
 <dt><a name="VIPS_B_X0" href="#VIPS_B_X0"><span>VIPS_B_X0:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -556,9 +742,89 @@
 <li><a class="reference external"
           data-doc-search-tag="colour: const VIPS_B_Z0" href="libvips/bindings/colour.html#VIPS_B_Z0">colour: const VIPS_B_Z0</a></li>
           </ul></dd>
+<dt><a name="vips_cache_drop_all" href="#vips_cache_drop_all"><span>vips_cache_drop_all:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="operation: proc vips_cache_drop_all()" href="libvips/bindings/operation.html#vips_cache_drop_all">operation: proc vips_cache_drop_all()</a></li>
+          </ul></dd>
+<dt><a name="vips_cache_get_max" href="#vips_cache_get_max"><span>vips_cache_get_max:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="operation: proc vips_cache_get_max(): cint" href="libvips/bindings/operation.html#vips_cache_get_max">operation: proc vips_cache_get_max(): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_cache_get_max_files" href="#vips_cache_get_max_files"><span>vips_cache_get_max_files:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="operation: proc vips_cache_get_max_files(): cint" href="libvips/bindings/operation.html#vips_cache_get_max_files">operation: proc vips_cache_get_max_files(): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_cache_get_max_mem" href="#vips_cache_get_max_mem"><span>vips_cache_get_max_mem:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="operation: proc vips_cache_get_max_mem(): csize_t" href="libvips/bindings/operation.html#vips_cache_get_max_mem">operation: proc vips_cache_get_max_mem(): csize_t</a></li>
+          </ul></dd>
+<dt><a name="vips_cache_get_size" href="#vips_cache_get_size"><span>vips_cache_get_size:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="operation: proc vips_cache_get_size(): cint" href="libvips/bindings/operation.html#vips_cache_get_size">operation: proc vips_cache_get_size(): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_cache_operation_build" href="#vips_cache_operation_build"><span>vips_cache_operation_build:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="operation: proc vips_cache_operation_build(operation: ptr VipsOperation): ptr VipsOperation" href="libvips/bindings/operation.html#vips_cache_operation_build%2Cptr.VipsOperation">operation: proc vips_cache_operation_build(operation: ptr VipsOperation): ptr VipsOperation</a></li>
+          </ul></dd>
+<dt><a name="vips_cache_operation_buildp" href="#vips_cache_operation_buildp"><span>vips_cache_operation_buildp:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="operation: proc vips_cache_operation_buildp(operation: ptr ptr VipsOperation): cint" href="libvips/bindings/operation.html#vips_cache_operation_buildp%2Cptr.ptr.VipsOperation">operation: proc vips_cache_operation_buildp(operation: ptr ptr VipsOperation): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_cache_print" href="#vips_cache_print"><span>vips_cache_print:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="operation: proc vips_cache_print()" href="libvips/bindings/operation.html#vips_cache_print">operation: proc vips_cache_print()</a></li>
+          </ul></dd>
+<dt><a name="vips_cache_set_dump" href="#vips_cache_set_dump"><span>vips_cache_set_dump:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="operation: proc vips_cache_set_dump(dump: gboolean)" href="libvips/bindings/operation.html#vips_cache_set_dump%2Cgboolean">operation: proc vips_cache_set_dump(dump: gboolean)</a></li>
+          </ul></dd>
+<dt><a name="vips_cache_set_max" href="#vips_cache_set_max"><span>vips_cache_set_max:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="operation: proc vips_cache_set_max(max: cint)" href="libvips/bindings/operation.html#vips_cache_set_max%2Ccint">operation: proc vips_cache_set_max(max: cint)</a></li>
+          </ul></dd>
+<dt><a name="vips_cache_set_max_files" href="#vips_cache_set_max_files"><span>vips_cache_set_max_files:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="operation: proc vips_cache_set_max_files(max_files: cint)" href="libvips/bindings/operation.html#vips_cache_set_max_files%2Ccint">operation: proc vips_cache_set_max_files(max_files: cint)</a></li>
+          </ul></dd>
+<dt><a name="vips_cache_set_max_mem" href="#vips_cache_set_max_mem"><span>vips_cache_set_max_mem:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="operation: proc vips_cache_set_max_mem(max_mem: csize_t)" href="libvips/bindings/operation.html#vips_cache_set_max_mem%2Ccsize_t">operation: proc vips_cache_set_max_mem(max_mem: csize_t)</a></li>
+          </ul></dd>
+<dt><a name="vips_cache_set_trace" href="#vips_cache_set_trace"><span>vips_cache_set_trace:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="operation: proc vips_cache_set_trace(trace: gboolean)" href="libvips/bindings/operation.html#vips_cache_set_trace%2Cgboolean">operation: proc vips_cache_set_trace(trace: gboolean)</a></li>
+          </ul></dd>
+<dt><a name="vips_call" href="#vips_call"><span>vips_call:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="operation: proc vips_call(operation_name: cstring): cint" href="libvips/bindings/operation.html#vips_call%2Ccstring">operation: proc vips_call(operation_name: cstring): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_call_argv" href="#vips_call_argv"><span>vips_call_argv:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="operation: proc vips_call_argv(operation: ptr VipsOperation; argc: cint; argv: cstringArray): cint" href="libvips/bindings/operation.html#vips_call_argv%2Cptr.VipsOperation%2Ccint%2CcstringArray">operation: proc vips_call_argv(operation: ptr VipsOperation; argc: cint; argv: cstringArray): cint</a></li>
+          </ul></dd>
 <dt><a name="VipsCallbackFn" href="#VipsCallbackFn"><span>VipsCallbackFn:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="basic: type VipsCallbackFn" href="libvips/bindings/basic.html#VipsCallbackFn">basic: type VipsCallbackFn</a></li>
+          </ul></dd>
+<dt><a name="vips_call_options" href="#vips_call_options"><span>vips_call_options:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="operation: proc vips_call_options(group: ptr GOptionGroup; operation: ptr VipsOperation)" href="libvips/bindings/operation.html#vips_call_options%2Cptr.GOptionGroup%2Cptr.VipsOperation">operation: proc vips_call_options(group: ptr GOptionGroup; operation: ptr VipsOperation)</a></li>
+          </ul></dd>
+<dt><a name="vips_call_required_optional" href="#vips_call_required_optional"><span>vips_call_required_optional:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="operation: proc vips_call_required_optional(operation: ptr ptr VipsOperation; required: va_list;
+                            optional: va_list): cint" href="libvips/bindings/operation.html#vips_call_required_optional%2Cptr.ptr.VipsOperation%2Cva_list%2Cva_list">operation: proc vips_call_required_optional(operation: ptr ptr VipsOperation; required: va_list;
+                            optional: va_list): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_call_split" href="#vips_call_split"><span>vips_call_split:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="operation: proc vips_call_split(operation_name: cstring; optional: va_list): cint" href="libvips/bindings/operation.html#vips_call_split%2Ccstring%2Cva_list">operation: proc vips_call_split(operation_name: cstring; optional: va_list): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_call_split_option_string" href="#vips_call_split_option_string"><span>vips_call_split_option_string:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="operation: proc vips_call_split_option_string(operation_name: cstring; option_string: cstring;
+                              optional: va_list): cint" href="libvips/bindings/operation.html#vips_call_split_option_string%2Ccstring%2Ccstring%2Cva_list">operation: proc vips_call_split_option_string(operation_name: cstring; option_string: cstring;
+                              optional: va_list): cint</a></li>
           </ul></dd>
 <dt><a name="vips_canny" href="#vips_canny"><span>vips_canny:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -747,6 +1013,18 @@
 <dt><a name="vips_clamp" href="#vips_clamp"><span>vips_clamp:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="arithmetic: proc vips_clamp(input: ptr VipsImage; res: ptr ptr VipsImage): cint" href="libvips/bindings/arithmetic.html#vips_clamp%2Cptr.VipsImage%2Cptr.ptr.VipsImage">arithmetic: proc vips_clamp(input: ptr VipsImage; res: ptr ptr VipsImage): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_class_find" href="#vips_class_find"><span>vips_class_find:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: proc vips_class_find(basename, nickname: cstring): ptr VipsObjectClass" href="libvips/bindings/object.html#vips_class_find%2Ccstring%2Ccstring">object: proc vips_class_find(basename, nickname: cstring): ptr VipsObjectClass</a></li>
+          </ul></dd>
+<dt><a name="vips_class_map_all" href="#vips_class_map_all"><span>vips_class_map_all:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: proc vips_class_map_all(typ: GType; fn: VipsClassMapFn; a: pointer): pointer" href="libvips/bindings/object.html#vips_class_map_all%2CGType%2CVipsClassMapFn%2Cpointer">object: proc vips_class_map_all(typ: GType; fn: VipsClassMapFn; a: pointer): pointer</a></li>
+          </ul></dd>
+<dt><a name="VipsClassMapFn" href="#VipsClassMapFn"><span>VipsClassMapFn:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: type VipsClassMapFn" href="libvips/bindings/object.html#VipsClassMapFn">object: type VipsClassMapFn</a></li>
           </ul></dd>
 <dt><a name="vips_CMC2LCh" href="#vips_CMC2LCh"><span>vips_CMC2LCh:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -947,6 +1225,14 @@
           data-doc-search-tag="conversion: proc vips_composite2(base, overlay: ptr VipsImage; output: ptr ptr VipsImage;
                 mode: VipsBlendMode): cint" href="libvips/bindings/conversion.html#vips_composite2%2Cptr.VipsImage%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2CVipsBlendMode">conversion: proc vips_composite2(base, overlay: ptr VipsImage; output: ptr ptr VipsImage;
                 mode: VipsBlendMode): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_concurrency_get" href="#vips_concurrency_get"><span>vips_concurrency_get:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="operation: proc vips_concurrency_get(): cint" href="libvips/bindings/operation.html#vips_concurrency_get">operation: proc vips_concurrency_get(): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_concurrency_set" href="#vips_concurrency_set"><span>vips_concurrency_set:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="operation: proc vips_concurrency_set(concurrency: cint)" href="libvips/bindings/operation.html#vips_concurrency_set%2Ccint">operation: proc vips_concurrency_set(concurrency: cint)</a></li>
           </ul></dd>
 <dt><a name="vips_conj" href="#vips_conj"><span>vips_conj:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -2786,6 +3072,10 @@
 <li><a class="reference external"
           data-doc-search-tag="arithmetic: proc vips_multiply(left: ptr VipsImage; right: ptr VipsImage; res: ptr ptr VipsImage): cint" href="libvips/bindings/arithmetic.html#vips_multiply%2Cptr.VipsImage%2Cptr.VipsImage%2Cptr.ptr.VipsImage">arithmetic: proc vips_multiply(left: ptr VipsImage; right: ptr VipsImage; res: ptr ptr VipsImage): cint</a></li>
           </ul></dd>
+<dt><a name="vips_nickname_find" href="#vips_nickname_find"><span>vips_nickname_find:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: proc vips_nickname_find(typ: GType): cstring" href="libvips/bindings/object.html#vips_nickname_find%2CGType">object: proc vips_nickname_find(typ: GType): cstring</a></li>
+          </ul></dd>
 <dt><a name="vips_niftiload" href="#vips_niftiload"><span>vips_niftiload:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="foreign: proc vips_niftiload(filename: cstring; res: ptr ptr VipsImage): cint" href="libvips/bindings/foreign.html#vips_niftiload%2Ccstring%2Cptr.ptr.VipsImage">foreign: proc vips_niftiload(filename: cstring; res: ptr ptr VipsImage): cint</a></li>
@@ -2812,6 +3102,194 @@
 <li><a class="reference external"
           data-doc-search-tag="arithmetic: proc vips_notequal_const1(input: ptr VipsImage; res: ptr ptr VipsImage; c: cdouble): cint" href="libvips/bindings/arithmetic.html#vips_notequal_const1%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2Ccdouble">arithmetic: proc vips_notequal_const1(input: ptr VipsImage; res: ptr ptr VipsImage; c: cdouble): cint</a></li>
           </ul></dd>
+<dt><a name="VipsObject" href="#VipsObject"><span>VipsObject:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: object VipsObject" href="libvips/bindings/object.html#VipsObject">object: object VipsObject</a></li>
+          </ul></dd>
+<dt><a name="vips_object_argument_isset" href="#vips_object_argument_isset"><span>vips_object_argument_isset:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: proc vips_object_argument_isset(obj: ptr VipsObject; name: cstring): cint" href="libvips/bindings/object.html#vips_object_argument_isset%2Cptr.VipsObject%2Ccstring">object: proc vips_object_argument_isset(obj: ptr VipsObject; name: cstring): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_object_argument_needsstring" href="#vips_object_argument_needsstring"><span>vips_object_argument_needsstring:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: proc vips_object_argument_needsstring(obj: ptr VipsObject; name: cstring): cint" href="libvips/bindings/object.html#vips_object_argument_needsstring%2Cptr.VipsObject%2Ccstring">object: proc vips_object_argument_needsstring(obj: ptr VipsObject; name: cstring): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_object_build" href="#vips_object_build"><span>vips_object_build:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: proc vips_object_build(obj: ptr VipsObject): cint" href="libvips/bindings/object.html#vips_object_build%2Cptr.VipsObject">object: proc vips_object_build(obj: ptr VipsObject): cint</a></li>
+          </ul></dd>
+<dt><a name="VipsObjectClass" href="#VipsObjectClass"><span>VipsObjectClass:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: object VipsObjectClass" href="libvips/bindings/object.html#VipsObjectClass">object: object VipsObjectClass</a></li>
+          </ul></dd>
+<dt><a name="vips_object_class_install_argument" href="#vips_object_class_install_argument"><span>vips_object_class_install_argument:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: proc vips_object_class_install_argument(cls: ptr VipsObjectClass;
+                                   pspec: ptr GParamSpec;
+                                   flags: VipsArgumentFlags; priority: cint;
+                                   offset: cuint)" href="libvips/bindings/object.html#vips_object_class_install_argument%2Cptr.VipsObjectClass%2Cptr.GParamSpec%2CVipsArgumentFlags%2Ccint%2Ccuint">object: proc vips_object_class_install_argument(cls: ptr VipsObjectClass;
+                                   pspec: ptr GParamSpec;
+                                   flags: VipsArgumentFlags; priority: cint;
+                                   offset: cuint)</a></li>
+          </ul></dd>
+<dt><a name="vips_object_dump" href="#vips_object_dump"><span>vips_object_dump:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: proc vips_object_dump(obj: ptr VipsObject; buf: ptr VipsBuf)" href="libvips/bindings/object.html#vips_object_dump%2Cptr.VipsObject%2Cptr.VipsBuf">object: proc vips_object_dump(obj: ptr VipsObject; buf: ptr VipsBuf)</a></li>
+          </ul></dd>
+<dt><a name="vips_object_get_args" href="#vips_object_get_args"><span>vips_object_get_args:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: proc vips_object_get_args(obj: ptr VipsObject; names: ptr ptr cstringArray;
+                     flags: ptr ptr cint; n_args: ptr cint): cint" href="libvips/bindings/object.html#vips_object_get_args%2Cptr.VipsObject%2Cptr.ptr.cstringArray%2Cptr.ptr.cint%2Cptr.cint">object: proc vips_object_get_args(obj: ptr VipsObject; names: ptr ptr cstringArray;
+                     flags: ptr ptr cint; n_args: ptr cint): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_object_get_argument" href="#vips_object_get_argument"><span>vips_object_get_argument:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: proc vips_object_get_argument(obj: ptr VipsObject; name: cstring;
+                         pspec: ptr ptr GParamSpec;
+                         argument_class: ptr ptr VipsArgumentClass;
+                         argument_instance: ptr ptr VipsArgumentInstance): cint" href="libvips/bindings/object.html#vips_object_get_argument%2Cptr.VipsObject%2Ccstring%2Cptr.ptr.GParamSpec%2Cptr.ptr.VipsArgumentClass%2Cptr.ptr.VipsArgumentInstance">object: proc vips_object_get_argument(obj: ptr VipsObject; name: cstring;
+                         pspec: ptr ptr GParamSpec;
+                         argument_class: ptr ptr VipsArgumentClass;
+                         argument_instance: ptr ptr VipsArgumentInstance): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_object_get_argument_flags" href="#vips_object_get_argument_flags"><span>vips_object_get_argument_flags:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: proc vips_object_get_argument_flags(obj: ptr VipsObject; name: cstring): VipsArgumentFlags" href="libvips/bindings/object.html#vips_object_get_argument_flags%2Cptr.VipsObject%2Ccstring">object: proc vips_object_get_argument_flags(obj: ptr VipsObject; name: cstring): VipsArgumentFlags</a></li>
+          </ul></dd>
+<dt><a name="vips_object_get_argument_priority" href="#vips_object_get_argument_priority"><span>vips_object_get_argument_priority:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: proc vips_object_get_argument_priority(obj: ptr VipsObject; name: cstring): cint" href="libvips/bindings/object.html#vips_object_get_argument_priority%2Cptr.VipsObject%2Ccstring">object: proc vips_object_get_argument_priority(obj: ptr VipsObject; name: cstring): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_object_get_argument_to_string" href="#vips_object_get_argument_to_string"><span>vips_object_get_argument_to_string:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: proc vips_object_get_argument_to_string(obj: ptr VipsObject; name, arg: cstring): cint" href="libvips/bindings/object.html#vips_object_get_argument_to_string%2Cptr.VipsObject%2Ccstring%2Ccstring">object: proc vips_object_get_argument_to_string(obj: ptr VipsObject; name, arg: cstring): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_object_get_description" href="#vips_object_get_description"><span>vips_object_get_description:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: proc vips_object_get_description(obj: ptr VipsObject): cstring" href="libvips/bindings/object.html#vips_object_get_description%2Cptr.VipsObject">object: proc vips_object_get_description(obj: ptr VipsObject): cstring</a></li>
+          </ul></dd>
+<dt><a name="vips_object_get_property" href="#vips_object_get_property"><span>vips_object_get_property:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: proc vips_object_get_property(obj: ptr GObject; property_id: cuint;
+                         value: ptr GValue; pspec: ptr GParamSpec)" href="libvips/bindings/object.html#vips_object_get_property%2Cptr.GObject%2Ccuint%2Cptr.GValue%2Cptr.GParamSpec">object: proc vips_object_get_property(obj: ptr GObject; property_id: cuint;
+                         value: ptr GValue; pspec: ptr GParamSpec)</a></li>
+          </ul></dd>
+<dt><a name="vips_object_get_type" href="#vips_object_get_type"><span>vips_object_get_type:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: proc vips_object_get_type(): GType" href="libvips/bindings/object.html#vips_object_get_type">object: proc vips_object_get_type(): GType</a></li>
+          </ul></dd>
+<dt><a name="vips_object_local_array" href="#vips_object_local_array"><span>vips_object_local_array:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: proc vips_object_local_array(parent: ptr VipsObject; n: cint): ptr ptr VipsObject" href="libvips/bindings/object.html#vips_object_local_array%2Cptr.VipsObject%2Ccint">object: proc vips_object_local_array(parent: ptr VipsObject; n: cint): ptr ptr VipsObject</a></li>
+          </ul></dd>
+<dt><a name="vips_object_local_cb" href="#vips_object_local_cb"><span>vips_object_local_cb:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: proc vips_object_local_cb(obj: ptr VipsObject; obj2: ptr GObject)" href="libvips/bindings/object.html#vips_object_local_cb%2Cptr.VipsObject%2Cptr.GObject">object: proc vips_object_local_cb(obj: ptr VipsObject; obj2: ptr GObject)</a></li>
+          </ul></dd>
+<dt><a name="vips_object_map" href="#vips_object_map"><span>vips_object_map:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: proc vips_object_map(fn: VipsSListMap2Fn; a, b: pointer): pointer" href="libvips/bindings/object.html#vips_object_map%2CVipsSListMap2Fn%2Cpointer%2Cpointer">object: proc vips_object_map(fn: VipsSListMap2Fn; a, b: pointer): pointer</a></li>
+          </ul></dd>
+<dt><a name="vips_object_new" href="#vips_object_new"><span>vips_object_new:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: proc vips_object_new(typ: GType; set: VipsObjectSetArguments; a, b: pointer): ptr VipsObject" href="libvips/bindings/object.html#vips_object_new%2CGType%2CVipsObjectSetArguments%2Cpointer%2Cpointer">object: proc vips_object_new(typ: GType; set: VipsObjectSetArguments; a, b: pointer): ptr VipsObject</a></li>
+          </ul></dd>
+<dt><a name="vips_object_new_from_string" href="#vips_object_new_from_string"><span>vips_object_new_from_string:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: proc vips_object_new_from_string(object_class: ptr VipsObjectClass; p: cstring): ptr VipsObject" href="libvips/bindings/object.html#vips_object_new_from_string%2Cptr.VipsObjectClass%2Ccstring">object: proc vips_object_new_from_string(object_class: ptr VipsObjectClass; p: cstring): ptr VipsObject</a></li>
+          </ul></dd>
+<dt><a name="vips_object_preclose" href="#vips_object_preclose"><span>vips_object_preclose:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: proc vips_object_preclose(obj: ptr VipsObject)" href="libvips/bindings/object.html#vips_object_preclose%2Cptr.VipsObject">object: proc vips_object_preclose(obj: ptr VipsObject)</a></li>
+          </ul></dd>
+<dt><a name="vips_object_print_all" href="#vips_object_print_all"><span>vips_object_print_all:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: proc vips_object_print_all()" href="libvips/bindings/object.html#vips_object_print_all">object: proc vips_object_print_all()</a></li>
+          </ul></dd>
+<dt><a name="vips_object_print_dump" href="#vips_object_print_dump"><span>vips_object_print_dump:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: proc vips_object_print_dump(obj: ptr VipsObject)" href="libvips/bindings/object.html#vips_object_print_dump%2Cptr.VipsObject">object: proc vips_object_print_dump(obj: ptr VipsObject)</a></li>
+          </ul></dd>
+<dt><a name="vips_object_print_name" href="#vips_object_print_name"><span>vips_object_print_name:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: proc vips_object_print_name(obj: ptr VipsObject)" href="libvips/bindings/object.html#vips_object_print_name%2Cptr.VipsObject">object: proc vips_object_print_name(obj: ptr VipsObject)</a></li>
+          </ul></dd>
+<dt><a name="vips_object_print_summary" href="#vips_object_print_summary"><span>vips_object_print_summary:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: proc vips_object_print_summary(obj: ptr VipsObject)" href="libvips/bindings/object.html#vips_object_print_summary%2Cptr.VipsObject">object: proc vips_object_print_summary(obj: ptr VipsObject)</a></li>
+          </ul></dd>
+<dt><a name="vips_object_print_summary_class" href="#vips_object_print_summary_class"><span>vips_object_print_summary_class:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: proc vips_object_print_summary_class(klass: ptr VipsObjectClass)" href="libvips/bindings/object.html#vips_object_print_summary_class%2Cptr.VipsObjectClass">object: proc vips_object_print_summary_class(klass: ptr VipsObjectClass)</a></li>
+          </ul></dd>
+<dt><a name="vips_object_rewind" href="#vips_object_rewind"><span>vips_object_rewind:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: proc vips_object_rewind(obj: ptr VipsObject)" href="libvips/bindings/object.html#vips_object_rewind%2Cptr.VipsObject">object: proc vips_object_rewind(obj: ptr VipsObject)</a></li>
+          </ul></dd>
+<dt><a name="vips_object_sanity" href="#vips_object_sanity"><span>vips_object_sanity:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: proc vips_object_sanity(obj: ptr VipsObject): cint" href="libvips/bindings/object.html#vips_object_sanity%2Cptr.VipsObject">object: proc vips_object_sanity(obj: ptr VipsObject): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_object_sanity_all" href="#vips_object_sanity_all"><span>vips_object_sanity_all:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: proc vips_object_sanity_all()" href="libvips/bindings/object.html#vips_object_sanity_all">object: proc vips_object_sanity_all()</a></li>
+          </ul></dd>
+<dt><a name="vips_object_set" href="#vips_object_set"><span>vips_object_set:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: proc vips_object_set(obj: ptr VipsObject): cint" href="libvips/bindings/object.html#vips_object_set%2Cptr.VipsObject">object: proc vips_object_set(obj: ptr VipsObject): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_object_set_argument_from_string" href="#vips_object_set_argument_from_string"><span>vips_object_set_argument_from_string:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: proc vips_object_set_argument_from_string(obj: ptr VipsObject; name, value: cstring): cint" href="libvips/bindings/object.html#vips_object_set_argument_from_string%2Cptr.VipsObject%2Ccstring%2Ccstring">object: proc vips_object_set_argument_from_string(obj: ptr VipsObject; name, value: cstring): cint</a></li>
+          </ul></dd>
+<dt><a name="VipsObjectSetArguments" href="#VipsObjectSetArguments"><span>VipsObjectSetArguments:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: type VipsObjectSetArguments" href="libvips/bindings/object.html#VipsObjectSetArguments">object: type VipsObjectSetArguments</a></li>
+          </ul></dd>
+<dt><a name="vips_object_set_from_string" href="#vips_object_set_from_string"><span>vips_object_set_from_string:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: proc vips_object_set_from_string(obj: ptr VipsObject; str: cstring): cint" href="libvips/bindings/object.html#vips_object_set_from_string%2Cptr.VipsObject%2Ccstring">object: proc vips_object_set_from_string(obj: ptr VipsObject; str: cstring): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_object_set_member" href="#vips_object_set_member"><span>vips_object_set_member:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: proc vips_object_set_member(obj: ptr VipsObject; pspec: ptr GParamSpec;
+                       member: ptr ptr GObject; argument: ptr GObject)" href="libvips/bindings/object.html#vips_object_set_member%2Cptr.VipsObject%2Cptr.GParamSpec%2Cptr.ptr.GObject%2Cptr.GObject">object: proc vips_object_set_member(obj: ptr VipsObject; pspec: ptr GParamSpec;
+                       member: ptr ptr GObject; argument: ptr GObject)</a></li>
+          </ul></dd>
+<dt><a name="vips_object_set_property" href="#vips_object_set_property"><span>vips_object_set_property:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: proc vips_object_set_property(obj: ptr GObject; property_id: cuint;
+                         value: ptr GValue; pspec: ptr GParamSpec)" href="libvips/bindings/object.html#vips_object_set_property%2Cptr.GObject%2Ccuint%2Cptr.GValue%2Cptr.GParamSpec">object: proc vips_object_set_property(obj: ptr GObject; property_id: cuint;
+                         value: ptr GValue; pspec: ptr GParamSpec)</a></li>
+          </ul></dd>
+<dt><a name="vips_object_set_required" href="#vips_object_set_required"><span>vips_object_set_required:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: proc vips_object_set_required(obj: ptr VipsObject; value: cstring): cint" href="libvips/bindings/object.html#vips_object_set_required%2Cptr.VipsObject%2Ccstring">object: proc vips_object_set_required(obj: ptr VipsObject; value: cstring): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_object_set_static" href="#vips_object_set_static"><span>vips_object_set_static:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: proc vips_object_set_static(obj: ptr VipsObject; obj2: cint)" href="libvips/bindings/object.html#vips_object_set_static%2Cptr.VipsObject%2Ccint">object: proc vips_object_set_static(obj: ptr VipsObject; obj2: cint)</a></li>
+          </ul></dd>
+<dt><a name="vips_object_set_valist" href="#vips_object_set_valist"><span>vips_object_set_valist:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: proc vips_object_set_valist(obj: ptr VipsObject; ap: va_list): cint" href="libvips/bindings/object.html#vips_object_set_valist%2Cptr.VipsObject%2Cva_list">object: proc vips_object_set_valist(obj: ptr VipsObject; ap: va_list): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_object_summary" href="#vips_object_summary"><span>vips_object_summary:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: proc vips_object_summary(obj: ptr VipsObject; buf: ptr VipsBuf)" href="libvips/bindings/object.html#vips_object_summary%2Cptr.VipsObject%2Cptr.VipsBuf">object: proc vips_object_summary(obj: ptr VipsObject; buf: ptr VipsBuf)</a></li>
+          </ul></dd>
+<dt><a name="vips_object_summary_class" href="#vips_object_summary_class"><span>vips_object_summary_class:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: proc vips_object_summary_class(klass: ptr VipsObjectClass; buf: ptr VipsBuf)" href="libvips/bindings/object.html#vips_object_summary_class%2Cptr.VipsObjectClass%2Cptr.VipsBuf">object: proc vips_object_summary_class(klass: ptr VipsObjectClass; buf: ptr VipsBuf)</a></li>
+          </ul></dd>
+<dt><a name="vips_object_to_string" href="#vips_object_to_string"><span>vips_object_to_string:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: proc vips_object_to_string(obj: ptr VipsObject; buf: ptr VipsBuf)" href="libvips/bindings/object.html#vips_object_to_string%2Cptr.VipsObject%2Cptr.VipsBuf">object: proc vips_object_to_string(obj: ptr VipsObject; buf: ptr VipsBuf)</a></li>
+          </ul></dd>
+<dt><a name="vips_object_unref_outputs" href="#vips_object_unref_outputs"><span>vips_object_unref_outputs:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: proc vips_object_unref_outputs(obj: ptr VipsObject)" href="libvips/bindings/object.html#vips_object_unref_outputs%2Cptr.VipsObject">object: proc vips_object_unref_outputs(obj: ptr VipsObject)</a></li>
+          </ul></dd>
 <dt><a name="vips_openexrload" href="#vips_openexrload"><span>vips_openexrload:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="foreign: proc vips_openexrload(filename: cstring; res: ptr ptr VipsImage): cint" href="libvips/bindings/foreign.html#vips_openexrload%2Ccstring%2Cptr.ptr.VipsImage">foreign: proc vips_openexrload(filename: cstring; res: ptr ptr VipsImage): cint</a></li>
@@ -2829,6 +3307,12 @@
           data-doc-search-tag="basic: object VipsOperation" href="libvips/bindings/basic.html#VipsOperation">basic: object VipsOperation</a></li>
           <li><a class="reference external"
           data-doc-search-tag="foreign: object VipsOperation" href="libvips/bindings/foreign.html#VipsOperation">foreign: object VipsOperation</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="operation: object VipsOperation" href="libvips/bindings/operation.html#VipsOperation">operation: object VipsOperation</a></li>
+          </ul></dd>
+<dt><a name="vips_operation_block_set" href="#vips_operation_block_set"><span>vips_operation_block_set:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="operation: proc vips_operation_block_set(name: cstring; state: gboolean)" href="libvips/bindings/operation.html#vips_operation_block_set%2Ccstring%2Cgboolean">operation: proc vips_operation_block_set(name: cstring; state: gboolean)</a></li>
           </ul></dd>
 <dt><a name="VipsOperationBoolean" href="#VipsOperationBoolean"><span>VipsOperationBoolean:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -2858,9 +3342,23 @@
 <li><a class="reference external"
           data-doc-search-tag="arithmetic: VipsOperationBoolean.VIPS_OPERATION_BOOLEAN_RSHIFT" href="libvips/bindings/arithmetic.html#VIPS_OPERATION_BOOLEAN_RSHIFT">arithmetic: VipsOperationBoolean.VIPS_OPERATION_BOOLEAN_RSHIFT</a></li>
           </ul></dd>
+<dt><a name="VipsOperationBuildFn" href="#VipsOperationBuildFn"><span>VipsOperationBuildFn:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="operation: type VipsOperationBuildFn" href="libvips/bindings/operation.html#VipsOperationBuildFn">operation: type VipsOperationBuildFn</a></li>
+          </ul></dd>
+<dt><a name="vips_operation_call_valist" href="#vips_operation_call_valist"><span>vips_operation_call_valist:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="operation: proc vips_operation_call_valist(operation: ptr VipsOperation; ap: va_list): cint" href="libvips/bindings/operation.html#vips_operation_call_valist%2Cptr.VipsOperation%2Cva_list">operation: proc vips_operation_call_valist(operation: ptr VipsOperation; ap: va_list): cint</a></li>
+          </ul></dd>
 <dt><a name="VipsOperationClass" href="#VipsOperationClass"><span>VipsOperationClass:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="foreign: object VipsOperationClass" href="libvips/bindings/foreign.html#VipsOperationClass">foreign: object VipsOperationClass</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="operation: object VipsOperationClass" href="libvips/bindings/operation.html#VipsOperationClass">operation: object VipsOperationClass</a></li>
+          </ul></dd>
+<dt><a name="vips_operation_class_print_usage" href="#vips_operation_class_print_usage"><span>vips_operation_class_print_usage:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="operation: proc vips_operation_class_print_usage(operation_class: ptr VipsOperationClass)" href="libvips/bindings/operation.html#vips_operation_class_print_usage%2Cptr.VipsOperationClass">operation: proc vips_operation_class_print_usage(operation_class: ptr VipsOperationClass)</a></li>
           </ul></dd>
 <dt><a name="VipsOperationComplex" href="#VipsOperationComplex"><span>VipsOperationComplex:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -2909,6 +3407,22 @@
 <dt><a name="VIPS_OPERATION_COMPLEX_RECT" href="#VIPS_OPERATION_COMPLEX_RECT"><span>VIPS_OPERATION_COMPLEX_RECT:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="arithmetic: VipsOperationComplex.VIPS_OPERATION_COMPLEX_RECT" href="libvips/bindings/arithmetic.html#VIPS_OPERATION_COMPLEX_RECT">arithmetic: VipsOperationComplex.VIPS_OPERATION_COMPLEX_RECT</a></li>
+          </ul></dd>
+<dt><a name="VipsOperationFlags" href="#VipsOperationFlags"><span>VipsOperationFlags:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="operation: enum VipsOperationFlags" href="libvips/bindings/operation.html#VipsOperationFlags">operation: enum VipsOperationFlags</a></li>
+          </ul></dd>
+<dt><a name="vips_operation_get_flags" href="#vips_operation_get_flags"><span>vips_operation_get_flags:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="operation: proc vips_operation_get_flags(operation: ptr VipsOperation): VipsOperationFlags" href="libvips/bindings/operation.html#vips_operation_get_flags%2Cptr.VipsOperation">operation: proc vips_operation_get_flags(operation: ptr VipsOperation): VipsOperationFlags</a></li>
+          </ul></dd>
+<dt><a name="vips_operation_get_type" href="#vips_operation_get_type"><span>vips_operation_get_type:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="operation: proc vips_operation_get_type(): GType" href="libvips/bindings/operation.html#vips_operation_get_type">operation: proc vips_operation_get_type(): GType</a></li>
+          </ul></dd>
+<dt><a name="vips_operation_invalidate" href="#vips_operation_invalidate"><span>vips_operation_invalidate:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="operation: proc vips_operation_invalidate(operation: ptr VipsOperation)" href="libvips/bindings/operation.html#vips_operation_invalidate%2Cptr.VipsOperation">operation: proc vips_operation_invalidate(operation: ptr VipsOperation)</a></li>
           </ul></dd>
 <dt><a name="VipsOperationMath" href="#VipsOperationMath"><span>VipsOperationMath:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -3001,6 +3515,10 @@
 <dt><a name="VIPS_OPERATION_MATH_TANH" href="#VIPS_OPERATION_MATH_TANH"><span>VIPS_OPERATION_MATH_TANH:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="arithmetic: VipsOperationMath.VIPS_OPERATION_MATH_TANH" href="libvips/bindings/arithmetic.html#VIPS_OPERATION_MATH_TANH">arithmetic: VipsOperationMath.VIPS_OPERATION_MATH_TANH</a></li>
+          </ul></dd>
+<dt><a name="vips_operation_new" href="#vips_operation_new"><span>vips_operation_new:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="operation: proc vips_operation_new(name: cstring): ptr VipsOperation" href="libvips/bindings/operation.html#vips_operation_new%2Ccstring">operation: proc vips_operation_new(name: cstring): ptr VipsOperation</a></li>
           </ul></dd>
 <dt><a name="VipsOperationRelational" href="#VipsOperationRelational"><span>VipsOperationRelational:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -3676,6 +4194,30 @@
 <li><a class="reference external"
           data-doc-search-tag="conversion: proc vips_transpose3d(input: ptr VipsImage; output: ptr ptr VipsImage): cint" href="libvips/bindings/conversion.html#vips_transpose3d%2Cptr.VipsImage%2Cptr.ptr.VipsImage">conversion: proc vips_transpose3d(input: ptr VipsImage; output: ptr ptr VipsImage): cint</a></li>
           </ul></dd>
+<dt><a name="vips_type_depth" href="#vips_type_depth"><span>vips_type_depth:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: proc vips_type_depth(typ: GType): cint" href="libvips/bindings/object.html#vips_type_depth%2CGType">object: proc vips_type_depth(typ: GType): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_type_find" href="#vips_type_find"><span>vips_type_find:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: proc vips_type_find(basename, nickname: cstring): GType" href="libvips/bindings/object.html#vips_type_find%2Ccstring%2Ccstring">object: proc vips_type_find(basename, nickname: cstring): GType</a></li>
+          </ul></dd>
+<dt><a name="vips_type_map" href="#vips_type_map"><span>vips_type_map:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: proc vips_type_map(base: GType; fn: VipsTypeMap2Fn; a, b: pointer): pointer" href="libvips/bindings/object.html#vips_type_map%2CGType%2CVipsTypeMap2Fn%2Cpointer%2Cpointer">object: proc vips_type_map(base: GType; fn: VipsTypeMap2Fn; a, b: pointer): pointer</a></li>
+          </ul></dd>
+<dt><a name="VipsTypeMap2Fn" href="#VipsTypeMap2Fn"><span>VipsTypeMap2Fn:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: type VipsTypeMap2Fn" href="libvips/bindings/object.html#VipsTypeMap2Fn">object: type VipsTypeMap2Fn</a></li>
+          </ul></dd>
+<dt><a name="vips_type_map_all" href="#vips_type_map_all"><span>vips_type_map_all:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: proc vips_type_map_all(base: GType; fn: VipsTypeMapFn; a: pointer): pointer" href="libvips/bindings/object.html#vips_type_map_all%2CGType%2CVipsTypeMapFn%2Cpointer">object: proc vips_type_map_all(base: GType; fn: VipsTypeMapFn; a: pointer): pointer</a></li>
+          </ul></dd>
+<dt><a name="VipsTypeMapFn" href="#VipsTypeMapFn"><span>VipsTypeMapFn:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: type VipsTypeMapFn" href="libvips/bindings/object.html#VipsTypeMapFn">object: type VipsTypeMapFn</a></li>
+          </ul></dd>
 <dt><a name="vips_uhdrload" href="#vips_uhdrload"><span>vips_uhdrload:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="foreign: proc vips_uhdrload(filename: cstring; res: ptr ptr VipsImage): cint" href="libvips/bindings/foreign.html#vips_uhdrload%2Ccstring%2Cptr.ptr.VipsImage">foreign: proc vips_uhdrload(filename: cstring; res: ptr ptr VipsImage): cint</a></li>
@@ -3742,6 +4284,10 @@
 <li><a class="reference external"
           data-doc-search-tag="types: proc vips_value_get_save_string(value: ptr GValue): cstring" href="libvips/bindings/types.html#vips_value_get_save_string%2Cptr.GValue">types: proc vips_value_get_save_string(value: ptr GValue): cstring</a></li>
           </ul></dd>
+<dt><a name="vips_value_is_null" href="#vips_value_is_null"><span>vips_value_is_null:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="object: proc vips_value_is_null(pspec: ptr GParamSpec; value: ptr GValue): cint" href="libvips/bindings/object.html#vips_value_is_null%2Cptr.GParamSpec%2Cptr.GValue">object: proc vips_value_is_null(pspec: ptr GParamSpec; value: ptr GValue): cint</a></li>
+          </ul></dd>
 <dt><a name="vips_value_set_area" href="#vips_value_set_area"><span>vips_value_set_area:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="types: proc vips_value_set_area(value: ptr GValue; free_fn: VipsCallbackFn; data: pointer)" href="libvips/bindings/types.html#vips_value_set_area%2Cptr.GValue%2CVipsCallbackFn%2Cpointer">types: proc vips_value_set_area(value: ptr GValue; free_fn: VipsCallbackFn; data: pointer)</a></li>
@@ -3789,6 +4335,30 @@
 <dt><a name="vips_value_set_save_stringf" href="#vips_value_set_save_stringf"><span>vips_value_set_save_stringf:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="types: proc vips_value_set_save_stringf(value: ptr GValue; fmt: cstring): void" href="libvips/bindings/types.html#vips_value_set_save_stringf%2Cptr.GValue%2Ccstring">types: proc vips_value_set_save_stringf(value: ptr GValue; fmt: cstring): void</a></li>
+          </ul></dd>
+<dt><a name="vips_vector_disable_targets" href="#vips_vector_disable_targets"><span>vips_vector_disable_targets:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="vector: proc vips_vector_disable_targets(disabled_targets: gint64)" href="libvips/bindings/vector.html#vips_vector_disable_targets%2Cgint64">vector: proc vips_vector_disable_targets(disabled_targets: gint64)</a></li>
+          </ul></dd>
+<dt><a name="vips_vector_get_builtin_targets" href="#vips_vector_get_builtin_targets"><span>vips_vector_get_builtin_targets:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="vector: proc vips_vector_get_builtin_targets(): gint64" href="libvips/bindings/vector.html#vips_vector_get_builtin_targets">vector: proc vips_vector_get_builtin_targets(): gint64</a></li>
+          </ul></dd>
+<dt><a name="vips_vector_get_supported_targets" href="#vips_vector_get_supported_targets"><span>vips_vector_get_supported_targets:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="vector: proc vips_vector_get_supported_targets(): gint64" href="libvips/bindings/vector.html#vips_vector_get_supported_targets">vector: proc vips_vector_get_supported_targets(): gint64</a></li>
+          </ul></dd>
+<dt><a name="vips_vector_isenabled" href="#vips_vector_isenabled"><span>vips_vector_isenabled:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="vector: proc vips_vector_isenabled(): gboolean" href="libvips/bindings/vector.html#vips_vector_isenabled">vector: proc vips_vector_isenabled(): gboolean</a></li>
+          </ul></dd>
+<dt><a name="vips_vector_set_enabled" href="#vips_vector_set_enabled"><span>vips_vector_set_enabled:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="vector: proc vips_vector_set_enabled(enabled: gboolean)" href="libvips/bindings/vector.html#vips_vector_set_enabled%2Cgboolean">vector: proc vips_vector_set_enabled(enabled: gboolean)</a></li>
+          </ul></dd>
+<dt><a name="vips_vector_target_name" href="#vips_vector_target_name"><span>vips_vector_target_name:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="vector: proc vips_vector_target_name(target: gint64): cstring" href="libvips/bindings/vector.html#vips_vector_target_name%2Cgint64">vector: proc vips_vector_target_name(target: gint64): cstring</a></li>
           </ul></dd>
 <dt><a name="vips_verror" href="#vips_verror"><span>vips_verror:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -3896,7 +4466,7 @@
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2025-09-22 07:28:39 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2025-09-22 08:47:25 UTC</small>
       </div>
     </div>
   </div>

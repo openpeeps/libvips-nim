@@ -9,8 +9,6 @@ nim	VipsImage	libvips/bindings/basic.html#VipsImage	object VipsImage		28
 nim	PVipsImage	libvips/bindings/basic.html#PVipsImage	type PVipsImage		29
 nim	VipsRegion	libvips/bindings/basic.html#VipsRegion	object VipsRegion		30
 nim	PVipsRegion	libvips/bindings/basic.html#PVipsRegion	type PVipsRegion		31
-nim	VipsBuf	libvips/bindings/basic.html#VipsBuf	object VipsBuf		32
-nim	PVipsBuf	libvips/bindings/basic.html#PVipsBuf	type PVipsBuf		33
 nim	VipsSource	libvips/bindings/basic.html#VipsSource	object VipsSource		34
 nim	PVipsSource	libvips/bindings/basic.html#PVipsSource	type PVipsSource		35
 nim	VipsTarget	libvips/bindings/basic.html#VipsTarget	object VipsTarget		36

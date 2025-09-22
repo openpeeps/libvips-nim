@@ -1,0 +1,33 @@
+nimTitle	operation	libvips/bindings/operation.html	module libvips/bindings/operation		0
+nim	VipsOperationFlags	libvips/bindings/operation.html#VipsOperationFlags	enum VipsOperationFlags		14
+nim	VipsOperationBuildFn	libvips/bindings/operation.html#VipsOperationBuildFn	type VipsOperationBuildFn		24
+nim	VipsOperation	libvips/bindings/operation.html#VipsOperation	object VipsOperation		26
+nim	VipsOperationClass	libvips/bindings/operation.html#VipsOperationClass	object VipsOperationClass		32
+nim	vips_operation_get_type	libvips/bindings/operation.html#vips_operation_get_type	proc vips_operation_get_type(): GType		44
+nim	vips_operation_get_flags	libvips/bindings/operation.html#vips_operation_get_flags,ptr.VipsOperation	proc vips_operation_get_flags(operation: ptr VipsOperation): VipsOperationFlags		45
+nim	vips_operation_class_print_usage	libvips/bindings/operation.html#vips_operation_class_print_usage,ptr.VipsOperationClass	proc vips_operation_class_print_usage(operation_class: ptr VipsOperationClass)		46
+nim	vips_operation_invalidate	libvips/bindings/operation.html#vips_operation_invalidate,ptr.VipsOperation	proc vips_operation_invalidate(operation: ptr VipsOperation)		47
+nim	vips_operation_call_valist	libvips/bindings/operation.html#vips_operation_call_valist,ptr.VipsOperation,va_list	proc vips_operation_call_valist(operation: ptr VipsOperation; ap: va_list): cint		48
+nim	vips_operation_new	libvips/bindings/operation.html#vips_operation_new,cstring	proc vips_operation_new(name: cstring): ptr VipsOperation		49
+nim	vips_call_required_optional	libvips/bindings/operation.html#vips_call_required_optional,ptr.ptr.VipsOperation,va_list,va_list	proc vips_call_required_optional(operation: ptr ptr VipsOperation; required: va_list;\n                            optional: va_list): cint		50
+nim	vips_call_options	libvips/bindings/operation.html#vips_call_options,ptr.GOptionGroup,ptr.VipsOperation	proc vips_call_options(group: ptr GOptionGroup; operation: ptr VipsOperation)		51
+nim	vips_call_argv	libvips/bindings/operation.html#vips_call_argv,ptr.VipsOperation,cint,cstringArray	proc vips_call_argv(operation: ptr VipsOperation; argc: cint; argv: cstringArray): cint		52
+nim	vips_cache_drop_all	libvips/bindings/operation.html#vips_cache_drop_all	proc vips_cache_drop_all()		53
+nim	vips_cache_operation_buildp	libvips/bindings/operation.html#vips_cache_operation_buildp,ptr.ptr.VipsOperation	proc vips_cache_operation_buildp(operation: ptr ptr VipsOperation): cint		54
+nim	vips_cache_operation_build	libvips/bindings/operation.html#vips_cache_operation_build,ptr.VipsOperation	proc vips_cache_operation_build(operation: ptr VipsOperation): ptr VipsOperation		55
+nim	vips_cache_print	libvips/bindings/operation.html#vips_cache_print	proc vips_cache_print()		56
+nim	vips_cache_set_max	libvips/bindings/operation.html#vips_cache_set_max,cint	proc vips_cache_set_max(max: cint)		57
+nim	vips_cache_set_max_mem	libvips/bindings/operation.html#vips_cache_set_max_mem,csize_t	proc vips_cache_set_max_mem(max_mem: csize_t)		58
+nim	vips_cache_get_max	libvips/bindings/operation.html#vips_cache_get_max	proc vips_cache_get_max(): cint		59
+nim	vips_cache_get_size	libvips/bindings/operation.html#vips_cache_get_size	proc vips_cache_get_size(): cint		60
+nim	vips_cache_get_max_mem	libvips/bindings/operation.html#vips_cache_get_max_mem	proc vips_cache_get_max_mem(): csize_t		61
+nim	vips_cache_get_max_files	libvips/bindings/operation.html#vips_cache_get_max_files	proc vips_cache_get_max_files(): cint		62
+nim	vips_cache_set_max_files	libvips/bindings/operation.html#vips_cache_set_max_files,cint	proc vips_cache_set_max_files(max_files: cint)		63
+nim	vips_cache_set_dump	libvips/bindings/operation.html#vips_cache_set_dump,gboolean	proc vips_cache_set_dump(dump: gboolean)		64
+nim	vips_cache_set_trace	libvips/bindings/operation.html#vips_cache_set_trace,gboolean	proc vips_cache_set_trace(trace: gboolean)		65
+nim	vips_concurrency_set	libvips/bindings/operation.html#vips_concurrency_set,cint	proc vips_concurrency_set(concurrency: cint)		66
+nim	vips_concurrency_get	libvips/bindings/operation.html#vips_concurrency_get	proc vips_concurrency_get(): cint		67
+nim	vips_operation_block_set	libvips/bindings/operation.html#vips_operation_block_set,cstring,gboolean	proc vips_operation_block_set(name: cstring; state: gboolean)		68
+nim	vips_call	libvips/bindings/operation.html#vips_call,cstring	proc vips_call(operation_name: cstring): cint		76
+nim	vips_call_split	libvips/bindings/operation.html#vips_call_split,cstring,va_list	proc vips_call_split(operation_name: cstring; optional: va_list): cint		79
+nim	vips_call_split_option_string	libvips/bindings/operation.html#vips_call_split_option_string,cstring,cstring,va_list	proc vips_call_split_option_string(operation_name: cstring; option_string: cstring;\n                              optional: va_list): cint		82

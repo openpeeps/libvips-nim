@@ -1,61 +1,55 @@
 nimTitle	types	libvips/bindings/types.html	module libvips/bindings/types		0
-nim	GType	libvips/bindings/types.html#GType	type GType		12
-nim	GMutex	libvips/bindings/types.html#GMutex	object GMutex		13
-nim	GValue	libvips/bindings/types.html#GValue	object GValue		15
-nim	GObject	libvips/bindings/types.html#GObject	object GObject		17
-nim	gboolean	libvips/bindings/types.html#gboolean	type gboolean		19
-nim	guint64	libvips/bindings/types.html#guint64	type guint64		20
-nim	guint32	libvips/bindings/types.html#guint32	type guint32		21
-nim	VipsThing	libvips/bindings/types.html#VipsThing	object VipsThing		23
-nim	VipsArea	libvips/bindings/types.html#VipsArea	object VipsArea		26
-nim	VipsSaveString	libvips/bindings/types.html#VipsSaveString	object VipsSaveString		37
-nim	VipsRefString	libvips/bindings/types.html#VipsRefString	object VipsRefString		40
-nim	VipsBlob	libvips/bindings/types.html#VipsBlob	object VipsBlob		43
-nim	VipsArrayDouble	libvips/bindings/types.html#VipsArrayDouble	object VipsArrayDouble		46
-nim	VipsArrayInt	libvips/bindings/types.html#VipsArrayInt	object VipsArrayInt		49
-nim	VipsArrayImage	libvips/bindings/types.html#VipsArrayImage	object VipsArrayImage		52
-nim	vips_thing_get_type	libvips/bindings/types.html#vips_thing_get_type	proc vips_thing_get_type(): GType		57
-nim	vips_thing_new	libvips/bindings/types.html#vips_thing_new,cint	proc vips_thing_new(i: cint): ptr VipsThing		58
-nim	vips_area_copy	libvips/bindings/types.html#vips_area_copy,ptr.VipsArea	proc vips_area_copy(area: ptr VipsArea): ptr VipsArea		60
-nim	vips_area_free_cb	libvips/bindings/types.html#vips_area_free_cb,pointer,ptr.VipsArea	proc vips_area_free_cb(mem: pointer; area: ptr VipsArea): cint		61
-nim	vips_area_unref	libvips/bindings/types.html#vips_area_unref,ptr.VipsArea	proc vips_area_unref(area: ptr VipsArea)		62
-nim	vips_area_new	libvips/bindings/types.html#vips_area_new,VipsCallbackFn,pointer	proc vips_area_new(free_fn: VipsCallbackFn; data: pointer): ptr VipsArea		63
-nim	vips_area_new_array	libvips/bindings/types.html#vips_area_new_array,GType,csize_t,cint	proc vips_area_new_array(typ: GType; sizeof_type: csize_t; n: cint): ptr VipsArea		64
-nim	vips_area_new_array_object	libvips/bindings/types.html#vips_area_new_array_object,cint	proc vips_area_new_array_object(n: cint): ptr VipsArea		65
-nim	vips_area_get_data	libvips/bindings/types.html#vips_area_get_data,ptr.VipsArea,ptr.csize_t,ptr.cint,ptr.GType,ptr.csize_t	proc vips_area_get_data(area: ptr VipsArea; length: ptr csize_t; n: ptr cint;\n                   typ: ptr GType; sizeof_type: ptr csize_t): pointer		66
-nim	vips_blob_new	libvips/bindings/types.html#vips_blob_new,VipsCallbackFn,pointer,csize_t	proc vips_blob_new(free_fn: VipsCallbackFn; data: pointer; length: csize_t): ptr VipsBlob		68
-nim	vips_blob_copy	libvips/bindings/types.html#vips_blob_copy,pointer,csize_t	proc vips_blob_copy(data: pointer; length: csize_t): ptr VipsBlob		69
-nim	vips_blob_get	libvips/bindings/types.html#vips_blob_get,ptr.VipsBlob,ptr.csize_t	proc vips_blob_get(blob: ptr VipsBlob; length: ptr csize_t): pointer		70
-nim	vips_blob_set	libvips/bindings/types.html#vips_blob_set,ptr.VipsBlob,VipsCallbackFn,pointer,csize_t	proc vips_blob_set(blob: ptr VipsBlob; free_fn: VipsCallbackFn; data: pointer;\n              length: csize_t)		71
-nim	vips_blob_get_type	libvips/bindings/types.html#vips_blob_get_type	proc vips_blob_get_type(): GType		72
-nim	vips_array_double_new	libvips/bindings/types.html#vips_array_double_new,ptr.cdouble,cint	proc vips_array_double_new(array: ptr cdouble; n: cint): ptr VipsArrayDouble		74
-nim	vips_array_double_newv	libvips/bindings/types.html#vips_array_double_newv,cint	proc vips_array_double_newv(n: cint): ptr VipsArrayDouble		75
-nim	vips_array_double_get	libvips/bindings/types.html#vips_array_double_get,ptr.VipsArrayDouble,ptr.cint	proc vips_array_double_get(array: ptr VipsArrayDouble; n: ptr cint): ptr cdouble		76
-nim	vips_array_double_get_type	libvips/bindings/types.html#vips_array_double_get_type	proc vips_array_double_get_type(): GType		77
-nim	vips_array_int_new	libvips/bindings/types.html#vips_array_int_new,ptr.cint,cint	proc vips_array_int_new(array: ptr cint; n: cint): ptr VipsArrayInt		79
-nim	vips_array_int_newv	libvips/bindings/types.html#vips_array_int_newv,cint	proc vips_array_int_newv(n: cint): ptr VipsArrayInt		80
-nim	vips_array_int_get	libvips/bindings/types.html#vips_array_int_get,ptr.VipsArrayInt,ptr.cint	proc vips_array_int_get(array: ptr VipsArrayInt; n: ptr cint): ptr cint		81
-nim	vips_array_int_get_type	libvips/bindings/types.html#vips_array_int_get_type	proc vips_array_int_get_type(): GType		82
-nim	vips_array_image_get_type	libvips/bindings/types.html#vips_array_image_get_type	proc vips_array_image_get_type(): GType		84
-nim	vips_ref_string_new	libvips/bindings/types.html#vips_ref_string_new,cstring	proc vips_ref_string_new(str: cstring): ptr VipsRefString		86
-nim	vips_ref_string_get	libvips/bindings/types.html#vips_ref_string_get,ptr.VipsRefString,ptr.csize_t	proc vips_ref_string_get(refstr: ptr VipsRefString; length: ptr csize_t): cstring		87
-nim	vips_ref_string_get_type	libvips/bindings/types.html#vips_ref_string_get_type	proc vips_ref_string_get_type(): GType		88
-nim	vips_save_string_get_type	libvips/bindings/types.html#vips_save_string_get_type	proc vips_save_string_get_type(): GType		90
-nim	vips_value_set_area	libvips/bindings/types.html#vips_value_set_area,ptr.GValue,VipsCallbackFn,pointer	proc vips_value_set_area(value: ptr GValue; free_fn: VipsCallbackFn; data: pointer)		92
-nim	vips_value_get_area	libvips/bindings/types.html#vips_value_get_area,ptr.GValue,ptr.csize_t	proc vips_value_get_area(value: ptr GValue; length: ptr csize_t): pointer		93
-nim	vips_value_get_save_string	libvips/bindings/types.html#vips_value_get_save_string,ptr.GValue	proc vips_value_get_save_string(value: ptr GValue): cstring		94
-nim	vips_value_set_save_string	libvips/bindings/types.html#vips_value_set_save_string,ptr.GValue,cstring	proc vips_value_set_save_string(value: ptr GValue; str: cstring)		95
-nim	vips_value_set_save_stringf	libvips/bindings/types.html#vips_value_set_save_stringf,ptr.GValue,cstring	proc vips_value_set_save_stringf(value: ptr GValue; fmt: cstring): void		96
-nim	vips_value_get_ref_string	libvips/bindings/types.html#vips_value_get_ref_string,ptr.GValue,ptr.csize_t	proc vips_value_get_ref_string(value: ptr GValue; length: ptr csize_t): cstring		97
-nim	vips_value_set_ref_string	libvips/bindings/types.html#vips_value_set_ref_string,ptr.GValue,cstring	proc vips_value_set_ref_string(value: ptr GValue; str: cstring)		98
-nim	vips_value_get_blob	libvips/bindings/types.html#vips_value_get_blob,ptr.GValue,ptr.csize_t	proc vips_value_get_blob(value: ptr GValue; length: ptr csize_t): pointer		99
-nim	vips_value_set_blob	libvips/bindings/types.html#vips_value_set_blob,ptr.GValue,VipsCallbackFn,pointer,csize_t	proc vips_value_set_blob(value: ptr GValue; free_fn: VipsCallbackFn; data: pointer;\n                    length: csize_t)		100
-nim	vips_value_set_blob_free	libvips/bindings/types.html#vips_value_set_blob_free,ptr.GValue,pointer,csize_t	proc vips_value_set_blob_free(value: ptr GValue; data: pointer; length: csize_t)		101
-nim	vips_value_set_array	libvips/bindings/types.html#vips_value_set_array,ptr.GValue,cint,GType,csize_t	proc vips_value_set_array(value: ptr GValue; n: cint; typ: GType;\n                     sizeof_type: csize_t)		102
-nim	vips_value_get_array	libvips/bindings/types.html#vips_value_get_array,ptr.GValue,ptr.cint,ptr.GType,ptr.csize_t	proc vips_value_get_array(value: ptr GValue; n: ptr cint; typ: ptr GType;\n                     sizeof_type: ptr csize_t): pointer		103
-nim	vips_value_get_array_double	libvips/bindings/types.html#vips_value_get_array_double,ptr.GValue,ptr.cint	proc vips_value_get_array_double(value: ptr GValue; n: ptr cint): ptr cdouble		104
-nim	vips_value_set_array_double	libvips/bindings/types.html#vips_value_set_array_double,ptr.GValue,ptr.cdouble,cint	proc vips_value_set_array_double(value: ptr GValue; array: ptr cdouble; n: cint)		105
-nim	vips_value_get_array_int	libvips/bindings/types.html#vips_value_get_array_int,ptr.GValue,ptr.cint	proc vips_value_get_array_int(value: ptr GValue; n: ptr cint): ptr cint		106
-nim	vips_value_set_array_int	libvips/bindings/types.html#vips_value_set_array_int,ptr.GValue,ptr.cint,cint	proc vips_value_set_array_int(value: ptr GValue; array: ptr cint; n: cint)		107
-nim	vips_value_get_array_object	libvips/bindings/types.html#vips_value_get_array_object,ptr.GValue,ptr.cint	proc vips_value_get_array_object(value: ptr GValue; n: ptr cint): ptr ptr GObject		108
-nim	vips_value_set_array_object	libvips/bindings/types.html#vips_value_set_array_object,ptr.GValue,cint	proc vips_value_set_array_object(value: ptr GValue; n: cint)		109
+nim	va_list	libvips/bindings/types.html#va_list	object va_list		13
+nim	VipsThing	libvips/bindings/types.html#VipsThing	object VipsThing		15
+nim	VipsArea	libvips/bindings/types.html#VipsArea	object VipsArea		18
+nim	VipsSaveString	libvips/bindings/types.html#VipsSaveString	object VipsSaveString		29
+nim	VipsRefString	libvips/bindings/types.html#VipsRefString	object VipsRefString		32
+nim	VipsBlob	libvips/bindings/types.html#VipsBlob	object VipsBlob		35
+nim	VipsArrayDouble	libvips/bindings/types.html#VipsArrayDouble	object VipsArrayDouble		38
+nim	VipsArrayInt	libvips/bindings/types.html#VipsArrayInt	object VipsArrayInt		41
+nim	VipsArrayImage	libvips/bindings/types.html#VipsArrayImage	object VipsArrayImage		44
+nim	vips_thing_get_type	libvips/bindings/types.html#vips_thing_get_type	proc vips_thing_get_type(): GType		49
+nim	vips_thing_new	libvips/bindings/types.html#vips_thing_new,cint	proc vips_thing_new(i: cint): ptr VipsThing		50
+nim	vips_area_copy	libvips/bindings/types.html#vips_area_copy,ptr.VipsArea	proc vips_area_copy(area: ptr VipsArea): ptr VipsArea		52
+nim	vips_area_free_cb	libvips/bindings/types.html#vips_area_free_cb,pointer,ptr.VipsArea	proc vips_area_free_cb(mem: pointer; area: ptr VipsArea): cint		53
+nim	vips_area_unref	libvips/bindings/types.html#vips_area_unref,ptr.VipsArea	proc vips_area_unref(area: ptr VipsArea)		54
+nim	vips_area_new	libvips/bindings/types.html#vips_area_new,VipsCallbackFn,pointer	proc vips_area_new(free_fn: VipsCallbackFn; data: pointer): ptr VipsArea		55
+nim	vips_area_new_array	libvips/bindings/types.html#vips_area_new_array,GType,csize_t,cint	proc vips_area_new_array(typ: GType; sizeof_type: csize_t; n: cint): ptr VipsArea		56
+nim	vips_area_new_array_object	libvips/bindings/types.html#vips_area_new_array_object,cint	proc vips_area_new_array_object(n: cint): ptr VipsArea		57
+nim	vips_area_get_data	libvips/bindings/types.html#vips_area_get_data,ptr.VipsArea,ptr.csize_t,ptr.cint,ptr.GType,ptr.csize_t	proc vips_area_get_data(area: ptr VipsArea; length: ptr csize_t; n: ptr cint;\n                   typ: ptr GType; sizeof_type: ptr csize_t): pointer		58
+nim	vips_blob_new	libvips/bindings/types.html#vips_blob_new,VipsCallbackFn,pointer,csize_t	proc vips_blob_new(free_fn: VipsCallbackFn; data: pointer; length: csize_t): ptr VipsBlob		60
+nim	vips_blob_copy	libvips/bindings/types.html#vips_blob_copy,pointer,csize_t	proc vips_blob_copy(data: pointer; length: csize_t): ptr VipsBlob		61
+nim	vips_blob_get	libvips/bindings/types.html#vips_blob_get,ptr.VipsBlob,ptr.csize_t	proc vips_blob_get(blob: ptr VipsBlob; length: ptr csize_t): pointer		62
+nim	vips_blob_set	libvips/bindings/types.html#vips_blob_set,ptr.VipsBlob,VipsCallbackFn,pointer,csize_t	proc vips_blob_set(blob: ptr VipsBlob; free_fn: VipsCallbackFn; data: pointer;\n              length: csize_t)		63
+nim	vips_blob_get_type	libvips/bindings/types.html#vips_blob_get_type	proc vips_blob_get_type(): GType		64
+nim	vips_array_double_new	libvips/bindings/types.html#vips_array_double_new,ptr.cdouble,cint	proc vips_array_double_new(array: ptr cdouble; n: cint): ptr VipsArrayDouble		66
+nim	vips_array_double_newv	libvips/bindings/types.html#vips_array_double_newv,cint	proc vips_array_double_newv(n: cint): ptr VipsArrayDouble		67
+nim	vips_array_double_get	libvips/bindings/types.html#vips_array_double_get,ptr.VipsArrayDouble,ptr.cint	proc vips_array_double_get(array: ptr VipsArrayDouble; n: ptr cint): ptr cdouble		68
+nim	vips_array_double_get_type	libvips/bindings/types.html#vips_array_double_get_type	proc vips_array_double_get_type(): GType		69
+nim	vips_array_int_new	libvips/bindings/types.html#vips_array_int_new,ptr.cint,cint	proc vips_array_int_new(array: ptr cint; n: cint): ptr VipsArrayInt		71
+nim	vips_array_int_newv	libvips/bindings/types.html#vips_array_int_newv,cint	proc vips_array_int_newv(n: cint): ptr VipsArrayInt		72
+nim	vips_array_int_get	libvips/bindings/types.html#vips_array_int_get,ptr.VipsArrayInt,ptr.cint	proc vips_array_int_get(array: ptr VipsArrayInt; n: ptr cint): ptr cint		73
+nim	vips_array_int_get_type	libvips/bindings/types.html#vips_array_int_get_type	proc vips_array_int_get_type(): GType		74
+nim	vips_array_image_get_type	libvips/bindings/types.html#vips_array_image_get_type	proc vips_array_image_get_type(): GType		76
+nim	vips_ref_string_new	libvips/bindings/types.html#vips_ref_string_new,cstring	proc vips_ref_string_new(str: cstring): ptr VipsRefString		78
+nim	vips_ref_string_get	libvips/bindings/types.html#vips_ref_string_get,ptr.VipsRefString,ptr.csize_t	proc vips_ref_string_get(refstr: ptr VipsRefString; length: ptr csize_t): cstring		79
+nim	vips_ref_string_get_type	libvips/bindings/types.html#vips_ref_string_get_type	proc vips_ref_string_get_type(): GType		80
+nim	vips_save_string_get_type	libvips/bindings/types.html#vips_save_string_get_type	proc vips_save_string_get_type(): GType		82
+nim	vips_value_set_area	libvips/bindings/types.html#vips_value_set_area,ptr.GValue,VipsCallbackFn,pointer	proc vips_value_set_area(value: ptr GValue; free_fn: VipsCallbackFn; data: pointer)		84
+nim	vips_value_get_area	libvips/bindings/types.html#vips_value_get_area,ptr.GValue,ptr.csize_t	proc vips_value_get_area(value: ptr GValue; length: ptr csize_t): pointer		85
+nim	vips_value_get_save_string	libvips/bindings/types.html#vips_value_get_save_string,ptr.GValue	proc vips_value_get_save_string(value: ptr GValue): cstring		86
+nim	vips_value_set_save_string	libvips/bindings/types.html#vips_value_set_save_string,ptr.GValue,cstring	proc vips_value_set_save_string(value: ptr GValue; str: cstring)		87
+nim	vips_value_set_save_stringf	libvips/bindings/types.html#vips_value_set_save_stringf,ptr.GValue,cstring	proc vips_value_set_save_stringf(value: ptr GValue; fmt: cstring): void		88
+nim	vips_value_get_ref_string	libvips/bindings/types.html#vips_value_get_ref_string,ptr.GValue,ptr.csize_t	proc vips_value_get_ref_string(value: ptr GValue; length: ptr csize_t): cstring		89
+nim	vips_value_set_ref_string	libvips/bindings/types.html#vips_value_set_ref_string,ptr.GValue,cstring	proc vips_value_set_ref_string(value: ptr GValue; str: cstring)		90
+nim	vips_value_get_blob	libvips/bindings/types.html#vips_value_get_blob,ptr.GValue,ptr.csize_t	proc vips_value_get_blob(value: ptr GValue; length: ptr csize_t): pointer		91
+nim	vips_value_set_blob	libvips/bindings/types.html#vips_value_set_blob,ptr.GValue,VipsCallbackFn,pointer,csize_t	proc vips_value_set_blob(value: ptr GValue; free_fn: VipsCallbackFn; data: pointer;\n                    length: csize_t)		92
+nim	vips_value_set_blob_free	libvips/bindings/types.html#vips_value_set_blob_free,ptr.GValue,pointer,csize_t	proc vips_value_set_blob_free(value: ptr GValue; data: pointer; length: csize_t)		93
+nim	vips_value_set_array	libvips/bindings/types.html#vips_value_set_array,ptr.GValue,cint,GType,csize_t	proc vips_value_set_array(value: ptr GValue; n: cint; typ: GType;\n                     sizeof_type: csize_t)		94
+nim	vips_value_get_array	libvips/bindings/types.html#vips_value_get_array,ptr.GValue,ptr.cint,ptr.GType,ptr.csize_t	proc vips_value_get_array(value: ptr GValue; n: ptr cint; typ: ptr GType;\n                     sizeof_type: ptr csize_t): pointer		95
+nim	vips_value_get_array_double	libvips/bindings/types.html#vips_value_get_array_double,ptr.GValue,ptr.cint	proc vips_value_get_array_double(value: ptr GValue; n: ptr cint): ptr cdouble		96
+nim	vips_value_set_array_double	libvips/bindings/types.html#vips_value_set_array_double,ptr.GValue,ptr.cdouble,cint	proc vips_value_set_array_double(value: ptr GValue; array: ptr cdouble; n: cint)		97
+nim	vips_value_get_array_int	libvips/bindings/types.html#vips_value_get_array_int,ptr.GValue,ptr.cint	proc vips_value_get_array_int(value: ptr GValue; n: ptr cint): ptr cint		98
+nim	vips_value_set_array_int	libvips/bindings/types.html#vips_value_set_array_int,ptr.GValue,ptr.cint,cint	proc vips_value_set_array_int(value: ptr GValue; array: ptr cint; n: cint)		99
+nim	vips_value_get_array_object	libvips/bindings/types.html#vips_value_get_array_object,ptr.GValue,ptr.cint	proc vips_value_get_array_object(value: ptr GValue; n: ptr cint): ptr ptr GObject		100
+nim	vips_value_set_array_object	libvips/bindings/types.html#vips_value_set_array_object,ptr.GValue,cint	proc vips_value_set_array_object(value: ptr GValue; n: cint)		101

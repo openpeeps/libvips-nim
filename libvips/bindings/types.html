@@ -58,13 +58,7 @@
   <details open>
     <summary><a class="reference reference-toplevel" href="#7" id="57">Types</a></summary>
     <ul class="simple simple-toc-section">
-      <li><a class="reference" href="#gboolean" title="gboolean = cint">gboolean</a></li>
-<li><a class="reference" href="#GMutex" title="GMutex = object">GMutex</a></li>
-<li><a class="reference" href="#GObject" title="GObject = object">GObject</a></li>
-<li><a class="reference" href="#GType" title="GType = culong">GType</a></li>
-<li><a class="reference" href="#guint32" title="guint32 = uint32">guint32</a></li>
-<li><a class="reference" href="#guint64" title="guint64 = uint64">guint64</a></li>
-<li><a class="reference" href="#GValue" title="GValue = object">GValue</a></li>
+      <li><a class="reference" href="#va_list" title="va_list {.importc: &quot;va_list&quot;, header: &quot;&lt;stdarg.h&gt;&quot;.} = object">va_list</a></li>
 <li><a class="reference" href="#VipsArea" title="VipsArea = object
   data*: pointer
   length*: csize_t
@@ -291,6 +285,9 @@
     </ul>
   </details>
 </li>
+<li>
+  <a class="reference reference-toplevel" href="#19" id="69">Exports</a>
+</li>
 
 </ul>
 
@@ -303,62 +300,14 @@
     <div class="section" id="6">
   <h1><a class="toc-backref" href="#6">Imports</a></h1>
   <dl class="item">
-    <a class="reference external" href="basic.html">basic</a>
+    <a class="reference external" href="basic.html">basic</a>, <a class="reference external" href="glib/glib.html">glib/glib</a>
   </dl>
 </div>
 <div class="section" id="7">
   <h1><a class="toc-backref" href="#7">Types</a></h1>
   <dl class="item">
-    <div id="gboolean">
-  <dt><pre><a href="types.html#gboolean"><span class="Identifier">gboolean</span></a> <span class="Other">=</span> <span class="Identifier">cint</span></pre></dt>
-  <dd>
-    
-    
-    
-  </dd>
-</div>
-<div id="GMutex">
-  <dt><pre><a href="types.html#GMutex"><span class="Identifier">GMutex</span></a> <span class="Other">=</span> <span class="Keyword">object</span></pre></dt>
-  <dd>
-    
-    
-    
-  </dd>
-</div>
-<div id="GObject">
-  <dt><pre><a href="types.html#GObject"><span class="Identifier">GObject</span></a> <span class="Other">=</span> <span class="Keyword">object</span></pre></dt>
-  <dd>
-    
-    
-    
-  </dd>
-</div>
-<div id="GType">
-  <dt><pre><a href="types.html#GType"><span class="Identifier">GType</span></a> <span class="Other">=</span> <span class="Identifier">culong</span></pre></dt>
-  <dd>
-    
-    
-    
-  </dd>
-</div>
-<div id="guint32">
-  <dt><pre><a href="types.html#guint32"><span class="Identifier">guint32</span></a> <span class="Other">=</span> <span class="Identifier">uint32</span></pre></dt>
-  <dd>
-    
-    
-    
-  </dd>
-</div>
-<div id="guint64">
-  <dt><pre><a href="types.html#guint64"><span class="Identifier">guint64</span></a> <span class="Other">=</span> <span class="Identifier">uint64</span></pre></dt>
-  <dd>
-    
-    
-    
-  </dd>
-</div>
-<div id="GValue">
-  <dt><pre><a href="types.html#GValue"><span class="Identifier">GValue</span></a> <span class="Other">=</span> <span class="Keyword">object</span></pre></dt>
+    <div id="va_list">
+  <dt><pre><a href="types.html#va_list"><span class="Identifier">va_list</span></a> {.<span class="Identifier">importc</span><span class="Other">:</span> <span class="StringLit">&quot;va_list&quot;</span><span class="Other">,</span> <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">&quot;&lt;stdarg.h&gt;&quot;</span>.} <span class="Other">=</span> <span class="Keyword">object</span></pre></dt>
   <dd>
     
     
@@ -371,10 +320,10 @@
   <span class="Identifier">length</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">csize_t</span>
   <span class="Identifier">n</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">cint</span>
   <span class="Identifier">count</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">cint</span>
-  <span class="Identifier">lock</span><span class="Operator">*</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="types.html#GMutex"><span class="Identifier">GMutex</span></a>
+  <span class="Identifier">lock</span><span class="Operator">*</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="glib/glib.html#GMutex"><span class="Identifier">GMutex</span></a>
   <span class="Identifier">free_fn</span><span class="Operator">*</span><span class="Other">:</span> <a href="basic.html#VipsCallbackFn"><span class="Identifier">VipsCallbackFn</span></a>
   <span class="Identifier">client</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">pointer</span>
-  <span class="Identifier">typ</span><span class="Operator">*</span><span class="Other">:</span> <a href="types.html#GType"><span class="Identifier">GType</span></a>
+  <span class="Identifier">typ</span><span class="Operator">*</span><span class="Other">:</span> <a href="glib/glib.html#GType"><span class="Identifier">GType</span></a>
   <span class="Identifier">sizeof_type</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">csize_t</span></pre></dt>
   <dd>
     
@@ -478,7 +427,7 @@
 <div id="vips_area_get_data-procs-all">
   <div id="vips_area_get_data,ptr.VipsArea,ptr.csize_t,ptr.cint,ptr.GType,ptr.csize_t">
   <dt><pre><span class="Keyword">proc</span> <a href="#vips_area_get_data%2Cptr.VipsArea%2Cptr.csize_t%2Cptr.cint%2Cptr.GType%2Cptr.csize_t"><span class="Identifier">vips_area_get_data</span></a><span class="Other">(</span><span class="Identifier">area</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="types.html#VipsArea"><span class="Identifier">VipsArea</span></a><span class="Other">;</span> <span class="Identifier">length</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">csize_t</span><span class="Other">;</span> <span class="Identifier">n</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">cint</span><span class="Other">;</span>
-                        <span class="Identifier">typ</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="types.html#GType"><span class="Identifier">GType</span></a><span class="Other">;</span> <span class="Identifier">sizeof_type</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">csize_t</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">pointer</span> {.
+                        <span class="Identifier">typ</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="glib/glib.html#GType"><span class="Identifier">GType</span></a><span class="Other">;</span> <span class="Identifier">sizeof_type</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">csize_t</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">pointer</span> {.
     <span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span> <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">&quot;vips/types.h&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -502,7 +451,7 @@
 </div>
 <div id="vips_area_new_array-procs-all">
   <div id="vips_area_new_array,GType,csize_t,cint">
-  <dt><pre><span class="Keyword">proc</span> <a href="#vips_area_new_array%2CGType%2Ccsize_t%2Ccint"><span class="Identifier">vips_area_new_array</span></a><span class="Other">(</span><span class="Identifier">typ</span><span class="Other">:</span> <a href="types.html#GType"><span class="Identifier">GType</span></a><span class="Other">;</span> <span class="Identifier">sizeof_type</span><span class="Other">:</span> <span class="Identifier">csize_t</span><span class="Other">;</span> <span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="types.html#VipsArea"><span class="Identifier">VipsArea</span></a> {.
+  <dt><pre><span class="Keyword">proc</span> <a href="#vips_area_new_array%2CGType%2Ccsize_t%2Ccint"><span class="Identifier">vips_area_new_array</span></a><span class="Other">(</span><span class="Identifier">typ</span><span class="Other">:</span> <a href="glib/glib.html#GType"><span class="Identifier">GType</span></a><span class="Other">;</span> <span class="Identifier">sizeof_type</span><span class="Other">:</span> <span class="Identifier">csize_t</span><span class="Other">;</span> <span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="types.html#VipsArea"><span class="Identifier">VipsArea</span></a> {.
     <span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span> <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">&quot;vips/types.h&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -550,7 +499,7 @@
 </div>
 <div id="vips_array_double_get_type-procs-all">
   <div id="vips_array_double_get_type">
-  <dt><pre><span class="Keyword">proc</span> <a href="#vips_array_double_get_type"><span class="Identifier">vips_array_double_get_type</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="types.html#GType"><span class="Identifier">GType</span></a> {.<span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span>
+  <dt><pre><span class="Keyword">proc</span> <a href="#vips_array_double_get_type"><span class="Identifier">vips_array_double_get_type</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="glib/glib.html#GType"><span class="Identifier">GType</span></a> {.<span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span>
     <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">&quot;vips/types.h&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -587,7 +536,7 @@
 </div>
 <div id="vips_array_image_get_type-procs-all">
   <div id="vips_array_image_get_type">
-  <dt><pre><span class="Keyword">proc</span> <a href="#vips_array_image_get_type"><span class="Identifier">vips_array_image_get_type</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="types.html#GType"><span class="Identifier">GType</span></a> {.<span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span>
+  <dt><pre><span class="Keyword">proc</span> <a href="#vips_array_image_get_type"><span class="Identifier">vips_array_image_get_type</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="glib/glib.html#GType"><span class="Identifier">GType</span></a> {.<span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span>
     <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">&quot;vips/types.h&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -611,7 +560,7 @@
 </div>
 <div id="vips_array_int_get_type-procs-all">
   <div id="vips_array_int_get_type">
-  <dt><pre><span class="Keyword">proc</span> <a href="#vips_array_int_get_type"><span class="Identifier">vips_array_int_get_type</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="types.html#GType"><span class="Identifier">GType</span></a> {.<span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span> <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">&quot;vips/types.h&quot;</span><span class="Other">,</span>
+  <dt><pre><span class="Keyword">proc</span> <a href="#vips_array_int_get_type"><span class="Identifier">vips_array_int_get_type</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="glib/glib.html#GType"><span class="Identifier">GType</span></a> {.<span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span> <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">&quot;vips/types.h&quot;</span><span class="Other">,</span>
                                         <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -671,7 +620,7 @@
 </div>
 <div id="vips_blob_get_type-procs-all">
   <div id="vips_blob_get_type">
-  <dt><pre><span class="Keyword">proc</span> <a href="#vips_blob_get_type"><span class="Identifier">vips_blob_get_type</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="types.html#GType"><span class="Identifier">GType</span></a> {.<span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span> <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">&quot;vips/types.h&quot;</span><span class="Other">,</span>
+  <dt><pre><span class="Keyword">proc</span> <a href="#vips_blob_get_type"><span class="Identifier">vips_blob_get_type</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="glib/glib.html#GType"><span class="Identifier">GType</span></a> {.<span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span> <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">&quot;vips/types.h&quot;</span><span class="Other">,</span>
                                    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -720,7 +669,7 @@
 </div>
 <div id="vips_ref_string_get_type-procs-all">
   <div id="vips_ref_string_get_type">
-  <dt><pre><span class="Keyword">proc</span> <a href="#vips_ref_string_get_type"><span class="Identifier">vips_ref_string_get_type</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="types.html#GType"><span class="Identifier">GType</span></a> {.<span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span> <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">&quot;vips/types.h&quot;</span><span class="Other">,</span>
+  <dt><pre><span class="Keyword">proc</span> <a href="#vips_ref_string_get_type"><span class="Identifier">vips_ref_string_get_type</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="glib/glib.html#GType"><span class="Identifier">GType</span></a> {.<span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span> <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">&quot;vips/types.h&quot;</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -744,7 +693,7 @@
 </div>
 <div id="vips_save_string_get_type-procs-all">
   <div id="vips_save_string_get_type">
-  <dt><pre><span class="Keyword">proc</span> <a href="#vips_save_string_get_type"><span class="Identifier">vips_save_string_get_type</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="types.html#GType"><span class="Identifier">GType</span></a> {.<span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span>
+  <dt><pre><span class="Keyword">proc</span> <a href="#vips_save_string_get_type"><span class="Identifier">vips_save_string_get_type</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="glib/glib.html#GType"><span class="Identifier">GType</span></a> {.<span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span>
     <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">&quot;vips/types.h&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -756,7 +705,7 @@
 </div>
 <div id="vips_thing_get_type-procs-all">
   <div id="vips_thing_get_type">
-  <dt><pre><span class="Keyword">proc</span> <a href="#vips_thing_get_type"><span class="Identifier">vips_thing_get_type</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="types.html#GType"><span class="Identifier">GType</span></a> {.<span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span> <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">&quot;vips/types.h&quot;</span><span class="Other">,</span>
+  <dt><pre><span class="Keyword">proc</span> <a href="#vips_thing_get_type"><span class="Identifier">vips_thing_get_type</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="glib/glib.html#GType"><span class="Identifier">GType</span></a> {.<span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span> <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">&quot;vips/types.h&quot;</span><span class="Other">,</span>
                                     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -780,7 +729,7 @@
 </div>
 <div id="vips_value_get_area-procs-all">
   <div id="vips_value_get_area,ptr.GValue,ptr.csize_t">
-  <dt><pre><span class="Keyword">proc</span> <a href="#vips_value_get_area%2Cptr.GValue%2Cptr.csize_t"><span class="Identifier">vips_value_get_area</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="types.html#GValue"><span class="Identifier">GValue</span></a><span class="Other">;</span> <span class="Identifier">length</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">csize_t</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">pointer</span> {.
+  <dt><pre><span class="Keyword">proc</span> <a href="#vips_value_get_area%2Cptr.GValue%2Cptr.csize_t"><span class="Identifier">vips_value_get_area</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="glib/glib.html#GValue"><span class="Identifier">GValue</span></a><span class="Other">;</span> <span class="Identifier">length</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">csize_t</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">pointer</span> {.
     <span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span> <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">&quot;vips/types.h&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -792,7 +741,7 @@
 </div>
 <div id="vips_value_get_array-procs-all">
   <div id="vips_value_get_array,ptr.GValue,ptr.cint,ptr.GType,ptr.csize_t">
-  <dt><pre><span class="Keyword">proc</span> <a href="#vips_value_get_array%2Cptr.GValue%2Cptr.cint%2Cptr.GType%2Cptr.csize_t"><span class="Identifier">vips_value_get_array</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="types.html#GValue"><span class="Identifier">GValue</span></a><span class="Other">;</span> <span class="Identifier">n</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">typ</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="types.html#GType"><span class="Identifier">GType</span></a><span class="Other">;</span>
+  <dt><pre><span class="Keyword">proc</span> <a href="#vips_value_get_array%2Cptr.GValue%2Cptr.cint%2Cptr.GType%2Cptr.csize_t"><span class="Identifier">vips_value_get_array</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="glib/glib.html#GValue"><span class="Identifier">GValue</span></a><span class="Other">;</span> <span class="Identifier">n</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">typ</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="glib/glib.html#GType"><span class="Identifier">GType</span></a><span class="Other">;</span>
                           <span class="Identifier">sizeof_type</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">csize_t</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">pointer</span> {.<span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span>
     <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">&quot;vips/types.h&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
@@ -805,7 +754,7 @@
 </div>
 <div id="vips_value_get_array_double-procs-all">
   <div id="vips_value_get_array_double,ptr.GValue,ptr.cint">
-  <dt><pre><span class="Keyword">proc</span> <a href="#vips_value_get_array_double%2Cptr.GValue%2Cptr.cint"><span class="Identifier">vips_value_get_array_double</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="types.html#GValue"><span class="Identifier">GValue</span></a><span class="Other">;</span> <span class="Identifier">n</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">cint</span><span class="Other">)</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">cdouble</span> {.
+  <dt><pre><span class="Keyword">proc</span> <a href="#vips_value_get_array_double%2Cptr.GValue%2Cptr.cint"><span class="Identifier">vips_value_get_array_double</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="glib/glib.html#GValue"><span class="Identifier">GValue</span></a><span class="Other">;</span> <span class="Identifier">n</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">cint</span><span class="Other">)</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">cdouble</span> {.
     <span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span> <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">&quot;vips/types.h&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -817,7 +766,7 @@
 </div>
 <div id="vips_value_get_array_int-procs-all">
   <div id="vips_value_get_array_int,ptr.GValue,ptr.cint">
-  <dt><pre><span class="Keyword">proc</span> <a href="#vips_value_get_array_int%2Cptr.GValue%2Cptr.cint"><span class="Identifier">vips_value_get_array_int</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="types.html#GValue"><span class="Identifier">GValue</span></a><span class="Other">;</span> <span class="Identifier">n</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">cint</span><span class="Other">)</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">cint</span> {.<span class="Identifier">cdecl</span><span class="Other">,</span>
+  <dt><pre><span class="Keyword">proc</span> <a href="#vips_value_get_array_int%2Cptr.GValue%2Cptr.cint"><span class="Identifier">vips_value_get_array_int</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="glib/glib.html#GValue"><span class="Identifier">GValue</span></a><span class="Other">;</span> <span class="Identifier">n</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">cint</span><span class="Other">)</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">cint</span> {.<span class="Identifier">cdecl</span><span class="Other">,</span>
     <span class="Identifier">importc</span><span class="Other">,</span> <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">&quot;vips/types.h&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -829,7 +778,7 @@
 </div>
 <div id="vips_value_get_array_object-procs-all">
   <div id="vips_value_get_array_object,ptr.GValue,ptr.cint">
-  <dt><pre><span class="Keyword">proc</span> <a href="#vips_value_get_array_object%2Cptr.GValue%2Cptr.cint"><span class="Identifier">vips_value_get_array_object</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="types.html#GValue"><span class="Identifier">GValue</span></a><span class="Other">;</span> <span class="Identifier">n</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">cint</span><span class="Other">)</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Keyword">ptr</span> <a href="types.html#GObject"><span class="Identifier">GObject</span></a> {.
+  <dt><pre><span class="Keyword">proc</span> <a href="#vips_value_get_array_object%2Cptr.GValue%2Cptr.cint"><span class="Identifier">vips_value_get_array_object</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="glib/glib.html#GValue"><span class="Identifier">GValue</span></a><span class="Other">;</span> <span class="Identifier">n</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">cint</span><span class="Other">)</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Keyword">ptr</span> <a href="glib/glib.html#GObject"><span class="Identifier">GObject</span></a> {.
     <span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span> <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">&quot;vips/types.h&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -841,7 +790,7 @@
 </div>
 <div id="vips_value_get_blob-procs-all">
   <div id="vips_value_get_blob,ptr.GValue,ptr.csize_t">
-  <dt><pre><span class="Keyword">proc</span> <a href="#vips_value_get_blob%2Cptr.GValue%2Cptr.csize_t"><span class="Identifier">vips_value_get_blob</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="types.html#GValue"><span class="Identifier">GValue</span></a><span class="Other">;</span> <span class="Identifier">length</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">csize_t</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">pointer</span> {.
+  <dt><pre><span class="Keyword">proc</span> <a href="#vips_value_get_blob%2Cptr.GValue%2Cptr.csize_t"><span class="Identifier">vips_value_get_blob</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="glib/glib.html#GValue"><span class="Identifier">GValue</span></a><span class="Other">;</span> <span class="Identifier">length</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">csize_t</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">pointer</span> {.
     <span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span> <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">&quot;vips/types.h&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -853,7 +802,7 @@
 </div>
 <div id="vips_value_get_ref_string-procs-all">
   <div id="vips_value_get_ref_string,ptr.GValue,ptr.csize_t">
-  <dt><pre><span class="Keyword">proc</span> <a href="#vips_value_get_ref_string%2Cptr.GValue%2Cptr.csize_t"><span class="Identifier">vips_value_get_ref_string</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="types.html#GValue"><span class="Identifier">GValue</span></a><span class="Other">;</span> <span class="Identifier">length</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">csize_t</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.
+  <dt><pre><span class="Keyword">proc</span> <a href="#vips_value_get_ref_string%2Cptr.GValue%2Cptr.csize_t"><span class="Identifier">vips_value_get_ref_string</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="glib/glib.html#GValue"><span class="Identifier">GValue</span></a><span class="Other">;</span> <span class="Identifier">length</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">csize_t</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.
     <span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span> <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">&quot;vips/types.h&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -865,7 +814,7 @@
 </div>
 <div id="vips_value_get_save_string-procs-all">
   <div id="vips_value_get_save_string,ptr.GValue">
-  <dt><pre><span class="Keyword">proc</span> <a href="#vips_value_get_save_string%2Cptr.GValue"><span class="Identifier">vips_value_get_save_string</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="types.html#GValue"><span class="Identifier">GValue</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span>
+  <dt><pre><span class="Keyword">proc</span> <a href="#vips_value_get_save_string%2Cptr.GValue"><span class="Identifier">vips_value_get_save_string</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="glib/glib.html#GValue"><span class="Identifier">GValue</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cstring</span> {.<span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span>
     <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">&quot;vips/types.h&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -877,7 +826,7 @@
 </div>
 <div id="vips_value_set_area-procs-all">
   <div id="vips_value_set_area,ptr.GValue,VipsCallbackFn,pointer">
-  <dt><pre><span class="Keyword">proc</span> <a href="#vips_value_set_area%2Cptr.GValue%2CVipsCallbackFn%2Cpointer"><span class="Identifier">vips_value_set_area</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="types.html#GValue"><span class="Identifier">GValue</span></a><span class="Other">;</span> <span class="Identifier">free_fn</span><span class="Other">:</span> <a href="basic.html#VipsCallbackFn"><span class="Identifier">VipsCallbackFn</span></a><span class="Other">;</span>
+  <dt><pre><span class="Keyword">proc</span> <a href="#vips_value_set_area%2Cptr.GValue%2CVipsCallbackFn%2Cpointer"><span class="Identifier">vips_value_set_area</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="glib/glib.html#GValue"><span class="Identifier">GValue</span></a><span class="Other">;</span> <span class="Identifier">free_fn</span><span class="Other">:</span> <a href="basic.html#VipsCallbackFn"><span class="Identifier">VipsCallbackFn</span></a><span class="Other">;</span>
                          <span class="Identifier">data</span><span class="Other">:</span> <span class="Identifier">pointer</span><span class="Other">)</span> {.<span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span>
     <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">&quot;vips/types.h&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
@@ -890,7 +839,7 @@
 </div>
 <div id="vips_value_set_array-procs-all">
   <div id="vips_value_set_array,ptr.GValue,cint,GType,csize_t">
-  <dt><pre><span class="Keyword">proc</span> <a href="#vips_value_set_array%2Cptr.GValue%2Ccint%2CGType%2Ccsize_t"><span class="Identifier">vips_value_set_array</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="types.html#GValue"><span class="Identifier">GValue</span></a><span class="Other">;</span> <span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">typ</span><span class="Other">:</span> <a href="types.html#GType"><span class="Identifier">GType</span></a><span class="Other">;</span>
+  <dt><pre><span class="Keyword">proc</span> <a href="#vips_value_set_array%2Cptr.GValue%2Ccint%2CGType%2Ccsize_t"><span class="Identifier">vips_value_set_array</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="glib/glib.html#GValue"><span class="Identifier">GValue</span></a><span class="Other">;</span> <span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">typ</span><span class="Other">:</span> <a href="glib/glib.html#GType"><span class="Identifier">GType</span></a><span class="Other">;</span>
                           <span class="Identifier">sizeof_type</span><span class="Other">:</span> <span class="Identifier">csize_t</span><span class="Other">)</span> {.<span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span>
     <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">&quot;vips/types.h&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
@@ -903,7 +852,7 @@
 </div>
 <div id="vips_value_set_array_double-procs-all">
   <div id="vips_value_set_array_double,ptr.GValue,ptr.cdouble,cint">
-  <dt><pre><span class="Keyword">proc</span> <a href="#vips_value_set_array_double%2Cptr.GValue%2Cptr.cdouble%2Ccint"><span class="Identifier">vips_value_set_array_double</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="types.html#GValue"><span class="Identifier">GValue</span></a><span class="Other">;</span> <span class="Identifier">array</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">cdouble</span><span class="Other">;</span> <span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span> {.
+  <dt><pre><span class="Keyword">proc</span> <a href="#vips_value_set_array_double%2Cptr.GValue%2Cptr.cdouble%2Ccint"><span class="Identifier">vips_value_set_array_double</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="glib/glib.html#GValue"><span class="Identifier">GValue</span></a><span class="Other">;</span> <span class="Identifier">array</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">cdouble</span><span class="Other">;</span> <span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span> {.
     <span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span> <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">&quot;vips/types.h&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -915,7 +864,7 @@
 </div>
 <div id="vips_value_set_array_int-procs-all">
   <div id="vips_value_set_array_int,ptr.GValue,ptr.cint,cint">
-  <dt><pre><span class="Keyword">proc</span> <a href="#vips_value_set_array_int%2Cptr.GValue%2Cptr.cint%2Ccint"><span class="Identifier">vips_value_set_array_int</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="types.html#GValue"><span class="Identifier">GValue</span></a><span class="Other">;</span> <span class="Identifier">array</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span> {.
+  <dt><pre><span class="Keyword">proc</span> <a href="#vips_value_set_array_int%2Cptr.GValue%2Cptr.cint%2Ccint"><span class="Identifier">vips_value_set_array_int</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="glib/glib.html#GValue"><span class="Identifier">GValue</span></a><span class="Other">;</span> <span class="Identifier">array</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span> {.
     <span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span> <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">&quot;vips/types.h&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -927,7 +876,7 @@
 </div>
 <div id="vips_value_set_array_object-procs-all">
   <div id="vips_value_set_array_object,ptr.GValue,cint">
-  <dt><pre><span class="Keyword">proc</span> <a href="#vips_value_set_array_object%2Cptr.GValue%2Ccint"><span class="Identifier">vips_value_set_array_object</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="types.html#GValue"><span class="Identifier">GValue</span></a><span class="Other">;</span> <span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span> {.<span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span>
+  <dt><pre><span class="Keyword">proc</span> <a href="#vips_value_set_array_object%2Cptr.GValue%2Ccint"><span class="Identifier">vips_value_set_array_object</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="glib/glib.html#GValue"><span class="Identifier">GValue</span></a><span class="Other">;</span> <span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span> {.<span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span>
     <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">&quot;vips/types.h&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -939,7 +888,7 @@
 </div>
 <div id="vips_value_set_blob-procs-all">
   <div id="vips_value_set_blob,ptr.GValue,VipsCallbackFn,pointer,csize_t">
-  <dt><pre><span class="Keyword">proc</span> <a href="#vips_value_set_blob%2Cptr.GValue%2CVipsCallbackFn%2Cpointer%2Ccsize_t"><span class="Identifier">vips_value_set_blob</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="types.html#GValue"><span class="Identifier">GValue</span></a><span class="Other">;</span> <span class="Identifier">free_fn</span><span class="Other">:</span> <a href="basic.html#VipsCallbackFn"><span class="Identifier">VipsCallbackFn</span></a><span class="Other">;</span>
+  <dt><pre><span class="Keyword">proc</span> <a href="#vips_value_set_blob%2Cptr.GValue%2CVipsCallbackFn%2Cpointer%2Ccsize_t"><span class="Identifier">vips_value_set_blob</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="glib/glib.html#GValue"><span class="Identifier">GValue</span></a><span class="Other">;</span> <span class="Identifier">free_fn</span><span class="Other">:</span> <a href="basic.html#VipsCallbackFn"><span class="Identifier">VipsCallbackFn</span></a><span class="Other">;</span>
                          <span class="Identifier">data</span><span class="Other">:</span> <span class="Identifier">pointer</span><span class="Other">;</span> <span class="Identifier">length</span><span class="Other">:</span> <span class="Identifier">csize_t</span><span class="Other">)</span> {.<span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span>
     <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">&quot;vips/types.h&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
@@ -952,7 +901,7 @@
 </div>
 <div id="vips_value_set_blob_free-procs-all">
   <div id="vips_value_set_blob_free,ptr.GValue,pointer,csize_t">
-  <dt><pre><span class="Keyword">proc</span> <a href="#vips_value_set_blob_free%2Cptr.GValue%2Cpointer%2Ccsize_t"><span class="Identifier">vips_value_set_blob_free</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="types.html#GValue"><span class="Identifier">GValue</span></a><span class="Other">;</span> <span class="Identifier">data</span><span class="Other">:</span> <span class="Identifier">pointer</span><span class="Other">;</span> <span class="Identifier">length</span><span class="Other">:</span> <span class="Identifier">csize_t</span><span class="Other">)</span> {.
+  <dt><pre><span class="Keyword">proc</span> <a href="#vips_value_set_blob_free%2Cptr.GValue%2Cpointer%2Ccsize_t"><span class="Identifier">vips_value_set_blob_free</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="glib/glib.html#GValue"><span class="Identifier">GValue</span></a><span class="Other">;</span> <span class="Identifier">data</span><span class="Other">:</span> <span class="Identifier">pointer</span><span class="Other">;</span> <span class="Identifier">length</span><span class="Other">:</span> <span class="Identifier">csize_t</span><span class="Other">)</span> {.
     <span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span> <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">&quot;vips/types.h&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -964,7 +913,7 @@
 </div>
 <div id="vips_value_set_ref_string-procs-all">
   <div id="vips_value_set_ref_string,ptr.GValue,cstring">
-  <dt><pre><span class="Keyword">proc</span> <a href="#vips_value_set_ref_string%2Cptr.GValue%2Ccstring"><span class="Identifier">vips_value_set_ref_string</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="types.html#GValue"><span class="Identifier">GValue</span></a><span class="Other">;</span> <span class="Identifier">str</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">cdecl</span><span class="Other">,</span>
+  <dt><pre><span class="Keyword">proc</span> <a href="#vips_value_set_ref_string%2Cptr.GValue%2Ccstring"><span class="Identifier">vips_value_set_ref_string</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="glib/glib.html#GValue"><span class="Identifier">GValue</span></a><span class="Other">;</span> <span class="Identifier">str</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">cdecl</span><span class="Other">,</span>
     <span class="Identifier">importc</span><span class="Other">,</span> <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">&quot;vips/types.h&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -976,7 +925,7 @@
 </div>
 <div id="vips_value_set_save_string-procs-all">
   <div id="vips_value_set_save_string,ptr.GValue,cstring">
-  <dt><pre><span class="Keyword">proc</span> <a href="#vips_value_set_save_string%2Cptr.GValue%2Ccstring"><span class="Identifier">vips_value_set_save_string</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="types.html#GValue"><span class="Identifier">GValue</span></a><span class="Other">;</span> <span class="Identifier">str</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">cdecl</span><span class="Other">,</span>
+  <dt><pre><span class="Keyword">proc</span> <a href="#vips_value_set_save_string%2Cptr.GValue%2Ccstring"><span class="Identifier">vips_value_set_save_string</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="glib/glib.html#GValue"><span class="Identifier">GValue</span></a><span class="Other">;</span> <span class="Identifier">str</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span> {.<span class="Identifier">cdecl</span><span class="Other">,</span>
     <span class="Identifier">importc</span><span class="Other">,</span> <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">&quot;vips/types.h&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -988,7 +937,7 @@
 </div>
 <div id="vips_value_set_save_stringf-procs-all">
   <div id="vips_value_set_save_stringf,ptr.GValue,cstring">
-  <dt><pre><span class="Keyword">proc</span> <a href="#vips_value_set_save_stringf%2Cptr.GValue%2Ccstring"><span class="Identifier">vips_value_set_save_stringf</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="types.html#GValue"><span class="Identifier">GValue</span></a><span class="Other">;</span> <span class="Identifier">fmt</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">void</span> {.
+  <dt><pre><span class="Keyword">proc</span> <a href="#vips_value_set_save_stringf%2Cptr.GValue%2Ccstring"><span class="Identifier">vips_value_set_save_stringf</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="glib/glib.html#GValue"><span class="Identifier">GValue</span></a><span class="Other">;</span> <span class="Identifier">fmt</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">void</span> {.
     <span class="Identifier">varargs</span><span class="Other">,</span> <span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span> <span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span> <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">&quot;vips/types.h&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
@@ -1002,6 +951,12 @@
 
   </dl>
 </div>
+<div class="section" id="19">
+  <h1><a class="toc-backref" href="#19">Exports</a></h1>
+  <dl class="item">
+    <a href="glib/glib.html#GParamSpec"><span class="Identifier">GParamSpec</span></a>, <a href="glib/glib.html#GOptionGroup"><span class="Identifier">GOptionGroup</span></a>, <a href="glib/glib.html#GObjectClass"><span class="Identifier">GObjectClass</span></a>, <a href="glib/glib.html#gint32"><span class="Identifier">gint32</span></a>, <a href="glib/glib.html#g_object_unref,pointer"><span class="Identifier">g_object_unref</span></a>, <a href="glib/glib.html#gint64"><span class="Identifier">gint64</span></a>, <a href="glib/glib.html#gboolean"><span class="Identifier">gboolean</span></a>, <a href="glib/glib.html#guint32"><span class="Identifier">guint32</span></a>, <a href="glib/glib.html#GObject"><span class="Identifier">GObject</span></a>, <a href="glib/glib.html#guint"><span class="Identifier">guint</span></a>, <a href="glib/glib.html#GType"><span class="Identifier">GType</span></a>, <a href="glib/glib.html#guint64"><span class="Identifier">guint64</span></a>, <a href="glib/glib.html#GMutex"><span class="Identifier">GMutex</span></a>, <a href="glib/glib.html#GValue"><span class="Identifier">GValue</span></a>, <a href="glib/glib.html#GSList"><span class="Identifier">GSList</span></a>
+  </dl>
+</div>
 
   </div>
 </div>
@@ -1009,7 +964,7 @@
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2025-09-22 07:28:39 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2025-09-22 08:47:25 UTC</small>
       </div>
     </div>
   </div>
