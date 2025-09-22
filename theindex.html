@@ -25,7 +25,7 @@
   <div class="document" id="documentId">
     <div class="container">
       <h1 class="title">Index</h1>
-      Modules: <a href="index.html">libvips</a>, <a href="libvips/bindings/arithmetic.html">libvips/bindings/arithmetic</a>, <a href="libvips/bindings/basic.html">libvips/bindings/basic</a>, <a href="libvips/bindings/colour.html">libvips/bindings/colour</a>, <a href="libvips/bindings/convolution.html">libvips/bindings/convolution</a>, <a href="libvips/bindings/error.html">libvips/bindings/error</a>, <a href="libvips/bindings/foreign.html">libvips/bindings/foreign</a>, <a href="libvips/bindings/header.html">libvips/bindings/header</a>, <a href="libvips/bindings/image.html">libvips/bindings/image</a>, <a href="libvips/bindings/resample.html">libvips/bindings/resample</a>, <a href="libvips/bindings/types.html">libvips/bindings/types</a>, <a href="libvips/bindings/vips.html">libvips/bindings/vips</a>.<br/><p /><h2>API symbols</h2>
+      Modules: <a href="index.html">libvips</a>, <a href="libvips/bindings/arithmetic.html">libvips/bindings/arithmetic</a>, <a href="libvips/bindings/basic.html">libvips/bindings/basic</a>, <a href="libvips/bindings/colour.html">libvips/bindings/colour</a>, <a href="libvips/bindings/conversion.html">libvips/bindings/conversion</a>, <a href="libvips/bindings/convolution.html">libvips/bindings/convolution</a>, <a href="libvips/bindings/error.html">libvips/bindings/error</a>, <a href="libvips/bindings/foreign.html">libvips/bindings/foreign</a>, <a href="libvips/bindings/header.html">libvips/bindings/header</a>, <a href="libvips/bindings/image.html">libvips/bindings/image</a>, <a href="libvips/bindings/resample.html">libvips/bindings/resample</a>, <a href="libvips/bindings/types.html">libvips/bindings/types</a>, <a href="libvips/bindings/vips.html">libvips/bindings/vips</a>.<br/><p /><h2>API symbols</h2>
 <dl><dt><a name="c_vips_affine" href="#c_vips_affine"><span>c_vips_affine:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="resample: proc c_vips_affine(input: ptr VipsImage; output: ptr ptr VipsImage;
@@ -198,6 +198,10 @@
 <li><a class="reference external"
           data-doc-search-tag="arithmetic: proc vips_add(left: ptr VipsImage; right: ptr VipsImage; res: ptr ptr VipsImage): cint" href="libvips/bindings/arithmetic.html#vips_add%2Cptr.VipsImage%2Cptr.VipsImage%2Cptr.ptr.VipsImage">arithmetic: proc vips_add(left: ptr VipsImage; right: ptr VipsImage; res: ptr ptr VipsImage): cint</a></li>
           </ul></dd>
+<dt><a name="vips_addalpha" href="#vips_addalpha"><span>vips_addalpha:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_addalpha(input: ptr VipsImage; output: ptr ptr VipsImage): cint" href="libvips/bindings/conversion.html#vips_addalpha%2Cptr.VipsImage%2Cptr.ptr.VipsImage">conversion: proc vips_addalpha(input: ptr VipsImage; output: ptr ptr VipsImage): cint</a></li>
+          </ul></dd>
 <dt><a name="vips_add_option_entries" href="#vips_add_option_entries"><span>vips_add_option_entries:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="vips: proc vips_add_option_entries(option_group: pointer)" href="libvips/bindings/vips.html#vips_add_option_entries%2Cpointer">vips: proc vips_add_option_entries(option_group: pointer)</a></li>
@@ -205,6 +209,10 @@
 <dt><a name="vips_affine" href="#vips_affine"><span>vips_affine:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="resample: proc vips_affine(input: ptr VipsImage; output: ptr ptr VipsImage; a, b, c, d: cdouble): cint" href="libvips/bindings/resample.html#vips_affine%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2Ccdouble%2Ccdouble%2Ccdouble%2Ccdouble">resample: proc vips_affine(input: ptr VipsImage; output: ptr ptr VipsImage; a, b, c, d: cdouble): cint</a></li>
+          </ul></dd>
+<dt><a name="VipsAlign" href="#VipsAlign"><span>VipsAlign:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: enum VipsAlign" href="libvips/bindings/conversion.html#VipsAlign">conversion: enum VipsAlign</a></li>
           </ul></dd>
 <dt><a name="vips_analyzeload" href="#vips_analyzeload"><span>vips_analyzeload:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -223,6 +231,14 @@
 <dt><a name="vips_andimage_const1" href="#vips_andimage_const1"><span>vips_andimage_const1:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="arithmetic: proc vips_andimage_const1(input: ptr VipsImage; res: ptr ptr VipsImage; c: cdouble): cint" href="libvips/bindings/arithmetic.html#vips_andimage_const1%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2Ccdouble">arithmetic: proc vips_andimage_const1(input: ptr VipsImage; res: ptr ptr VipsImage; c: cdouble): cint</a></li>
+          </ul></dd>
+<dt><a name="VipsAngle" href="#VipsAngle"><span>VipsAngle:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: enum VipsAngle" href="libvips/bindings/conversion.html#VipsAngle">conversion: enum VipsAngle</a></li>
+          </ul></dd>
+<dt><a name="VipsAngle45" href="#VipsAngle45"><span>VipsAngle45:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: enum VipsAngle45" href="libvips/bindings/conversion.html#VipsAngle45">conversion: enum VipsAngle45</a></li>
           </ul></dd>
 <dt><a name="VipsArea" href="#VipsArea"><span>VipsArea:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -332,6 +348,10 @@
 <li><a class="reference external"
           data-doc-search-tag="types: proc vips_array_int_newv(n: cint): ptr VipsArrayInt" href="libvips/bindings/types.html#vips_array_int_newv%2Ccint">types: proc vips_array_int_newv(n: cint): ptr VipsArrayInt</a></li>
           </ul></dd>
+<dt><a name="vips_arrayjoin" href="#vips_arrayjoin"><span>vips_arrayjoin:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_arrayjoin(input: ptr ptr VipsImage; output: ptr ptr VipsImage; n: cint): cint" href="libvips/bindings/conversion.html#vips_arrayjoin%2Cptr.ptr.VipsImage%2Cptr.ptr.VipsImage%2Ccint">conversion: proc vips_arrayjoin(input: ptr ptr VipsImage; output: ptr ptr VipsImage; n: cint): cint</a></li>
+          </ul></dd>
 <dt><a name="vips_asin" href="#vips_asin"><span>vips_asin:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="arithmetic: proc vips_asin(input: ptr VipsImage; res: ptr ptr VipsImage): cint" href="libvips/bindings/arithmetic.html#vips_asin%2Cptr.VipsImage%2Cptr.ptr.VipsImage">arithmetic: proc vips_asin(input: ptr VipsImage; res: ptr ptr VipsImage): cint</a></li>
@@ -362,6 +382,14 @@
 <li><a class="reference external"
           data-doc-search-tag="arithmetic: proc vips_atanh(input: ptr VipsImage; res: ptr ptr VipsImage): cint" href="libvips/bindings/arithmetic.html#vips_atanh%2Cptr.VipsImage%2Cptr.ptr.VipsImage">arithmetic: proc vips_atanh(input: ptr VipsImage; res: ptr ptr VipsImage): cint</a></li>
           </ul></dd>
+<dt><a name="vips_autorot" href="#vips_autorot"><span>vips_autorot:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_autorot(input: ptr VipsImage; output: ptr ptr VipsImage): cint" href="libvips/bindings/conversion.html#vips_autorot%2Cptr.VipsImage%2Cptr.ptr.VipsImage">conversion: proc vips_autorot(input: ptr VipsImage; output: ptr ptr VipsImage): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_autorot_remove_angle" href="#vips_autorot_remove_angle"><span>vips_autorot_remove_angle:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_autorot_remove_angle(image: ptr VipsImage)" href="libvips/bindings/conversion.html#vips_autorot_remove_angle%2Cptr.VipsImage">conversion: proc vips_autorot_remove_angle(image: ptr VipsImage)</a></li>
+          </ul></dd>
 <dt><a name="vips_avg" href="#vips_avg"><span>vips_avg:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="arithmetic: proc vips_avg(input: ptr VipsImage; res: ptr cdouble): cint" href="libvips/bindings/arithmetic.html#vips_avg%2Cptr.VipsImage%2Cptr.cdouble">arithmetic: proc vips_avg(input: ptr VipsImage; res: ptr cdouble): cint</a></li>
@@ -377,6 +405,24 @@
 <dt><a name="VIPS_A_Z0" href="#VIPS_A_Z0"><span>VIPS_A_Z0:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="colour: const VIPS_A_Z0" href="libvips/bindings/colour.html#VIPS_A_Z0">colour: const VIPS_A_Z0</a></li>
+          </ul></dd>
+<dt><a name="vips_bandand" href="#vips_bandand"><span>vips_bandand:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_bandand(input: ptr VipsImage; output: ptr ptr VipsImage): cint" href="libvips/bindings/conversion.html#vips_bandand%2Cptr.VipsImage%2Cptr.ptr.VipsImage">conversion: proc vips_bandand(input: ptr VipsImage; output: ptr ptr VipsImage): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_bandbool" href="#vips_bandbool"><span>vips_bandbool:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_bandbool(input: ptr VipsImage; output: ptr ptr VipsImage;
+              boolean: VipsOperationBoolean): cint" href="libvips/bindings/conversion.html#vips_bandbool%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2CVipsOperationBoolean">conversion: proc vips_bandbool(input: ptr VipsImage; output: ptr ptr VipsImage;
+              boolean: VipsOperationBoolean): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_bandeor" href="#vips_bandeor"><span>vips_bandeor:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_bandeor(input: ptr VipsImage; output: ptr ptr VipsImage): cint" href="libvips/bindings/conversion.html#vips_bandeor%2Cptr.VipsImage%2Cptr.ptr.VipsImage">conversion: proc vips_bandeor(input: ptr VipsImage; output: ptr ptr VipsImage): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_bandfold" href="#vips_bandfold"><span>vips_bandfold:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_bandfold(input: ptr VipsImage; output: ptr ptr VipsImage): cint" href="libvips/bindings/conversion.html#vips_bandfold%2Cptr.VipsImage%2Cptr.ptr.VipsImage">conversion: proc vips_bandfold(input: ptr VipsImage; output: ptr ptr VipsImage): cint</a></li>
           </ul></dd>
 <dt><a name="VipsBandFormat" href="#VipsBandFormat"><span>VipsBandFormat:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -403,6 +449,44 @@
 <dt><a name="vips_band_format_isuint" href="#vips_band_format_isuint"><span>vips_band_format_isuint:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="image: proc vips_band_format_isuint(format: VipsBandFormat): gboolean" href="libvips/bindings/image.html#vips_band_format_isuint%2CVipsBandFormat">image: proc vips_band_format_isuint(format: VipsBandFormat): gboolean</a></li>
+          </ul></dd>
+<dt><a name="vips_bandjoin" href="#vips_bandjoin"><span>vips_bandjoin:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_bandjoin(input: ptr ptr VipsImage; output: ptr ptr VipsImage; n: cint): cint" href="libvips/bindings/conversion.html#vips_bandjoin%2Cptr.ptr.VipsImage%2Cptr.ptr.VipsImage%2Ccint">conversion: proc vips_bandjoin(input: ptr ptr VipsImage; output: ptr ptr VipsImage; n: cint): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_bandjoin2" href="#vips_bandjoin2"><span>vips_bandjoin2:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_bandjoin2(in1, in2: ptr VipsImage; output: ptr ptr VipsImage): cint" href="libvips/bindings/conversion.html#vips_bandjoin2%2Cptr.VipsImage%2Cptr.VipsImage%2Cptr.ptr.VipsImage">conversion: proc vips_bandjoin2(in1, in2: ptr VipsImage; output: ptr ptr VipsImage): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_bandjoin_const" href="#vips_bandjoin_const"><span>vips_bandjoin_const:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_bandjoin_const(input: ptr VipsImage; output: ptr ptr VipsImage;
+                    c: ptr cdouble; n: cint): cint" href="libvips/bindings/conversion.html#vips_bandjoin_const%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2Cptr.cdouble%2Ccint">conversion: proc vips_bandjoin_const(input: ptr VipsImage; output: ptr ptr VipsImage;
+                    c: ptr cdouble; n: cint): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_bandjoin_const1" href="#vips_bandjoin_const1"><span>vips_bandjoin_const1:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_bandjoin_const1(input: ptr VipsImage; output: ptr ptr VipsImage; c: cdouble): cint" href="libvips/bindings/conversion.html#vips_bandjoin_const1%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2Ccdouble">conversion: proc vips_bandjoin_const1(input: ptr VipsImage; output: ptr ptr VipsImage; c: cdouble): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_bandmean" href="#vips_bandmean"><span>vips_bandmean:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_bandmean(input: ptr VipsImage; output: ptr ptr VipsImage): cint" href="libvips/bindings/conversion.html#vips_bandmean%2Cptr.VipsImage%2Cptr.ptr.VipsImage">conversion: proc vips_bandmean(input: ptr VipsImage; output: ptr ptr VipsImage): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_bandor" href="#vips_bandor"><span>vips_bandor:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_bandor(input: ptr VipsImage; output: ptr ptr VipsImage): cint" href="libvips/bindings/conversion.html#vips_bandor%2Cptr.VipsImage%2Cptr.ptr.VipsImage">conversion: proc vips_bandor(input: ptr VipsImage; output: ptr ptr VipsImage): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_bandrank" href="#vips_bandrank"><span>vips_bandrank:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_bandrank(input: ptr ptr VipsImage; output: ptr ptr VipsImage; n: cint): cint" href="libvips/bindings/conversion.html#vips_bandrank%2Cptr.ptr.VipsImage%2Cptr.ptr.VipsImage%2Ccint">conversion: proc vips_bandrank(input: ptr ptr VipsImage; output: ptr ptr VipsImage; n: cint): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_bandunfold" href="#vips_bandunfold"><span>vips_bandunfold:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_bandunfold(input: ptr VipsImage; output: ptr ptr VipsImage): cint" href="libvips/bindings/conversion.html#vips_bandunfold%2Cptr.VipsImage%2Cptr.ptr.VipsImage">conversion: proc vips_bandunfold(input: ptr VipsImage; output: ptr ptr VipsImage): cint</a></li>
+          </ul></dd>
+<dt><a name="VipsBlendMode" href="#VipsBlendMode"><span>VipsBlendMode:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: enum VipsBlendMode" href="libvips/bindings/conversion.html#VipsBlendMode">conversion: enum VipsBlendMode</a></li>
           </ul></dd>
 <dt><a name="VipsBlob" href="#VipsBlob"><span>VipsBlob:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -464,6 +548,10 @@
 <li><a class="reference external"
           data-doc-search-tag="colour: const VIPS_B_Y0" href="libvips/bindings/colour.html#VIPS_B_Y0">colour: const VIPS_B_Y0</a></li>
           </ul></dd>
+<dt><a name="vips_byteswap" href="#vips_byteswap"><span>vips_byteswap:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_byteswap(input: ptr VipsImage; output: ptr ptr VipsImage): cint" href="libvips/bindings/conversion.html#vips_byteswap%2Cptr.VipsImage%2Cptr.ptr.VipsImage">conversion: proc vips_byteswap(input: ptr VipsImage; output: ptr ptr VipsImage): cint</a></li>
+          </ul></dd>
 <dt><a name="VIPS_B_Z0" href="#VIPS_B_Z0"><span>VIPS_B_Z0:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="colour: const VIPS_B_Z0" href="libvips/bindings/colour.html#VIPS_B_Z0">colour: const VIPS_B_Z0</a></li>
@@ -477,6 +565,52 @@
           data-doc-search-tag="convolution: proc vips_canny(input: ptr VipsImage; output: ptr ptr VipsImage;
            args: varargs[pointer]): cint" href="libvips/bindings/convolution.html#vips_canny%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2Cvarargs%5Bpointer%5D">convolution: proc vips_canny(input: ptr VipsImage; output: ptr ptr VipsImage;
            args: varargs[pointer]): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_cast" href="#vips_cast"><span>vips_cast:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_cast(input: ptr VipsImage; output: ptr ptr VipsImage;
+          format: VipsBandFormat): cint" href="libvips/bindings/conversion.html#vips_cast%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2CVipsBandFormat">conversion: proc vips_cast(input: ptr VipsImage; output: ptr ptr VipsImage;
+          format: VipsBandFormat): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_cast_char" href="#vips_cast_char"><span>vips_cast_char:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_cast_char(input: ptr VipsImage; output: ptr ptr VipsImage): cint" href="libvips/bindings/conversion.html#vips_cast_char%2Cptr.VipsImage%2Cptr.ptr.VipsImage">conversion: proc vips_cast_char(input: ptr VipsImage; output: ptr ptr VipsImage): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_cast_complex" href="#vips_cast_complex"><span>vips_cast_complex:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_cast_complex(input: ptr VipsImage; output: ptr ptr VipsImage): cint" href="libvips/bindings/conversion.html#vips_cast_complex%2Cptr.VipsImage%2Cptr.ptr.VipsImage">conversion: proc vips_cast_complex(input: ptr VipsImage; output: ptr ptr VipsImage): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_cast_double" href="#vips_cast_double"><span>vips_cast_double:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_cast_double(input: ptr VipsImage; output: ptr ptr VipsImage): cint" href="libvips/bindings/conversion.html#vips_cast_double%2Cptr.VipsImage%2Cptr.ptr.VipsImage">conversion: proc vips_cast_double(input: ptr VipsImage; output: ptr ptr VipsImage): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_cast_dpcomplex" href="#vips_cast_dpcomplex"><span>vips_cast_dpcomplex:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_cast_dpcomplex(input: ptr VipsImage; output: ptr ptr VipsImage): cint" href="libvips/bindings/conversion.html#vips_cast_dpcomplex%2Cptr.VipsImage%2Cptr.ptr.VipsImage">conversion: proc vips_cast_dpcomplex(input: ptr VipsImage; output: ptr ptr VipsImage): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_cast_float" href="#vips_cast_float"><span>vips_cast_float:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_cast_float(input: ptr VipsImage; output: ptr ptr VipsImage): cint" href="libvips/bindings/conversion.html#vips_cast_float%2Cptr.VipsImage%2Cptr.ptr.VipsImage">conversion: proc vips_cast_float(input: ptr VipsImage; output: ptr ptr VipsImage): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_cast_int" href="#vips_cast_int"><span>vips_cast_int:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_cast_int(input: ptr VipsImage; output: ptr ptr VipsImage): cint" href="libvips/bindings/conversion.html#vips_cast_int%2Cptr.VipsImage%2Cptr.ptr.VipsImage">conversion: proc vips_cast_int(input: ptr VipsImage; output: ptr ptr VipsImage): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_cast_short" href="#vips_cast_short"><span>vips_cast_short:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_cast_short(input: ptr VipsImage; output: ptr ptr VipsImage): cint" href="libvips/bindings/conversion.html#vips_cast_short%2Cptr.VipsImage%2Cptr.ptr.VipsImage">conversion: proc vips_cast_short(input: ptr VipsImage; output: ptr ptr VipsImage): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_cast_uchar" href="#vips_cast_uchar"><span>vips_cast_uchar:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_cast_uchar(input: ptr VipsImage; output: ptr ptr VipsImage): cint" href="libvips/bindings/conversion.html#vips_cast_uchar%2Cptr.VipsImage%2Cptr.ptr.VipsImage">conversion: proc vips_cast_uchar(input: ptr VipsImage; output: ptr ptr VipsImage): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_cast_uint" href="#vips_cast_uint"><span>vips_cast_uint:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_cast_uint(input: ptr VipsImage; output: ptr ptr VipsImage): cint" href="libvips/bindings/conversion.html#vips_cast_uint%2Cptr.VipsImage%2Cptr.ptr.VipsImage">conversion: proc vips_cast_uint(input: ptr VipsImage; output: ptr ptr VipsImage): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_cast_ushort" href="#vips_cast_ushort"><span>vips_cast_ushort:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_cast_ushort(input: ptr VipsImage; output: ptr ptr VipsImage): cint" href="libvips/bindings/conversion.html#vips_cast_ushort%2Cptr.VipsImage%2Cptr.ptr.VipsImage">conversion: proc vips_cast_ushort(input: ptr VipsImage; output: ptr ptr VipsImage): cint</a></li>
           </ul></dd>
 <dt><a name="vips_ceil" href="#vips_ceil"><span>vips_ceil:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -774,6 +908,10 @@
              mask: ptr VipsImage; args: varargs[pointer]): cint" href="libvips/bindings/convolution.html#vips_compass%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2Cptr.VipsImage%2Cvarargs%5Bpointer%5D">convolution: proc vips_compass(input: ptr VipsImage; output: ptr ptr VipsImage;
              mask: ptr VipsImage; args: varargs[pointer]): cint</a></li>
           </ul></dd>
+<dt><a name="VipsCompassDirection" href="#VipsCompassDirection"><span>VipsCompassDirection:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: enum VipsCompassDirection" href="libvips/bindings/conversion.html#VipsCompassDirection">conversion: enum VipsCompassDirection</a></li>
+          </ul></dd>
 <dt><a name="vips_complex" href="#vips_complex"><span>vips_complex:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="arithmetic: proc vips_complex(input: ptr VipsImage; res: ptr ptr VipsImage;
@@ -797,6 +935,18 @@
           data-doc-search-tag="arithmetic: proc vips_complexget(input: ptr VipsImage; res: ptr ptr VipsImage;
                 get: VipsOperationComplexget): cint" href="libvips/bindings/arithmetic.html#vips_complexget%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2CVipsOperationComplexget">arithmetic: proc vips_complexget(input: ptr VipsImage; res: ptr ptr VipsImage;
                 get: VipsOperationComplexget): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_composite" href="#vips_composite"><span>vips_composite:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_composite(input: ptr ptr VipsImage; output: ptr ptr VipsImage; n: cint;
+               mode: ptr cint): cint" href="libvips/bindings/conversion.html#vips_composite%2Cptr.ptr.VipsImage%2Cptr.ptr.VipsImage%2Ccint%2Cptr.cint">conversion: proc vips_composite(input: ptr ptr VipsImage; output: ptr ptr VipsImage; n: cint;
+               mode: ptr cint): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_composite2" href="#vips_composite2"><span>vips_composite2:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_composite2(base, overlay: ptr VipsImage; output: ptr ptr VipsImage;
+                mode: VipsBlendMode): cint" href="libvips/bindings/conversion.html#vips_composite2%2Cptr.VipsImage%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2CVipsBlendMode">conversion: proc vips_composite2(base, overlay: ptr VipsImage; output: ptr ptr VipsImage;
+                mode: VipsBlendMode): cint</a></li>
           </ul></dd>
 <dt><a name="vips_conj" href="#vips_conj"><span>vips_conj:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -838,6 +988,14 @@
              mask: ptr VipsImage; args: varargs[pointer]): cint" href="libvips/bindings/convolution.html#vips_convsep%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2Cptr.VipsImage%2Cvarargs%5Bpointer%5D">convolution: proc vips_convsep(input: ptr VipsImage; output: ptr ptr VipsImage;
              mask: ptr VipsImage; args: varargs[pointer]): cint</a></li>
           </ul></dd>
+<dt><a name="vips_copy" href="#vips_copy"><span>vips_copy:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_copy(input: ptr VipsImage; output: ptr ptr VipsImage): cint" href="libvips/bindings/conversion.html#vips_copy%2Cptr.VipsImage%2Cptr.ptr.VipsImage">conversion: proc vips_copy(input: ptr VipsImage; output: ptr ptr VipsImage): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_copy_file" href="#vips_copy_file"><span>vips_copy_file:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_copy_file(input: ptr VipsImage; output: ptr ptr VipsImage): cint" href="libvips/bindings/conversion.html#vips_copy_file%2Cptr.VipsImage%2Cptr.ptr.VipsImage">conversion: proc vips_copy_file(input: ptr VipsImage; output: ptr ptr VipsImage): cint</a></li>
+          </ul></dd>
 <dt><a name="vips_cos" href="#vips_cos"><span>vips_cos:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="arithmetic: proc vips_cos(input: ptr VipsImage; res: ptr ptr VipsImage): cint" href="libvips/bindings/arithmetic.html#vips_cos%2Cptr.VipsImage%2Cptr.ptr.VipsImage">arithmetic: proc vips_cos(input: ptr VipsImage; res: ptr ptr VipsImage): cint</a></li>
@@ -845,6 +1003,12 @@
 <dt><a name="vips_cosh" href="#vips_cosh"><span>vips_cosh:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="arithmetic: proc vips_cosh(input: ptr VipsImage; res: ptr ptr VipsImage): cint" href="libvips/bindings/arithmetic.html#vips_cosh%2Cptr.VipsImage%2Cptr.ptr.VipsImage">arithmetic: proc vips_cosh(input: ptr VipsImage; res: ptr ptr VipsImage): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_crop" href="#vips_crop"><span>vips_crop:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_crop(input: ptr VipsImage; output: ptr ptr VipsImage;
+          left, top, width, height: cint): cint" href="libvips/bindings/conversion.html#vips_crop%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2Ccint%2Ccint%2Ccint%2Ccint">conversion: proc vips_crop(input: ptr VipsImage; output: ptr ptr VipsImage;
+          left, top, width, height: cint): cint</a></li>
           </ul></dd>
 <dt><a name="vips_cross_phase" href="#vips_cross_phase"><span>vips_cross_phase:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -1004,6 +1168,10 @@
 <li><a class="reference external"
           data-doc-search-tag="arithmetic: proc vips_deviate(input: ptr VipsImage; res: ptr cdouble): cint" href="libvips/bindings/arithmetic.html#vips_deviate%2Cptr.VipsImage%2Cptr.cdouble">arithmetic: proc vips_deviate(input: ptr VipsImage; res: ptr cdouble): cint</a></li>
           </ul></dd>
+<dt><a name="VipsDirection" href="#VipsDirection"><span>VipsDirection:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: enum VipsDirection" href="libvips/bindings/conversion.html#VipsDirection">conversion: enum VipsDirection</a></li>
+          </ul></dd>
 <dt><a name="vips_divide" href="#vips_divide"><span>vips_divide:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="arithmetic: proc vips_divide(left: ptr VipsImage; right: ptr VipsImage; res: ptr ptr VipsImage): cint" href="libvips/bindings/arithmetic.html#vips_divide%2Cptr.VipsImage%2Cptr.VipsImage%2Cptr.ptr.VipsImage">arithmetic: proc vips_divide(left: ptr VipsImage; right: ptr VipsImage; res: ptr ptr VipsImage): cint</a></li>
@@ -1019,6 +1187,12 @@
 <dt><a name="vips_dzsave_target" href="#vips_dzsave_target"><span>vips_dzsave_target:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="foreign: proc vips_dzsave_target(input: ptr VipsImage; target: ptr VipsTarget): cint" href="libvips/bindings/foreign.html#vips_dzsave_target%2Cptr.VipsImage%2Cptr.VipsTarget">foreign: proc vips_dzsave_target(input: ptr VipsImage; target: ptr VipsTarget): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_embed" href="#vips_embed"><span>vips_embed:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_embed(input: ptr VipsImage; output: ptr ptr VipsImage;
+           x, y, width, height: cint): cint" href="libvips/bindings/conversion.html#vips_embed%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2Ccint%2Ccint%2Ccint%2Ccint">conversion: proc vips_embed(input: ptr VipsImage; output: ptr ptr VipsImage;
+           x, y, width, height: cint): cint</a></li>
           </ul></dd>
 <dt><a name="vips_eorimage" href="#vips_eorimage"><span>vips_eorimage:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -1096,6 +1270,20 @@
 <li><a class="reference external"
           data-doc-search-tag="arithmetic: proc vips_exp10(input: ptr VipsImage; res: ptr ptr VipsImage): cint" href="libvips/bindings/arithmetic.html#vips_exp10%2Cptr.VipsImage%2Cptr.ptr.VipsImage">arithmetic: proc vips_exp10(input: ptr VipsImage; res: ptr ptr VipsImage): cint</a></li>
           </ul></dd>
+<dt><a name="VipsExtend" href="#VipsExtend"><span>VipsExtend:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: enum VipsExtend" href="libvips/bindings/conversion.html#VipsExtend">conversion: enum VipsExtend</a></li>
+          </ul></dd>
+<dt><a name="vips_extract_area" href="#vips_extract_area"><span>vips_extract_area:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_extract_area(input: ptr VipsImage; output: ptr ptr VipsImage;
+                  left, top, width, height: cint): cint" href="libvips/bindings/conversion.html#vips_extract_area%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2Ccint%2Ccint%2Ccint%2Ccint">conversion: proc vips_extract_area(input: ptr VipsImage; output: ptr ptr VipsImage;
+                  left, top, width, height: cint): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_extract_band" href="#vips_extract_band"><span>vips_extract_band:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_extract_band(input: ptr VipsImage; output: ptr ptr VipsImage; band: cint): cint" href="libvips/bindings/conversion.html#vips_extract_band%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2Ccint">conversion: proc vips_extract_band(input: ptr VipsImage; output: ptr ptr VipsImage; band: cint): cint</a></li>
+          </ul></dd>
 <dt><a name="VIPS_E_Y0" href="#VIPS_E_Y0"><span>VIPS_E_Y0:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="colour: const VIPS_E_Y0" href="libvips/bindings/colour.html#VIPS_E_Y0">colour: const VIPS_E_Y0</a></li>
@@ -1107,6 +1295,10 @@
 <dt><a name="VipsFailOn" href="#VipsFailOn"><span>VipsFailOn:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="foreign: enum VipsFailOn" href="libvips/bindings/foreign.html#VipsFailOn">foreign: enum VipsFailOn</a></li>
+          </ul></dd>
+<dt><a name="vips_falsecolour" href="#vips_falsecolour"><span>vips_falsecolour:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_falsecolour(input: ptr VipsImage; output: ptr ptr VipsImage): cint" href="libvips/bindings/conversion.html#vips_falsecolour%2Cptr.VipsImage%2Cptr.ptr.VipsImage">conversion: proc vips_falsecolour(input: ptr VipsImage; output: ptr ptr VipsImage): cint</a></li>
           </ul></dd>
 <dt><a name="vips_fastcor" href="#vips_fastcor"><span>vips_fastcor:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -1139,6 +1331,16 @@
 <dt><a name="vips_fitssave" href="#vips_fitssave"><span>vips_fitssave:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="foreign: proc vips_fitssave(input: ptr VipsImage; filename: cstring): cint" href="libvips/bindings/foreign.html#vips_fitssave%2Cptr.VipsImage%2Ccstring">foreign: proc vips_fitssave(input: ptr VipsImage; filename: cstring): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_flatten" href="#vips_flatten"><span>vips_flatten:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_flatten(input: ptr VipsImage; output: ptr ptr VipsImage): cint" href="libvips/bindings/conversion.html#vips_flatten%2Cptr.VipsImage%2Cptr.ptr.VipsImage">conversion: proc vips_flatten(input: ptr VipsImage; output: ptr ptr VipsImage): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_flip" href="#vips_flip"><span>vips_flip:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_flip(input: ptr VipsImage; output: ptr ptr VipsImage;
+          direction: VipsDirection): cint" href="libvips/bindings/conversion.html#vips_flip%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2CVipsDirection">conversion: proc vips_flip(input: ptr VipsImage; output: ptr ptr VipsImage;
+          direction: VipsDirection): cint</a></li>
           </ul></dd>
 <dt><a name="vips_float2rad" href="#vips_float2rad"><span>vips_float2rad:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -1360,6 +1562,10 @@
 <li><a class="reference external"
           data-doc-search-tag="image: VipsBandFormat.VIPS_FORMAT_USHORT" href="libvips/bindings/image.html#VIPS_FORMAT_USHORT">image: VipsBandFormat.VIPS_FORMAT_USHORT</a></li>
           </ul></dd>
+<dt><a name="vips_gamma" href="#vips_gamma"><span>vips_gamma:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_gamma(input: ptr VipsImage; output: ptr ptr VipsImage): cint" href="libvips/bindings/conversion.html#vips_gamma%2Cptr.VipsImage%2Cptr.ptr.VipsImage">conversion: proc vips_gamma(input: ptr VipsImage; output: ptr ptr VipsImage): cint</a></li>
+          </ul></dd>
 <dt><a name="vips_gaussblur" href="#vips_gaussblur"><span>vips_gaussblur:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="convolution: proc vips_gaussblur(input: ptr VipsImage; output: ptr ptr VipsImage; sigma: cdouble;
@@ -1415,6 +1621,18 @@
 <dt><a name="vips_gifsave_target" href="#vips_gifsave_target"><span>vips_gifsave_target:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="foreign: proc vips_gifsave_target(input: ptr VipsImage; target: ptr VipsTarget): cint" href="libvips/bindings/foreign.html#vips_gifsave_target%2Cptr.VipsImage%2Cptr.VipsTarget">foreign: proc vips_gifsave_target(input: ptr VipsImage; target: ptr VipsTarget): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_gravity" href="#vips_gravity"><span>vips_gravity:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_gravity(input: ptr VipsImage; output: ptr ptr VipsImage;
+             direction: VipsCompassDirection; width, height: cint): cint" href="libvips/bindings/conversion.html#vips_gravity%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2CVipsCompassDirection%2Ccint%2Ccint">conversion: proc vips_gravity(input: ptr VipsImage; output: ptr ptr VipsImage;
+             direction: VipsCompassDirection; width, height: cint): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_grid" href="#vips_grid"><span>vips_grid:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_grid(input: ptr VipsImage; output: ptr ptr VipsImage;
+          tile_height, across, down: cint): cint" href="libvips/bindings/conversion.html#vips_grid%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2Ccint%2Ccint%2Ccint">conversion: proc vips_grid(input: ptr VipsImage; output: ptr ptr VipsImage;
+          tile_height, across, down: cint): cint</a></li>
           </ul></dd>
 <dt><a name="vips_guess_libdir" href="#vips_guess_libdir"><span>vips_guess_libdir:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -1503,6 +1721,10 @@
           data-doc-search-tag="colour: proc vips_icc_transform(input: ptr VipsImage; output: ptr ptr VipsImage;
                    output_profile: cstring): cint" href="libvips/bindings/colour.html#vips_icc_transform%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2Ccstring">colour: proc vips_icc_transform(input: ptr VipsImage; output: ptr ptr VipsImage;
                    output_profile: cstring): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_ifthenelse" href="#vips_ifthenelse"><span>vips_ifthenelse:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_ifthenelse(cond, in1, in2: ptr VipsImage; output: ptr ptr VipsImage): cint" href="libvips/bindings/conversion.html#vips_ifthenelse%2Cptr.VipsImage%2Cptr.VipsImage%2Cptr.VipsImage%2Cptr.ptr.VipsImage">conversion: proc vips_ifthenelse(cond, in1, in2: ptr VipsImage; output: ptr ptr VipsImage): cint</a></li>
           </ul></dd>
 <dt><a name="vips_imag" href="#vips_imag"><span>vips_imag:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -2022,9 +2244,17 @@
 <li><a class="reference external"
           data-doc-search-tag="vips: proc vips_init(argv0: cstring): cint" href="libvips/bindings/vips.html#vips_init%2Ccstring">vips: proc vips_init(argv0: cstring): cint</a></li>
           </ul></dd>
+<dt><a name="vips_insert" href="#vips_insert"><span>vips_insert:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_insert(main, sub: ptr VipsImage; output: ptr ptr VipsImage; x, y: cint): cint" href="libvips/bindings/conversion.html#vips_insert%2Cptr.VipsImage%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2Ccint%2Ccint">conversion: proc vips_insert(main, sub: ptr VipsImage; output: ptr ptr VipsImage; x, y: cint): cint</a></li>
+          </ul></dd>
 <dt><a name="VipsIntent" href="#VipsIntent"><span>VipsIntent:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="colour: enum VipsIntent" href="libvips/bindings/colour.html#VipsIntent">colour: enum VipsIntent</a></li>
+          </ul></dd>
+<dt><a name="VipsInteresting" href="#VipsInteresting"><span>VipsInteresting:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: enum VipsInteresting" href="libvips/bindings/conversion.html#VipsInteresting">conversion: enum VipsInteresting</a></li>
           </ul></dd>
 <dt><a name="VipsInterpolate" href="#VipsInterpolate"><span>VipsInterpolate:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -2125,6 +2355,12 @@
 <dt><a name="vips_invert" href="#vips_invert"><span>vips_invert:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="arithmetic: proc vips_invert(input: ptr VipsImage; output: ptr ptr VipsImage): cint" href="libvips/bindings/arithmetic.html#vips_invert%2Cptr.VipsImage%2Cptr.ptr.VipsImage">arithmetic: proc vips_invert(input: ptr VipsImage; output: ptr ptr VipsImage): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_join" href="#vips_join"><span>vips_join:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_join(in1, in2: ptr VipsImage; output: ptr ptr VipsImage;
+          direction: VipsDirection): cint" href="libvips/bindings/conversion.html#vips_join%2Cptr.VipsImage%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2CVipsDirection">conversion: proc vips_join(in1, in2: ptr VipsImage; output: ptr ptr VipsImage;
+          direction: VipsDirection): cint</a></li>
           </ul></dd>
 <dt><a name="vips_jp2kload" href="#vips_jp2kload"><span>vips_jp2kload:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -2321,6 +2557,10 @@
           data-doc-search-tag="arithmetic: proc vips_linear1(input: ptr VipsImage; res: ptr ptr VipsImage; a: cdouble;
              b: cdouble): cint" href="libvips/bindings/arithmetic.html#vips_linear1%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2Ccdouble%2Ccdouble">arithmetic: proc vips_linear1(input: ptr VipsImage; res: ptr ptr VipsImage; a: cdouble;
              b: cdouble): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_linecache" href="#vips_linecache"><span>vips_linecache:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_linecache(input: ptr VipsImage; output: ptr ptr VipsImage): cint" href="libvips/bindings/conversion.html#vips_linecache%2Cptr.VipsImage%2Cptr.ptr.VipsImage">conversion: proc vips_linecache(input: ptr VipsImage; output: ptr ptr VipsImage): cint</a></li>
           </ul></dd>
 <dt><a name="vips_log" href="#vips_log"><span>vips_log:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -2537,6 +2777,10 @@
 <dt><a name="vips_moreeq_const1" href="#vips_moreeq_const1"><span>vips_moreeq_const1:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="arithmetic: proc vips_moreeq_const1(input: ptr VipsImage; res: ptr ptr VipsImage; c: cdouble): cint" href="libvips/bindings/arithmetic.html#vips_moreeq_const1%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2Ccdouble">arithmetic: proc vips_moreeq_const1(input: ptr VipsImage; res: ptr ptr VipsImage; c: cdouble): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_msb" href="#vips_msb"><span>vips_msb:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_msb(input: ptr VipsImage; output: ptr ptr VipsImage): cint" href="libvips/bindings/conversion.html#vips_msb%2Cptr.VipsImage%2Cptr.ptr.VipsImage">conversion: proc vips_msb(input: ptr VipsImage; output: ptr ptr VipsImage): cint</a></li>
           </ul></dd>
 <dt><a name="vips_multiply" href="#vips_multiply"><span>vips_multiply:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -2918,6 +3162,10 @@
 <li><a class="reference external"
           data-doc-search-tag="basic: enum VipsPrecision" href="libvips/bindings/basic.html#VipsPrecision">basic: enum VipsPrecision</a></li>
           </ul></dd>
+<dt><a name="vips_premultiply" href="#vips_premultiply"><span>vips_premultiply:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_premultiply(input: ptr VipsImage; output: ptr ptr VipsImage): cint" href="libvips/bindings/conversion.html#vips_premultiply%2Cptr.VipsImage%2Cptr.ptr.VipsImage">conversion: proc vips_premultiply(input: ptr VipsImage; output: ptr ptr VipsImage): cint</a></li>
+          </ul></dd>
 <dt><a name="vips_prewitt" href="#vips_prewitt"><span>vips_prewitt:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="convolution: proc vips_prewitt(input: ptr VipsImage; output: ptr ptr VipsImage;
@@ -3008,6 +3256,10 @@
 <li><a class="reference external"
           data-doc-search-tag="arithmetic: proc vips_real(input: ptr VipsImage; res: ptr ptr VipsImage): cint" href="libvips/bindings/arithmetic.html#vips_real%2Cptr.VipsImage%2Cptr.ptr.VipsImage">arithmetic: proc vips_real(input: ptr VipsImage; res: ptr ptr VipsImage): cint</a></li>
           </ul></dd>
+<dt><a name="vips_recomb" href="#vips_recomb"><span>vips_recomb:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_recomb(input: ptr VipsImage; output: ptr ptr VipsImage; m: ptr VipsImage): cint" href="libvips/bindings/conversion.html#vips_recomb%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2Cptr.VipsImage">conversion: proc vips_recomb(input: ptr VipsImage; output: ptr ptr VipsImage; m: ptr VipsImage): cint</a></li>
+          </ul></dd>
 <dt><a name="vips_rect" href="#vips_rect"><span>vips_rect:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="arithmetic: proc vips_rect(input: ptr VipsImage; res: ptr ptr VipsImage): cint" href="libvips/bindings/arithmetic.html#vips_rect%2Cptr.VipsImage%2Cptr.ptr.VipsImage">arithmetic: proc vips_rect(input: ptr VipsImage; res: ptr ptr VipsImage): cint</a></li>
@@ -3094,6 +3346,12 @@
                           r: ptr VipsRect): cint" href="libvips/bindings/image.html#vips_reorder_prepare_many%2Cptr.VipsImage%2Cptr.ptr.VipsRegion%2Cptr.VipsRect">image: proc vips_reorder_prepare_many(image: ptr VipsImage; regions: ptr ptr VipsRegion;
                           r: ptr VipsRect): cint</a></li>
           </ul></dd>
+<dt><a name="vips_replicate" href="#vips_replicate"><span>vips_replicate:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_replicate(input: ptr VipsImage; output: ptr ptr VipsImage;
+               across, down: cint): cint" href="libvips/bindings/conversion.html#vips_replicate%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2Ccint%2Ccint">conversion: proc vips_replicate(input: ptr VipsImage; output: ptr ptr VipsImage;
+               across, down: cint): cint</a></li>
+          </ul></dd>
 <dt><a name="vips_resize" href="#vips_resize"><span>vips_resize:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="resample: proc vips_resize(input: ptr VipsImage; output: ptr ptr VipsImage; scale: cdouble): cint" href="libvips/bindings/resample.html#vips_resize%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2Ccdouble">resample: proc vips_resize(input: ptr VipsImage; output: ptr ptr VipsImage; scale: cdouble): cint</a></li>
@@ -3101,6 +3359,26 @@
 <dt><a name="vips_rint" href="#vips_rint"><span>vips_rint:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="arithmetic: proc vips_rint(input: ptr VipsImage; res: ptr ptr VipsImage): cint" href="libvips/bindings/arithmetic.html#vips_rint%2Cptr.VipsImage%2Cptr.ptr.VipsImage">arithmetic: proc vips_rint(input: ptr VipsImage; res: ptr ptr VipsImage): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_rot" href="#vips_rot"><span>vips_rot:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_rot(input: ptr VipsImage; output: ptr ptr VipsImage; angle: VipsAngle): cint" href="libvips/bindings/conversion.html#vips_rot%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2CVipsAngle">conversion: proc vips_rot(input: ptr VipsImage; output: ptr ptr VipsImage; angle: VipsAngle): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_rot180" href="#vips_rot180"><span>vips_rot180:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_rot180(input: ptr VipsImage; output: ptr ptr VipsImage): cint" href="libvips/bindings/conversion.html#vips_rot180%2Cptr.VipsImage%2Cptr.ptr.VipsImage">conversion: proc vips_rot180(input: ptr VipsImage; output: ptr ptr VipsImage): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_rot270" href="#vips_rot270"><span>vips_rot270:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_rot270(input: ptr VipsImage; output: ptr ptr VipsImage): cint" href="libvips/bindings/conversion.html#vips_rot270%2Cptr.VipsImage%2Cptr.ptr.VipsImage">conversion: proc vips_rot270(input: ptr VipsImage; output: ptr ptr VipsImage): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_rot45" href="#vips_rot45"><span>vips_rot45:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_rot45(input: ptr VipsImage; output: ptr ptr VipsImage): cint" href="libvips/bindings/conversion.html#vips_rot45%2Cptr.VipsImage%2Cptr.ptr.VipsImage">conversion: proc vips_rot45(input: ptr VipsImage; output: ptr ptr VipsImage): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_rot90" href="#vips_rot90"><span>vips_rot90:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_rot90(input: ptr VipsImage; output: ptr ptr VipsImage): cint" href="libvips/bindings/conversion.html#vips_rot90%2Cptr.VipsImage%2Cptr.ptr.VipsImage">conversion: proc vips_rot90(input: ptr VipsImage; output: ptr ptr VipsImage): cint</a></li>
           </ul></dd>
 <dt><a name="vips_rotate" href="#vips_rotate"><span>vips_rotate:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -3134,6 +3412,10 @@
 <li><a class="reference external"
           data-doc-search-tag="types: proc vips_save_string_get_type(): GType" href="libvips/bindings/types.html#vips_save_string_get_type">types: proc vips_save_string_get_type(): GType</a></li>
           </ul></dd>
+<dt><a name="vips_scale" href="#vips_scale"><span>vips_scale:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_scale(input: ptr VipsImage; output: ptr ptr VipsImage): cint" href="libvips/bindings/conversion.html#vips_scale%2Cptr.VipsImage%2Cptr.ptr.VipsImage">conversion: proc vips_scale(input: ptr VipsImage; output: ptr ptr VipsImage): cint</a></li>
+          </ul></dd>
 <dt><a name="vips_scharr" href="#vips_scharr"><span>vips_scharr:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="convolution: proc vips_scharr(input: ptr VipsImage; output: ptr ptr VipsImage;
@@ -3151,6 +3433,10 @@
 <dt><a name="vips_scRGB2XYZ" href="#vips_scRGB2XYZ"><span>vips_scRGB2XYZ:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="colour: proc vips_scRGB2XYZ(input: ptr VipsImage; output: ptr ptr VipsImage): cint" href="libvips/bindings/colour.html#vips_scRGB2XYZ%2Cptr.VipsImage%2Cptr.ptr.VipsImage">colour: proc vips_scRGB2XYZ(input: ptr VipsImage; output: ptr ptr VipsImage): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_sequential" href="#vips_sequential"><span>vips_sequential:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_sequential(input: ptr VipsImage; output: ptr ptr VipsImage): cint" href="libvips/bindings/conversion.html#vips_sequential%2Cptr.VipsImage%2Cptr.ptr.VipsImage">conversion: proc vips_sequential(input: ptr VipsImage; output: ptr ptr VipsImage): cint</a></li>
           </ul></dd>
 <dt><a name="vips_sharpen" href="#vips_sharpen"><span>vips_sharpen:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -3228,6 +3514,12 @@
 <li><a class="reference external"
           data-doc-search-tag="basic: type VipsSListMap4Fn" href="libvips/bindings/basic.html#VipsSListMap4Fn">basic: type VipsSListMap4Fn</a></li>
           </ul></dd>
+<dt><a name="vips_smartcrop" href="#vips_smartcrop"><span>vips_smartcrop:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_smartcrop(input: ptr VipsImage; output: ptr ptr VipsImage;
+               width, height: cint): cint" href="libvips/bindings/conversion.html#vips_smartcrop%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2Ccint%2Ccint">conversion: proc vips_smartcrop(input: ptr VipsImage; output: ptr ptr VipsImage;
+               width, height: cint): cint</a></li>
+          </ul></dd>
 <dt><a name="vips_sobel" href="#vips_sobel"><span>vips_sobel:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="convolution: proc vips_sobel(input: ptr VipsImage; output: ptr ptr VipsImage;
@@ -3264,6 +3556,10 @@
 <li><a class="reference external"
           data-doc-search-tag="image: type VipsStopFn" href="libvips/bindings/image.html#VipsStopFn">image: type VipsStopFn</a></li>
           </ul></dd>
+<dt><a name="vips_subsample" href="#vips_subsample"><span>vips_subsample:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_subsample(input: ptr VipsImage; output: ptr ptr VipsImage; xfac, yfac: cint): cint" href="libvips/bindings/conversion.html#vips_subsample%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2Ccint%2Ccint">conversion: proc vips_subsample(input: ptr VipsImage; output: ptr ptr VipsImage; xfac, yfac: cint): cint</a></li>
+          </ul></dd>
 <dt><a name="vips_subtract" href="#vips_subtract"><span>vips_subtract:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="arithmetic: proc vips_subtract(in1: ptr VipsImage; in2: ptr VipsImage; res: ptr ptr VipsImage): cint" href="libvips/bindings/arithmetic.html#vips_subtract%2Cptr.VipsImage%2Cptr.VipsImage%2Cptr.ptr.VipsImage">arithmetic: proc vips_subtract(in1: ptr VipsImage; in2: ptr VipsImage; res: ptr ptr VipsImage): cint</a></li>
@@ -3287,6 +3583,10 @@
 <dt><a name="vips_svgload_string" href="#vips_svgload_string"><span>vips_svgload_string:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="foreign: proc vips_svgload_string(str: cstring; res: ptr ptr VipsImage): cint" href="libvips/bindings/foreign.html#vips_svgload_string%2Ccstring%2Cptr.ptr.VipsImage">foreign: proc vips_svgload_string(str: cstring; res: ptr ptr VipsImage): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_switch" href="#vips_switch"><span>vips_switch:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_switch(tests: ptr ptr VipsImage; output: ptr ptr VipsImage; n: cint): cint" href="libvips/bindings/conversion.html#vips_switch%2Cptr.ptr.VipsImage%2Cptr.ptr.VipsImage%2Ccint">conversion: proc vips_switch(tests: ptr ptr VipsImage; output: ptr ptr VipsImage; n: cint): cint</a></li>
           </ul></dd>
 <dt><a name="vips_system" href="#vips_system"><span>vips_system:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -3368,6 +3668,14 @@
 <li><a class="reference external"
           data-doc-search-tag="foreign: proc vips_tiffsave_target(input: ptr VipsImage; target: ptr VipsTarget): cint" href="libvips/bindings/foreign.html#vips_tiffsave_target%2Cptr.VipsImage%2Cptr.VipsTarget">foreign: proc vips_tiffsave_target(input: ptr VipsImage; target: ptr VipsTarget): cint</a></li>
           </ul></dd>
+<dt><a name="vips_tilecache" href="#vips_tilecache"><span>vips_tilecache:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_tilecache(input: ptr VipsImage; output: ptr ptr VipsImage): cint" href="libvips/bindings/conversion.html#vips_tilecache%2Cptr.VipsImage%2Cptr.ptr.VipsImage">conversion: proc vips_tilecache(input: ptr VipsImage; output: ptr ptr VipsImage): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_transpose3d" href="#vips_transpose3d"><span>vips_transpose3d:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_transpose3d(input: ptr VipsImage; output: ptr ptr VipsImage): cint" href="libvips/bindings/conversion.html#vips_transpose3d%2Cptr.VipsImage%2Cptr.ptr.VipsImage">conversion: proc vips_transpose3d(input: ptr VipsImage; output: ptr ptr VipsImage): cint</a></li>
+          </ul></dd>
 <dt><a name="vips_uhdrload" href="#vips_uhdrload"><span>vips_uhdrload:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="foreign: proc vips_uhdrload(filename: cstring; res: ptr ptr VipsImage): cint" href="libvips/bindings/foreign.html#vips_uhdrload%2Ccstring%2Cptr.ptr.VipsImage">foreign: proc vips_uhdrload(filename: cstring; res: ptr ptr VipsImage): cint</a></li>
@@ -3391,6 +3699,10 @@
 <dt><a name="vips_uhdrsave_target" href="#vips_uhdrsave_target"><span>vips_uhdrsave_target:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="foreign: proc vips_uhdrsave_target(input: ptr VipsImage; target: ptr VipsTarget): cint" href="libvips/bindings/foreign.html#vips_uhdrsave_target%2Cptr.VipsImage%2Cptr.VipsTarget">foreign: proc vips_uhdrsave_target(input: ptr VipsImage; target: ptr VipsTarget): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_unpremultiply" href="#vips_unpremultiply"><span>vips_unpremultiply:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_unpremultiply(input: ptr VipsImage; output: ptr ptr VipsImage): cint" href="libvips/bindings/conversion.html#vips_unpremultiply%2Cptr.VipsImage%2Cptr.ptr.VipsImage">conversion: proc vips_unpremultiply(input: ptr VipsImage; output: ptr ptr VipsImage): cint</a></li>
           </ul></dd>
 <dt><a name="vips_value_get_area" href="#vips_value_get_area"><span>vips_value_get_area:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -3552,6 +3864,10 @@
 <li><a class="reference external"
           data-doc-search-tag="arithmetic: proc vips_wop_const1(input: ptr VipsImage; res: ptr ptr VipsImage; c: cdouble): cint" href="libvips/bindings/arithmetic.html#vips_wop_const1%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2Ccdouble">arithmetic: proc vips_wop_const1(input: ptr VipsImage; res: ptr ptr VipsImage; c: cdouble): cint</a></li>
           </ul></dd>
+<dt><a name="vips_wrap" href="#vips_wrap"><span>vips_wrap:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_wrap(input: ptr VipsImage; output: ptr ptr VipsImage): cint" href="libvips/bindings/conversion.html#vips_wrap%2Cptr.VipsImage%2Cptr.ptr.VipsImage">conversion: proc vips_wrap(input: ptr VipsImage; output: ptr ptr VipsImage): cint</a></li>
+          </ul></dd>
 <dt><a name="vips_XYZ2CMYK" href="#vips_XYZ2CMYK"><span>vips_XYZ2CMYK:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="colour: proc vips_XYZ2CMYK(input: ptr VipsImage; output: ptr ptr VipsImage): cint" href="libvips/bindings/colour.html#vips_XYZ2CMYK%2Cptr.VipsImage%2Cptr.ptr.VipsImage">colour: proc vips_XYZ2CMYK(input: ptr VipsImage; output: ptr ptr VipsImage): cint</a></li>
@@ -3572,11 +3888,15 @@
 <li><a class="reference external"
           data-doc-search-tag="colour: proc vips_Yxy2XYZ(input: ptr VipsImage; output: ptr ptr VipsImage): cint" href="libvips/bindings/colour.html#vips_Yxy2XYZ%2Cptr.VipsImage%2Cptr.ptr.VipsImage">colour: proc vips_Yxy2XYZ(input: ptr VipsImage; output: ptr ptr VipsImage): cint</a></li>
           </ul></dd>
+<dt><a name="vips_zoom" href="#vips_zoom"><span>vips_zoom:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_zoom(input: ptr VipsImage; output: ptr ptr VipsImage; xfac, yfac: cint): cint" href="libvips/bindings/conversion.html#vips_zoom%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2Ccint%2Ccint">conversion: proc vips_zoom(input: ptr VipsImage; output: ptr ptr VipsImage; xfac, yfac: cint): cint</a></li>
+          </ul></dd>
 </dl>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2025-09-21 16:17:38 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2025-09-22 07:28:39 UTC</small>
       </div>
     </div>
   </div>
