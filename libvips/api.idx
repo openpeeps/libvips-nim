@@ -1,0 +1,40 @@
+nimTitle	api	libvips/api.html	module libvips/api		0
+nim	VAlignTop	libvips/api.html#VAlignTop	VerticalAlignment.VAlignTop		13
+nim	VAlignCenter	libvips/api.html#VAlignCenter	VerticalAlignment.VAlignCenter		13
+nim	VAlignBottom	libvips/api.html#VAlignBottom	VerticalAlignment.VAlignBottom		13
+nim	VerticalAlignment	libvips/api.html#VerticalAlignment	enum VerticalAlignment		13
+nim	HAlignLeft	libvips/api.html#HAlignLeft	HorizontalAlignment.HAlignLeft		16
+nim	HAlignCenter	libvips/api.html#HAlignCenter	HorizontalAlignment.HAlignCenter		16
+nim	HAlignRight	libvips/api.html#HAlignRight	HorizontalAlignment.HAlignRight		16
+nim	HorizontalAlignment	libvips/api.html#HorizontalAlignment	enum HorizontalAlignment		16
+nim	VipsError	libvips/api.html#VipsError	object VipsError		19
+nim	init_vips	libvips/api.html#init_vips.t,untyped	template init_vips(body: untyped)		22
+nim	enableVipsAcceleration	libvips/api.html#enableVipsAcceleration,int	proc enableVipsAcceleration(numWorkers: int)		27
+nim	init_vips_accelerated	libvips/api.html#init_vips_accelerated.t,int,untyped	template init_vips_accelerated(workers: int; body: untyped)		32
+nim	close	libvips/api.html#close,ptr.VipsImage	proc close(img: ptr VipsImage)		38
+nim	openImage	libvips/api.html#openImage,string	proc openImage(path: string): ptr VipsImage		40
+nim	save	libvips/api.html#save,ptr.VipsImage,string	proc save(img: ptr VipsImage; path: string)		46
+nim	width	libvips/api.html#width,ptr.VipsImage	proc width(img: ptr VipsImage): int		53
+nim	height	libvips/api.html#height,ptr.VipsImage	proc height(img: ptr VipsImage): int		57
+nim	bands	libvips/api.html#bands,ptr.VipsImage	proc bands(img: ptr VipsImage): int		61
+nim	interpretation	libvips/api.html#interpretation,ptr.VipsImage	proc interpretation(img: ptr VipsImage): VipsInterpretation		65
+nim	format	libvips/api.html#format,ptr.VipsImage	proc format(img: ptr VipsImage): VipsBandFormat		69
+nim	invert	libvips/api.html#invert,ptr.VipsImage	proc invert(img: ptr VipsImage): ptr VipsImage		73
+nim	resize	libvips/api.html#resize,ptr.VipsImage,float	proc resize(img: ptr VipsImage; scale: float): ptr VipsImage		81
+nim	rotate	libvips/api.html#rotate,ptr.VipsImage,float	proc rotate(img: ptr VipsImage; angle: float = 90.0): ptr VipsImage		89
+nim	flip	libvips/api.html#flip,ptr.VipsImage,bool	proc flip(img: ptr VipsImage; vertical: bool = true): ptr VipsImage		97
+nim	crop	libvips/api.html#crop,ptr.VipsImage,int,int,int,int	proc crop(img: ptr VipsImage; left, top, width, height: int): ptr VipsImage		106
+nim	crop	libvips/api.html#crop,ptr.VipsImage,int,int	proc crop(img: ptr VipsImage; width, height: int): ptr VipsImage		114
+nim	thumbnail	libvips/api.html#thumbnail,ptr.VipsImage,int	proc thumbnail(img: ptr VipsImage; size: int): ptr VipsImage		120
+nim	sharpen	libvips/api.html#sharpen,ptr.VipsImage	proc sharpen(img: ptr VipsImage): ptr VipsImage		128
+nim	blur	libvips/api.html#blur,ptr.VipsImage,float	proc blur(img: ptr VipsImage; sigma: float = 1.0): ptr VipsImage		136
+nim	blend	libvips/api.html#blend,ptr.VipsImage,ptr.VipsImage,VipsBlendMode	proc blend(img: ptr VipsImage; overlay: ptr VipsImage; mode: VipsBlendMode): ptr VipsImage		148
+nim	blendMultiply	libvips/api.html#blendMultiply,ptr.VipsImage,ptr.VipsImage	proc blendMultiply(img: ptr VipsImage; overlay: ptr VipsImage): ptr VipsImage		156
+nim	blendScreen	libvips/api.html#blendScreen,ptr.VipsImage,ptr.VipsImage	proc blendScreen(img: ptr VipsImage; overlay: ptr VipsImage): ptr VipsImage		160
+nim	blendOverlay	libvips/api.html#blendOverlay,ptr.VipsImage,ptr.VipsImage	proc blendOverlay(img: ptr VipsImage; overlay: ptr VipsImage): ptr VipsImage		164
+nim	blendDarken	libvips/api.html#blendDarken,ptr.VipsImage,ptr.VipsImage	proc blendDarken(img: ptr VipsImage; overlay: ptr VipsImage): ptr VipsImage		168
+nim	blendLighten	libvips/api.html#blendLighten,ptr.VipsImage,ptr.VipsImage	proc blendLighten(img: ptr VipsImage; overlay: ptr VipsImage): ptr VipsImage		172
+nim	blendAdd	libvips/api.html#blendAdd,ptr.VipsImage,ptr.VipsImage	proc blendAdd(img: ptr VipsImage; overlay: ptr VipsImage): ptr VipsImage		176
+nim	blendDifference	libvips/api.html#blendDifference,ptr.VipsImage,ptr.VipsImage	proc blendDifference(img: ptr VipsImage; overlay: ptr VipsImage): ptr VipsImage		180
+nim	blendExclusion	libvips/api.html#blendExclusion,ptr.VipsImage,ptr.VipsImage	proc blendExclusion(img: ptr VipsImage; overlay: ptr VipsImage): ptr VipsImage		184
+nimgrp	crop	libvips/api.html#crop-procs-all	proc		106
