@@ -33,7 +33,7 @@ type
   VipsImageMapFn* = proc(image: ptr VipsImage, name: cstring, value: ptr GValue, a: pointer): pointer {.cdecl.}
 
 # Function declarations
-{.push cdecl, importc, header: "vips/image.h".}
+{.push cdecl, importc, header: "vips/vips.h".} # should be `vips/header.h` but the compiler complains about missing types
 proc vips_format_sizeof*(format: VipsBandFormat): uint64
 proc vips_format_sizeof_unsafe*(format: VipsBandFormat): uint64
 

@@ -14,6 +14,8 @@ export basic, header, image, conversion,
     resample, convolution, colour, foreign,
     buf, vector, arithmetic, operation, error
 
+import ./glib/glib
+
 {.push cdecl, importc, header: "vips/vips.h".}
 
 proc vips_max_coord_get*(): cint

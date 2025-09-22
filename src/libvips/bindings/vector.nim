@@ -1,5 +1,6 @@
 import ./glib/glib
 
+
 {.push cdecl, importc, header: "vips/vector.h".}
 proc vips_vector_isenabled*(): gboolean
 proc vips_vector_set_enabled*(enabled: gboolean)
