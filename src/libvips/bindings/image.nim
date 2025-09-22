@@ -96,12 +96,12 @@ type
 # Raw varargs imports
 proc c_vips_image_new_from_file(name: cstring): ptr VipsImage {.cdecl, importc: "vips_image_new_from_file", varargs.}
 proc c_vips_image_write_to_file(img: ptr VipsImage, fname: cstring): cint {.cdecl, importc: "vips_image_write_to_file", varargs.}
-proc c_vips_image_new_from_buffer(buf: pointer, len: csize_t, option_string: cstring, args: varargs[pointer]): ptr VipsImage {.cdecl, importc: "vips_image_new_from_buffer", varargs.}
-proc c_vips_image_new_from_source(source: ptr VipsSource, option_string: cstring, args: varargs[pointer]): ptr VipsImage {.cdecl, importc: "vips_image_new_from_source", varargs.}
-proc c_vips_image_write_to_buffer(img: ptr VipsImage, suffix: cstring, buf: ptr pointer, size: ptr csize_t, args: varargs[pointer]): cint {.cdecl, importc: "vips_image_write_to_buffer", varargs.}
-proc c_vips_image_write_to_target(img: ptr VipsImage, suffix: cstring, target: ptr VipsTarget, args: varargs[pointer]): cint {.cdecl, importc: "vips_image_write_to_target", varargs.}
-proc c_vips_system(cmd_format: cstring, args: varargs[pointer]): cint {.cdecl, importc: "vips_system", varargs.}
-proc c_vips_array_image_newv(n: cint, args: varargs[pointer]): ptr VipsArrayImage {.cdecl, importc: "vips_array_image_newv", varargs.}
+proc c_vips_image_new_from_buffer(buf: pointer, len: csize_t, option_string: cstring): ptr VipsImage {.cdecl, importc: "vips_image_new_from_buffer", varargs.}
+proc c_vips_image_new_from_source(source: ptr VipsSource, option_string: cstring): ptr VipsImage {.cdecl, importc: "vips_image_new_from_source", varargs.}
+proc c_vips_image_write_to_buffer(img: ptr VipsImage, suffix: cstring, buf: ptr pointer, size: ptr csize_t): cint {.cdecl, importc: "vips_image_write_to_buffer", varargs.}
+proc c_vips_image_write_to_target(img: ptr VipsImage, suffix: cstring, target: ptr VipsTarget): cint {.cdecl, importc: "vips_image_write_to_target", varargs.}
+proc c_vips_system(cmd_format: cstring): cint {.cdecl, importc: "vips_system", varargs.}
+proc c_vips_array_image_newv(n: cint): ptr VipsArrayImage {.cdecl, importc: "vips_array_image_newv", varargs.}
 
 # Safe, exported wrappers
 proc vips_image_new_from_file*(fname: cstring): ptr VipsImage =
@@ -128,7 +128,7 @@ proc vips_system*(cmd_format: cstring): cint =
 proc vips_array_image_newv*(n: cint): ptr VipsArrayImage =
   c_vips_array_image_newv(n, nil)
 
-{.push cdecl, importc, header: "vips/image.h".}
+{.push cdecl, importc, header: "vips/vips.h".} # should be `vips/header.h` but the compiler complains about missing types
 proc vips_image_get_type*(): culong
 proc vips_progress_set*(progress: gboolean)
 proc vips_image_invalidate_all*(image: ptr VipsImage)
@@ -146,8 +146,6 @@ proc vips_image_new_from_file_RW*(filename: cstring): ptr VipsImage
 proc vips_image_new_from_file_raw*(filename: cstring, xsize, ysize, bands: cint, offset: guint64): ptr VipsImage
 proc vips_image_new_from_memory*(data: pointer, size: csize_t, width, height, bands: cint, format: VipsBandFormat): ptr VipsImage
 proc vips_image_new_from_memory_copy*(data: pointer, size: csize_t, width, height, bands: cint, format: VipsBandFormat): ptr VipsImage
-proc vips_image_new_from_buffer*(buf: pointer, len: csize_t, option_string: cstring, args: varargs[pointer]): ptr VipsImage
-proc vips_image_new_from_source*(source: ptr VipsSource, option_string: cstring, args: varargs[pointer]): ptr VipsImage
 proc vips_image_new_matrix*(width, height: cint): ptr VipsImage
 proc vips_image_new_matrixv*(width, height: cint, args: varargs[cdouble]): ptr VipsImage
 proc vips_image_new_matrix_from_array*(width, height: cint, array: ptr cdouble, size: cint): ptr VipsImage
@@ -158,8 +156,6 @@ proc vips_image_set_delete_on_close*(image: ptr VipsImage, delete_on_close: gboo
 proc vips_get_disc_threshold*(): guint64
 proc vips_image_new_temp_file*(format: cstring): ptr VipsImage
 proc vips_image_write*(image: ptr VipsImage, outImg: ptr VipsImage): cint
-proc vips_image_write_to_buffer*(img: ptr VipsImage, suffix: cstring, buf: ptr pointer, size: ptr csize_t, args: varargs[pointer]): cint
-proc vips_image_write_to_target*(img: ptr VipsImage, suffix: cstring, target: ptr VipsTarget, args: varargs[pointer]): cint
 proc vips_image_write_to_memory*(img: ptr VipsImage, size: ptr csize_t): pointer
 proc vips_image_decode_predict*(img: ptr VipsImage, bands: ptr cint, format: ptr VipsBandFormat): cint
 proc vips_image_decode*(img: ptr VipsImage, outImg: ptr ptr VipsImage): cint
@@ -180,9 +176,7 @@ proc vips_band_format_isuint*(format: VipsBandFormat): gboolean
 proc vips_band_format_is8bit*(format: VipsBandFormat): gboolean
 proc vips_band_format_isfloat*(format: VipsBandFormat): gboolean
 proc vips_band_format_iscomplex*(format: VipsBandFormat): gboolean
-proc vips_system*(cmd_format: cstring, args: varargs[pointer]): cint
 proc vips_array_image_new*(array: ptr ptr VipsImage, n: cint): ptr VipsArrayImage
-proc vips_array_image_newv*(n: cint, args: varargs[pointer]): ptr VipsArrayImage
 proc vips_array_image_new_from_string*(str: cstring, flags: VipsAccess): ptr VipsArrayImage
 proc vips_array_image_empty*(): ptr VipsArrayImage
 proc vips_array_image_append*(array: ptr VipsArrayImage, image: ptr VipsImage): ptr VipsArrayImage

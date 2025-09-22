@@ -169,131 +169,194 @@ proc c_vips_gamma(input: ptr VipsImage, output: ptr ptr VipsImage): cint {.impor
 # Safe wrappers
 proc vips_copy*(input: ptr VipsImage, output: ptr ptr VipsImage): cint =
   c_vips_copy(input, output, nil)
+  
 proc vips_tilecache*(input: ptr VipsImage, output: ptr ptr VipsImage): cint =
   c_vips_tilecache(input, output, nil)
+  
 proc vips_linecache*(input: ptr VipsImage, output: ptr ptr VipsImage): cint =
   c_vips_linecache(input, output, nil)
+  
 proc vips_sequential*(input: ptr VipsImage, output: ptr ptr VipsImage): cint =
   c_vips_sequential(input, output, nil)
+  
 proc vips_copy_file*(input: ptr VipsImage, output: ptr ptr VipsImage): cint =
   c_vips_copy_file(input, output, nil)
+  
 proc vips_embed*(input: ptr VipsImage, output: ptr ptr VipsImage, x, y, width, height: cint): cint =
   c_vips_embed(input, output, x, y, width, height, nil)
+  
 proc vips_gravity*(input: ptr VipsImage, output: ptr ptr VipsImage, direction: VipsCompassDirection, width, height: cint): cint =
   c_vips_gravity(input, output, direction, width, height, nil)
+  
 proc vips_flip*(input: ptr VipsImage, output: ptr ptr VipsImage, direction: VipsDirection): cint =
   c_vips_flip(input, output, direction, nil)
+  
 proc vips_insert*(main, sub: ptr VipsImage, output: ptr ptr VipsImage, x, y: cint): cint =
   c_vips_insert(main, sub, output, x, y, nil)
+  
 proc vips_join*(in1, in2: ptr VipsImage, output: ptr ptr VipsImage, direction: VipsDirection): cint =
   c_vips_join(in1, in2, output, direction, nil)
+  
 proc vips_arrayjoin*(input: ptr ptr VipsImage, output: ptr ptr VipsImage, n: cint): cint =
   c_vips_arrayjoin(input, output, n, nil)
+  
 proc vips_extract_area*(input: ptr VipsImage, output: ptr ptr VipsImage, left, top, width, height: cint): cint =
   c_vips_extract_area(input, output, left, top, width, height, nil)
+  
 proc vips_crop*(input: ptr VipsImage, output: ptr ptr VipsImage, left, top, width, height: cint): cint =
   c_vips_crop(input, output, left, top, width, height, nil)
+  
 proc vips_smartcrop*(input: ptr VipsImage, output: ptr ptr VipsImage, width, height: cint): cint =
   c_vips_smartcrop(input, output, width, height, nil)
+  
 proc vips_extract_band*(input: ptr VipsImage, output: ptr ptr VipsImage, band: cint): cint =
   c_vips_extract_band(input, output, band, nil)
+  
 proc vips_replicate*(input: ptr VipsImage, output: ptr ptr VipsImage, across, down: cint): cint =
   c_vips_replicate(input, output, across, down, nil)
+  
 proc vips_grid*(input: ptr VipsImage, output: ptr ptr VipsImage, tile_height, across, down: cint): cint =
   c_vips_grid(input, output, tile_height, across, down, nil)
+  
 proc vips_transpose3d*(input: ptr VipsImage, output: ptr ptr VipsImage): cint =
   c_vips_transpose3d(input, output, nil)
+  
 proc vips_wrap*(input: ptr VipsImage, output: ptr ptr VipsImage): cint =
   c_vips_wrap(input, output, nil)
+  
 proc vips_rot*(input: ptr VipsImage, output: ptr ptr VipsImage, angle: VipsAngle): cint =
   c_vips_rot(input, output, angle, nil)
+  
 proc vips_rot90*(input: ptr VipsImage, output: ptr ptr VipsImage): cint =
   c_vips_rot90(input, output, nil)
+  
 proc vips_rot180*(input: ptr VipsImage, output: ptr ptr VipsImage): cint =
   c_vips_rot180(input, output, nil)
+  
 proc vips_rot270*(input: ptr VipsImage, output: ptr ptr VipsImage): cint =
   c_vips_rot270(input, output, nil)
+  
 proc vips_rot45*(input: ptr VipsImage, output: ptr ptr VipsImage): cint =
   c_vips_rot45(input, output, nil)
+  
 proc vips_autorot_remove_angle*(image: ptr VipsImage) =
   c_vips_autorot_remove_angle(image)
 proc vips_autorot*(input: ptr VipsImage, output: ptr ptr VipsImage): cint =
   c_vips_autorot(input, output, nil)
+  
 proc vips_zoom*(input: ptr VipsImage, output: ptr ptr VipsImage, xfac, yfac: cint): cint =
   c_vips_zoom(input, output, xfac, yfac, nil)
+  
 proc vips_subsample*(input: ptr VipsImage, output: ptr ptr VipsImage, xfac, yfac: cint): cint =
   c_vips_subsample(input, output, xfac, yfac, nil)
+  
 proc vips_cast*(input: ptr VipsImage, output: ptr ptr VipsImage, format: VipsBandFormat): cint =
   c_vips_cast(input, output, format, nil)
+  
 proc vips_cast_uchar*(input: ptr VipsImage, output: ptr ptr VipsImage): cint =
   c_vips_cast_uchar(input, output, nil)
+  
 proc vips_cast_char*(input: ptr VipsImage, output: ptr ptr VipsImage): cint =
   c_vips_cast_char(input, output, nil)
+  
 proc vips_cast_ushort*(input: ptr VipsImage, output: ptr ptr VipsImage): cint =
   c_vips_cast_ushort(input, output, nil)
+  
 proc vips_cast_short*(input: ptr VipsImage, output: ptr ptr VipsImage): cint =
   c_vips_cast_short(input, output, nil)
+  
 proc vips_cast_uint*(input: ptr VipsImage, output: ptr ptr VipsImage): cint =
   c_vips_cast_uint(input, output, nil)
+  
 proc vips_cast_int*(input: ptr VipsImage, output: ptr ptr VipsImage): cint =
   c_vips_cast_int(input, output, nil)
+  
 proc vips_cast_float*(input: ptr VipsImage, output: ptr ptr VipsImage): cint =
   c_vips_cast_float(input, output, nil)
+  
 proc vips_cast_double*(input: ptr VipsImage, output: ptr ptr VipsImage): cint =
   c_vips_cast_double(input, output, nil)
+  
 proc vips_cast_complex*(input: ptr VipsImage, output: ptr ptr VipsImage): cint =
   c_vips_cast_complex(input, output, nil)
+  
 proc vips_cast_dpcomplex*(input: ptr VipsImage, output: ptr ptr VipsImage): cint =
   c_vips_cast_dpcomplex(input, output, nil)
+  
 proc vips_scale*(input: ptr VipsImage, output: ptr ptr VipsImage): cint =
   c_vips_scale(input, output, nil)
+  
 proc vips_msb*(input: ptr VipsImage, output: ptr ptr VipsImage): cint =
   c_vips_msb(input, output, nil)
+  
 proc vips_byteswap*(input: ptr VipsImage, output: ptr ptr VipsImage): cint =
   c_vips_byteswap(input, output, nil)
+  
 proc vips_bandjoin*(input: ptr ptr VipsImage, output: ptr ptr VipsImage, n: cint): cint =
   c_vips_bandjoin(input, output, n, nil)
+  
 proc vips_bandjoin2*(in1, in2: ptr VipsImage, output: ptr ptr VipsImage): cint =
   c_vips_bandjoin2(in1, in2, output, nil)
+  
 proc vips_bandjoin_const*(input: ptr VipsImage, output: ptr ptr VipsImage, c: ptr cdouble, n: cint): cint =
   c_vips_bandjoin_const(input, output, c, n, nil)
+  
 proc vips_bandjoin_const1*(input: ptr VipsImage, output: ptr ptr VipsImage, c: cdouble): cint =
   c_vips_bandjoin_const1(input, output, c, nil)
+  
 proc vips_bandrank*(input: ptr ptr VipsImage, output: ptr ptr VipsImage, n: cint): cint =
   c_vips_bandrank(input, output, n, nil)
+  
 proc vips_bandfold*(input: ptr VipsImage, output: ptr ptr VipsImage): cint =
   c_vips_bandfold(input, output, nil)
+  
 proc vips_bandunfold*(input: ptr VipsImage, output: ptr ptr VipsImage): cint =
   c_vips_bandunfold(input, output, nil)
+  
 proc vips_bandbool*(input: ptr VipsImage, output: ptr ptr VipsImage, boolean: VipsOperationBoolean): cint =
   c_vips_bandbool(input, output, boolean, nil)
+  
 proc vips_bandand*(input: ptr VipsImage, output: ptr ptr VipsImage): cint =
   c_vips_bandand(input, output, nil)
+  
 proc vips_bandor*(input: ptr VipsImage, output: ptr ptr VipsImage): cint =
   c_vips_bandor(input, output, nil)
+  
 proc vips_bandeor*(input: ptr VipsImage, output: ptr ptr VipsImage): cint =
   c_vips_bandeor(input, output, nil)
+  
 proc vips_bandmean*(input: ptr VipsImage, output: ptr ptr VipsImage): cint =
   c_vips_bandmean(input, output, nil)
+  
 proc vips_recomb*(input: ptr VipsImage, output: ptr ptr VipsImage, m: ptr VipsImage): cint =
   c_vips_recomb(input, output, m, nil)
+  
 proc vips_ifthenelse*(cond, in1, in2: ptr VipsImage, output: ptr ptr VipsImage): cint =
   c_vips_ifthenelse(cond, in1, in2, output, nil)
+  
 proc vips_switch*(tests: ptr ptr VipsImage, output: ptr ptr VipsImage, n: cint): cint =
   c_vips_switch(tests, output, n, nil)
+  
 proc vips_flatten*(input: ptr VipsImage, output: ptr ptr VipsImage): cint =
   c_vips_flatten(input, output, nil)
+  
 proc vips_addalpha*(input: ptr VipsImage, output: ptr ptr VipsImage): cint =
   c_vips_addalpha(input, output, nil)
+  
 proc vips_premultiply*(input: ptr VipsImage, output: ptr ptr VipsImage): cint =
   c_vips_premultiply(input, output, nil)
+  
 proc vips_unpremultiply*(input: ptr VipsImage, output: ptr ptr VipsImage): cint =
   c_vips_unpremultiply(input, output, nil)
+  
 proc vips_composite*(input: ptr ptr VipsImage, output: ptr ptr VipsImage, n: cint, mode: ptr cint): cint =
   c_vips_composite(input, output, n, mode, nil)
+  
 proc vips_composite2*(base, overlay: ptr VipsImage, output: ptr ptr VipsImage, mode: VipsBlendMode): cint =
   c_vips_composite2(base, overlay, output, mode, nil)
+  
 proc vips_falsecolour*(input: ptr VipsImage, output: ptr ptr VipsImage): cint =
   c_vips_falsecolour(input, output, nil)
+  
 proc vips_gamma*(input: ptr VipsImage, output: ptr ptr VipsImage): cint =
   c_vips_gamma(input, output, nil)

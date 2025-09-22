@@ -70,6 +70,14 @@ proc format*(img: ptr VipsImage): VipsBandFormat =
   ## Get the pixel format of the image.
   vips_image_get_format(img)
 
+proc invert*(img: ptr VipsImage): ptr VipsImage =
+  ## Invert the colors of the image.
+  var res: ptr VipsImage
+  let rc = vips_invert(img, addr res)
+  if rc != 0:
+    raise newException(VipsError, "Failed to invert image")
+  res
+
 proc resize*(img: ptr VipsImage, scale: float): ptr VipsImage =
   ## Resize the image by the given scale factor.
   var res: ptr VipsImage
