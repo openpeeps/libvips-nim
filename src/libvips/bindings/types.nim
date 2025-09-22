@@ -6,19 +6,11 @@
 #          Made by Humans from OpenPeeps
 #          https://github.com/openpeeps/libvips-nim
 
-import ./basic
+import ./basic, ./glib/glib
+export glib
 
 type
-  GType* = culong      # GLib's GType is usually an unsigned long
-  GMutex* = object     # Opaque struct, size depends on platform
-    dummy: array[8, byte] # 8 bytes is typical for pthread mutex on most platforms
-  GValue* = object
-    dummy: array[24, byte] # GLib's GValue is typically 24 bytes on 64-bit platforms
-  GObject* = object
-
-  gboolean* = cint
-  guint64* = uint64
-  guint32* = uint32
+  va_list* {.importc: "va_list", header: "<stdarg.h>".} = object
 
   VipsThing* = object
     i*: cint

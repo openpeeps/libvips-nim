@@ -8,13 +8,11 @@
 
 import basic, header, image, conversion,
     resample, convolution, colour, foreign,
-
-    arithmetic, error
+    buf, vector, arithmetic, operation, error
 
 export basic, header, image, conversion,
     resample, convolution, colour, foreign,
-
-    arithmetic, error
+    buf, vector, arithmetic, operation, error
 
 {.push cdecl, importc, header: "vips/vips.h".}
 

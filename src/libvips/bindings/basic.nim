@@ -29,8 +29,8 @@ type
   PVipsImage* = ptr VipsImage
   VipsRegion* = object
   PVipsRegion* = ptr VipsRegion
-  VipsBuf* = object
-  PVipsBuf* = ptr VipsBuf
+  # VipsBuf* = object
+  # PVipsBuf* = ptr VipsBuf
   VipsSource* = object
   PVipsSource* = ptr VipsSource
   VipsTarget* = object

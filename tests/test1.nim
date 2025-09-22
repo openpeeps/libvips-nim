@@ -1,4 +1,4 @@
-import std/[unittest, os]
+import std/[unittest, os, times]
 
 import libvips
 import libvips/bindings/glib/glib
@@ -8,16 +8,12 @@ proc logVipsError(prefix: string = "vips") =
   if msg.len > 0: echo prefix, " error: ", msg
   vips_error_clear()
 
-suite "libvips bindings":
-
+template runBasicTests() =
+  let startTime = cpuTime()
   # Resolve test asset relative to this source file
   let imgPath = parentDir(currentSourcePath()) / "data" / "07_11_000198_image_access_800.jpg"
   doAssert fileExists(imgPath), "Missing test image at: " & imgPath
-
-  test "initialize libvips":
-    # Use real argv0 so libvips can locate modules
-    check vips_init(getAppFilename().cstring) == 0
-
+  
   test "create and save image":
     var img = vips_image_new_from_file(imgPath.cstring)
     if img == nil: logVipsError("load")
@@ -118,5 +114,63 @@ suite "libvips bindings":
     if outImg != nil: g_object_unref(outImg)
     removeFile(outPath)
 
-  test "shutdown libvips":
-    vips_shutdown()
+  test "flip image":
+    var img = vips_image_new_from_file(imgPath.cstring)
+    if img == nil: logVipsError("load")
+    check img != nil
+
+    var outImg: ptr VipsImage
+    let rcF = vips_flip(img, addr outImg, VIPS_DIRECTION_VERTICAL)
+    if rcF != 0: logVipsError("flip")
+    check rcF == 0
+
+    # write flipped image
+    let outPath = "test_output_flip.jpg"
+    let rcW = vips_image_write_to_file(outImg, outPath.cstring)
+    if rcW != 0: logVipsError("save")
+    check rcW == 0
+    check fileExists(outPath)
+
+    # Clean up
+    if img != nil: g_object_unref(img)
+    if outImg != nil: g_object_unref(outImg)
+    removeFile(outPath)
+
+  test "rotate image":
+    var img = vips_image_new_from_file(imgPath.cstring)
+    if img == nil: logVipsError("load")
+    check img != nil
+
+    var outImg: ptr VipsImage
+    let angle = 90.cdouble
+    let rcR = vips_rotate(img, addr outImg, angle)
+    if rcR != 0: logVipsError("rotate")
+    check rcR == 0
+
+    # write rotated image
+    let outPath = "test_output_rotate.jpg"
+    let rcW = vips_image_write_to_file(outImg, outPath.cstring)
+    if rcW != 0: logVipsError("save")
+    check rcW == 0
+    check fileExists(outPath)
+
+    # Clean up
+    if img != nil: g_object_unref(img)
+    if outImg != nil: g_object_unref(outImg)
+    removeFile(outPath)
+
+  echo "Suite time: ", cpuTime() - startTime, " seconds"
+
+proc enableAcceleration() =
+  vips_vector_set_enabled(1)
+  vips_concurrency_set(4)
+  assert vips_vector_isenabled() == 1
+
+suite "libvips bindings":
+  check vips_init(getAppFilename().cstring) == 0
+  runBasicTests()
+
+suite "libvips SIMD/GPU acceleration":
+  check vips_init(getAppFilename().cstring) == 0
+  enableAcceleration()
+  runBasicTests()
