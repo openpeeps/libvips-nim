@@ -27,7 +27,6 @@ type
   VipsForeignSaveClass* = object
     # ...opaque...
   # VipsImage, VipsSource, VipsTarget, VipsArrayDouble are imported from ./types
-  VipsBandFormat* = cint # Replace with actual enum if available
 
 # Enums
 type

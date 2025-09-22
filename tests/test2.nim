@@ -1,5 +1,5 @@
 import std/[unittest, os, times]
-import libvips/api
+import libvips/[api, watermark]
 
 suite "libvips high-level API":
   let
@@ -39,3 +39,21 @@ suite "libvips high-level API":
       let img = api.openImage(imgPath)
       let cropped = img.crop(200, 200)
       cropped.save(tempPath / "api_test_output_crop_center.jpg")
+
+  test "thumbnail":
+    initVips:
+      let img = api.openImage(imgPath)
+      let thumb = img.thumbnail(150)
+      thumb.save(tempPath / "api_test_output_thumbnail.jpg")
+
+  test "sharpen":
+    initVips:
+      let img = api.openImage(imgPath)
+      let sharp = img.sharpen()
+      sharp.save(tempPath / "api_test_output_sharpen.jpg")
+  
+  test "blur":
+    initVips:
+      let img = api.openImage(imgPath)
+      let blurred = img.blur(5.0)
+      blurred.save(tempPath / "api_test_output_blur.jpg")

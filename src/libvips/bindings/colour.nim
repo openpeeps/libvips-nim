@@ -65,58 +65,47 @@ type
     VIPS_PCS_XYZ,
     VIPS_PCS_LAST
 
-# Function declarations
+# Low-level C procs (private)
+{.push cdecl, header: "vips/vips.h".}
+proc c_vips_colourspace(img: ptr VipsImage, `out`: ptr ptr VipsImage, space: VipsInterpretation): cint {.importc: "vips_colourspace", varargs.}
+proc c_vips_LabQ2sRGB(img: ptr VipsImage, `out`: ptr ptr VipsImage): cint {.importc: "vips_LabQ2sRGB", varargs.}
+proc c_vips_rad2float(img: ptr VipsImage, `out`: ptr ptr VipsImage): cint {.importc: "vips_rad2float", varargs.}
+proc c_vips_float2rad(img: ptr VipsImage, `out`: ptr ptr VipsImage): cint {.importc: "vips_float2rad", varargs.}
+proc c_vips_LabS2LabQ(img: ptr VipsImage, `out`: ptr ptr VipsImage): cint {.importc: "vips_LabS2LabQ", varargs.}
+proc c_vips_LabQ2LabS(img: ptr VipsImage, `out`: ptr ptr VipsImage): cint {.importc: "vips_LabQ2LabS", varargs.}
+proc c_vips_LabQ2Lab(img: ptr VipsImage, `out`: ptr ptr VipsImage): cint {.importc: "vips_LabQ2Lab", varargs.}
+proc c_vips_Lab2LabQ(img: ptr VipsImage, `out`: ptr ptr VipsImage): cint {.importc: "vips_Lab2LabQ", varargs.}
+proc c_vips_LCh2Lab(img: ptr VipsImage, `out`: ptr ptr VipsImage): cint {.importc: "vips_LCh2Lab", varargs.}
+proc c_vips_Lab2LCh(img: ptr VipsImage, `out`: ptr ptr VipsImage): cint {.importc: "vips_Lab2LCh", varargs.}
+proc c_vips_Lab2XYZ(img: ptr VipsImage, `out`: ptr ptr VipsImage): cint {.importc: "vips_Lab2XYZ", varargs.}
+proc c_vips_XYZ2Lab(img: ptr VipsImage, `out`: ptr ptr VipsImage): cint {.importc: "vips_XYZ2Lab", varargs.}
+proc c_vips_XYZ2scRGB(img: ptr VipsImage, `out`: ptr ptr VipsImage): cint {.importc: "vips_XYZ2scRGB", varargs.}
+proc c_vips_scRGB2sRGB(img: ptr VipsImage, `out`: ptr ptr VipsImage): cint {.importc: "vips_scRGB2sRGB", varargs.}
+proc c_vips_scRGB2BW(img: ptr VipsImage, `out`: ptr ptr VipsImage): cint {.importc: "vips_scRGB2BW", varargs.}
+proc c_vips_sRGB2scRGB(img: ptr VipsImage, `out`: ptr ptr VipsImage): cint {.importc: "vips_sRGB2scRGB", varargs.}
+proc c_vips_scRGB2XYZ(img: ptr VipsImage, `out`: ptr ptr VipsImage): cint {.importc: "vips_scRGB2XYZ", varargs.}
+proc c_vips_HSV2sRGB(img: ptr VipsImage, `out`: ptr ptr VipsImage): cint {.importc: "vips_HSV2sRGB", varargs.}
+proc c_vips_sRGB2HSV(img: ptr VipsImage, `out`: ptr ptr VipsImage): cint {.importc: "vips_sRGB2HSV", varargs.}
+proc c_vips_LCh2CMC(img: ptr VipsImage, `out`: ptr ptr VipsImage): cint {.importc: "vips_LCh2CMC", varargs.}
+proc c_vips_CMC2LCh(img: ptr VipsImage, `out`: ptr ptr VipsImage): cint {.importc: "vips_CMC2LCh", varargs.}
+proc c_vips_XYZ2Yxy(img: ptr VipsImage, `out`: ptr ptr VipsImage): cint {.importc: "vips_XYZ2Yxy", varargs.}
+proc c_vips_Yxy2XYZ(img: ptr VipsImage, `out`: ptr ptr VipsImage): cint {.importc: "vips_Yxy2XYZ", varargs.}
+proc c_vips_LabS2Lab(img: ptr VipsImage, `out`: ptr ptr VipsImage): cint {.importc: "vips_LabS2Lab", varargs.}
+proc c_vips_Lab2LabS(img: ptr VipsImage, `out`: ptr ptr VipsImage): cint {.importc: "vips_Lab2LabS", varargs.}
+proc c_vips_CMYK2XYZ(img: ptr VipsImage, `out`: ptr ptr VipsImage): cint {.importc: "vips_CMYK2XYZ", varargs.}
+proc c_vips_XYZ2CMYK(img: ptr VipsImage, `out`: ptr ptr VipsImage): cint {.importc: "vips_XYZ2CMYK", varargs.}
+proc c_vips_profile_load(name: cstring, profile: ptr ptr VipsBlob): cint {.importc: "vips_profile_load", varargs.}
+proc c_vips_icc_present(): cint {.importc: "vips_icc_present", varargs.}
+proc c_vips_icc_transform(img: ptr VipsImage, `out`: ptr ptr VipsImage, `output_profile`: cstring): cint {.importc: "vips_icc_transform", varargs.}
+proc c_vips_icc_import(img: ptr VipsImage, `out`: ptr ptr VipsImage): cint {.importc: "vips_icc_import", varargs.}
+proc c_vips_icc_export(img: ptr VipsImage, `out`: ptr ptr VipsImage): cint {.importc: "vips_icc_export", varargs.}
+proc c_vips_dE76(left: ptr VipsImage, right: ptr VipsImage, `out`: ptr ptr VipsImage): cint {.importc: "vips_dE76", varargs.}
+proc c_vips_dE00(left: ptr VipsImage, right: ptr VipsImage, `out`: ptr ptr VipsImage): cint {.importc: "vips_dE00", varargs.}
+proc c_vips_dECMC(left: ptr VipsImage, right: ptr VipsImage, `out`: ptr ptr VipsImage): cint {.importc: "vips_dECMC", varargs.}
+{.pop.}
+
 {.push cdecl, importc, header: "vips/colour.h".}
 proc vips_colourspace_issupported*(image: ptr VipsImage): bool
-proc vips_colourspace*(input: ptr VipsImage, output: ptr ptr VipsImage,
-                      space: VipsInterpretation): cint
-
-proc vips_LabQ2sRGB*(input: ptr VipsImage, output: ptr ptr VipsImage): cint
-proc vips_rad2float*(input: ptr VipsImage, output: ptr ptr VipsImage): cint
-proc vips_float2rad*(input: ptr VipsImage, output: ptr ptr VipsImage): cint
-proc vips_LabS2LabQ*(input: ptr VipsImage, output: ptr ptr VipsImage): cint
-proc vips_LabQ2LabS*(input: ptr VipsImage, output: ptr ptr VipsImage): cint
-proc vips_LabQ2Lab*(input: ptr VipsImage, output: ptr ptr VipsImage): cint
-proc vips_Lab2LabQ*(input: ptr VipsImage, output: ptr ptr VipsImage): cint
-proc vips_LCh2Lab*(input: ptr VipsImage, output: ptr ptr VipsImage): cint
-proc vips_Lab2LCh*(input: ptr VipsImage, output: ptr ptr VipsImage): cint
-proc vips_Lab2XYZ*(input: ptr VipsImage, output: ptr ptr VipsImage): cint
-proc vips_XYZ2Lab*(input: ptr VipsImage, output: ptr ptr VipsImage): cint
-
-proc vips_XYZ2scRGB*(input: ptr VipsImage, output: ptr ptr VipsImage): cint
-proc vips_scRGB2sRGB*(input: ptr VipsImage, output: ptr ptr VipsImage): cint
-proc vips_scRGB2BW*(input: ptr VipsImage, output: ptr ptr VipsImage): cint
-proc vips_sRGB2scRGB*(input: ptr VipsImage, output: ptr ptr VipsImage): cint
-proc vips_scRGB2XYZ*(input: ptr VipsImage, output: ptr ptr VipsImage): cint
-proc vips_HSV2sRGB*(input: ptr VipsImage, output: ptr ptr VipsImage): cint
-proc vips_sRGB2HSV*(input: ptr VipsImage, output: ptr ptr VipsImage): cint
-
-proc vips_LCh2CMC*(input: ptr VipsImage, output: ptr ptr VipsImage): cint
-proc vips_CMC2LCh*(input: ptr VipsImage, output: ptr ptr VipsImage): cint
-proc vips_XYZ2Yxy*(input: ptr VipsImage, output: ptr ptr VipsImage): cint
-proc vips_Yxy2XYZ*(input: ptr VipsImage, output: ptr ptr VipsImage): cint
-proc vips_LabS2Lab*(input: ptr VipsImage, output: ptr ptr VipsImage): cint
-proc vips_Lab2LabS*(input: ptr VipsImage, output: ptr ptr VipsImage): cint
-
-proc vips_CMYK2XYZ*(input: ptr VipsImage, output: ptr ptr VipsImage): cint
-proc vips_XYZ2CMYK*(input: ptr VipsImage, output: ptr ptr VipsImage): cint
-
-proc vips_profile_load*(name: cstring, profile: ptr ptr VipsBlob): cint
-proc vips_icc_present*(): cint
-proc vips_icc_transform*(input: ptr VipsImage, output: ptr ptr VipsImage,
-                        output_profile: cstring): cint
-proc vips_icc_import*(input: ptr VipsImage, output: ptr ptr VipsImage): cint
-proc vips_icc_export*(input: ptr VipsImage, output: ptr ptr VipsImage): cint
-proc vips_icc_ac2rc*(input: ptr VipsImage, output: ptr ptr VipsImage,
-                    profile_filename: cstring): cint
-proc vips_icc_is_compatible_profile*(image: ptr VipsImage,
-                                    data: pointer, data_length: csize_t): bool
- 
-
-proc vips_dE76*(left: ptr VipsImage, right: ptr VipsImage, output: ptr ptr VipsImage): cint
-proc vips_dE00*(left: ptr VipsImage, right: ptr VipsImage, output: ptr ptr VipsImage): cint
-proc vips_dECMC*(left: ptr VipsImage, right: ptr VipsImage, output: ptr ptr VipsImage): cint
-
 proc vips_col_Lab2XYZ*(L, a, b: float32, X, Y, Z: ptr float32)
 proc vips_col_XYZ2Lab*(X, Y, Z: float32, L, a, b: ptr float32)
 proc vips_col_ab2h*(a, b: float64): float64
@@ -148,3 +137,111 @@ proc vips_col_scRGB2BW_8*(R, G, B: float32, g, og: ptr cint): cint
 proc vips_pythagoras*(L1, a1, b1, L2, a2, b2: float32): float32
 proc vips_col_dE00*(L1, a1, b1, L2, a2, b2: float32): float32
 {.pop.}
+
+
+
+# Safe wrappers (exported)
+proc vips_colourspace*(img: ptr VipsImage, `out`: ptr ptr VipsImage, space: VipsInterpretation): cint =
+  c_vips_colourspace(img, `out`, space)
+
+proc vips_LabQ2sRGB*(img: ptr VipsImage, `out`: ptr ptr VipsImage): cint =
+  c_vips_LabQ2sRGB(img, `out`)
+
+proc vips_rad2float*(img: ptr VipsImage, `out`: ptr ptr VipsImage): cint =
+  c_vips_rad2float(img, `out`)
+
+proc vips_float2rad*(img: ptr VipsImage, `out`: ptr ptr VipsImage): cint =
+  c_vips_float2rad(img, `out`)
+
+proc vips_LabS2LabQ*(img: ptr VipsImage, `out`: ptr ptr VipsImage): cint =
+  c_vips_LabS2LabQ(img, `out`)
+
+proc vips_LabQ2LabS*(img: ptr VipsImage, `out`: ptr ptr VipsImage): cint =
+  c_vips_LabQ2LabS(img, `out`)
+
+proc vips_LabQ2Lab*(img: ptr VipsImage, `out`: ptr ptr VipsImage): cint =
+  c_vips_LabQ2Lab(img, `out`)
+
+proc vips_Lab2LabQ*(img: ptr VipsImage, `out`: ptr ptr VipsImage): cint =
+  c_vips_Lab2LabQ(img, `out`)
+
+proc vips_LCh2Lab*(img: ptr VipsImage, `out`: ptr ptr VipsImage): cint =
+  c_vips_LCh2Lab(img, `out`)
+
+proc vips_Lab2LCh*(img: ptr VipsImage, `out`: ptr ptr VipsImage): cint =
+  c_vips_Lab2LCh(img, `out`)
+
+proc vips_Lab2XYZ*(img: ptr VipsImage, `out`: ptr ptr VipsImage): cint =
+  c_vips_Lab2XYZ(img, `out`)
+
+proc vips_XYZ2Lab*(img: ptr VipsImage, `out`: ptr ptr VipsImage): cint =
+  c_vips_XYZ2Lab(img, `out`)
+
+proc vips_XYZ2scRGB*(img: ptr VipsImage, `out`: ptr ptr VipsImage): cint =
+  c_vips_XYZ2scRGB(img, `out`)
+
+proc vips_scRGB2sRGB*(img: ptr VipsImage, `out`: ptr ptr VipsImage): cint =
+  c_vips_scRGB2sRGB(img, `out`)
+
+proc vips_scRGB2BW*(img: ptr VipsImage, `out`: ptr ptr VipsImage): cint =
+  c_vips_scRGB2BW(img, `out`)
+
+proc vips_sRGB2scRGB*(img: ptr VipsImage, `out`: ptr ptr VipsImage): cint =
+  c_vips_sRGB2scRGB(img, `out`)
+
+proc vips_scRGB2XYZ*(img: ptr VipsImage, `out`: ptr ptr VipsImage): cint =
+  c_vips_scRGB2XYZ(img, `out`)
+
+proc vips_HSV2sRGB*(img: ptr VipsImage, `out`: ptr ptr VipsImage): cint =
+  c_vips_HSV2sRGB(img, `out`)
+
+proc vips_sRGB2HSV*(img: ptr VipsImage, `out`: ptr ptr VipsImage): cint =
+  c_vips_sRGB2HSV(img, `out`)
+
+proc vips_LCh2CMC*(img: ptr VipsImage, `out`: ptr ptr VipsImage): cint =
+  c_vips_LCh2CMC(img, `out`)
+
+proc vips_CMC2LCh*(img: ptr VipsImage, `out`: ptr ptr VipsImage): cint =
+  c_vips_CMC2LCh(img, `out`)
+
+proc vips_XYZ2Yxy*(img: ptr VipsImage, `out`: ptr ptr VipsImage): cint =
+  c_vips_XYZ2Yxy(img, `out`)
+
+proc vips_Yxy2XYZ*(img: ptr VipsImage, `out`: ptr ptr VipsImage): cint =
+  c_vips_Yxy2XYZ(img, `out`)
+
+proc vips_LabS2Lab*(img: ptr VipsImage, `out`: ptr ptr VipsImage): cint =
+  c_vips_LabS2Lab(img, `out`)
+
+proc vips_Lab2LabS*(img: ptr VipsImage, `out`: ptr ptr VipsImage): cint =
+  c_vips_Lab2LabS(img, `out`)
+
+proc vips_CMYK2XYZ*(img: ptr VipsImage, `out`: ptr ptr VipsImage): cint =
+  c_vips_CMYK2XYZ(img, `out`)
+
+proc vips_XYZ2CMYK*(img: ptr VipsImage, `out`: ptr ptr VipsImage): cint =
+  c_vips_XYZ2CMYK(img, `out`)
+
+proc vips_profile_load*(name: cstring, profile: ptr ptr VipsBlob): cint =
+  c_vips_profile_load(name, profile)
+
+proc vips_icc_present*(): cint =
+  c_vips_icc_present()
+
+proc vips_icc_transform*(img: ptr VipsImage, `out`: ptr ptr VipsImage, `output_profile`: cstring): cint =
+  c_vips_icc_transform(img, `out`, `output_profile`)
+
+proc vips_icc_import*(img: ptr VipsImage, `out`: ptr ptr VipsImage): cint =
+  c_vips_icc_import(img, `out`)
+
+proc vips_icc_export*(img: ptr VipsImage, `out`: ptr ptr VipsImage): cint =
+  c_vips_icc_export(img, `out`)
+
+proc vips_dE76*(left: ptr VipsImage, right: ptr VipsImage, `out`: ptr ptr VipsImage): cint =
+  c_vips_dE76(left, right, `out`)
+
+proc vips_dE00*(left: ptr VipsImage, right: ptr VipsImage, `out`: ptr ptr VipsImage): cint =
+  c_vips_dE00(left, right, `out`)
+
+proc vips_dECMC*(left: ptr VipsImage, right: ptr VipsImage, `out`: ptr ptr VipsImage): cint =
+  c_vips_dECMC(left, right, `out`)

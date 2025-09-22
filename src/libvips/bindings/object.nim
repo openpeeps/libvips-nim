@@ -20,7 +20,7 @@ type
     preclose*: cint # gboolean
     close*: cint # gboolean
     postclose*: cint # gboolean
-    local_memory*: csize
+    local_memory*: csize_t
 
   VipsObjectClass* = object
     # ...fields as in C struct...

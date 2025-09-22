@@ -6,8 +6,7 @@
 #          Made by Humans from OpenPeeps
 #          https://github.com/openpeeps/libvips-nim
 
-import ./glib/glib
-import ./types, ./basic, ./buf
+import ./types, ./buf
 import "object.nim"
 
 type

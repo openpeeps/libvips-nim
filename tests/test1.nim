@@ -85,6 +85,7 @@ template runBasicTests() =
     # Clean up
     if img != nil: g_object_unref(img)
     if outImg != nil: g_object_unref(outImg)
+    removeFile(outPath)
 
   test "crop image":
     var img = vips_image_new_from_file(imgPath.cstring)
@@ -161,16 +162,15 @@ template runBasicTests() =
 
   echo "Suite time: ", cpuTime() - startTime, " seconds"
 
-proc enableAcceleration() =
+suite "libvips low-level bindings":
+  check vips_init(getAppFilename().cstring) == 0
+  runBasicTests()
+
+suite "libvips low-level SIMD/GPU acceleration":
+  check vips_init(getAppFilename().cstring) == 0
+
   vips_vector_set_enabled(1)
   vips_concurrency_set(4)
   assert vips_vector_isenabled() == 1
 
-suite "libvips bindings":
-  check vips_init(getAppFilename().cstring) == 0
-  runBasicTests()
-
-suite "libvips SIMD/GPU acceleration":
-  check vips_init(getAppFilename().cstring) == 0
-  enableAcceleration()
   runBasicTests()
