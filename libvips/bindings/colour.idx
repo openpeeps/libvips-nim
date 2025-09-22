@@ -31,65 +31,63 @@ nim	VIPS_D3250_Y0	libvips/bindings/colour.html#VIPS_D3250_Y0	const VIPS_D3250_Y0
 nim	VIPS_D3250_Z0	libvips/bindings/colour.html#VIPS_D3250_Z0	const VIPS_D3250_Z0		51
 nim	VipsIntent	libvips/bindings/colour.html#VipsIntent	enum VipsIntent		55
 nim	VipsPCS	libvips/bindings/colour.html#VipsPCS	enum VipsPCS		63
-nim	vips_colourspace_issupported	libvips/bindings/colour.html#vips_colourspace_issupported,ptr.VipsImage	proc vips_colourspace_issupported(image: ptr VipsImage): bool		70
-nim	vips_colourspace	libvips/bindings/colour.html#vips_colourspace,ptr.VipsImage,ptr.ptr.VipsImage,VipsInterpretation	proc vips_colourspace(input: ptr VipsImage; output: ptr ptr VipsImage;\n                 space: VipsInterpretation): cint		71
-nim	vips_LabQ2sRGB	libvips/bindings/colour.html#vips_LabQ2sRGB,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_LabQ2sRGB(input: ptr VipsImage; output: ptr ptr VipsImage): cint		74
-nim	vips_rad2float	libvips/bindings/colour.html#vips_rad2float,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_rad2float(input: ptr VipsImage; output: ptr ptr VipsImage): cint		75
-nim	vips_float2rad	libvips/bindings/colour.html#vips_float2rad,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_float2rad(input: ptr VipsImage; output: ptr ptr VipsImage): cint		76
-nim	vips_LabS2LabQ	libvips/bindings/colour.html#vips_LabS2LabQ,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_LabS2LabQ(input: ptr VipsImage; output: ptr ptr VipsImage): cint		77
-nim	vips_LabQ2LabS	libvips/bindings/colour.html#vips_LabQ2LabS,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_LabQ2LabS(input: ptr VipsImage; output: ptr ptr VipsImage): cint		78
-nim	vips_LabQ2Lab	libvips/bindings/colour.html#vips_LabQ2Lab,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_LabQ2Lab(input: ptr VipsImage; output: ptr ptr VipsImage): cint		79
-nim	vips_Lab2LabQ	libvips/bindings/colour.html#vips_Lab2LabQ,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_Lab2LabQ(input: ptr VipsImage; output: ptr ptr VipsImage): cint		80
-nim	vips_LCh2Lab	libvips/bindings/colour.html#vips_LCh2Lab,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_LCh2Lab(input: ptr VipsImage; output: ptr ptr VipsImage): cint		81
-nim	vips_Lab2LCh	libvips/bindings/colour.html#vips_Lab2LCh,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_Lab2LCh(input: ptr VipsImage; output: ptr ptr VipsImage): cint		82
-nim	vips_Lab2XYZ	libvips/bindings/colour.html#vips_Lab2XYZ,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_Lab2XYZ(input: ptr VipsImage; output: ptr ptr VipsImage): cint		83
-nim	vips_XYZ2Lab	libvips/bindings/colour.html#vips_XYZ2Lab,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_XYZ2Lab(input: ptr VipsImage; output: ptr ptr VipsImage): cint		84
-nim	vips_XYZ2scRGB	libvips/bindings/colour.html#vips_XYZ2scRGB,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_XYZ2scRGB(input: ptr VipsImage; output: ptr ptr VipsImage): cint		86
-nim	vips_scRGB2sRGB	libvips/bindings/colour.html#vips_scRGB2sRGB,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_scRGB2sRGB(input: ptr VipsImage; output: ptr ptr VipsImage): cint		87
-nim	vips_scRGB2BW	libvips/bindings/colour.html#vips_scRGB2BW,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_scRGB2BW(input: ptr VipsImage; output: ptr ptr VipsImage): cint		88
-nim	vips_sRGB2scRGB	libvips/bindings/colour.html#vips_sRGB2scRGB,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_sRGB2scRGB(input: ptr VipsImage; output: ptr ptr VipsImage): cint		89
-nim	vips_scRGB2XYZ	libvips/bindings/colour.html#vips_scRGB2XYZ,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_scRGB2XYZ(input: ptr VipsImage; output: ptr ptr VipsImage): cint		90
-nim	vips_HSV2sRGB	libvips/bindings/colour.html#vips_HSV2sRGB,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_HSV2sRGB(input: ptr VipsImage; output: ptr ptr VipsImage): cint		91
-nim	vips_sRGB2HSV	libvips/bindings/colour.html#vips_sRGB2HSV,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_sRGB2HSV(input: ptr VipsImage; output: ptr ptr VipsImage): cint		92
-nim	vips_LCh2CMC	libvips/bindings/colour.html#vips_LCh2CMC,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_LCh2CMC(input: ptr VipsImage; output: ptr ptr VipsImage): cint		94
-nim	vips_CMC2LCh	libvips/bindings/colour.html#vips_CMC2LCh,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_CMC2LCh(input: ptr VipsImage; output: ptr ptr VipsImage): cint		95
-nim	vips_XYZ2Yxy	libvips/bindings/colour.html#vips_XYZ2Yxy,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_XYZ2Yxy(input: ptr VipsImage; output: ptr ptr VipsImage): cint		96
-nim	vips_Yxy2XYZ	libvips/bindings/colour.html#vips_Yxy2XYZ,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_Yxy2XYZ(input: ptr VipsImage; output: ptr ptr VipsImage): cint		97
-nim	vips_LabS2Lab	libvips/bindings/colour.html#vips_LabS2Lab,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_LabS2Lab(input: ptr VipsImage; output: ptr ptr VipsImage): cint		98
-nim	vips_Lab2LabS	libvips/bindings/colour.html#vips_Lab2LabS,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_Lab2LabS(input: ptr VipsImage; output: ptr ptr VipsImage): cint		99
-nim	vips_CMYK2XYZ	libvips/bindings/colour.html#vips_CMYK2XYZ,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_CMYK2XYZ(input: ptr VipsImage; output: ptr ptr VipsImage): cint		101
-nim	vips_XYZ2CMYK	libvips/bindings/colour.html#vips_XYZ2CMYK,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_XYZ2CMYK(input: ptr VipsImage; output: ptr ptr VipsImage): cint		102
-nim	vips_profile_load	libvips/bindings/colour.html#vips_profile_load,cstring,ptr.ptr.VipsBlob	proc vips_profile_load(name: cstring; profile: ptr ptr VipsBlob): cint		104
-nim	vips_icc_present	libvips/bindings/colour.html#vips_icc_present	proc vips_icc_present(): cint		105
-nim	vips_icc_transform	libvips/bindings/colour.html#vips_icc_transform,ptr.VipsImage,ptr.ptr.VipsImage,cstring	proc vips_icc_transform(input: ptr VipsImage; output: ptr ptr VipsImage;\n                   output_profile: cstring): cint		106
-nim	vips_icc_import	libvips/bindings/colour.html#vips_icc_import,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_icc_import(input: ptr VipsImage; output: ptr ptr VipsImage): cint		108
-nim	vips_icc_export	libvips/bindings/colour.html#vips_icc_export,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_icc_export(input: ptr VipsImage; output: ptr ptr VipsImage): cint		109
-nim	vips_icc_ac2rc	libvips/bindings/colour.html#vips_icc_ac2rc,ptr.VipsImage,ptr.ptr.VipsImage,cstring	proc vips_icc_ac2rc(input: ptr VipsImage; output: ptr ptr VipsImage;\n               profile_filename: cstring): cint		110
-nim	vips_icc_is_compatible_profile	libvips/bindings/colour.html#vips_icc_is_compatible_profile,ptr.VipsImage,pointer,csize_t	proc vips_icc_is_compatible_profile(image: ptr VipsImage; data: pointer;\n                               data_length: csize_t): bool		112
-nim	vips_dE76	libvips/bindings/colour.html#vips_dE76,ptr.VipsImage,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_dE76(left: ptr VipsImage; right: ptr VipsImage; output: ptr ptr VipsImage): cint		116
-nim	vips_dE00	libvips/bindings/colour.html#vips_dE00,ptr.VipsImage,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_dE00(left: ptr VipsImage; right: ptr VipsImage; output: ptr ptr VipsImage): cint		117
-nim	vips_dECMC	libvips/bindings/colour.html#vips_dECMC,ptr.VipsImage,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_dECMC(left: ptr VipsImage; right: ptr VipsImage; output: ptr ptr VipsImage): cint		118
-nim	vips_col_Lab2XYZ	libvips/bindings/colour.html#vips_col_Lab2XYZ,float32,float32,float32,ptr.float32,ptr.float32,ptr.float32	proc vips_col_Lab2XYZ(L, a, b: float32; X, Y, Z: ptr float32)		120
-nim	vips_col_XYZ2Lab	libvips/bindings/colour.html#vips_col_XYZ2Lab,float32,float32,float32,ptr.float32,ptr.float32,ptr.float32	proc vips_col_XYZ2Lab(X, Y, Z: float32; L, a, b: ptr float32)		121
-nim	vips_col_ab2h	libvips/bindings/colour.html#vips_col_ab2h,float64,float64	proc vips_col_ab2h(a, b: float64): float64		122
-nim	vips_col_ab2Ch	libvips/bindings/colour.html#vips_col_ab2Ch,float32,float32,ptr.float32,ptr.float32	proc vips_col_ab2Ch(a, b: float32; C, h: ptr float32)		123
-nim	vips_col_Ch2ab	libvips/bindings/colour.html#vips_col_Ch2ab,float32,float32,ptr.float32,ptr.float32	proc vips_col_Ch2ab(C, h: float32; a, b: ptr float32)		124
-nim	vips_col_L2Lcmc	libvips/bindings/colour.html#vips_col_L2Lcmc,float32	proc vips_col_L2Lcmc(L: float32): float32		126
-nim	vips_col_C2Ccmc	libvips/bindings/colour.html#vips_col_C2Ccmc,float32	proc vips_col_C2Ccmc(C: float32): float32		127
-nim	vips_col_Ch2hcmc	libvips/bindings/colour.html#vips_col_Ch2hcmc,float32,float32	proc vips_col_Ch2hcmc(C, h: float32): float32		128
-nim	vips_col_make_tables_CMC	libvips/bindings/colour.html#vips_col_make_tables_CMC	proc vips_col_make_tables_CMC()		130
-nim	vips_col_Lcmc2L	libvips/bindings/colour.html#vips_col_Lcmc2L,float32	proc vips_col_Lcmc2L(Lcmc: float32): float32		131
-nim	vips_col_Ccmc2C	libvips/bindings/colour.html#vips_col_Ccmc2C,float32	proc vips_col_Ccmc2C(Ccmc: float32): float32		132
-nim	vips_col_Chcmc2h	libvips/bindings/colour.html#vips_col_Chcmc2h,float32,float32	proc vips_col_Chcmc2h(C, hcmc: float32): float32		133
-nim	vips_col_sRGB2scRGB_8	libvips/bindings/colour.html#vips_col_sRGB2scRGB_8,cint,cint,cint,ptr.float32,ptr.float32,ptr.float32	proc vips_col_sRGB2scRGB_8(r, g, b: cint; R, G, B: ptr float32): cint		135
-nim	vips_col_sRGB2scRGB_16	libvips/bindings/colour.html#vips_col_sRGB2scRGB_16,cint,cint,cint,ptr.float32,ptr.float32,ptr.float32	proc vips_col_sRGB2scRGB_16(r, g, b: cint; R, G, B: ptr float32): cint		136
-nim	vips_col_sRGB2scRGB_8_noclip	libvips/bindings/colour.html#vips_col_sRGB2scRGB_8_noclip,cint,cint,cint,ptr.float32,ptr.float32,ptr.float32	proc vips_col_sRGB2scRGB_8_noclip(r, g, b: cint; R, G, B: ptr float32): cint		137
-nim	vips_col_sRGB2scRGB_16_noclip	libvips/bindings/colour.html#vips_col_sRGB2scRGB_16_noclip,cint,cint,cint,ptr.float32,ptr.float32,ptr.float32	proc vips_col_sRGB2scRGB_16_noclip(r, g, b: cint; R, G, B: ptr float32): cint		138
-nim	vips_col_scRGB2XYZ	libvips/bindings/colour.html#vips_col_scRGB2XYZ,float32,float32,float32,ptr.float32,ptr.float32,ptr.float32	proc vips_col_scRGB2XYZ(R, G, B: float32; X, Y, Z: ptr float32): cint		140
-nim	vips_col_XYZ2scRGB	libvips/bindings/colour.html#vips_col_XYZ2scRGB,float32,float32,float32,ptr.float32,ptr.float32,ptr.float32	proc vips_col_XYZ2scRGB(X, Y, Z: float32; R, G, B: ptr float32): cint		141
-nim	vips_col_scRGB2sRGB_8	libvips/bindings/colour.html#vips_col_scRGB2sRGB_8,float32,float32,float32,ptr.cint,ptr.cint,ptr.cint,ptr.cint	proc vips_col_scRGB2sRGB_8(R, G, B: float32; r, g, b, og: ptr cint): cint		143
-nim	vips_col_scRGB2sRGB_16	libvips/bindings/colour.html#vips_col_scRGB2sRGB_16,float32,float32,float32,ptr.cint,ptr.cint,ptr.cint,ptr.cint	proc vips_col_scRGB2sRGB_16(R, G, B: float32; r, g, b, og: ptr cint): cint		144
-nim	vips_col_scRGB2BW_16	libvips/bindings/colour.html#vips_col_scRGB2BW_16,float32,float32,float32,ptr.cint,ptr.cint	proc vips_col_scRGB2BW_16(R, G, B: float32; g, og: ptr cint): cint		145
-nim	vips_col_scRGB2BW_8	libvips/bindings/colour.html#vips_col_scRGB2BW_8,float32,float32,float32,ptr.cint,ptr.cint	proc vips_col_scRGB2BW_8(R, G, B: float32; g, og: ptr cint): cint		146
-nim	vips_pythagoras	libvips/bindings/colour.html#vips_pythagoras,float32,float32,float32,float32,float32,float32	proc vips_pythagoras(L1, a1, b1, L2, a2, b2: float32): float32		148
-nim	vips_col_dE00	libvips/bindings/colour.html#vips_col_dE00,float32,float32,float32,float32,float32,float32	proc vips_col_dE00(L1, a1, b1, L2, a2, b2: float32): float32		149
+nim	vips_colourspace_issupported	libvips/bindings/colour.html#vips_colourspace_issupported,ptr.VipsImage	proc vips_colourspace_issupported(image: ptr VipsImage): bool		108
+nim	vips_col_Lab2XYZ	libvips/bindings/colour.html#vips_col_Lab2XYZ,float32,float32,float32,ptr.float32,ptr.float32,ptr.float32	proc vips_col_Lab2XYZ(L, a, b: float32; X, Y, Z: ptr float32)		109
+nim	vips_col_XYZ2Lab	libvips/bindings/colour.html#vips_col_XYZ2Lab,float32,float32,float32,ptr.float32,ptr.float32,ptr.float32	proc vips_col_XYZ2Lab(X, Y, Z: float32; L, a, b: ptr float32)		110
+nim	vips_col_ab2h	libvips/bindings/colour.html#vips_col_ab2h,float64,float64	proc vips_col_ab2h(a, b: float64): float64		111
+nim	vips_col_ab2Ch	libvips/bindings/colour.html#vips_col_ab2Ch,float32,float32,ptr.float32,ptr.float32	proc vips_col_ab2Ch(a, b: float32; C, h: ptr float32)		112
+nim	vips_col_Ch2ab	libvips/bindings/colour.html#vips_col_Ch2ab,float32,float32,ptr.float32,ptr.float32	proc vips_col_Ch2ab(C, h: float32; a, b: ptr float32)		113
+nim	vips_col_L2Lcmc	libvips/bindings/colour.html#vips_col_L2Lcmc,float32	proc vips_col_L2Lcmc(L: float32): float32		115
+nim	vips_col_C2Ccmc	libvips/bindings/colour.html#vips_col_C2Ccmc,float32	proc vips_col_C2Ccmc(C: float32): float32		116
+nim	vips_col_Ch2hcmc	libvips/bindings/colour.html#vips_col_Ch2hcmc,float32,float32	proc vips_col_Ch2hcmc(C, h: float32): float32		117
+nim	vips_col_make_tables_CMC	libvips/bindings/colour.html#vips_col_make_tables_CMC	proc vips_col_make_tables_CMC()		119
+nim	vips_col_Lcmc2L	libvips/bindings/colour.html#vips_col_Lcmc2L,float32	proc vips_col_Lcmc2L(Lcmc: float32): float32		120
+nim	vips_col_Ccmc2C	libvips/bindings/colour.html#vips_col_Ccmc2C,float32	proc vips_col_Ccmc2C(Ccmc: float32): float32		121
+nim	vips_col_Chcmc2h	libvips/bindings/colour.html#vips_col_Chcmc2h,float32,float32	proc vips_col_Chcmc2h(C, hcmc: float32): float32		122
+nim	vips_col_sRGB2scRGB_8	libvips/bindings/colour.html#vips_col_sRGB2scRGB_8,cint,cint,cint,ptr.float32,ptr.float32,ptr.float32	proc vips_col_sRGB2scRGB_8(r, g, b: cint; R, G, B: ptr float32): cint		124
+nim	vips_col_sRGB2scRGB_16	libvips/bindings/colour.html#vips_col_sRGB2scRGB_16,cint,cint,cint,ptr.float32,ptr.float32,ptr.float32	proc vips_col_sRGB2scRGB_16(r, g, b: cint; R, G, B: ptr float32): cint		125
+nim	vips_col_sRGB2scRGB_8_noclip	libvips/bindings/colour.html#vips_col_sRGB2scRGB_8_noclip,cint,cint,cint,ptr.float32,ptr.float32,ptr.float32	proc vips_col_sRGB2scRGB_8_noclip(r, g, b: cint; R, G, B: ptr float32): cint		126
+nim	vips_col_sRGB2scRGB_16_noclip	libvips/bindings/colour.html#vips_col_sRGB2scRGB_16_noclip,cint,cint,cint,ptr.float32,ptr.float32,ptr.float32	proc vips_col_sRGB2scRGB_16_noclip(r, g, b: cint; R, G, B: ptr float32): cint		127
+nim	vips_col_scRGB2XYZ	libvips/bindings/colour.html#vips_col_scRGB2XYZ,float32,float32,float32,ptr.float32,ptr.float32,ptr.float32	proc vips_col_scRGB2XYZ(R, G, B: float32; X, Y, Z: ptr float32): cint		129
+nim	vips_col_XYZ2scRGB	libvips/bindings/colour.html#vips_col_XYZ2scRGB,float32,float32,float32,ptr.float32,ptr.float32,ptr.float32	proc vips_col_XYZ2scRGB(X, Y, Z: float32; R, G, B: ptr float32): cint		130
+nim	vips_col_scRGB2sRGB_8	libvips/bindings/colour.html#vips_col_scRGB2sRGB_8,float32,float32,float32,ptr.cint,ptr.cint,ptr.cint,ptr.cint	proc vips_col_scRGB2sRGB_8(R, G, B: float32; r, g, b, og: ptr cint): cint		132
+nim	vips_col_scRGB2sRGB_16	libvips/bindings/colour.html#vips_col_scRGB2sRGB_16,float32,float32,float32,ptr.cint,ptr.cint,ptr.cint,ptr.cint	proc vips_col_scRGB2sRGB_16(R, G, B: float32; r, g, b, og: ptr cint): cint		133
+nim	vips_col_scRGB2BW_16	libvips/bindings/colour.html#vips_col_scRGB2BW_16,float32,float32,float32,ptr.cint,ptr.cint	proc vips_col_scRGB2BW_16(R, G, B: float32; g, og: ptr cint): cint		134
+nim	vips_col_scRGB2BW_8	libvips/bindings/colour.html#vips_col_scRGB2BW_8,float32,float32,float32,ptr.cint,ptr.cint	proc vips_col_scRGB2BW_8(R, G, B: float32; g, og: ptr cint): cint		135
+nim	vips_pythagoras	libvips/bindings/colour.html#vips_pythagoras,float32,float32,float32,float32,float32,float32	proc vips_pythagoras(L1, a1, b1, L2, a2, b2: float32): float32		137
+nim	vips_col_dE00	libvips/bindings/colour.html#vips_col_dE00,float32,float32,float32,float32,float32,float32	proc vips_col_dE00(L1, a1, b1, L2, a2, b2: float32): float32		138
+nim	vips_colourspace	libvips/bindings/colour.html#vips_colourspace,ptr.VipsImage,ptr.ptr.VipsImage,VipsInterpretation	proc vips_colourspace(img: ptr VipsImage; out: ptr ptr VipsImage;\n                 space: VipsInterpretation): cint		144
+nim	vips_LabQ2sRGB	libvips/bindings/colour.html#vips_LabQ2sRGB,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_LabQ2sRGB(img: ptr VipsImage; out: ptr ptr VipsImage): cint		147
+nim	vips_rad2float	libvips/bindings/colour.html#vips_rad2float,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_rad2float(img: ptr VipsImage; out: ptr ptr VipsImage): cint		150
+nim	vips_float2rad	libvips/bindings/colour.html#vips_float2rad,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_float2rad(img: ptr VipsImage; out: ptr ptr VipsImage): cint		153
+nim	vips_LabS2LabQ	libvips/bindings/colour.html#vips_LabS2LabQ,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_LabS2LabQ(img: ptr VipsImage; out: ptr ptr VipsImage): cint		156
+nim	vips_LabQ2LabS	libvips/bindings/colour.html#vips_LabQ2LabS,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_LabQ2LabS(img: ptr VipsImage; out: ptr ptr VipsImage): cint		159
+nim	vips_LabQ2Lab	libvips/bindings/colour.html#vips_LabQ2Lab,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_LabQ2Lab(img: ptr VipsImage; out: ptr ptr VipsImage): cint		162
+nim	vips_Lab2LabQ	libvips/bindings/colour.html#vips_Lab2LabQ,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_Lab2LabQ(img: ptr VipsImage; out: ptr ptr VipsImage): cint		165
+nim	vips_LCh2Lab	libvips/bindings/colour.html#vips_LCh2Lab,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_LCh2Lab(img: ptr VipsImage; out: ptr ptr VipsImage): cint		168
+nim	vips_Lab2LCh	libvips/bindings/colour.html#vips_Lab2LCh,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_Lab2LCh(img: ptr VipsImage; out: ptr ptr VipsImage): cint		171
+nim	vips_Lab2XYZ	libvips/bindings/colour.html#vips_Lab2XYZ,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_Lab2XYZ(img: ptr VipsImage; out: ptr ptr VipsImage): cint		174
+nim	vips_XYZ2Lab	libvips/bindings/colour.html#vips_XYZ2Lab,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_XYZ2Lab(img: ptr VipsImage; out: ptr ptr VipsImage): cint		177
+nim	vips_XYZ2scRGB	libvips/bindings/colour.html#vips_XYZ2scRGB,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_XYZ2scRGB(img: ptr VipsImage; out: ptr ptr VipsImage): cint		180
+nim	vips_scRGB2sRGB	libvips/bindings/colour.html#vips_scRGB2sRGB,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_scRGB2sRGB(img: ptr VipsImage; out: ptr ptr VipsImage): cint		183
+nim	vips_scRGB2BW	libvips/bindings/colour.html#vips_scRGB2BW,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_scRGB2BW(img: ptr VipsImage; out: ptr ptr VipsImage): cint		186
+nim	vips_sRGB2scRGB	libvips/bindings/colour.html#vips_sRGB2scRGB,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_sRGB2scRGB(img: ptr VipsImage; out: ptr ptr VipsImage): cint		189
+nim	vips_scRGB2XYZ	libvips/bindings/colour.html#vips_scRGB2XYZ,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_scRGB2XYZ(img: ptr VipsImage; out: ptr ptr VipsImage): cint		192
+nim	vips_HSV2sRGB	libvips/bindings/colour.html#vips_HSV2sRGB,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_HSV2sRGB(img: ptr VipsImage; out: ptr ptr VipsImage): cint		195
+nim	vips_sRGB2HSV	libvips/bindings/colour.html#vips_sRGB2HSV,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_sRGB2HSV(img: ptr VipsImage; out: ptr ptr VipsImage): cint		198
+nim	vips_LCh2CMC	libvips/bindings/colour.html#vips_LCh2CMC,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_LCh2CMC(img: ptr VipsImage; out: ptr ptr VipsImage): cint		201
+nim	vips_CMC2LCh	libvips/bindings/colour.html#vips_CMC2LCh,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_CMC2LCh(img: ptr VipsImage; out: ptr ptr VipsImage): cint		204
+nim	vips_XYZ2Yxy	libvips/bindings/colour.html#vips_XYZ2Yxy,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_XYZ2Yxy(img: ptr VipsImage; out: ptr ptr VipsImage): cint		207
+nim	vips_Yxy2XYZ	libvips/bindings/colour.html#vips_Yxy2XYZ,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_Yxy2XYZ(img: ptr VipsImage; out: ptr ptr VipsImage): cint		210
+nim	vips_LabS2Lab	libvips/bindings/colour.html#vips_LabS2Lab,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_LabS2Lab(img: ptr VipsImage; out: ptr ptr VipsImage): cint		213
+nim	vips_Lab2LabS	libvips/bindings/colour.html#vips_Lab2LabS,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_Lab2LabS(img: ptr VipsImage; out: ptr ptr VipsImage): cint		216
+nim	vips_CMYK2XYZ	libvips/bindings/colour.html#vips_CMYK2XYZ,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_CMYK2XYZ(img: ptr VipsImage; out: ptr ptr VipsImage): cint		219
+nim	vips_XYZ2CMYK	libvips/bindings/colour.html#vips_XYZ2CMYK,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_XYZ2CMYK(img: ptr VipsImage; out: ptr ptr VipsImage): cint		222
+nim	vips_profile_load	libvips/bindings/colour.html#vips_profile_load,cstring,ptr.ptr.VipsBlob	proc vips_profile_load(name: cstring; profile: ptr ptr VipsBlob): cint		225
+nim	vips_icc_present	libvips/bindings/colour.html#vips_icc_present	proc vips_icc_present(): cint		228
+nim	vips_icc_transform	libvips/bindings/colour.html#vips_icc_transform,ptr.VipsImage,ptr.ptr.VipsImage,cstring	proc vips_icc_transform(img: ptr VipsImage; out: ptr ptr VipsImage;\n                   output_profile: cstring): cint		231
+nim	vips_icc_import	libvips/bindings/colour.html#vips_icc_import,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_icc_import(img: ptr VipsImage; out: ptr ptr VipsImage): cint		234
+nim	vips_icc_export	libvips/bindings/colour.html#vips_icc_export,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_icc_export(img: ptr VipsImage; out: ptr ptr VipsImage): cint		237
+nim	vips_dE76	libvips/bindings/colour.html#vips_dE76,ptr.VipsImage,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_dE76(left: ptr VipsImage; right: ptr VipsImage; out: ptr ptr VipsImage): cint		240
+nim	vips_dE00	libvips/bindings/colour.html#vips_dE00,ptr.VipsImage,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_dE00(left: ptr VipsImage; right: ptr VipsImage; out: ptr ptr VipsImage): cint		243
+nim	vips_dECMC	libvips/bindings/colour.html#vips_dECMC,ptr.VipsImage,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_dECMC(left: ptr VipsImage; right: ptr VipsImage; out: ptr ptr VipsImage): cint		246

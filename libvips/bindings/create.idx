@@ -1,0 +1,31 @@
+nimTitle	create	libvips/bindings/create.html	module libvips/bindings/create		0
+nim	VipsTextWrap	libvips/bindings/create.html#VipsTextWrap	enum VipsTextWrap		4
+nim	VipsSdfShape	libvips/bindings/create.html#VipsSdfShape	enum VipsSdfShape		11
+nim	vips_black	libvips/bindings/create.html#vips_black,ptr.ptr.VipsImage,int,int	proc vips_black(output: ptr ptr VipsImage; width, height: int): cint		50
+nim	vips_xyz	libvips/bindings/create.html#vips_xyz,ptr.ptr.VipsImage,int,int	proc vips_xyz(output: ptr ptr VipsImage; width, height: int): cint		52
+nim	vips_grey	libvips/bindings/create.html#vips_grey,ptr.ptr.VipsImage,int,int	proc vips_grey(output: ptr ptr VipsImage; width, height: int): cint		54
+nim	vips_gaussmat	libvips/bindings/create.html#vips_gaussmat,ptr.ptr.VipsImage,float,float	proc vips_gaussmat(output: ptr ptr VipsImage; sigma, min_ampl: float): cint		56
+nim	vips_logmat	libvips/bindings/create.html#vips_logmat,ptr.ptr.VipsImage,float,float	proc vips_logmat(output: ptr ptr VipsImage; sigma, min_ampl: float): cint		58
+nim	vips_text	libvips/bindings/create.html#vips_text,ptr.ptr.VipsImage,string	proc vips_text(output: ptr ptr VipsImage; text: string): cint		60
+nim	vips_gaussnoise	libvips/bindings/create.html#vips_gaussnoise,ptr.ptr.VipsImage,int,int	proc vips_gaussnoise(output: ptr ptr VipsImage; width, height: int): cint		62
+nim	vips_eye	libvips/bindings/create.html#vips_eye,ptr.ptr.VipsImage,int,int	proc vips_eye(output: ptr ptr VipsImage; width, height: int): cint		64
+nim	vips_sines	libvips/bindings/create.html#vips_sines,ptr.ptr.VipsImage,int,int	proc vips_sines(output: ptr ptr VipsImage; width, height: int): cint		66
+nim	vips_zone	libvips/bindings/create.html#vips_zone,ptr.ptr.VipsImage,int,int	proc vips_zone(output: ptr ptr VipsImage; width, height: int): cint		68
+nim	vips_sdf	libvips/bindings/create.html#vips_sdf,ptr.ptr.VipsImage,int,int,VipsSdfShape	proc vips_sdf(output: ptr ptr VipsImage; width, height: int; shape: VipsSdfShape): cint		70
+nim	vips_identity	libvips/bindings/create.html#vips_identity,ptr.ptr.VipsImage	proc vips_identity(output: ptr ptr VipsImage): cint		72
+nim	vips_buildlut	libvips/bindings/create.html#vips_buildlut,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_buildlut(input: ptr VipsImage; output: ptr ptr VipsImage): cint		74
+nim	vips_invertlut	libvips/bindings/create.html#vips_invertlut,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_invertlut(input: ptr VipsImage; output: ptr ptr VipsImage): cint		76
+nim	vips_tonelut	libvips/bindings/create.html#vips_tonelut,ptr.ptr.VipsImage	proc vips_tonelut(output: ptr ptr VipsImage): cint		78
+nim	vips_mask_ideal	libvips/bindings/create.html#vips_mask_ideal,ptr.ptr.VipsImage,int,int,float	proc vips_mask_ideal(output: ptr ptr VipsImage; width, height: int;\n                frequency_cutoff: float): cint		80
+nim	vips_mask_ideal_ring	libvips/bindings/create.html#vips_mask_ideal_ring,ptr.ptr.VipsImage,int,int,float,float	proc vips_mask_ideal_ring(output: ptr ptr VipsImage; width, height: int;\n                     frequency_cutoff, ringwidth: float): cint		82
+nim	vips_mask_ideal_band	libvips/bindings/create.html#vips_mask_ideal_band,ptr.ptr.VipsImage,int,int,float,float,float	proc vips_mask_ideal_band(output: ptr ptr VipsImage; width, height: int;\n                     frequency_cutoff_x, frequency_cutoff_y, radius: float): cint		84
+nim	vips_mask_butterworth	libvips/bindings/create.html#vips_mask_butterworth,ptr.ptr.VipsImage,int,int,float,float,float	proc vips_mask_butterworth(output: ptr ptr VipsImage; width, height: int;\n                      order, frequency_cutoff, amplitude_cutoff: float): cint		86
+nim	vips_mask_butterworth_ring	libvips/bindings/create.html#vips_mask_butterworth_ring,ptr.ptr.VipsImage,int,int,float,float,float,float	proc vips_mask_butterworth_ring(output: ptr ptr VipsImage; width, height: int; order,\n    frequency_cutoff, amplitude_cutoff, ringwidth: float): cint		88
+nim	vips_mask_butterworth_band	libvips/bindings/create.html#vips_mask_butterworth_band,ptr.ptr.VipsImage,int,int,float,float,float,float,float	proc vips_mask_butterworth_band(output: ptr ptr VipsImage; width, height: int; order,\n    frequency_cutoff_x, frequency_cutoff_y, radius, amplitude_cutoff: float): cint		90
+nim	vips_mask_gaussian	libvips/bindings/create.html#vips_mask_gaussian,ptr.ptr.VipsImage,int,int,float,float	proc vips_mask_gaussian(output: ptr ptr VipsImage; width, height: int;\n                   frequency_cutoff, amplitude_cutoff: float): cint		92
+nim	vips_mask_gaussian_ring	libvips/bindings/create.html#vips_mask_gaussian_ring,ptr.ptr.VipsImage,int,int,float,float,float	proc vips_mask_gaussian_ring(output: ptr ptr VipsImage; width, height: int;\n                        frequency_cutoff, amplitude_cutoff, ringwidth: float): cint		94
+nim	vips_mask_gaussian_band	libvips/bindings/create.html#vips_mask_gaussian_band,ptr.ptr.VipsImage,int,int,float,float,float,float	proc vips_mask_gaussian_band(output: ptr ptr VipsImage; width, height: int;\n    frequency_cutoff_x, frequency_cutoff_y, radius, amplitude_cutoff: float): cint		96
+nim	vips_mask_fractal	libvips/bindings/create.html#vips_mask_fractal,ptr.ptr.VipsImage,int,int,float	proc vips_mask_fractal(output: ptr ptr VipsImage; width, height: int;\n                  fractal_dimension: float): cint		98
+nim	vips_fractsurf	libvips/bindings/create.html#vips_fractsurf,ptr.ptr.VipsImage,int,int,float	proc vips_fractsurf(output: ptr ptr VipsImage; width, height: int;\n               fractal_dimension: float): cint		100
+nim	vips_worley	libvips/bindings/create.html#vips_worley,ptr.ptr.VipsImage,int,int	proc vips_worley(output: ptr ptr VipsImage; width, height: int): cint		102
+nim	vips_perlin	libvips/bindings/create.html#vips_perlin,ptr.ptr.VipsImage,int,int	proc vips_perlin(output: ptr ptr VipsImage; width, height: int): cint		104

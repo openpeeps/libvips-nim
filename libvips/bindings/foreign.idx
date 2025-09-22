@@ -7,151 +7,150 @@ nim	VipsForeignLoad	libvips/bindings/foreign.html#VipsForeignLoad	object VipsFor
 nim	VipsForeignLoadClass	libvips/bindings/foreign.html#VipsForeignLoadClass	object VipsForeignLoadClass		23
 nim	VipsForeignSave	libvips/bindings/foreign.html#VipsForeignSave	object VipsForeignSave		25
 nim	VipsForeignSaveClass	libvips/bindings/foreign.html#VipsForeignSaveClass	object VipsForeignSaveClass		27
-nim	VipsBandFormat	libvips/bindings/foreign.html#VipsBandFormat	type VipsBandFormat		30
-nim	VipsForeignFlags	libvips/bindings/foreign.html#VipsForeignFlags	enum VipsForeignFlags		34
-nim	VipsFailOn	libvips/bindings/foreign.html#VipsFailOn	enum VipsFailOn		41
-nim	VipsForeignSaveable	libvips/bindings/foreign.html#VipsForeignSaveable	enum VipsForeignSaveable		48
-nim	VipsForeignCoding	libvips/bindings/foreign.html#VipsForeignCoding	enum VipsForeignCoding		56
-nim	VipsForeignKeep	libvips/bindings/foreign.html#VipsForeignKeep	enum VipsForeignKeep		62
-nim	VipsForeignSubsample	libvips/bindings/foreign.html#VipsForeignSubsample	enum VipsForeignSubsample		71
-nim	VipsForeignWebpPreset	libvips/bindings/foreign.html#VipsForeignWebpPreset	enum VipsForeignWebpPreset		77
-nim	VipsForeignTiffCompression	libvips/bindings/foreign.html#VipsForeignTiffCompression	enum VipsForeignTiffCompression		86
-nim	VipsForeignTiffPredictor	libvips/bindings/foreign.html#VipsForeignTiffPredictor	enum VipsForeignTiffPredictor		98
-nim	VipsForeignTiffResunit	libvips/bindings/foreign.html#VipsForeignTiffResunit	enum VipsForeignTiffResunit		104
-nim	VipsForeignPpmFormat	libvips/bindings/foreign.html#VipsForeignPpmFormat	enum VipsForeignPpmFormat		109
-nim	VipsForeignPdfPageBox	libvips/bindings/foreign.html#VipsForeignPdfPageBox	enum VipsForeignPdfPageBox		117
-nim	VipsForeignPngFilter	libvips/bindings/foreign.html#VipsForeignPngFilter	enum VipsForeignPngFilter		125
-nim	VipsForeignDzLayout	libvips/bindings/foreign.html#VipsForeignDzLayout	enum VipsForeignDzLayout		133
-nim	VipsForeignDzDepth	libvips/bindings/foreign.html#VipsForeignDzDepth	enum VipsForeignDzDepth		141
-nim	VipsForeignDzContainer	libvips/bindings/foreign.html#VipsForeignDzContainer	enum VipsForeignDzContainer		147
-nim	VipsForeignHeifCompression	libvips/bindings/foreign.html#VipsForeignHeifCompression	enum VipsForeignHeifCompression		153
-nim	VipsForeignHeifEncoder	libvips/bindings/foreign.html#VipsForeignHeifEncoder	enum VipsForeignHeifEncoder		160
-nim	vips_foreign_get_type	libvips/bindings/foreign.html#vips_foreign_get_type	proc vips_foreign_get_type(): culong		169
-nim	vips_foreign_map	libvips/bindings/foreign.html#vips_foreign_map,cstring,pointer,pointer,pointer	proc vips_foreign_map(base: cstring; fn: pointer; a: pointer; b: pointer): pointer		170
-nim	vips_foreign_load_get_type	libvips/bindings/foreign.html#vips_foreign_load_get_type	proc vips_foreign_load_get_type(): culong		172
-nim	vips_foreign_find_load	libvips/bindings/foreign.html#vips_foreign_find_load,cstring	proc vips_foreign_find_load(filename: cstring): cstring		173
-nim	vips_foreign_find_load_buffer	libvips/bindings/foreign.html#vips_foreign_find_load_buffer,pointer,csize_t	proc vips_foreign_find_load_buffer(data: pointer; size: csize_t): cstring		174
-nim	vips_foreign_find_load_source	libvips/bindings/foreign.html#vips_foreign_find_load_source,ptr.VipsSource	proc vips_foreign_find_load_source(source: ptr VipsSource): cstring		175
-nim	vips_foreign_flags	libvips/bindings/foreign.html#vips_foreign_flags,cstring,cstring	proc vips_foreign_flags(loader, filename: cstring): VipsForeignFlags		176
-nim	vips_foreign_is_a	libvips/bindings/foreign.html#vips_foreign_is_a,cstring,cstring	proc vips_foreign_is_a(loader, filename: cstring): bool		177
-nim	vips_foreign_is_a_buffer	libvips/bindings/foreign.html#vips_foreign_is_a_buffer,cstring,pointer,csize_t	proc vips_foreign_is_a_buffer(loader: cstring; data: pointer; size: csize_t): bool		178
-nim	vips_foreign_is_a_source	libvips/bindings/foreign.html#vips_foreign_is_a_source,cstring,ptr.VipsSource	proc vips_foreign_is_a_source(loader: cstring; source: ptr VipsSource): bool		179
-nim	vips_foreign_load_invalidate	libvips/bindings/foreign.html#vips_foreign_load_invalidate,ptr.VipsImage	proc vips_foreign_load_invalidate(image: ptr VipsImage)		180
-nim	vips_foreign_save_get_type	libvips/bindings/foreign.html#vips_foreign_save_get_type	proc vips_foreign_save_get_type(): culong		182
-nim	vips_foreign_find_save	libvips/bindings/foreign.html#vips_foreign_find_save,cstring	proc vips_foreign_find_save(filename: cstring): cstring		183
-nim	vips_foreign_get_suffixes	libvips/bindings/foreign.html#vips_foreign_get_suffixes	proc vips_foreign_get_suffixes(): ptr cstring		184
-nim	vips_foreign_find_save_buffer	libvips/bindings/foreign.html#vips_foreign_find_save_buffer,cstring	proc vips_foreign_find_save_buffer(suffix: cstring): cstring		185
-nim	vips_foreign_find_save_target	libvips/bindings/foreign.html#vips_foreign_find_save_target,cstring	proc vips_foreign_find_save_target(suffix: cstring): cstring		186
-nim	vips_vipsload	libvips/bindings/foreign.html#vips_vipsload,cstring,ptr.ptr.VipsImage	proc vips_vipsload(filename: cstring; res: ptr ptr VipsImage): cint		188
-nim	vips_vipsload_source	libvips/bindings/foreign.html#vips_vipsload_source,ptr.VipsSource,ptr.ptr.VipsImage	proc vips_vipsload_source(source: ptr VipsSource; res: ptr ptr VipsImage): cint		189
-nim	vips_vipssave	libvips/bindings/foreign.html#vips_vipssave,ptr.VipsImage,cstring	proc vips_vipssave(input: ptr VipsImage; filename: cstring): cint		190
-nim	vips_vipssave_target	libvips/bindings/foreign.html#vips_vipssave_target,ptr.VipsImage,ptr.VipsTarget	proc vips_vipssave_target(input: ptr VipsImage; target: ptr VipsTarget): cint		191
-nim	vips_openslideload	libvips/bindings/foreign.html#vips_openslideload,cstring,ptr.ptr.VipsImage	proc vips_openslideload(filename: cstring; res: ptr ptr VipsImage): cint		193
-nim	vips_openslideload_source	libvips/bindings/foreign.html#vips_openslideload_source,ptr.VipsSource,ptr.ptr.VipsImage	proc vips_openslideload_source(source: ptr VipsSource; res: ptr ptr VipsImage): cint		194
-nim	vips_jpegload	libvips/bindings/foreign.html#vips_jpegload,cstring,ptr.ptr.VipsImage	proc vips_jpegload(filename: cstring; res: ptr ptr VipsImage): cint		196
-nim	vips_jpegload_buffer	libvips/bindings/foreign.html#vips_jpegload_buffer,pointer,csize_t,ptr.ptr.VipsImage	proc vips_jpegload_buffer(buf: pointer; len: csize_t; res: ptr ptr VipsImage): cint		197
-nim	vips_jpegload_source	libvips/bindings/foreign.html#vips_jpegload_source,ptr.VipsSource,ptr.ptr.VipsImage	proc vips_jpegload_source(source: ptr VipsSource; res: ptr ptr VipsImage): cint		198
-nim	vips_jpegsave_target	libvips/bindings/foreign.html#vips_jpegsave_target,ptr.VipsImage,ptr.VipsTarget	proc vips_jpegsave_target(input: ptr VipsImage; target: ptr VipsTarget): cint		199
-nim	vips_jpegsave	libvips/bindings/foreign.html#vips_jpegsave,ptr.VipsImage,cstring	proc vips_jpegsave(input: ptr VipsImage; filename: cstring): cint		200
-nim	vips_jpegsave_buffer	libvips/bindings/foreign.html#vips_jpegsave_buffer,ptr.VipsImage,ptr.pointer,ptr.csize_t	proc vips_jpegsave_buffer(input: ptr VipsImage; buf: ptr pointer; len: ptr csize_t): cint		201
-nim	vips_jpegsave_mime	libvips/bindings/foreign.html#vips_jpegsave_mime,ptr.VipsImage	proc vips_jpegsave_mime(input: ptr VipsImage): cint		202
-nim	vips_webpload_source	libvips/bindings/foreign.html#vips_webpload_source,ptr.VipsSource,ptr.ptr.VipsImage	proc vips_webpload_source(source: ptr VipsSource; res: ptr ptr VipsImage): cint		204
-nim	vips_webpload	libvips/bindings/foreign.html#vips_webpload,cstring,ptr.ptr.VipsImage	proc vips_webpload(filename: cstring; res: ptr ptr VipsImage): cint		205
-nim	vips_webpload_buffer	libvips/bindings/foreign.html#vips_webpload_buffer,pointer,csize_t,ptr.ptr.VipsImage	proc vips_webpload_buffer(buf: pointer; len: csize_t; res: ptr ptr VipsImage): cint		206
-nim	vips_webpsave_target	libvips/bindings/foreign.html#vips_webpsave_target,ptr.VipsImage,ptr.VipsTarget	proc vips_webpsave_target(input: ptr VipsImage; target: ptr VipsTarget): cint		207
-nim	vips_webpsave	libvips/bindings/foreign.html#vips_webpsave,ptr.VipsImage,cstring	proc vips_webpsave(input: ptr VipsImage; filename: cstring): cint		208
-nim	vips_webpsave_buffer	libvips/bindings/foreign.html#vips_webpsave_buffer,ptr.VipsImage,ptr.pointer,ptr.csize_t	proc vips_webpsave_buffer(input: ptr VipsImage; buf: ptr pointer; len: ptr csize_t): cint		209
-nim	vips_webpsave_mime	libvips/bindings/foreign.html#vips_webpsave_mime,ptr.VipsImage	proc vips_webpsave_mime(input: ptr VipsImage): cint		210
-nim	vips_tiffload	libvips/bindings/foreign.html#vips_tiffload,cstring,ptr.ptr.VipsImage	proc vips_tiffload(filename: cstring; res: ptr ptr VipsImage): cint		212
-nim	vips_tiffload_buffer	libvips/bindings/foreign.html#vips_tiffload_buffer,pointer,csize_t,ptr.ptr.VipsImage	proc vips_tiffload_buffer(buf: pointer; len: csize_t; res: ptr ptr VipsImage): cint		213
-nim	vips_tiffload_source	libvips/bindings/foreign.html#vips_tiffload_source,ptr.VipsSource,ptr.ptr.VipsImage	proc vips_tiffload_source(source: ptr VipsSource; res: ptr ptr VipsImage): cint		214
-nim	vips_tiffsave	libvips/bindings/foreign.html#vips_tiffsave,ptr.VipsImage,cstring	proc vips_tiffsave(input: ptr VipsImage; filename: cstring): cint		215
-nim	vips_tiffsave_buffer	libvips/bindings/foreign.html#vips_tiffsave_buffer,ptr.VipsImage,ptr.pointer,ptr.csize_t	proc vips_tiffsave_buffer(input: ptr VipsImage; buf: ptr pointer; len: ptr csize_t): cint		216
-nim	vips_tiffsave_target	libvips/bindings/foreign.html#vips_tiffsave_target,ptr.VipsImage,ptr.VipsTarget	proc vips_tiffsave_target(input: ptr VipsImage; target: ptr VipsTarget): cint		217
-nim	vips_openexrload	libvips/bindings/foreign.html#vips_openexrload,cstring,ptr.ptr.VipsImage	proc vips_openexrload(filename: cstring; res: ptr ptr VipsImage): cint		219
-nim	vips_fitsload	libvips/bindings/foreign.html#vips_fitsload,cstring,ptr.ptr.VipsImage	proc vips_fitsload(filename: cstring; res: ptr ptr VipsImage): cint		221
-nim	vips_fitsload_source	libvips/bindings/foreign.html#vips_fitsload_source,ptr.VipsSource,ptr.ptr.VipsImage	proc vips_fitsload_source(source: ptr VipsSource; res: ptr ptr VipsImage): cint		222
-nim	vips_fitssave	libvips/bindings/foreign.html#vips_fitssave,ptr.VipsImage,cstring	proc vips_fitssave(input: ptr VipsImage; filename: cstring): cint		223
-nim	vips_analyzeload	libvips/bindings/foreign.html#vips_analyzeload,cstring,ptr.ptr.VipsImage	proc vips_analyzeload(filename: cstring; res: ptr ptr VipsImage): cint		225
-nim	vips_rawload	libvips/bindings/foreign.html#vips_rawload,cstring,ptr.ptr.VipsImage,cint,cint,cint	proc vips_rawload(filename: cstring; res: ptr ptr VipsImage;\n             width, height, bands: cint): cint		227
-nim	vips_rawsave	libvips/bindings/foreign.html#vips_rawsave,ptr.VipsImage,cstring	proc vips_rawsave(input: ptr VipsImage; filename: cstring): cint		228
-nim	vips_rawsave_buffer	libvips/bindings/foreign.html#vips_rawsave_buffer,ptr.VipsImage,ptr.pointer,ptr.csize_t	proc vips_rawsave_buffer(input: ptr VipsImage; buf: ptr pointer; len: ptr csize_t): cint		229
-nim	vips_rawsave_target	libvips/bindings/foreign.html#vips_rawsave_target,ptr.VipsImage,ptr.VipsTarget	proc vips_rawsave_target(input: ptr VipsImage; target: ptr VipsTarget): cint		230
-nim	vips_csvload	libvips/bindings/foreign.html#vips_csvload,cstring,ptr.ptr.VipsImage	proc vips_csvload(filename: cstring; res: ptr ptr VipsImage): cint		232
-nim	vips_csvload_source	libvips/bindings/foreign.html#vips_csvload_source,ptr.VipsSource,ptr.ptr.VipsImage	proc vips_csvload_source(source: ptr VipsSource; res: ptr ptr VipsImage): cint		233
-nim	vips_csvsave	libvips/bindings/foreign.html#vips_csvsave,ptr.VipsImage,cstring	proc vips_csvsave(input: ptr VipsImage; filename: cstring): cint		234
-nim	vips_csvsave_target	libvips/bindings/foreign.html#vips_csvsave_target,ptr.VipsImage,ptr.VipsTarget	proc vips_csvsave_target(input: ptr VipsImage; target: ptr VipsTarget): cint		235
-nim	vips_matrixload	libvips/bindings/foreign.html#vips_matrixload,cstring,ptr.ptr.VipsImage	proc vips_matrixload(filename: cstring; res: ptr ptr VipsImage): cint		237
-nim	vips_matrixload_source	libvips/bindings/foreign.html#vips_matrixload_source,ptr.VipsSource,ptr.ptr.VipsImage	proc vips_matrixload_source(source: ptr VipsSource; res: ptr ptr VipsImage): cint		238
-nim	vips_matrixsave	libvips/bindings/foreign.html#vips_matrixsave,ptr.VipsImage,cstring	proc vips_matrixsave(input: ptr VipsImage; filename: cstring): cint		239
-nim	vips_matrixsave_target	libvips/bindings/foreign.html#vips_matrixsave_target,ptr.VipsImage,ptr.VipsTarget	proc vips_matrixsave_target(input: ptr VipsImage; target: ptr VipsTarget): cint		240
-nim	vips_matrixprint	libvips/bindings/foreign.html#vips_matrixprint,ptr.VipsImage	proc vips_matrixprint(input: ptr VipsImage): cint		241
-nim	vips_magickload	libvips/bindings/foreign.html#vips_magickload,cstring,ptr.ptr.VipsImage	proc vips_magickload(filename: cstring; res: ptr ptr VipsImage): cint		243
-nim	vips_magickload_buffer	libvips/bindings/foreign.html#vips_magickload_buffer,pointer,csize_t,ptr.ptr.VipsImage	proc vips_magickload_buffer(buf: pointer; len: csize_t; res: ptr ptr VipsImage): cint		244
-nim	vips_magickload_source	libvips/bindings/foreign.html#vips_magickload_source,ptr.VipsSource,ptr.ptr.VipsImage	proc vips_magickload_source(source: ptr VipsSource; res: ptr ptr VipsImage): cint		245
-nim	vips_magicksave	libvips/bindings/foreign.html#vips_magicksave,ptr.VipsImage,cstring	proc vips_magicksave(input: ptr VipsImage; filename: cstring): cint		246
-nim	vips_magicksave_buffer	libvips/bindings/foreign.html#vips_magicksave_buffer,ptr.VipsImage,ptr.pointer,ptr.csize_t	proc vips_magicksave_buffer(input: ptr VipsImage; buf: ptr pointer; len: ptr csize_t): cint		247
-nim	vips_pngload_source	libvips/bindings/foreign.html#vips_pngload_source,ptr.VipsSource,ptr.ptr.VipsImage	proc vips_pngload_source(source: ptr VipsSource; res: ptr ptr VipsImage): cint		249
-nim	vips_pngload	libvips/bindings/foreign.html#vips_pngload,cstring,ptr.ptr.VipsImage	proc vips_pngload(filename: cstring; res: ptr ptr VipsImage): cint		250
-nim	vips_pngload_buffer	libvips/bindings/foreign.html#vips_pngload_buffer,pointer,csize_t,ptr.ptr.VipsImage	proc vips_pngload_buffer(buf: pointer; len: csize_t; res: ptr ptr VipsImage): cint		251
-nim	vips_pngsave_target	libvips/bindings/foreign.html#vips_pngsave_target,ptr.VipsImage,ptr.VipsTarget	proc vips_pngsave_target(input: ptr VipsImage; target: ptr VipsTarget): cint		252
-nim	vips_pngsave	libvips/bindings/foreign.html#vips_pngsave,ptr.VipsImage,cstring	proc vips_pngsave(input: ptr VipsImage; filename: cstring): cint		253
-nim	vips_pngsave_buffer	libvips/bindings/foreign.html#vips_pngsave_buffer,ptr.VipsImage,ptr.pointer,ptr.csize_t	proc vips_pngsave_buffer(input: ptr VipsImage; buf: ptr pointer; len: ptr csize_t): cint		254
-nim	vips_ppmload	libvips/bindings/foreign.html#vips_ppmload,cstring,ptr.ptr.VipsImage	proc vips_ppmload(filename: cstring; res: ptr ptr VipsImage): cint		256
-nim	vips_ppmload_buffer	libvips/bindings/foreign.html#vips_ppmload_buffer,pointer,csize_t,ptr.ptr.VipsImage	proc vips_ppmload_buffer(buf: pointer; len: csize_t; res: ptr ptr VipsImage): cint		257
-nim	vips_ppmload_source	libvips/bindings/foreign.html#vips_ppmload_source,ptr.VipsSource,ptr.ptr.VipsImage	proc vips_ppmload_source(source: ptr VipsSource; res: ptr ptr VipsImage): cint		258
-nim	vips_ppmsave	libvips/bindings/foreign.html#vips_ppmsave,ptr.VipsImage,cstring	proc vips_ppmsave(input: ptr VipsImage; filename: cstring): cint		259
-nim	vips_ppmsave_target	libvips/bindings/foreign.html#vips_ppmsave_target,ptr.VipsImage,ptr.VipsTarget	proc vips_ppmsave_target(input: ptr VipsImage; target: ptr VipsTarget): cint		260
-nim	vips_matload	libvips/bindings/foreign.html#vips_matload,cstring,ptr.ptr.VipsImage	proc vips_matload(filename: cstring; res: ptr ptr VipsImage): cint		262
-nim	vips_radload_source	libvips/bindings/foreign.html#vips_radload_source,ptr.VipsSource,ptr.ptr.VipsImage	proc vips_radload_source(source: ptr VipsSource; res: ptr ptr VipsImage): cint		264
-nim	vips_radload	libvips/bindings/foreign.html#vips_radload,cstring,ptr.ptr.VipsImage	proc vips_radload(filename: cstring; res: ptr ptr VipsImage): cint		265
-nim	vips_radload_buffer	libvips/bindings/foreign.html#vips_radload_buffer,pointer,csize_t,ptr.ptr.VipsImage	proc vips_radload_buffer(buf: pointer; len: csize_t; res: ptr ptr VipsImage): cint		266
-nim	vips_radsave	libvips/bindings/foreign.html#vips_radsave,ptr.VipsImage,cstring	proc vips_radsave(input: ptr VipsImage; filename: cstring): cint		267
-nim	vips_radsave_buffer	libvips/bindings/foreign.html#vips_radsave_buffer,ptr.VipsImage,ptr.pointer,ptr.csize_t	proc vips_radsave_buffer(input: ptr VipsImage; buf: ptr pointer; len: ptr csize_t): cint		268
-nim	vips_radsave_target	libvips/bindings/foreign.html#vips_radsave_target,ptr.VipsImage,ptr.VipsTarget	proc vips_radsave_target(input: ptr VipsImage; target: ptr VipsTarget): cint		269
-nim	vips_pdfload	libvips/bindings/foreign.html#vips_pdfload,cstring,ptr.ptr.VipsImage	proc vips_pdfload(filename: cstring; res: ptr ptr VipsImage): cint		271
-nim	vips_pdfload_buffer	libvips/bindings/foreign.html#vips_pdfload_buffer,pointer,csize_t,ptr.ptr.VipsImage	proc vips_pdfload_buffer(buf: pointer; len: csize_t; res: ptr ptr VipsImage): cint		272
-nim	vips_pdfload_source	libvips/bindings/foreign.html#vips_pdfload_source,ptr.VipsSource,ptr.ptr.VipsImage	proc vips_pdfload_source(source: ptr VipsSource; res: ptr ptr VipsImage): cint		273
-nim	vips_svgload	libvips/bindings/foreign.html#vips_svgload,cstring,ptr.ptr.VipsImage	proc vips_svgload(filename: cstring; res: ptr ptr VipsImage): cint		275
-nim	vips_svgload_buffer	libvips/bindings/foreign.html#vips_svgload_buffer,pointer,csize_t,ptr.ptr.VipsImage	proc vips_svgload_buffer(buf: pointer; len: csize_t; res: ptr ptr VipsImage): cint		276
-nim	vips_svgload_string	libvips/bindings/foreign.html#vips_svgload_string,cstring,ptr.ptr.VipsImage	proc vips_svgload_string(str: cstring; res: ptr ptr VipsImage): cint		277
-nim	vips_svgload_source	libvips/bindings/foreign.html#vips_svgload_source,ptr.VipsSource,ptr.ptr.VipsImage	proc vips_svgload_source(source: ptr VipsSource; res: ptr ptr VipsImage): cint		278
-nim	vips_gifload	libvips/bindings/foreign.html#vips_gifload,cstring,ptr.ptr.VipsImage	proc vips_gifload(filename: cstring; res: ptr ptr VipsImage): cint		280
-nim	vips_gifload_buffer	libvips/bindings/foreign.html#vips_gifload_buffer,pointer,csize_t,ptr.ptr.VipsImage	proc vips_gifload_buffer(buf: pointer; len: csize_t; res: ptr ptr VipsImage): cint		281
-nim	vips_gifload_source	libvips/bindings/foreign.html#vips_gifload_source,ptr.VipsSource,ptr.ptr.VipsImage	proc vips_gifload_source(source: ptr VipsSource; res: ptr ptr VipsImage): cint		282
-nim	vips_gifsave	libvips/bindings/foreign.html#vips_gifsave,ptr.VipsImage,cstring	proc vips_gifsave(input: ptr VipsImage; filename: cstring): cint		284
-nim	vips_gifsave_buffer	libvips/bindings/foreign.html#vips_gifsave_buffer,ptr.VipsImage,ptr.pointer,ptr.csize_t	proc vips_gifsave_buffer(input: ptr VipsImage; buf: ptr pointer; len: ptr csize_t): cint		285
-nim	vips_gifsave_target	libvips/bindings/foreign.html#vips_gifsave_target,ptr.VipsImage,ptr.VipsTarget	proc vips_gifsave_target(input: ptr VipsImage; target: ptr VipsTarget): cint		286
-nim	vips_dcrawload	libvips/bindings/foreign.html#vips_dcrawload,cstring,ptr.ptr.VipsImage	proc vips_dcrawload(filename: cstring; res: ptr ptr VipsImage): cint		288
-nim	vips_dcrawload_buffer	libvips/bindings/foreign.html#vips_dcrawload_buffer,pointer,csize_t,ptr.ptr.VipsImage	proc vips_dcrawload_buffer(buf: pointer; len: csize_t; res: ptr ptr VipsImage): cint		289
-nim	vips_dcrawload_source	libvips/bindings/foreign.html#vips_dcrawload_source,ptr.VipsSource,ptr.ptr.VipsImage	proc vips_dcrawload_source(source: ptr VipsSource; res: ptr ptr VipsImage): cint		290
-nim	vips_uhdrload	libvips/bindings/foreign.html#vips_uhdrload,cstring,ptr.ptr.VipsImage	proc vips_uhdrload(filename: cstring; res: ptr ptr VipsImage): cint		292
-nim	vips_uhdrload_buffer	libvips/bindings/foreign.html#vips_uhdrload_buffer,pointer,csize_t,ptr.ptr.VipsImage	proc vips_uhdrload_buffer(buf: pointer; len: csize_t; res: ptr ptr VipsImage): cint		293
-nim	vips_uhdrload_source	libvips/bindings/foreign.html#vips_uhdrload_source,ptr.VipsSource,ptr.ptr.VipsImage	proc vips_uhdrload_source(source: ptr VipsSource; res: ptr ptr VipsImage): cint		294
-nim	vips_uhdrsave	libvips/bindings/foreign.html#vips_uhdrsave,ptr.VipsImage,cstring	proc vips_uhdrsave(input: ptr VipsImage; filename: cstring): cint		296
-nim	vips_uhdrsave_buffer	libvips/bindings/foreign.html#vips_uhdrsave_buffer,ptr.VipsImage,ptr.pointer,ptr.csize_t	proc vips_uhdrsave_buffer(input: ptr VipsImage; buf: ptr pointer; len: ptr csize_t): cint		297
-nim	vips_uhdrsave_target	libvips/bindings/foreign.html#vips_uhdrsave_target,ptr.VipsImage,ptr.VipsTarget	proc vips_uhdrsave_target(input: ptr VipsImage; target: ptr VipsTarget): cint		298
-nim	vips_heifload	libvips/bindings/foreign.html#vips_heifload,cstring,ptr.ptr.VipsImage	proc vips_heifload(filename: cstring; res: ptr ptr VipsImage): cint		300
-nim	vips_heifload_buffer	libvips/bindings/foreign.html#vips_heifload_buffer,pointer,csize_t,ptr.ptr.VipsImage	proc vips_heifload_buffer(buf: pointer; len: csize_t; res: ptr ptr VipsImage): cint		301
-nim	vips_heifload_source	libvips/bindings/foreign.html#vips_heifload_source,ptr.VipsSource,ptr.ptr.VipsImage	proc vips_heifload_source(source: ptr VipsSource; res: ptr ptr VipsImage): cint		302
-nim	vips_heifsave	libvips/bindings/foreign.html#vips_heifsave,ptr.VipsImage,cstring	proc vips_heifsave(input: ptr VipsImage; filename: cstring): cint		303
-nim	vips_heifsave_buffer	libvips/bindings/foreign.html#vips_heifsave_buffer,ptr.VipsImage,ptr.pointer,ptr.csize_t	proc vips_heifsave_buffer(input: ptr VipsImage; buf: ptr pointer; len: ptr csize_t): cint		304
-nim	vips_heifsave_target	libvips/bindings/foreign.html#vips_heifsave_target,ptr.VipsImage,ptr.VipsTarget	proc vips_heifsave_target(input: ptr VipsImage; target: ptr VipsTarget): cint		305
-nim	vips_niftiload	libvips/bindings/foreign.html#vips_niftiload,cstring,ptr.ptr.VipsImage	proc vips_niftiload(filename: cstring; res: ptr ptr VipsImage): cint		307
-nim	vips_niftiload_source	libvips/bindings/foreign.html#vips_niftiload_source,ptr.VipsSource,ptr.ptr.VipsImage	proc vips_niftiload_source(source: ptr VipsSource; res: ptr ptr VipsImage): cint		308
-nim	vips_niftisave	libvips/bindings/foreign.html#vips_niftisave,ptr.VipsImage,cstring	proc vips_niftisave(input: ptr VipsImage; filename: cstring): cint		309
-nim	vips_jp2kload	libvips/bindings/foreign.html#vips_jp2kload,cstring,ptr.ptr.VipsImage	proc vips_jp2kload(filename: cstring; res: ptr ptr VipsImage): cint		311
-nim	vips_jp2kload_buffer	libvips/bindings/foreign.html#vips_jp2kload_buffer,pointer,csize_t,ptr.ptr.VipsImage	proc vips_jp2kload_buffer(buf: pointer; len: csize_t; res: ptr ptr VipsImage): cint		312
-nim	vips_jp2kload_source	libvips/bindings/foreign.html#vips_jp2kload_source,ptr.VipsSource,ptr.ptr.VipsImage	proc vips_jp2kload_source(source: ptr VipsSource; res: ptr ptr VipsImage): cint		313
-nim	vips_jp2ksave	libvips/bindings/foreign.html#vips_jp2ksave,ptr.VipsImage,cstring	proc vips_jp2ksave(input: ptr VipsImage; filename: cstring): cint		314
-nim	vips_jp2ksave_buffer	libvips/bindings/foreign.html#vips_jp2ksave_buffer,ptr.VipsImage,ptr.pointer,ptr.csize_t	proc vips_jp2ksave_buffer(input: ptr VipsImage; buf: ptr pointer; len: ptr csize_t): cint		315
-nim	vips_jp2ksave_target	libvips/bindings/foreign.html#vips_jp2ksave_target,ptr.VipsImage,ptr.VipsTarget	proc vips_jp2ksave_target(input: ptr VipsImage; target: ptr VipsTarget): cint		316
-nim	vips_jxlload_source	libvips/bindings/foreign.html#vips_jxlload_source,ptr.VipsSource,ptr.ptr.VipsImage	proc vips_jxlload_source(source: ptr VipsSource; res: ptr ptr VipsImage): cint		318
-nim	vips_jxlload_buffer	libvips/bindings/foreign.html#vips_jxlload_buffer,pointer,csize_t,ptr.ptr.VipsImage	proc vips_jxlload_buffer(buf: pointer; len: csize_t; res: ptr ptr VipsImage): cint		319
-nim	vips_jxlload	libvips/bindings/foreign.html#vips_jxlload,cstring,ptr.ptr.VipsImage	proc vips_jxlload(filename: cstring; res: ptr ptr VipsImage): cint		320
-nim	vips_jxlsave	libvips/bindings/foreign.html#vips_jxlsave,ptr.VipsImage,cstring	proc vips_jxlsave(input: ptr VipsImage; filename: cstring): cint		321
-nim	vips_jxlsave_buffer	libvips/bindings/foreign.html#vips_jxlsave_buffer,ptr.VipsImage,ptr.pointer,ptr.csize_t	proc vips_jxlsave_buffer(input: ptr VipsImage; buf: ptr pointer; len: ptr csize_t): cint		322
-nim	vips_jxlsave_target	libvips/bindings/foreign.html#vips_jxlsave_target,ptr.VipsImage,ptr.VipsTarget	proc vips_jxlsave_target(input: ptr VipsImage; target: ptr VipsTarget): cint		323
-nim	vips_dzsave	libvips/bindings/foreign.html#vips_dzsave,ptr.VipsImage,cstring	proc vips_dzsave(input: ptr VipsImage; name: cstring): cint		325
-nim	vips_dzsave_buffer	libvips/bindings/foreign.html#vips_dzsave_buffer,ptr.VipsImage,ptr.pointer,ptr.csize_t	proc vips_dzsave_buffer(input: ptr VipsImage; buf: ptr pointer; len: ptr csize_t): cint		326
-nim	vips_dzsave_target	libvips/bindings/foreign.html#vips_dzsave_target,ptr.VipsImage,ptr.VipsTarget	proc vips_dzsave_target(input: ptr VipsImage; target: ptr VipsTarget): cint		327
+nim	VipsForeignFlags	libvips/bindings/foreign.html#VipsForeignFlags	enum VipsForeignFlags		33
+nim	VipsFailOn	libvips/bindings/foreign.html#VipsFailOn	enum VipsFailOn		40
+nim	VipsForeignSaveable	libvips/bindings/foreign.html#VipsForeignSaveable	enum VipsForeignSaveable		47
+nim	VipsForeignCoding	libvips/bindings/foreign.html#VipsForeignCoding	enum VipsForeignCoding		55
+nim	VipsForeignKeep	libvips/bindings/foreign.html#VipsForeignKeep	enum VipsForeignKeep		61
+nim	VipsForeignSubsample	libvips/bindings/foreign.html#VipsForeignSubsample	enum VipsForeignSubsample		70
+nim	VipsForeignWebpPreset	libvips/bindings/foreign.html#VipsForeignWebpPreset	enum VipsForeignWebpPreset		76
+nim	VipsForeignTiffCompression	libvips/bindings/foreign.html#VipsForeignTiffCompression	enum VipsForeignTiffCompression		85
+nim	VipsForeignTiffPredictor	libvips/bindings/foreign.html#VipsForeignTiffPredictor	enum VipsForeignTiffPredictor		97
+nim	VipsForeignTiffResunit	libvips/bindings/foreign.html#VipsForeignTiffResunit	enum VipsForeignTiffResunit		103
+nim	VipsForeignPpmFormat	libvips/bindings/foreign.html#VipsForeignPpmFormat	enum VipsForeignPpmFormat		108
+nim	VipsForeignPdfPageBox	libvips/bindings/foreign.html#VipsForeignPdfPageBox	enum VipsForeignPdfPageBox		116
+nim	VipsForeignPngFilter	libvips/bindings/foreign.html#VipsForeignPngFilter	enum VipsForeignPngFilter		124
+nim	VipsForeignDzLayout	libvips/bindings/foreign.html#VipsForeignDzLayout	enum VipsForeignDzLayout		132
+nim	VipsForeignDzDepth	libvips/bindings/foreign.html#VipsForeignDzDepth	enum VipsForeignDzDepth		140
+nim	VipsForeignDzContainer	libvips/bindings/foreign.html#VipsForeignDzContainer	enum VipsForeignDzContainer		146
+nim	VipsForeignHeifCompression	libvips/bindings/foreign.html#VipsForeignHeifCompression	enum VipsForeignHeifCompression		152
+nim	VipsForeignHeifEncoder	libvips/bindings/foreign.html#VipsForeignHeifEncoder	enum VipsForeignHeifEncoder		159
+nim	vips_foreign_get_type	libvips/bindings/foreign.html#vips_foreign_get_type	proc vips_foreign_get_type(): culong		168
+nim	vips_foreign_map	libvips/bindings/foreign.html#vips_foreign_map,cstring,pointer,pointer,pointer	proc vips_foreign_map(base: cstring; fn: pointer; a: pointer; b: pointer): pointer		169
+nim	vips_foreign_load_get_type	libvips/bindings/foreign.html#vips_foreign_load_get_type	proc vips_foreign_load_get_type(): culong		171
+nim	vips_foreign_find_load	libvips/bindings/foreign.html#vips_foreign_find_load,cstring	proc vips_foreign_find_load(filename: cstring): cstring		172
+nim	vips_foreign_find_load_buffer	libvips/bindings/foreign.html#vips_foreign_find_load_buffer,pointer,csize_t	proc vips_foreign_find_load_buffer(data: pointer; size: csize_t): cstring		173
+nim	vips_foreign_find_load_source	libvips/bindings/foreign.html#vips_foreign_find_load_source,ptr.VipsSource	proc vips_foreign_find_load_source(source: ptr VipsSource): cstring		174
+nim	vips_foreign_flags	libvips/bindings/foreign.html#vips_foreign_flags,cstring,cstring	proc vips_foreign_flags(loader, filename: cstring): VipsForeignFlags		175
+nim	vips_foreign_is_a	libvips/bindings/foreign.html#vips_foreign_is_a,cstring,cstring	proc vips_foreign_is_a(loader, filename: cstring): bool		176
+nim	vips_foreign_is_a_buffer	libvips/bindings/foreign.html#vips_foreign_is_a_buffer,cstring,pointer,csize_t	proc vips_foreign_is_a_buffer(loader: cstring; data: pointer; size: csize_t): bool		177
+nim	vips_foreign_is_a_source	libvips/bindings/foreign.html#vips_foreign_is_a_source,cstring,ptr.VipsSource	proc vips_foreign_is_a_source(loader: cstring; source: ptr VipsSource): bool		178
+nim	vips_foreign_load_invalidate	libvips/bindings/foreign.html#vips_foreign_load_invalidate,ptr.VipsImage	proc vips_foreign_load_invalidate(image: ptr VipsImage)		179
+nim	vips_foreign_save_get_type	libvips/bindings/foreign.html#vips_foreign_save_get_type	proc vips_foreign_save_get_type(): culong		181
+nim	vips_foreign_find_save	libvips/bindings/foreign.html#vips_foreign_find_save,cstring	proc vips_foreign_find_save(filename: cstring): cstring		182
+nim	vips_foreign_get_suffixes	libvips/bindings/foreign.html#vips_foreign_get_suffixes	proc vips_foreign_get_suffixes(): ptr cstring		183
+nim	vips_foreign_find_save_buffer	libvips/bindings/foreign.html#vips_foreign_find_save_buffer,cstring	proc vips_foreign_find_save_buffer(suffix: cstring): cstring		184
+nim	vips_foreign_find_save_target	libvips/bindings/foreign.html#vips_foreign_find_save_target,cstring	proc vips_foreign_find_save_target(suffix: cstring): cstring		185
+nim	vips_vipsload	libvips/bindings/foreign.html#vips_vipsload,cstring,ptr.ptr.VipsImage	proc vips_vipsload(filename: cstring; res: ptr ptr VipsImage): cint		187
+nim	vips_vipsload_source	libvips/bindings/foreign.html#vips_vipsload_source,ptr.VipsSource,ptr.ptr.VipsImage	proc vips_vipsload_source(source: ptr VipsSource; res: ptr ptr VipsImage): cint		188
+nim	vips_vipssave	libvips/bindings/foreign.html#vips_vipssave,ptr.VipsImage,cstring	proc vips_vipssave(input: ptr VipsImage; filename: cstring): cint		189
+nim	vips_vipssave_target	libvips/bindings/foreign.html#vips_vipssave_target,ptr.VipsImage,ptr.VipsTarget	proc vips_vipssave_target(input: ptr VipsImage; target: ptr VipsTarget): cint		190
+nim	vips_openslideload	libvips/bindings/foreign.html#vips_openslideload,cstring,ptr.ptr.VipsImage	proc vips_openslideload(filename: cstring; res: ptr ptr VipsImage): cint		192
+nim	vips_openslideload_source	libvips/bindings/foreign.html#vips_openslideload_source,ptr.VipsSource,ptr.ptr.VipsImage	proc vips_openslideload_source(source: ptr VipsSource; res: ptr ptr VipsImage): cint		193
+nim	vips_jpegload	libvips/bindings/foreign.html#vips_jpegload,cstring,ptr.ptr.VipsImage	proc vips_jpegload(filename: cstring; res: ptr ptr VipsImage): cint		195
+nim	vips_jpegload_buffer	libvips/bindings/foreign.html#vips_jpegload_buffer,pointer,csize_t,ptr.ptr.VipsImage	proc vips_jpegload_buffer(buf: pointer; len: csize_t; res: ptr ptr VipsImage): cint		196
+nim	vips_jpegload_source	libvips/bindings/foreign.html#vips_jpegload_source,ptr.VipsSource,ptr.ptr.VipsImage	proc vips_jpegload_source(source: ptr VipsSource; res: ptr ptr VipsImage): cint		197
+nim	vips_jpegsave_target	libvips/bindings/foreign.html#vips_jpegsave_target,ptr.VipsImage,ptr.VipsTarget	proc vips_jpegsave_target(input: ptr VipsImage; target: ptr VipsTarget): cint		198
+nim	vips_jpegsave	libvips/bindings/foreign.html#vips_jpegsave,ptr.VipsImage,cstring	proc vips_jpegsave(input: ptr VipsImage; filename: cstring): cint		199
+nim	vips_jpegsave_buffer	libvips/bindings/foreign.html#vips_jpegsave_buffer,ptr.VipsImage,ptr.pointer,ptr.csize_t	proc vips_jpegsave_buffer(input: ptr VipsImage; buf: ptr pointer; len: ptr csize_t): cint		200
+nim	vips_jpegsave_mime	libvips/bindings/foreign.html#vips_jpegsave_mime,ptr.VipsImage	proc vips_jpegsave_mime(input: ptr VipsImage): cint		201
+nim	vips_webpload_source	libvips/bindings/foreign.html#vips_webpload_source,ptr.VipsSource,ptr.ptr.VipsImage	proc vips_webpload_source(source: ptr VipsSource; res: ptr ptr VipsImage): cint		203
+nim	vips_webpload	libvips/bindings/foreign.html#vips_webpload,cstring,ptr.ptr.VipsImage	proc vips_webpload(filename: cstring; res: ptr ptr VipsImage): cint		204
+nim	vips_webpload_buffer	libvips/bindings/foreign.html#vips_webpload_buffer,pointer,csize_t,ptr.ptr.VipsImage	proc vips_webpload_buffer(buf: pointer; len: csize_t; res: ptr ptr VipsImage): cint		205
+nim	vips_webpsave_target	libvips/bindings/foreign.html#vips_webpsave_target,ptr.VipsImage,ptr.VipsTarget	proc vips_webpsave_target(input: ptr VipsImage; target: ptr VipsTarget): cint		206
+nim	vips_webpsave	libvips/bindings/foreign.html#vips_webpsave,ptr.VipsImage,cstring	proc vips_webpsave(input: ptr VipsImage; filename: cstring): cint		207
+nim	vips_webpsave_buffer	libvips/bindings/foreign.html#vips_webpsave_buffer,ptr.VipsImage,ptr.pointer,ptr.csize_t	proc vips_webpsave_buffer(input: ptr VipsImage; buf: ptr pointer; len: ptr csize_t): cint		208
+nim	vips_webpsave_mime	libvips/bindings/foreign.html#vips_webpsave_mime,ptr.VipsImage	proc vips_webpsave_mime(input: ptr VipsImage): cint		209
+nim	vips_tiffload	libvips/bindings/foreign.html#vips_tiffload,cstring,ptr.ptr.VipsImage	proc vips_tiffload(filename: cstring; res: ptr ptr VipsImage): cint		211
+nim	vips_tiffload_buffer	libvips/bindings/foreign.html#vips_tiffload_buffer,pointer,csize_t,ptr.ptr.VipsImage	proc vips_tiffload_buffer(buf: pointer; len: csize_t; res: ptr ptr VipsImage): cint		212
+nim	vips_tiffload_source	libvips/bindings/foreign.html#vips_tiffload_source,ptr.VipsSource,ptr.ptr.VipsImage	proc vips_tiffload_source(source: ptr VipsSource; res: ptr ptr VipsImage): cint		213
+nim	vips_tiffsave	libvips/bindings/foreign.html#vips_tiffsave,ptr.VipsImage,cstring	proc vips_tiffsave(input: ptr VipsImage; filename: cstring): cint		214
+nim	vips_tiffsave_buffer	libvips/bindings/foreign.html#vips_tiffsave_buffer,ptr.VipsImage,ptr.pointer,ptr.csize_t	proc vips_tiffsave_buffer(input: ptr VipsImage; buf: ptr pointer; len: ptr csize_t): cint		215
+nim	vips_tiffsave_target	libvips/bindings/foreign.html#vips_tiffsave_target,ptr.VipsImage,ptr.VipsTarget	proc vips_tiffsave_target(input: ptr VipsImage; target: ptr VipsTarget): cint		216
+nim	vips_openexrload	libvips/bindings/foreign.html#vips_openexrload,cstring,ptr.ptr.VipsImage	proc vips_openexrload(filename: cstring; res: ptr ptr VipsImage): cint		218
+nim	vips_fitsload	libvips/bindings/foreign.html#vips_fitsload,cstring,ptr.ptr.VipsImage	proc vips_fitsload(filename: cstring; res: ptr ptr VipsImage): cint		220
+nim	vips_fitsload_source	libvips/bindings/foreign.html#vips_fitsload_source,ptr.VipsSource,ptr.ptr.VipsImage	proc vips_fitsload_source(source: ptr VipsSource; res: ptr ptr VipsImage): cint		221
+nim	vips_fitssave	libvips/bindings/foreign.html#vips_fitssave,ptr.VipsImage,cstring	proc vips_fitssave(input: ptr VipsImage; filename: cstring): cint		222
+nim	vips_analyzeload	libvips/bindings/foreign.html#vips_analyzeload,cstring,ptr.ptr.VipsImage	proc vips_analyzeload(filename: cstring; res: ptr ptr VipsImage): cint		224
+nim	vips_rawload	libvips/bindings/foreign.html#vips_rawload,cstring,ptr.ptr.VipsImage,cint,cint,cint	proc vips_rawload(filename: cstring; res: ptr ptr VipsImage;\n             width, height, bands: cint): cint		226
+nim	vips_rawsave	libvips/bindings/foreign.html#vips_rawsave,ptr.VipsImage,cstring	proc vips_rawsave(input: ptr VipsImage; filename: cstring): cint		227
+nim	vips_rawsave_buffer	libvips/bindings/foreign.html#vips_rawsave_buffer,ptr.VipsImage,ptr.pointer,ptr.csize_t	proc vips_rawsave_buffer(input: ptr VipsImage; buf: ptr pointer; len: ptr csize_t): cint		228
+nim	vips_rawsave_target	libvips/bindings/foreign.html#vips_rawsave_target,ptr.VipsImage,ptr.VipsTarget	proc vips_rawsave_target(input: ptr VipsImage; target: ptr VipsTarget): cint		229
+nim	vips_csvload	libvips/bindings/foreign.html#vips_csvload,cstring,ptr.ptr.VipsImage	proc vips_csvload(filename: cstring; res: ptr ptr VipsImage): cint		231
+nim	vips_csvload_source	libvips/bindings/foreign.html#vips_csvload_source,ptr.VipsSource,ptr.ptr.VipsImage	proc vips_csvload_source(source: ptr VipsSource; res: ptr ptr VipsImage): cint		232
+nim	vips_csvsave	libvips/bindings/foreign.html#vips_csvsave,ptr.VipsImage,cstring	proc vips_csvsave(input: ptr VipsImage; filename: cstring): cint		233
+nim	vips_csvsave_target	libvips/bindings/foreign.html#vips_csvsave_target,ptr.VipsImage,ptr.VipsTarget	proc vips_csvsave_target(input: ptr VipsImage; target: ptr VipsTarget): cint		234
+nim	vips_matrixload	libvips/bindings/foreign.html#vips_matrixload,cstring,ptr.ptr.VipsImage	proc vips_matrixload(filename: cstring; res: ptr ptr VipsImage): cint		236
+nim	vips_matrixload_source	libvips/bindings/foreign.html#vips_matrixload_source,ptr.VipsSource,ptr.ptr.VipsImage	proc vips_matrixload_source(source: ptr VipsSource; res: ptr ptr VipsImage): cint		237
+nim	vips_matrixsave	libvips/bindings/foreign.html#vips_matrixsave,ptr.VipsImage,cstring	proc vips_matrixsave(input: ptr VipsImage; filename: cstring): cint		238
+nim	vips_matrixsave_target	libvips/bindings/foreign.html#vips_matrixsave_target,ptr.VipsImage,ptr.VipsTarget	proc vips_matrixsave_target(input: ptr VipsImage; target: ptr VipsTarget): cint		239
+nim	vips_matrixprint	libvips/bindings/foreign.html#vips_matrixprint,ptr.VipsImage	proc vips_matrixprint(input: ptr VipsImage): cint		240
+nim	vips_magickload	libvips/bindings/foreign.html#vips_magickload,cstring,ptr.ptr.VipsImage	proc vips_magickload(filename: cstring; res: ptr ptr VipsImage): cint		242
+nim	vips_magickload_buffer	libvips/bindings/foreign.html#vips_magickload_buffer,pointer,csize_t,ptr.ptr.VipsImage	proc vips_magickload_buffer(buf: pointer; len: csize_t; res: ptr ptr VipsImage): cint		243
+nim	vips_magickload_source	libvips/bindings/foreign.html#vips_magickload_source,ptr.VipsSource,ptr.ptr.VipsImage	proc vips_magickload_source(source: ptr VipsSource; res: ptr ptr VipsImage): cint		244
+nim	vips_magicksave	libvips/bindings/foreign.html#vips_magicksave,ptr.VipsImage,cstring	proc vips_magicksave(input: ptr VipsImage; filename: cstring): cint		245
+nim	vips_magicksave_buffer	libvips/bindings/foreign.html#vips_magicksave_buffer,ptr.VipsImage,ptr.pointer,ptr.csize_t	proc vips_magicksave_buffer(input: ptr VipsImage; buf: ptr pointer; len: ptr csize_t): cint		246
+nim	vips_pngload_source	libvips/bindings/foreign.html#vips_pngload_source,ptr.VipsSource,ptr.ptr.VipsImage	proc vips_pngload_source(source: ptr VipsSource; res: ptr ptr VipsImage): cint		248
+nim	vips_pngload	libvips/bindings/foreign.html#vips_pngload,cstring,ptr.ptr.VipsImage	proc vips_pngload(filename: cstring; res: ptr ptr VipsImage): cint		249
+nim	vips_pngload_buffer	libvips/bindings/foreign.html#vips_pngload_buffer,pointer,csize_t,ptr.ptr.VipsImage	proc vips_pngload_buffer(buf: pointer; len: csize_t; res: ptr ptr VipsImage): cint		250
+nim	vips_pngsave_target	libvips/bindings/foreign.html#vips_pngsave_target,ptr.VipsImage,ptr.VipsTarget	proc vips_pngsave_target(input: ptr VipsImage; target: ptr VipsTarget): cint		251
+nim	vips_pngsave	libvips/bindings/foreign.html#vips_pngsave,ptr.VipsImage,cstring	proc vips_pngsave(input: ptr VipsImage; filename: cstring): cint		252
+nim	vips_pngsave_buffer	libvips/bindings/foreign.html#vips_pngsave_buffer,ptr.VipsImage,ptr.pointer,ptr.csize_t	proc vips_pngsave_buffer(input: ptr VipsImage; buf: ptr pointer; len: ptr csize_t): cint		253
+nim	vips_ppmload	libvips/bindings/foreign.html#vips_ppmload,cstring,ptr.ptr.VipsImage	proc vips_ppmload(filename: cstring; res: ptr ptr VipsImage): cint		255
+nim	vips_ppmload_buffer	libvips/bindings/foreign.html#vips_ppmload_buffer,pointer,csize_t,ptr.ptr.VipsImage	proc vips_ppmload_buffer(buf: pointer; len: csize_t; res: ptr ptr VipsImage): cint		256
+nim	vips_ppmload_source	libvips/bindings/foreign.html#vips_ppmload_source,ptr.VipsSource,ptr.ptr.VipsImage	proc vips_ppmload_source(source: ptr VipsSource; res: ptr ptr VipsImage): cint		257
+nim	vips_ppmsave	libvips/bindings/foreign.html#vips_ppmsave,ptr.VipsImage,cstring	proc vips_ppmsave(input: ptr VipsImage; filename: cstring): cint		258
+nim	vips_ppmsave_target	libvips/bindings/foreign.html#vips_ppmsave_target,ptr.VipsImage,ptr.VipsTarget	proc vips_ppmsave_target(input: ptr VipsImage; target: ptr VipsTarget): cint		259
+nim	vips_matload	libvips/bindings/foreign.html#vips_matload,cstring,ptr.ptr.VipsImage	proc vips_matload(filename: cstring; res: ptr ptr VipsImage): cint		261
+nim	vips_radload_source	libvips/bindings/foreign.html#vips_radload_source,ptr.VipsSource,ptr.ptr.VipsImage	proc vips_radload_source(source: ptr VipsSource; res: ptr ptr VipsImage): cint		263
+nim	vips_radload	libvips/bindings/foreign.html#vips_radload,cstring,ptr.ptr.VipsImage	proc vips_radload(filename: cstring; res: ptr ptr VipsImage): cint		264
+nim	vips_radload_buffer	libvips/bindings/foreign.html#vips_radload_buffer,pointer,csize_t,ptr.ptr.VipsImage	proc vips_radload_buffer(buf: pointer; len: csize_t; res: ptr ptr VipsImage): cint		265
+nim	vips_radsave	libvips/bindings/foreign.html#vips_radsave,ptr.VipsImage,cstring	proc vips_radsave(input: ptr VipsImage; filename: cstring): cint		266
+nim	vips_radsave_buffer	libvips/bindings/foreign.html#vips_radsave_buffer,ptr.VipsImage,ptr.pointer,ptr.csize_t	proc vips_radsave_buffer(input: ptr VipsImage; buf: ptr pointer; len: ptr csize_t): cint		267
+nim	vips_radsave_target	libvips/bindings/foreign.html#vips_radsave_target,ptr.VipsImage,ptr.VipsTarget	proc vips_radsave_target(input: ptr VipsImage; target: ptr VipsTarget): cint		268
+nim	vips_pdfload	libvips/bindings/foreign.html#vips_pdfload,cstring,ptr.ptr.VipsImage	proc vips_pdfload(filename: cstring; res: ptr ptr VipsImage): cint		270
+nim	vips_pdfload_buffer	libvips/bindings/foreign.html#vips_pdfload_buffer,pointer,csize_t,ptr.ptr.VipsImage	proc vips_pdfload_buffer(buf: pointer; len: csize_t; res: ptr ptr VipsImage): cint		271
+nim	vips_pdfload_source	libvips/bindings/foreign.html#vips_pdfload_source,ptr.VipsSource,ptr.ptr.VipsImage	proc vips_pdfload_source(source: ptr VipsSource; res: ptr ptr VipsImage): cint		272
+nim	vips_svgload	libvips/bindings/foreign.html#vips_svgload,cstring,ptr.ptr.VipsImage	proc vips_svgload(filename: cstring; res: ptr ptr VipsImage): cint		274
+nim	vips_svgload_buffer	libvips/bindings/foreign.html#vips_svgload_buffer,pointer,csize_t,ptr.ptr.VipsImage	proc vips_svgload_buffer(buf: pointer; len: csize_t; res: ptr ptr VipsImage): cint		275
+nim	vips_svgload_string	libvips/bindings/foreign.html#vips_svgload_string,cstring,ptr.ptr.VipsImage	proc vips_svgload_string(str: cstring; res: ptr ptr VipsImage): cint		276
+nim	vips_svgload_source	libvips/bindings/foreign.html#vips_svgload_source,ptr.VipsSource,ptr.ptr.VipsImage	proc vips_svgload_source(source: ptr VipsSource; res: ptr ptr VipsImage): cint		277
+nim	vips_gifload	libvips/bindings/foreign.html#vips_gifload,cstring,ptr.ptr.VipsImage	proc vips_gifload(filename: cstring; res: ptr ptr VipsImage): cint		279
+nim	vips_gifload_buffer	libvips/bindings/foreign.html#vips_gifload_buffer,pointer,csize_t,ptr.ptr.VipsImage	proc vips_gifload_buffer(buf: pointer; len: csize_t; res: ptr ptr VipsImage): cint		280
+nim	vips_gifload_source	libvips/bindings/foreign.html#vips_gifload_source,ptr.VipsSource,ptr.ptr.VipsImage	proc vips_gifload_source(source: ptr VipsSource; res: ptr ptr VipsImage): cint		281
+nim	vips_gifsave	libvips/bindings/foreign.html#vips_gifsave,ptr.VipsImage,cstring	proc vips_gifsave(input: ptr VipsImage; filename: cstring): cint		283
+nim	vips_gifsave_buffer	libvips/bindings/foreign.html#vips_gifsave_buffer,ptr.VipsImage,ptr.pointer,ptr.csize_t	proc vips_gifsave_buffer(input: ptr VipsImage; buf: ptr pointer; len: ptr csize_t): cint		284
+nim	vips_gifsave_target	libvips/bindings/foreign.html#vips_gifsave_target,ptr.VipsImage,ptr.VipsTarget	proc vips_gifsave_target(input: ptr VipsImage; target: ptr VipsTarget): cint		285
+nim	vips_dcrawload	libvips/bindings/foreign.html#vips_dcrawload,cstring,ptr.ptr.VipsImage	proc vips_dcrawload(filename: cstring; res: ptr ptr VipsImage): cint		287
+nim	vips_dcrawload_buffer	libvips/bindings/foreign.html#vips_dcrawload_buffer,pointer,csize_t,ptr.ptr.VipsImage	proc vips_dcrawload_buffer(buf: pointer; len: csize_t; res: ptr ptr VipsImage): cint		288
+nim	vips_dcrawload_source	libvips/bindings/foreign.html#vips_dcrawload_source,ptr.VipsSource,ptr.ptr.VipsImage	proc vips_dcrawload_source(source: ptr VipsSource; res: ptr ptr VipsImage): cint		289
+nim	vips_uhdrload	libvips/bindings/foreign.html#vips_uhdrload,cstring,ptr.ptr.VipsImage	proc vips_uhdrload(filename: cstring; res: ptr ptr VipsImage): cint		291
+nim	vips_uhdrload_buffer	libvips/bindings/foreign.html#vips_uhdrload_buffer,pointer,csize_t,ptr.ptr.VipsImage	proc vips_uhdrload_buffer(buf: pointer; len: csize_t; res: ptr ptr VipsImage): cint		292
+nim	vips_uhdrload_source	libvips/bindings/foreign.html#vips_uhdrload_source,ptr.VipsSource,ptr.ptr.VipsImage	proc vips_uhdrload_source(source: ptr VipsSource; res: ptr ptr VipsImage): cint		293
+nim	vips_uhdrsave	libvips/bindings/foreign.html#vips_uhdrsave,ptr.VipsImage,cstring	proc vips_uhdrsave(input: ptr VipsImage; filename: cstring): cint		295
+nim	vips_uhdrsave_buffer	libvips/bindings/foreign.html#vips_uhdrsave_buffer,ptr.VipsImage,ptr.pointer,ptr.csize_t	proc vips_uhdrsave_buffer(input: ptr VipsImage; buf: ptr pointer; len: ptr csize_t): cint		296
+nim	vips_uhdrsave_target	libvips/bindings/foreign.html#vips_uhdrsave_target,ptr.VipsImage,ptr.VipsTarget	proc vips_uhdrsave_target(input: ptr VipsImage; target: ptr VipsTarget): cint		297
+nim	vips_heifload	libvips/bindings/foreign.html#vips_heifload,cstring,ptr.ptr.VipsImage	proc vips_heifload(filename: cstring; res: ptr ptr VipsImage): cint		299
+nim	vips_heifload_buffer	libvips/bindings/foreign.html#vips_heifload_buffer,pointer,csize_t,ptr.ptr.VipsImage	proc vips_heifload_buffer(buf: pointer; len: csize_t; res: ptr ptr VipsImage): cint		300
+nim	vips_heifload_source	libvips/bindings/foreign.html#vips_heifload_source,ptr.VipsSource,ptr.ptr.VipsImage	proc vips_heifload_source(source: ptr VipsSource; res: ptr ptr VipsImage): cint		301
+nim	vips_heifsave	libvips/bindings/foreign.html#vips_heifsave,ptr.VipsImage,cstring	proc vips_heifsave(input: ptr VipsImage; filename: cstring): cint		302
+nim	vips_heifsave_buffer	libvips/bindings/foreign.html#vips_heifsave_buffer,ptr.VipsImage,ptr.pointer,ptr.csize_t	proc vips_heifsave_buffer(input: ptr VipsImage; buf: ptr pointer; len: ptr csize_t): cint		303
+nim	vips_heifsave_target	libvips/bindings/foreign.html#vips_heifsave_target,ptr.VipsImage,ptr.VipsTarget	proc vips_heifsave_target(input: ptr VipsImage; target: ptr VipsTarget): cint		304
+nim	vips_niftiload	libvips/bindings/foreign.html#vips_niftiload,cstring,ptr.ptr.VipsImage	proc vips_niftiload(filename: cstring; res: ptr ptr VipsImage): cint		306
+nim	vips_niftiload_source	libvips/bindings/foreign.html#vips_niftiload_source,ptr.VipsSource,ptr.ptr.VipsImage	proc vips_niftiload_source(source: ptr VipsSource; res: ptr ptr VipsImage): cint		307
+nim	vips_niftisave	libvips/bindings/foreign.html#vips_niftisave,ptr.VipsImage,cstring	proc vips_niftisave(input: ptr VipsImage; filename: cstring): cint		308
+nim	vips_jp2kload	libvips/bindings/foreign.html#vips_jp2kload,cstring,ptr.ptr.VipsImage	proc vips_jp2kload(filename: cstring; res: ptr ptr VipsImage): cint		310
+nim	vips_jp2kload_buffer	libvips/bindings/foreign.html#vips_jp2kload_buffer,pointer,csize_t,ptr.ptr.VipsImage	proc vips_jp2kload_buffer(buf: pointer; len: csize_t; res: ptr ptr VipsImage): cint		311
+nim	vips_jp2kload_source	libvips/bindings/foreign.html#vips_jp2kload_source,ptr.VipsSource,ptr.ptr.VipsImage	proc vips_jp2kload_source(source: ptr VipsSource; res: ptr ptr VipsImage): cint		312
+nim	vips_jp2ksave	libvips/bindings/foreign.html#vips_jp2ksave,ptr.VipsImage,cstring	proc vips_jp2ksave(input: ptr VipsImage; filename: cstring): cint		313
+nim	vips_jp2ksave_buffer	libvips/bindings/foreign.html#vips_jp2ksave_buffer,ptr.VipsImage,ptr.pointer,ptr.csize_t	proc vips_jp2ksave_buffer(input: ptr VipsImage; buf: ptr pointer; len: ptr csize_t): cint		314
+nim	vips_jp2ksave_target	libvips/bindings/foreign.html#vips_jp2ksave_target,ptr.VipsImage,ptr.VipsTarget	proc vips_jp2ksave_target(input: ptr VipsImage; target: ptr VipsTarget): cint		315
+nim	vips_jxlload_source	libvips/bindings/foreign.html#vips_jxlload_source,ptr.VipsSource,ptr.ptr.VipsImage	proc vips_jxlload_source(source: ptr VipsSource; res: ptr ptr VipsImage): cint		317
+nim	vips_jxlload_buffer	libvips/bindings/foreign.html#vips_jxlload_buffer,pointer,csize_t,ptr.ptr.VipsImage	proc vips_jxlload_buffer(buf: pointer; len: csize_t; res: ptr ptr VipsImage): cint		318
+nim	vips_jxlload	libvips/bindings/foreign.html#vips_jxlload,cstring,ptr.ptr.VipsImage	proc vips_jxlload(filename: cstring; res: ptr ptr VipsImage): cint		319
+nim	vips_jxlsave	libvips/bindings/foreign.html#vips_jxlsave,ptr.VipsImage,cstring	proc vips_jxlsave(input: ptr VipsImage; filename: cstring): cint		320
+nim	vips_jxlsave_buffer	libvips/bindings/foreign.html#vips_jxlsave_buffer,ptr.VipsImage,ptr.pointer,ptr.csize_t	proc vips_jxlsave_buffer(input: ptr VipsImage; buf: ptr pointer; len: ptr csize_t): cint		321
+nim	vips_jxlsave_target	libvips/bindings/foreign.html#vips_jxlsave_target,ptr.VipsImage,ptr.VipsTarget	proc vips_jxlsave_target(input: ptr VipsImage; target: ptr VipsTarget): cint		322
+nim	vips_dzsave	libvips/bindings/foreign.html#vips_dzsave,ptr.VipsImage,cstring	proc vips_dzsave(input: ptr VipsImage; name: cstring): cint		324
+nim	vips_dzsave_buffer	libvips/bindings/foreign.html#vips_dzsave_buffer,ptr.VipsImage,ptr.pointer,ptr.csize_t	proc vips_dzsave_buffer(input: ptr VipsImage; buf: ptr pointer; len: ptr csize_t): cint		325
+nim	vips_dzsave_target	libvips/bindings/foreign.html#vips_dzsave_target,ptr.VipsImage,ptr.VipsTarget	proc vips_dzsave_target(input: ptr VipsImage; target: ptr VipsTarget): cint		326
