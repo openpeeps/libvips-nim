@@ -6,12 +6,12 @@
 #          Made by Humans from OpenPeeps
 #          https://github.com/openpeeps/libvips-nim
 
-import basic, header, image,
+import basic, header, image, conversion,
     resample, convolution, colour, foreign,
 
     arithmetic, error
 
-export basic, header, image,
+export basic, header, image, conversion,
     resample, convolution, colour, foreign,
 
     arithmetic, error

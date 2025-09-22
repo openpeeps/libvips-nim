@@ -6,7 +6,7 @@
 #          Made by Humans from OpenPeeps
 #          https://github.com/openpeeps/libvips-nim
 
-import ./basic, ./types
+import ./basic, ./types, ./image
 
 type
   VipsKernel* = enum
@@ -25,24 +25,22 @@ type
     VIPS_SIZE_FORCE,
     VIPS_SIZE_LAST
 
-{.push cdecl, importc, header: "vips/resample.h".}
-proc c_vips_shrink*(input: ptr VipsImage, output: ptr ptr VipsImage, hshrink, vshrink: cdouble): cint {.varargs.}
-proc c_vips_shrinkh*(input: ptr VipsImage, output: ptr ptr VipsImage, hshrink: cint): cint {.varargs.}
-proc c_vips_shrinkv*(input: ptr VipsImage, output: ptr ptr VipsImage, vshrink: cint): cint {.varargs.}
-proc c_vips_reduce*(input: ptr VipsImage, output: ptr ptr VipsImage, hshrink, vshrink: cdouble): cint {.varargs.}
-proc c_vips_reduceh*(input: ptr VipsImage, output: ptr ptr VipsImage, hshrink: cdouble): cint {.varargs.}
-proc c_vips_reducev*(input: ptr VipsImage, output: ptr ptr VipsImage, vshrink: cdouble): cint {.varargs.}
-proc c_vips_thumbnail*(filename: cstring, output: ptr ptr VipsImage, width: cint): cint {.varargs.}
-proc c_vips_thumbnail_buffer*(buf: pointer, len: csize_t, output: ptr ptr VipsImage, width: cint): cint {.varargs.}
-proc c_vips_thumbnail_image*(input: ptr VipsImage, output: ptr ptr VipsImage, width: cint): cint {.varargs.}
-proc c_vips_thumbnail_source*(source: ptr VipsSource, output: ptr ptr VipsImage, width: cint): cint {.varargs.}
-proc c_vips_similarity*(input: ptr VipsImage, output: ptr ptr VipsImage): cint {.varargs.}
-proc c_vips_rotate*(input: ptr VipsImage, output: ptr ptr VipsImage, angle: cdouble): cint {.varargs.}
-proc c_vips_affine*(input: ptr VipsImage, output: ptr ptr VipsImage, a, b, c, d: cdouble): cint {.varargs.}
-proc c_vips_resize*(input: ptr VipsImage, output: ptr ptr VipsImage, scale: cdouble): cint {.varargs.}
-proc c_vips_mapim*(input: ptr VipsImage, output: ptr ptr VipsImage, index: ptr VipsImage): cint {.varargs.}
-proc c_vips_quadratic*(input: ptr VipsImage, output: ptr ptr VipsImage, coeff: ptr VipsImage): cint {.varargs.}
-{.pop.}
+proc c_vips_shrink*(input: ptr VipsImage, output: ptr ptr VipsImage, hshrink, vshrink: cdouble): cint {.cdecl, importc: "vips_shrink", header: "vips/vips.h", varargs.}
+proc c_vips_shrinkh*(input: ptr VipsImage, output: ptr ptr VipsImage, hshrink: cint): cint {.cdecl, importc: "vips_shrinkh", header: "vips/vips.h", varargs.}
+proc c_vips_shrinkv*(input: ptr VipsImage, output: ptr ptr VipsImage, vshrink: cint): cint {.cdecl, importc: "vips_shrinkv", header: "vips/vips.h", varargs.}
+proc c_vips_reduce*(input: ptr VipsImage, output: ptr ptr VipsImage, hshrink, vshrink: cdouble): cint {.cdecl, importc: "vips_reduce", header: "vips/vips.h", varargs.}
+proc c_vips_reduceh*(input: ptr VipsImage, output: ptr ptr VipsImage, hshrink: cdouble): cint {.cdecl, importc: "vips_reduceh", header: "vips/vips.h", varargs.}
+proc c_vips_reducev*(input: ptr VipsImage, output: ptr ptr VipsImage, vshrink: cdouble): cint {.cdecl, importc: "vips_reducev", header: "vips/vips.h", varargs.}
+proc c_vips_thumbnail*(filename: cstring, output: ptr ptr VipsImage, width: cint): cint {.cdecl, importc: "vips_thumbnail", header: "vips/vips.h", varargs.}
+proc c_vips_thumbnail_buffer*(buf: pointer, len: csize_t, output: ptr ptr VipsImage, width: cint): cint {.cdecl, importc: "vips_thumbnail_buffer", header: "vips/vips.h", varargs.}
+proc c_vips_thumbnail_image*(input: ptr VipsImage, output: ptr ptr VipsImage, width: cint): cint {.cdecl, importc: "vips_thumbnail_image", header: "vips/vips.h", varargs.}
+proc c_vips_thumbnail_source*(source: ptr VipsSource, output: ptr ptr VipsImage, width: cint): cint {.cdecl, importc: "vips_thumbnail_source", header: "vips/vips.h", varargs.}
+proc c_vips_similarity*(input: ptr VipsImage, output: ptr ptr VipsImage): cint {.cdecl, importc: "vips_similarity", header: "vips/vips.h", varargs.}
+proc c_vips_rotate*(input: ptr VipsImage, output: ptr ptr VipsImage, angle: cdouble): cint {.cdecl, importc: "vips_rotate", header: "vips/vips.h", varargs.}
+proc c_vips_affine*(input: ptr VipsImage, output: ptr ptr VipsImage, a, b, c, d: cdouble): cint {.cdecl, importc: "vips_affine", header: "vips/vips.h", varargs.}
+proc c_vips_resize*(input: ptr VipsImage, output: ptr ptr VipsImage, scale: cdouble): cint {.cdecl, importc: "vips_resize", header: "vips/vips.h", varargs.}
+proc c_vips_mapim*(input: ptr VipsImage, output: ptr ptr VipsImage, index: ptr VipsImage): cint {.cdecl, importc: "vips_mapim", header: "vips/vips.h", varargs.}
+proc c_vips_quadratic*(input: ptr VipsImage, output: ptr ptr VipsImage, coeff: ptr VipsImage): cint {.cdecl, importc: "vips_quadratic", header: "vips/vips.h", varargs.}
 
 # Safe, exported wrappers
 proc vips_shrink*(input: ptr VipsImage, output: ptr ptr VipsImage, hshrink, vshrink: cdouble): cint =

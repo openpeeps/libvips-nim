@@ -66,5 +66,57 @@ suite "libvips bindings":
     if outImg != nil: g_object_unref(outImg)
     removeFile(outPath)
 
+  test "resize image":
+    var img = vips_image_new_from_file(imgPath.cstring)
+    if img == nil: logVipsError("load")
+    check img != nil
+
+    var outImg: ptr VipsImage
+    let scale = 0.5.cdouble
+    let rcR = vips_resize(img, addr outImg, scale)
+    if rcR != 0: logVipsError("resize")
+    check rcR == 0
+    check vips_image_get_width(outImg) == 281
+    check vips_image_get_height(outImg) == 400
+
+    # write resized image
+    let outPath = "test_output_resize.jpg"
+    let rcW = vips_image_write_to_file(outImg, outPath.cstring)
+    if rcW != 0: logVipsError("save")
+    check rcW == 0
+    check fileExists(outPath)
+
+    # Clean up
+    if img != nil: g_object_unref(img)
+    if outImg != nil: g_object_unref(outImg)
+
+  test "crop image":
+    var img = vips_image_new_from_file(imgPath.cstring)
+    if img == nil: logVipsError("load")
+    check img != nil
+
+    var outImg: ptr VipsImage
+    let left = 100.cint
+    let top = 100.cint
+    let width = 200.cint
+    let height = 200.cint
+    let rcC = vips_crop(img, addr outImg, left, top, width, height)
+    if rcC != 0: logVipsError("crop")
+    check rcC == 0
+    check vips_image_get_width(outImg) == width
+    check vips_image_get_height(outImg) == height
+
+    # write cropped image
+    let outPath = "test_output_crop.jpg"
+    let rcW = vips_image_write_to_file(outImg, outPath.cstring)
+    if rcW != 0: logVipsError("save")
+    check rcW == 0
+    check fileExists(outPath)
+
+    # Clean up
+    if img != nil: g_object_unref(img)
+    if outImg != nil: g_object_unref(outImg)
+    removeFile(outPath)
+
   test "shutdown libvips":
     vips_shutdown()
