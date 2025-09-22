@@ -6,5 +6,5 @@
 #          Made by Humans from OpenPeeps
 #          https://github.com/openpeeps/libvips-nim
 
-import libvips/bindings/vips
-export vips
+import libvips/api
+export api

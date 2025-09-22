@@ -1,6 +1,6 @@
 import std/[unittest, os, times]
 
-import libvips
+import libvips/bindings/vips
 import libvips/bindings/glib/glib
 
 proc logVipsError(prefix: string = "vips") =
