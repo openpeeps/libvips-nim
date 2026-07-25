@@ -12,8 +12,6 @@
   <img src="https://github.com/openpeeps/libvips-nim/workflows/test/badge.svg" alt="Github Actions">  <img src="https://github.com/openpeeps/libvips-nim/workflows/docs/badge.svg" alt="Github Actions">
 </p>
 
-> [!NOTE]  
-> This is a work in progress. Please check back later for updates.
 
 ## A lightning fast image processing and resizing library for Nim 
 
@@ -29,7 +27,6 @@ _todo_
 ### ❤ Contributions & Support
 - 🐛 Found a bug? [Create a new Issue](https://github.com/openpeeps/libvips-nim/issues)
 - 👋 Wanna help? [Fork it!](https://github.com/openpeeps/libvips-nim/fork)
-- 😎 [Get €20 in cloud credits from Hetzner](https://hetzner.cloud/?ref=Hm0mYGM9NxZ4)
 
 ### 🎩 License
 MIT license. [Made by Humans from OpenPeeps](https://github.com/openpeeps).<br>
