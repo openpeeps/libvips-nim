@@ -324,3 +324,34 @@ proc vips_jxlsave_target*(input: ptr VipsImage, target: ptr VipsTarget): cint {.
 proc vips_dzsave*(input: ptr VipsImage, name: cstring): cint {.importc, cdecl, varargs.}
 proc vips_dzsave_buffer*(input: ptr VipsImage, buf: ptr pointer, len: ptr csize_t): cint {.importc, cdecl, varargs.}
 proc vips_dzsave_target*(input: ptr VipsImage, target: ptr VipsTarget): cint {.importc, cdecl, varargs.}
+
+# Safe wrappers for format-specific save (pass nil to terminate varargs)
+proc vips_jpegsave_safe*(input: ptr VipsImage, filename: cstring): cint =
+  vips_jpegsave(input, filename, nil)
+
+proc vips_jpegsave_buffer_safe*(input: ptr VipsImage, buf: ptr pointer, len: ptr csize_t): cint =
+  vips_jpegsave_buffer(input, buf, len, nil)
+
+proc vips_pngsave_safe*(input: ptr VipsImage, filename: cstring): cint =
+  vips_pngsave(input, filename, nil)
+
+proc vips_pngsave_buffer_safe*(input: ptr VipsImage, buf: ptr pointer, len: ptr csize_t): cint =
+  vips_pngsave_buffer(input, buf, len, nil)
+
+proc vips_webpsave_safe*(input: ptr VipsImage, filename: cstring): cint =
+  vips_webpsave(input, filename, nil)
+
+proc vips_webpsave_buffer_safe*(input: ptr VipsImage, buf: ptr pointer, len: ptr csize_t): cint =
+  vips_webpsave_buffer(input, buf, len, nil)
+
+proc vips_tiffsave_safe*(input: ptr VipsImage, filename: cstring): cint =
+  vips_tiffsave(input, filename, nil)
+
+proc vips_heifsave_safe*(input: ptr VipsImage, filename: cstring): cint =
+  vips_heifsave(input, filename, nil)
+
+proc vips_jxlsave_safe*(input: ptr VipsImage, filename: cstring): cint =
+  vips_jxlsave(input, filename, nil)
+
+proc vips_gifsave_safe*(input: ptr VipsImage, filename: cstring): cint =
+  vips_gifsave(input, filename, nil)

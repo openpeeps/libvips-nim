@@ -6,7 +6,7 @@
 #          Made by Humans from OpenPeeps
 #          https://github.com/openpeeps/libvips-nim
 
-{.push cdecl, importc, header: "vips/error.h".}
+{.push cdecl, importc, header: "vips/vips.h".}
 proc vips_error_buffer*(): cstring
 proc vips_error_buffer_copy*(): cstring
 proc vips_error_clear*()

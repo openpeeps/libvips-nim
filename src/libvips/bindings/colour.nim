@@ -142,7 +142,7 @@ proc vips_col_dE00*(L1, a1, b1, L2, a2, b2: float32): float32
 
 # Safe wrappers (exported)
 proc vips_colourspace*(img: ptr VipsImage, `out`: ptr ptr VipsImage, space: VipsInterpretation): cint =
-  c_vips_colourspace(img, `out`, space)
+  c_vips_colourspace(img, `out`, space, nil)
 
 proc vips_LabQ2sRGB*(img: ptr VipsImage, `out`: ptr ptr VipsImage): cint =
   c_vips_LabQ2sRGB(img, `out`)

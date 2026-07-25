@@ -74,7 +74,7 @@ type
 
 
 # Function declarations
-{.push cdecl, header: "vips/arithmetic.h".}
+{.push cdecl, header: "vips/vips.h".}
 proc c_vips_add(left: ptr VipsImage, right: ptr VipsImage, res: ptr ptr VipsImage): cint {.importc: "vips_add", varargs.}
 proc c_vips_sum(input: ptr ptr VipsImage, res: ptr ptr VipsImage, n: cint): cint {.importc: "vips_sum", varargs.}
 proc c_vips_subtract(in1: ptr VipsImage, in2: ptr VipsImage, res: ptr ptr VipsImage): cint {.importc: "vips_subtract", varargs.}
