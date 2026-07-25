@@ -1,0 +1,21 @@
+nimTitle	image	libvips/api/image.html	module libvips/api/image		0
+nim	Image	libvips/api/image.html#Image	type Image		8
+nim	init_vips	libvips/api/image.html#init_vips.t,untyped	template init_vips(body: untyped)		15
+nim	enableVipsAcceleration	libvips/api/image.html#enableVipsAcceleration,int	proc enableVipsAcceleration(numWorkers: int)		20
+nim	init_vips_accelerated	libvips/api/image.html#init_vips_accelerated.t,int,untyped	template init_vips_accelerated(workers: int; body: untyped)		25
+nim	openImage	libvips/api/image.html#openImage,string	proc openImage(path: string): Image		30
+nim	openBuffer	libvips/api/image.html#openBuffer,seq[uint8]	proc openBuffer(buf: seq[uint8]): Image		36
+nim	fromMemory	libvips/api/image.html#fromMemory,seq[uint8],int,int,int,VipsBandFormat	proc fromMemory(data: seq[uint8]; width, height, bands: int; format: VipsBandFormat): Image		42
+nim	black	libvips/api/image.html#black,int,int,int	proc black(width, height: int; bands: int = 1): Image		49
+nim	text	libvips/api/image.html#text,string	proc text(text: string): Image		61
+nim	width	libvips/api/image.html#width,Image	proc width(img: Image): int		67
+nim	height	libvips/api/image.html#height,Image	proc height(img: Image): int		70
+nim	bands	libvips/api/image.html#bands,Image	proc bands(img: Image): int		73
+nim	format	libvips/api/image.html#format,Image	proc format(img: Image): VipsBandFormat		76
+nim	space	libvips/api/image.html#space,Image	proc space(img: Image): VipsInterpretation		79
+nim	hasAlpha	libvips/api/image.html#hasAlpha,Image	proc hasAlpha(img: Image): bool		82
+nim	xres	libvips/api/image.html#xres,Image	proc xres(img: Image): float		85
+nim	yres	libvips/api/image.html#yres,Image	proc yres(img: Image): float		88
+nim	orientation	libvips/api/image.html#orientation,Image	proc orientation(img: Image): int		91
+nim	castUchar	libvips/api/image.html#castUchar,Image	proc castUchar(img: Image): Image		94
+nim	scale	libvips/api/image.html#scale,Image	proc scale(img: Image): Image		100

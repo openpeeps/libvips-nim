@@ -1,0 +1,25 @@
+nimTitle	io	libvips/api/io.html	module libvips/api/io		0
+nim	g_free	libvips/api/io.html#g_free,pointer	proc g_free(p: pointer)		5
+nim	jpegDefaultQuality	libvips/api/io.html#jpegDefaultQuality	const jpegDefaultQuality		8
+nim	pngDefaultCompression	libvips/api/io.html#pngDefaultCompression	const pngDefaultCompression		9
+nim	webpDefaultQuality	libvips/api/io.html#webpDefaultQuality	const webpDefaultQuality		10
+nim	heifDefaultQuality	libvips/api/io.html#heifDefaultQuality	const heifDefaultQuality		11
+nim	avifDefaultQuality	libvips/api/io.html#avifDefaultQuality	const avifDefaultQuality		12
+nim	jxlDefaultQuality	libvips/api/io.html#jxlDefaultQuality	const jxlDefaultQuality		13
+nim	save	libvips/api/io.html#save,Image,string	proc save(img: Image; path: string)		15
+nim	saveJPEG	libvips/api/io.html#saveJPEG,Image,string,range[]	proc saveJPEG(img: Image; path: string; quality: range[0 .. 100] = jpegDefaultQuality)		19
+nim	savePNG	libvips/api/io.html#savePNG,Image,string,range[]	proc savePNG(img: Image; path: string;\n        compression: range[0 .. 9] = pngDefaultCompression)		23
+nim	saveWebP	libvips/api/io.html#saveWebP,Image,string,range[]	proc saveWebP(img: Image; path: string; quality: range[0 .. 100] = webpDefaultQuality)		27
+nim	saveTIFF	libvips/api/io.html#saveTIFF,Image,string,VipsForeignTiffCompression	proc saveTIFF(img: Image; path: string; compression: VipsForeignTiffCompression = VIPS_FOREIGN_TIFF_COMPRESSION_LZW)		31
+nim	saveHEIF	libvips/api/io.html#saveHEIF,Image,string,range[]	proc saveHEIF(img: Image; path: string; quality: range[0 .. 100] = heifDefaultQuality)		35
+nim	saveAVIF	libvips/api/io.html#saveAVIF,Image,string,range[]	proc saveAVIF(img: Image; path: string; quality: range[0 .. 100] = avifDefaultQuality)		39
+nim	saveJXL	libvips/api/io.html#saveJXL,Image,string,range[]	proc saveJXL(img: Image; path: string; quality: range[0 .. 100] = jxlDefaultQuality)		43
+nim	saveJPEG	libvips/api/io.html#saveJPEG,Image,range[]	proc saveJPEG(img: Image; quality: range[0 .. 100] = jpegDefaultQuality): seq[uint8]		47
+nim	savePNG	libvips/api/io.html#savePNG,Image,range[]	proc savePNG(img: Image; compression: range[0 .. 9] = pngDefaultCompression): seq[\n    uint8]		56
+nim	saveWebP	libvips/api/io.html#saveWebP,Image,range[]	proc saveWebP(img: Image; quality: range[0 .. 100] = webpDefaultQuality): seq[uint8]		65
+nim	thumbnailFromFile	libvips/api/io.html#thumbnailFromFile,string,int	proc thumbnailFromFile(path: string; width: int): Image		74
+nim	thumbnailFromFile	libvips/api/io.html#thumbnailFromFile,string,int,int	proc thumbnailFromFile(path: string; width, height: int): Image		80
+nimgrp	savewebp	libvips/api/io.html#saveWebP-procs-all	proc		27
+nimgrp	savejpeg	libvips/api/io.html#saveJPEG-procs-all	proc		19
+nimgrp	savepng	libvips/api/io.html#savePNG-procs-all	proc		23
+nimgrp	thumbnailfromfile	libvips/api/io.html#thumbnailFromFile-procs-all	proc		74

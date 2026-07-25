@@ -1,0 +1,4 @@
+nimTitle	watermark	libvips/watermark.html	module libvips/watermark		0
+nim	watermark	libvips/watermark.html#watermark,Image,Image,int,int,range[]	proc watermark(img: Image; watermark: Image; x, y: int; opacity: range[0.0 .. 1.0]): Image		6
+nim	watermark	libvips/watermark.html#watermark,Image,Image,VerticalAlignment,HorizontalAlignment,float,int	proc watermark(img: Image; watermark: Image;\n          verticalAlignment: VerticalAlignment = VAlignCenter;\n          horizontalAlignment: HorizontalAlignment = HAlignCenter;\n          opacity: float = 0.5; margin: int = 20): Image		78
+nimgrp	watermark	libvips/watermark.html#watermark-procs-all	proc		6

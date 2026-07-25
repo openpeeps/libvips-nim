@@ -1,0 +1,21 @@
+nimTitle	composite	libvips/api/composite.html	module libvips/api/composite		0
+nim	addAlpha	libvips/api/composite.html#addAlpha,Image	proc addAlpha(img: Image): Image		5
+nim	flatten	libvips/api/composite.html#flatten,Image,openArray[cdouble]	proc flatten(img: Image; background: openArray[cdouble] = @[0.0, 0.0, 0.0]): Image		11
+nim	composite	libvips/api/composite.html#composite,Image,Image,VipsBlendMode,int,int	proc composite(img: Image; overlay: Image; mode: VipsBlendMode; x: int = 0;\n          y: int = 0): Image		17
+nim	composite	libvips/api/composite.html#composite,Image,openArray[Image],openArray[VipsBlendMode]	proc composite(img: Image; overlays: openArray[Image];\n          modes: openArray[VipsBlendMode]): Image		52
+nim	blendOver	libvips/api/composite.html#blendOver,Image,Image	proc blendOver(img: Image; overlay: Image): Image		61
+nim	blendMultiply	libvips/api/composite.html#blendMultiply,Image,Image	proc blendMultiply(img: Image; overlay: Image): Image		64
+nim	blendScreen	libvips/api/composite.html#blendScreen,Image,Image	proc blendScreen(img: Image; overlay: Image): Image		67
+nim	blendOverlay	libvips/api/composite.html#blendOverlay,Image,Image	proc blendOverlay(img: Image; overlay: Image): Image		70
+nim	blendDarken	libvips/api/composite.html#blendDarken,Image,Image	proc blendDarken(img: Image; overlay: Image): Image		73
+nim	blendLighten	libvips/api/composite.html#blendLighten,Image,Image	proc blendLighten(img: Image; overlay: Image): Image		76
+nim	blendAdd	libvips/api/composite.html#blendAdd,Image,Image	proc blendAdd(img: Image; overlay: Image): Image		79
+nim	blendDifference	libvips/api/composite.html#blendDifference,Image,Image	proc blendDifference(img: Image; overlay: Image): Image		82
+nim	blendExclusion	libvips/api/composite.html#blendExclusion,Image,Image	proc blendExclusion(img: Image; overlay: Image): Image		85
+nim	premultiply	libvips/api/composite.html#premultiply,Image	proc premultiply(img: Image): Image		88
+nim	unpremultiply	libvips/api/composite.html#unpremultiply,Image	proc unpremultiply(img: Image): Image		94
+nim	bandJoin	libvips/api/composite.html#bandJoin,Image,Image	proc bandJoin(img: Image; other: Image): Image		100
+nim	bandJoin	libvips/api/composite.html#bandJoin,openArray[Image]	proc bandJoin(images: openArray[Image]): Image		106
+nim	bandMean	libvips/api/composite.html#bandMean,Image	proc bandMean(img: Image): Image		113
+nimgrp	bandjoin	libvips/api/composite.html#bandJoin-procs-all	proc		100
+nimgrp	composite	libvips/api/composite.html#composite-procs-all	proc		17

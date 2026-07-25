@@ -1,0 +1,13 @@
+nimTitle	colour	libvips/api/colour.html	module libvips/api/colour		0
+nim	toColourspace	libvips/api/colour.html#toColourspace,Image,VipsInterpretation	proc toColourspace(img: Image; space: VipsInterpretation): Image		4
+nim	toSRGB	libvips/api/colour.html#toSRGB,Image	proc toSRGB(img: Image): Image		10
+nim	toGrayscale	libvips/api/colour.html#toGrayscale,Image	proc toGrayscale(img: Image): Image		13
+nim	toCMYK	libvips/api/colour.html#toCMYK,Image	proc toCMYK(img: Image): Image		16
+nim	toLAB	libvips/api/colour.html#toLAB,Image	proc toLAB(img: Image): Image		19
+nim	toHSV	libvips/api/colour.html#toHSV,Image	proc toHSV(img: Image): Image		22
+nim	toXYZ	libvips/api/colour.html#toXYZ,Image	proc toXYZ(img: Image): Image		25
+nim	toLCh	libvips/api/colour.html#toLCh,Image	proc toLCh(img: Image): Image		28
+nim	toscRGB	libvips/api/colour.html#toscRGB,Image	proc toscRGB(img: Image): Image		31
+nim	iccTransform	libvips/api/colour.html#iccTransform,Image,string	proc iccTransform(img: Image; outputProfile: string): Image		34
+nim	iccImport	libvips/api/colour.html#iccImport,Image	proc iccImport(img: Image): Image		40
+nim	iccExport	libvips/api/colour.html#iccExport,Image	proc iccExport(img: Image): Image		46

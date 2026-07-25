@@ -1,0 +1,21 @@
+nimTitle	transform	libvips/api/transform.html	module libvips/api/transform		0
+nim	resize	libvips/api/transform.html#resize,Image,float	proc resize(img: Image; scale: float): Image		4
+nim	resize	libvips/api/transform.html#resize,Image,int	proc resize(img: Image; width: int): Image		10
+nim	resize	libvips/api/transform.html#resize,Image,int,int	proc resize(img: Image; width, height: int): Image		14
+nim	rotate	libvips/api/transform.html#rotate,Image,float	proc rotate(img: Image; angle: float): Image		18
+nim	rotate	libvips/api/transform.html#rotate,Image,VipsAngle	proc rotate(img: Image; angle: VipsAngle): Image		24
+nim	flip	libvips/api/transform.html#flip,Image,VipsDirection	proc flip(img: Image; direction: VipsDirection): Image		30
+nim	flipHorizontal	libvips/api/transform.html#flipHorizontal,Image	proc flipHorizontal(img: Image): Image		36
+nim	flipVertical	libvips/api/transform.html#flipVertical,Image	proc flipVertical(img: Image): Image		39
+nim	crop	libvips/api/transform.html#crop,Image,int,int,int,int	proc crop(img: Image; left, top, width, height: int): Image		42
+nim	crop	libvips/api/transform.html#crop,Image,int,int	proc crop(img: Image; width, height: int): Image		48
+nim	smartCrop	libvips/api/transform.html#smartCrop,Image,int,int,VipsInteresting	proc smartCrop(img: Image; width, height: int;\n          interesting: VipsInteresting = VIPS_INTERESTING_ATTENTION): Image		53
+nim	thumbnail	libvips/api/transform.html#thumbnail,Image,int	proc thumbnail(img: Image; size: int): Image		60
+nim	thumbnail	libvips/api/transform.html#thumbnail,Image,int,int	proc thumbnail(img: Image; width, height: int): Image		66
+nim	extractBand	libvips/api/transform.html#extractBand,Image,int	proc extractBand(img: Image; band: int): Image		72
+nim	autorotate	libvips/api/transform.html#autorotate,Image	proc autorotate(img: Image): Image		78
+nim	embed	libvips/api/transform.html#embed,Image,int,int,int,int,VipsExtend	proc embed(img: Image; x, y, width, height: int;\n      extend: VipsExtend = VIPS_EXTEND_BLACK): Image		84
+nimgrp	thumbnail	libvips/api/transform.html#thumbnail-procs-all	proc		60
+nimgrp	resize	libvips/api/transform.html#resize-procs-all	proc		4
+nimgrp	crop	libvips/api/transform.html#crop-procs-all	proc		42
+nimgrp	rotate	libvips/api/transform.html#rotate-procs-all	proc		18

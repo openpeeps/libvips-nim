@@ -16,13 +16,16 @@
 <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH4QQQEwksSS9ZWwAAAk1JREFUWMPtll2ITVEUx39nn/O7Y5qR8f05wtCUUr6ZIS++8pEnkZInPImneaCQ5METNdOkeFBKUhMPRIkHKfEuUZSUlGlKPN2TrgfncpvmnntnmlEyq1Z7t89/rf9a6+y99oZxGZf/XeIq61EdtgKXgdXA0xrYAvBjOIF1AI9zvjcC74BSpndrJPkBWDScTF8Aa4E3wDlgHbASaANmVqlcCnwHvgDvgVfAJ+AikAAvgfVZwLnSVZHZaOuKoQi3ZOMi4NkYkpe1p4J7A8BpYAD49hfIy/oqG0+hLomiKP2L5L+1ubn5115S+3OAn4EnwBlgMzCjyt6ZAnQCJ4A7wOs88iRJHvw50HoujuPBoCKwHWiosy8MdfZnAdcHk8dxXFJ3VQbQlCTJvRBCGdRbD4M6uc5glpY3eAihpN5S5w12diSEcCCEcKUO4ljdr15T76ur1FDDLIQQ3qv71EdDOe3Kxj3leRXyk+pxdWnFWod6Wt2bY3de3aSuUHcPBVimHs7mK9WrmeOF6lR1o9qnzskh2ar2qm1qizpfXaPeVGdlmGN5pb09qMxz1Xb1kLqgzn1RyH7JUXW52lr5e/Kqi9qpto7V1atuUzfnARrV7jEib1T76gG2qxdGmXyiekkt1GswPTtek0aBfJp6YySGBfWg2tPQ0FAYgf1stUfdmdcjarbYJEniKIq6gY/Aw+zWHAC+p2labGpqiorFYgGYCEzN7oQdQClN07O1/EfDyGgC0ALMBdYAi4FyK+4H3gLPsxfR1zRNi+NP7nH5J+QntnXe5B5mpfQAAAAASUVORK5CYII=">
 
 <!-- CSS -->
-<link rel="stylesheet" type="text/css" href="../../nimdoc.out.css?v=2.2.4">
+<link rel="stylesheet" type="text/css" href="../../nimdoc.out.css?v=2.2.10">
 
 <!-- JS -->
-<script type="text/javascript" src="../../dochack.js?v=2.2.4"></script>
+<script type="text/javascript" src="../../dochack.js?v=2.2.10"></script>
 </head>
 <body>
   <div class="document" id="documentId">
+    <input type="checkbox" id="nav-toggle" hidden>
+    <label for="nav-toggle" id="nav-burger">&#9776;</label>
+    <label for="nav-toggle" id="nav-overlay"></label>
     <div class="container">
       <h1 class="title">libvips/bindings/conversion</h1>
       <div class="row">
@@ -412,7 +415,7 @@
   <h1><a class="toc-backref" href="#7">Types</a></h1>
   <dl class="item">
     <div id="VipsAlign">
-  <dt><pre><a href="conversion.html#VipsAlign"><span class="Identifier">VipsAlign</span></a> {.<span class="Identifier">size</span><span class="Other">:</span> <span class="DecNumber">4</span>.} <span class="Other">=</span> <span class="Keyword">enum</span>
+  <dt><pre><a href="#VipsAlign"><span class="Identifier">VipsAlign</span></a> {.<span class="Identifier">size</span><span class="Other">:</span> <span class="DecNumber">4</span>.} <span class="Other">=</span> <span class="Keyword">enum</span>
   <span class="Identifier">VIPS_ALIGN_LOW</span><span class="Other">,</span> <span class="Identifier">VIPS_ALIGN_CENTRE</span><span class="Other">,</span> <span class="Identifier">VIPS_ALIGN_HIGH</span><span class="Other">,</span> <span class="Identifier">VIPS_ALIGN_LAST</span></pre></dt>
   <dd>
     
@@ -421,7 +424,7 @@
   </dd>
 </div>
 <div id="VipsAngle">
-  <dt><pre><a href="conversion.html#VipsAngle"><span class="Identifier">VipsAngle</span></a> {.<span class="Identifier">size</span><span class="Other">:</span> <span class="DecNumber">4</span>.} <span class="Other">=</span> <span class="Keyword">enum</span>
+  <dt><pre><a href="#VipsAngle"><span class="Identifier">VipsAngle</span></a> {.<span class="Identifier">size</span><span class="Other">:</span> <span class="DecNumber">4</span>.} <span class="Other">=</span> <span class="Keyword">enum</span>
   <span class="Identifier">VIPS_ANGLE_D0</span><span class="Other">,</span> <span class="Identifier">VIPS_ANGLE_D90</span><span class="Other">,</span> <span class="Identifier">VIPS_ANGLE_D180</span><span class="Other">,</span> <span class="Identifier">VIPS_ANGLE_D270</span><span class="Other">,</span>
   <span class="Identifier">VIPS_ANGLE_LAST</span></pre></dt>
   <dd>
@@ -431,7 +434,7 @@
   </dd>
 </div>
 <div id="VipsAngle45">
-  <dt><pre><a href="conversion.html#VipsAngle45"><span class="Identifier">VipsAngle45</span></a> {.<span class="Identifier">size</span><span class="Other">:</span> <span class="DecNumber">4</span>.} <span class="Other">=</span> <span class="Keyword">enum</span>
+  <dt><pre><a href="#VipsAngle45"><span class="Identifier">VipsAngle45</span></a> {.<span class="Identifier">size</span><span class="Other">:</span> <span class="DecNumber">4</span>.} <span class="Other">=</span> <span class="Keyword">enum</span>
   <span class="Identifier">VIPS_ANGLE45_D0</span><span class="Other">,</span> <span class="Identifier">VIPS_ANGLE45_D45</span><span class="Other">,</span> <span class="Identifier">VIPS_ANGLE45_D90</span><span class="Other">,</span> <span class="Identifier">VIPS_ANGLE45_D135</span><span class="Other">,</span>
   <span class="Identifier">VIPS_ANGLE45_D180</span><span class="Other">,</span> <span class="Identifier">VIPS_ANGLE45_D225</span><span class="Other">,</span> <span class="Identifier">VIPS_ANGLE45_D270</span><span class="Other">,</span> <span class="Identifier">VIPS_ANGLE45_D315</span><span class="Other">,</span>
   <span class="Identifier">VIPS_ANGLE45_LAST</span></pre></dt>
@@ -442,7 +445,7 @@
   </dd>
 </div>
 <div id="VipsBlendMode">
-  <dt><pre><a href="conversion.html#VipsBlendMode"><span class="Identifier">VipsBlendMode</span></a> {.<span class="Identifier">size</span><span class="Other">:</span> <span class="DecNumber">4</span>.} <span class="Other">=</span> <span class="Keyword">enum</span>
+  <dt><pre><a href="#VipsBlendMode"><span class="Identifier">VipsBlendMode</span></a> {.<span class="Identifier">size</span><span class="Other">:</span> <span class="DecNumber">4</span>.} <span class="Other">=</span> <span class="Keyword">enum</span>
   <span class="Identifier">VIPS_BLEND_MODE_CLEAR</span><span class="Other">,</span> <span class="Identifier">VIPS_BLEND_MODE_SOURCE</span><span class="Other">,</span> <span class="Identifier">VIPS_BLEND_MODE_OVER</span><span class="Other">,</span>
   <span class="Identifier">VIPS_BLEND_MODE_IN</span><span class="Other">,</span> <span class="Identifier">VIPS_BLEND_MODE_OUT</span><span class="Other">,</span> <span class="Identifier">VIPS_BLEND_MODE_ATOP</span><span class="Other">,</span>
   <span class="Identifier">VIPS_BLEND_MODE_DEST</span><span class="Other">,</span> <span class="Identifier">VIPS_BLEND_MODE_DEST_OVER</span><span class="Other">,</span> <span class="Identifier">VIPS_BLEND_MODE_DEST_IN</span><span class="Other">,</span>
@@ -460,7 +463,7 @@
   </dd>
 </div>
 <div id="VipsCompassDirection">
-  <dt><pre><a href="conversion.html#VipsCompassDirection"><span class="Identifier">VipsCompassDirection</span></a> {.<span class="Identifier">size</span><span class="Other">:</span> <span class="DecNumber">4</span>.} <span class="Other">=</span> <span class="Keyword">enum</span>
+  <dt><pre><a href="#VipsCompassDirection"><span class="Identifier">VipsCompassDirection</span></a> {.<span class="Identifier">size</span><span class="Other">:</span> <span class="DecNumber">4</span>.} <span class="Other">=</span> <span class="Keyword">enum</span>
   <span class="Identifier">VIPS_COMPASS_DIRECTION_CENTRE</span><span class="Other">,</span> <span class="Identifier">VIPS_COMPASS_DIRECTION_NORTH</span><span class="Other">,</span>
   <span class="Identifier">VIPS_COMPASS_DIRECTION_EAST</span><span class="Other">,</span> <span class="Identifier">VIPS_COMPASS_DIRECTION_SOUTH</span><span class="Other">,</span>
   <span class="Identifier">VIPS_COMPASS_DIRECTION_WEST</span><span class="Other">,</span> <span class="Identifier">VIPS_COMPASS_DIRECTION_NORTH_EAST</span><span class="Other">,</span>
@@ -473,7 +476,7 @@
   </dd>
 </div>
 <div id="VipsDirection">
-  <dt><pre><a href="conversion.html#VipsDirection"><span class="Identifier">VipsDirection</span></a> {.<span class="Identifier">size</span><span class="Other">:</span> <span class="DecNumber">4</span>.} <span class="Other">=</span> <span class="Keyword">enum</span>
+  <dt><pre><a href="#VipsDirection"><span class="Identifier">VipsDirection</span></a> {.<span class="Identifier">size</span><span class="Other">:</span> <span class="DecNumber">4</span>.} <span class="Other">=</span> <span class="Keyword">enum</span>
   <span class="Identifier">VIPS_DIRECTION_HORIZONTAL</span><span class="Other">,</span> <span class="Identifier">VIPS_DIRECTION_VERTICAL</span><span class="Other">,</span> <span class="Identifier">VIPS_DIRECTION_LAST</span></pre></dt>
   <dd>
     
@@ -482,7 +485,7 @@
   </dd>
 </div>
 <div id="VipsExtend">
-  <dt><pre><a href="conversion.html#VipsExtend"><span class="Identifier">VipsExtend</span></a> {.<span class="Identifier">size</span><span class="Other">:</span> <span class="DecNumber">4</span>.} <span class="Other">=</span> <span class="Keyword">enum</span>
+  <dt><pre><a href="#VipsExtend"><span class="Identifier">VipsExtend</span></a> {.<span class="Identifier">size</span><span class="Other">:</span> <span class="DecNumber">4</span>.} <span class="Other">=</span> <span class="Keyword">enum</span>
   <span class="Identifier">VIPS_EXTEND_BLACK</span><span class="Other">,</span> <span class="Identifier">VIPS_EXTEND_COPY</span><span class="Other">,</span> <span class="Identifier">VIPS_EXTEND_REPEAT</span><span class="Other">,</span> <span class="Identifier">VIPS_EXTEND_MIRROR</span><span class="Other">,</span>
   <span class="Identifier">VIPS_EXTEND_WHITE</span><span class="Other">,</span> <span class="Identifier">VIPS_EXTEND_BACKGROUND</span><span class="Other">,</span> <span class="Identifier">VIPS_EXTEND_LAST</span></pre></dt>
   <dd>
@@ -492,7 +495,7 @@
   </dd>
 </div>
 <div id="VipsInteresting">
-  <dt><pre><a href="conversion.html#VipsInteresting"><span class="Identifier">VipsInteresting</span></a> {.<span class="Identifier">size</span><span class="Other">:</span> <span class="DecNumber">4</span>.} <span class="Other">=</span> <span class="Keyword">enum</span>
+  <dt><pre><a href="#VipsInteresting"><span class="Identifier">VipsInteresting</span></a> {.<span class="Identifier">size</span><span class="Other">:</span> <span class="DecNumber">4</span>.} <span class="Other">=</span> <span class="Keyword">enum</span>
   <span class="Identifier">VIPS_INTERESTING_NONE</span><span class="Other">,</span> <span class="Identifier">VIPS_INTERESTING_CENTRE</span><span class="Other">,</span> <span class="Identifier">VIPS_INTERESTING_ENTROPY</span><span class="Other">,</span>
   <span class="Identifier">VIPS_INTERESTING_ATTENTION</span><span class="Other">,</span> <span class="Identifier">VIPS_INTERESTING_LOW</span><span class="Other">,</span> <span class="Identifier">VIPS_INTERESTING_HIGH</span><span class="Other">,</span>
   <span class="Identifier">VIPS_INTERESTING_ALL</span><span class="Other">,</span> <span class="Identifier">VIPS_INTERESTING_LAST</span></pre></dt>
@@ -862,7 +865,7 @@
 <div id="vips_composite2-procs-all">
   <div id="vips_composite2,ptr.VipsImage,ptr.VipsImage,ptr.ptr.VipsImage,VipsBlendMode">
   <dt><pre><span class="Keyword">proc</span> <a href="#vips_composite2%2Cptr.VipsImage%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2CVipsBlendMode"><span class="Identifier">vips_composite2</span></a><span class="Other">(</span><span class="Identifier">base</span><span class="Other">,</span> <span class="Identifier">overlay</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span> <span class="Identifier">output</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span>
-                     <span class="Identifier">mode</span><span class="Other">:</span> <a href="conversion.html#VipsBlendMode"><span class="Identifier">VipsBlendMode</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+                     <span class="Identifier">mode</span><span class="Other">:</span> <a href="#VipsBlendMode"><span class="Identifier">VipsBlendMode</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
     <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -974,7 +977,7 @@
 <div id="vips_flip-procs-all">
   <div id="vips_flip,ptr.VipsImage,ptr.ptr.VipsImage,VipsDirection">
   <dt><pre><span class="Keyword">proc</span> <a href="#vips_flip%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2CVipsDirection"><span class="Identifier">vips_flip</span></a><span class="Other">(</span><span class="Identifier">input</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span> <span class="Identifier">output</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span>
-               <span class="Identifier">direction</span><span class="Other">:</span> <a href="conversion.html#VipsDirection"><span class="Identifier">VipsDirection</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+               <span class="Identifier">direction</span><span class="Other">:</span> <a href="#VipsDirection"><span class="Identifier">VipsDirection</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
     <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -999,7 +1002,7 @@
 <div id="vips_gravity-procs-all">
   <div id="vips_gravity,ptr.VipsImage,ptr.ptr.VipsImage,VipsCompassDirection,cint,cint">
   <dt><pre><span class="Keyword">proc</span> <a href="#vips_gravity%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2CVipsCompassDirection%2Ccint%2Ccint"><span class="Identifier">vips_gravity</span></a><span class="Other">(</span><span class="Identifier">input</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span> <span class="Identifier">output</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span>
-                  <span class="Identifier">direction</span><span class="Other">:</span> <a href="conversion.html#VipsCompassDirection"><span class="Identifier">VipsCompassDirection</span></a><span class="Other">;</span> <span class="Identifier">width</span><span class="Other">,</span> <span class="Identifier">height</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.
+                  <span class="Identifier">direction</span><span class="Other">:</span> <a href="#VipsCompassDirection"><span class="Identifier">VipsCompassDirection</span></a><span class="Other">;</span> <span class="Identifier">width</span><span class="Other">,</span> <span class="Identifier">height</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -1049,7 +1052,7 @@
 <div id="vips_join-procs-all">
   <div id="vips_join,ptr.VipsImage,ptr.VipsImage,ptr.ptr.VipsImage,VipsDirection">
   <dt><pre><span class="Keyword">proc</span> <a href="#vips_join%2Cptr.VipsImage%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2CVipsDirection"><span class="Identifier">vips_join</span></a><span class="Other">(</span><span class="Identifier">in1</span><span class="Other">,</span> <span class="Identifier">in2</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span> <span class="Identifier">output</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span>
-               <span class="Identifier">direction</span><span class="Other">:</span> <a href="conversion.html#VipsDirection"><span class="Identifier">VipsDirection</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+               <span class="Identifier">direction</span><span class="Other">:</span> <a href="#VipsDirection"><span class="Identifier">VipsDirection</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
     <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -1122,7 +1125,7 @@
 </div>
 <div id="vips_rot-procs-all">
   <div id="vips_rot,ptr.VipsImage,ptr.ptr.VipsImage,VipsAngle">
-  <dt><pre><span class="Keyword">proc</span> <a href="#vips_rot%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2CVipsAngle"><span class="Identifier">vips_rot</span></a><span class="Other">(</span><span class="Identifier">input</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span> <span class="Identifier">output</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span> <span class="Identifier">angle</span><span class="Other">:</span> <a href="conversion.html#VipsAngle"><span class="Identifier">VipsAngle</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.
+  <dt><pre><span class="Keyword">proc</span> <a href="#vips_rot%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2CVipsAngle"><span class="Identifier">vips_rot</span></a><span class="Other">(</span><span class="Identifier">input</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span> <span class="Identifier">output</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span> <span class="Identifier">angle</span><span class="Other">:</span> <a href="#VipsAngle"><span class="Identifier">VipsAngle</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -1311,7 +1314,7 @@
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2025-09-22 16:43:04 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2026-07-25 07:22:30 UTC</small>
       </div>
     </div>
   </div>

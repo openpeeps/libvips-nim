@@ -16,13 +16,16 @@
 <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH4QQQEwksSS9ZWwAAAk1JREFUWMPtll2ITVEUx39nn/O7Y5qR8f05wtCUUr6ZIS++8pEnkZInPImneaCQ5METNdOkeFBKUhMPRIkHKfEuUZSUlGlKPN2TrgfncpvmnntnmlEyq1Z7t89/rf9a6+y99oZxGZf/XeIq61EdtgKXgdXA0xrYAvBjOIF1AI9zvjcC74BSpndrJPkBWDScTF8Aa4E3wDlgHbASaANmVqlcCnwHvgDvgVfAJ+AikAAvgfVZwLnSVZHZaOuKoQi3ZOMi4NkYkpe1p4J7A8BpYAD49hfIy/oqG0+hLomiKP2L5L+1ubn5115S+3OAn4EnwBlgMzCjyt6ZAnQCJ4A7wOs88iRJHvw50HoujuPBoCKwHWiosy8MdfZnAdcHk8dxXFJ3VQbQlCTJvRBCGdRbD4M6uc5glpY3eAihpN5S5w12diSEcCCEcKUO4ljdr15T76ur1FDDLIQQ3qv71EdDOe3Kxj3leRXyk+pxdWnFWod6Wt2bY3de3aSuUHcPBVimHs7mK9WrmeOF6lR1o9qnzskh2ar2qm1qizpfXaPeVGdlmGN5pb09qMxz1Xb1kLqgzn1RyH7JUXW52lr5e/Kqi9qpto7V1atuUzfnARrV7jEib1T76gG2qxdGmXyiekkt1GswPTtek0aBfJp6YySGBfWg2tPQ0FAYgf1stUfdmdcjarbYJEniKIq6gY/Aw+zWHAC+p2labGpqiorFYgGYCEzN7oQdQClN07O1/EfDyGgC0ALMBdYAi4FyK+4H3gLPsxfR1zRNi+NP7nH5J+QntnXe5B5mpfQAAAAASUVORK5CYII=">
 
 <!-- CSS -->
-<link rel="stylesheet" type="text/css" href="../../nimdoc.out.css?v=2.2.4">
+<link rel="stylesheet" type="text/css" href="../../nimdoc.out.css?v=2.2.10">
 
 <!-- JS -->
-<script type="text/javascript" src="../../dochack.js?v=2.2.4"></script>
+<script type="text/javascript" src="../../dochack.js?v=2.2.10"></script>
 </head>
 <body>
   <div class="document" id="documentId">
+    <input type="checkbox" id="nav-toggle" hidden>
+    <label for="nav-toggle" id="nav-burger">&#9776;</label>
+    <label for="nav-toggle" id="nav-overlay"></label>
     <div class="container">
       <h1 class="title">libvips/bindings/image</h1>
       <div class="row">
@@ -407,7 +410,7 @@
   <h1><a class="toc-backref" href="#7">Types</a></h1>
   <dl class="item">
     <div id="VipsAccess">
-  <dt><pre><a href="image.html#VipsAccess"><span class="Identifier">VipsAccess</span></a> <span class="Other">=</span> <span class="Keyword">enum</span>
+  <dt><pre><a href="#VipsAccess"><span class="Identifier">VipsAccess</span></a> <span class="Other">=</span> <span class="Keyword">enum</span>
   <span class="Identifier">VIPS_ACCESS_RANDOM</span><span class="Other">,</span> <span class="Identifier">VIPS_ACCESS_SEQUENTIAL</span><span class="Other">,</span> <span class="Identifier">VIPS_ACCESS_SEQUENTIAL_UNBUFFERED</span><span class="Other">,</span>
   <span class="Identifier">VIPS_ACCESS_LAST</span></pre></dt>
   <dd>
@@ -417,7 +420,7 @@
   </dd>
 </div>
 <div id="VipsBandFormat">
-  <dt><pre><a href="image.html#VipsBandFormat"><span class="Identifier">VipsBandFormat</span></a> <span class="Other">=</span> <span class="Keyword">enum</span>
+  <dt><pre><a href="#VipsBandFormat"><span class="Identifier">VipsBandFormat</span></a> <span class="Other">=</span> <span class="Keyword">enum</span>
   <span class="Identifier">VIPS_FORMAT_NOTSET</span> <span class="Other">=</span> <span class="DecNumber">-1</span><span class="Other">,</span> <span class="Identifier">VIPS_FORMAT_UCHAR</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="Identifier">VIPS_FORMAT_CHAR</span> <span class="Other">=</span> <span class="DecNumber">1</span><span class="Other">,</span>
   <span class="Identifier">VIPS_FORMAT_USHORT</span> <span class="Other">=</span> <span class="DecNumber">2</span><span class="Other">,</span> <span class="Identifier">VIPS_FORMAT_SHORT</span> <span class="Other">=</span> <span class="DecNumber">3</span><span class="Other">,</span> <span class="Identifier">VIPS_FORMAT_UINT</span> <span class="Other">=</span> <span class="DecNumber">4</span><span class="Other">,</span>
   <span class="Identifier">VIPS_FORMAT_INT</span> <span class="Other">=</span> <span class="DecNumber">5</span><span class="Other">,</span> <span class="Identifier">VIPS_FORMAT_FLOAT</span> <span class="Other">=</span> <span class="DecNumber">6</span><span class="Other">,</span> <span class="Identifier">VIPS_FORMAT_COMPLEX</span> <span class="Other">=</span> <span class="DecNumber">7</span><span class="Other">,</span>
@@ -429,7 +432,7 @@
   </dd>
 </div>
 <div id="VipsCoding">
-  <dt><pre><a href="image.html#VipsCoding"><span class="Identifier">VipsCoding</span></a> <span class="Other">=</span> <span class="Keyword">enum</span>
+  <dt><pre><a href="#VipsCoding"><span class="Identifier">VipsCoding</span></a> <span class="Other">=</span> <span class="Keyword">enum</span>
   <span class="Identifier">VIPS_CODING_ERROR</span> <span class="Other">=</span> <span class="DecNumber">-1</span><span class="Other">,</span> <span class="Identifier">VIPS_CODING_NONE</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="Identifier">VIPS_CODING_LABQ</span> <span class="Other">=</span> <span class="DecNumber">2</span><span class="Other">,</span>
   <span class="Identifier">VIPS_CODING_RAD</span> <span class="Other">=</span> <span class="DecNumber">6</span><span class="Other">,</span> <span class="Identifier">VIPS_CODING_LAST</span> <span class="Other">=</span> <span class="DecNumber">7</span></pre></dt>
   <dd>
@@ -439,7 +442,7 @@
   </dd>
 </div>
 <div id="VipsDemandStyle">
-  <dt><pre><a href="image.html#VipsDemandStyle"><span class="Identifier">VipsDemandStyle</span></a> <span class="Other">=</span> <span class="Keyword">enum</span>
+  <dt><pre><a href="#VipsDemandStyle"><span class="Identifier">VipsDemandStyle</span></a> <span class="Other">=</span> <span class="Keyword">enum</span>
   <span class="Identifier">VIPS_DEMAND_STYLE_ERROR</span> <span class="Other">=</span> <span class="DecNumber">-1</span><span class="Other">,</span> <span class="Identifier">VIPS_DEMAND_STYLE_SMALLTILE</span><span class="Other">,</span>
   <span class="Identifier">VIPS_DEMAND_STYLE_FATSTRIP</span><span class="Other">,</span> <span class="Identifier">VIPS_DEMAND_STYLE_THINSTRIP</span><span class="Other">,</span> <span class="Identifier">VIPS_DEMAND_STYLE_ANY</span></pre></dt>
   <dd>
@@ -449,7 +452,7 @@
   </dd>
 </div>
 <div id="VipsGenerateFn">
-  <dt><pre><a href="image.html#VipsGenerateFn"><span class="Identifier">VipsGenerateFn</span></a> <span class="Other">=</span> <span class="Keyword">proc</span> <span class="Other">(</span><span class="Identifier">outRegion</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsRegion"><span class="Identifier">VipsRegion</span></a><span class="Other">;</span> <span class="Identifier">seq</span><span class="Other">:</span> <span class="Identifier">pointer</span><span class="Other">;</span> <span class="Identifier">a</span><span class="Other">:</span> <span class="Identifier">pointer</span><span class="Other">;</span>
+  <dt><pre><a href="#VipsGenerateFn"><span class="Identifier">VipsGenerateFn</span></a> <span class="Other">=</span> <span class="Keyword">proc</span> <span class="Other">(</span><span class="Identifier">outRegion</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsRegion"><span class="Identifier">VipsRegion</span></a><span class="Other">;</span> <span class="Identifier">seq</span><span class="Other">:</span> <span class="Identifier">pointer</span><span class="Other">;</span> <span class="Identifier">a</span><span class="Other">:</span> <span class="Identifier">pointer</span><span class="Other">;</span>
                        <span class="Identifier">b</span><span class="Other">:</span> <span class="Identifier">pointer</span><span class="Other">;</span> <span class="Identifier">stop</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="glib/glib.html#gboolean"><span class="Identifier">gboolean</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.<span class="Identifier">cdecl</span>.}</pre></dt>
   <dd>
     
@@ -458,7 +461,7 @@
   </dd>
 </div>
 <div id="VipsImageClass">
-  <dt><pre><a href="image.html#VipsImageClass"><span class="Identifier">VipsImageClass</span></a> <span class="Other">=</span> <span class="Keyword">object</span></pre></dt>
+  <dt><pre><a href="#VipsImageClass"><span class="Identifier">VipsImageClass</span></a> <span class="Other">=</span> <span class="Keyword">object</span></pre></dt>
   <dd>
     
     
@@ -466,7 +469,7 @@
   </dd>
 </div>
 <div id="VipsImageType">
-  <dt><pre><a href="image.html#VipsImageType"><span class="Identifier">VipsImageType</span></a> <span class="Other">=</span> <span class="Keyword">enum</span>
+  <dt><pre><a href="#VipsImageType"><span class="Identifier">VipsImageType</span></a> <span class="Other">=</span> <span class="Keyword">enum</span>
   <span class="Identifier">VIPS_IMAGE_ERROR</span> <span class="Other">=</span> <span class="DecNumber">-1</span><span class="Other">,</span> <span class="Identifier">VIPS_IMAGE_NONE</span><span class="Other">,</span> <span class="Identifier">VIPS_IMAGE_SETBUF</span><span class="Other">,</span>
   <span class="Identifier">VIPS_IMAGE_SETBUF_FOREIGN</span><span class="Other">,</span> <span class="Identifier">VIPS_IMAGE_OPENIN</span><span class="Other">,</span> <span class="Identifier">VIPS_IMAGE_MMAPIN</span><span class="Other">,</span>
   <span class="Identifier">VIPS_IMAGE_MMAPINRW</span><span class="Other">,</span> <span class="Identifier">VIPS_IMAGE_OPENOUT</span><span class="Other">,</span> <span class="Identifier">VIPS_IMAGE_PARTIAL</span></pre></dt>
@@ -477,7 +480,7 @@
   </dd>
 </div>
 <div id="VipsInterpretation">
-  <dt><pre><a href="image.html#VipsInterpretation"><span class="Identifier">VipsInterpretation</span></a> <span class="Other">=</span> <span class="Keyword">enum</span>
+  <dt><pre><a href="#VipsInterpretation"><span class="Identifier">VipsInterpretation</span></a> <span class="Other">=</span> <span class="Keyword">enum</span>
   <span class="Identifier">VIPS_INTERPRETATION_ERROR</span> <span class="Other">=</span> <span class="DecNumber">-1</span><span class="Other">,</span> <span class="Identifier">VIPS_INTERPRETATION_MULTIBAND</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">,</span>
   <span class="Identifier">VIPS_INTERPRETATION_B_W</span> <span class="Other">=</span> <span class="DecNumber">1</span><span class="Other">,</span> <span class="Identifier">VIPS_INTERPRETATION_HISTOGRAM</span> <span class="Other">=</span> <span class="DecNumber">10</span><span class="Other">,</span>
   <span class="Identifier">VIPS_INTERPRETATION_XYZ</span> <span class="Other">=</span> <span class="DecNumber">12</span><span class="Other">,</span> <span class="Identifier">VIPS_INTERPRETATION_LAB</span> <span class="Other">=</span> <span class="DecNumber">13</span><span class="Other">,</span>
@@ -496,7 +499,7 @@
   </dd>
 </div>
 <div id="VipsProgress">
-  <dt><pre><a href="image.html#VipsProgress"><span class="Identifier">VipsProgress</span></a> <span class="Other">=</span> <span class="Keyword">object</span></pre></dt>
+  <dt><pre><a href="#VipsProgress"><span class="Identifier">VipsProgress</span></a> <span class="Other">=</span> <span class="Keyword">object</span></pre></dt>
   <dd>
     
     
@@ -504,7 +507,7 @@
   </dd>
 </div>
 <div id="VipsRect">
-  <dt><pre><a href="image.html#VipsRect"><span class="Identifier">VipsRect</span></a> <span class="Other">=</span> <span class="Keyword">object</span></pre></dt>
+  <dt><pre><a href="#VipsRect"><span class="Identifier">VipsRect</span></a> <span class="Other">=</span> <span class="Keyword">object</span></pre></dt>
   <dd>
     
     
@@ -512,7 +515,7 @@
   </dd>
 </div>
 <div id="VipsStartFn">
-  <dt><pre><a href="image.html#VipsStartFn"><span class="Identifier">VipsStartFn</span></a> <span class="Other">=</span> <span class="Keyword">proc</span> <span class="Other">(</span><span class="Identifier">outImg</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span> <span class="Identifier">a</span><span class="Other">:</span> <span class="Identifier">pointer</span><span class="Other">;</span> <span class="Identifier">b</span><span class="Other">:</span> <span class="Identifier">pointer</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">pointer</span> {.
+  <dt><pre><a href="#VipsStartFn"><span class="Identifier">VipsStartFn</span></a> <span class="Other">=</span> <span class="Keyword">proc</span> <span class="Other">(</span><span class="Identifier">outImg</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span> <span class="Identifier">a</span><span class="Other">:</span> <span class="Identifier">pointer</span><span class="Other">;</span> <span class="Identifier">b</span><span class="Other">:</span> <span class="Identifier">pointer</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">pointer</span> {.
     <span class="Identifier">cdecl</span>.}</pre></dt>
   <dd>
     
@@ -521,7 +524,7 @@
   </dd>
 </div>
 <div id="VipsStopFn">
-  <dt><pre><a href="image.html#VipsStopFn"><span class="Identifier">VipsStopFn</span></a> <span class="Other">=</span> <span class="Keyword">proc</span> <span class="Other">(</span><span class="Identifier">seq</span><span class="Other">:</span> <span class="Identifier">pointer</span><span class="Other">;</span> <span class="Identifier">a</span><span class="Other">:</span> <span class="Identifier">pointer</span><span class="Other">;</span> <span class="Identifier">b</span><span class="Other">:</span> <span class="Identifier">pointer</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.<span class="Identifier">cdecl</span>.}</pre></dt>
+  <dt><pre><a href="#VipsStopFn"><span class="Identifier">VipsStopFn</span></a> <span class="Other">=</span> <span class="Keyword">proc</span> <span class="Other">(</span><span class="Identifier">seq</span><span class="Other">:</span> <span class="Identifier">pointer</span><span class="Other">;</span> <span class="Identifier">a</span><span class="Other">:</span> <span class="Identifier">pointer</span><span class="Other">;</span> <span class="Identifier">b</span><span class="Other">:</span> <span class="Identifier">pointer</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.<span class="Identifier">cdecl</span>.}</pre></dt>
   <dd>
     
     
@@ -584,7 +587,7 @@
 </div>
 <div id="vips_array_image_new_from_string-procs-all">
   <div id="vips_array_image_new_from_string,cstring,VipsAccess">
-  <dt><pre><span class="Keyword">proc</span> <a href="#vips_array_image_new_from_string%2Ccstring%2CVipsAccess"><span class="Identifier">vips_array_image_new_from_string</span></a><span class="Other">(</span><span class="Identifier">str</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">flags</span><span class="Other">:</span> <a href="image.html#VipsAccess"><span class="Identifier">VipsAccess</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="types.html#VipsArrayImage"><span class="Identifier">VipsArrayImage</span></a> {.
+  <dt><pre><span class="Keyword">proc</span> <a href="#vips_array_image_new_from_string%2Ccstring%2CVipsAccess"><span class="Identifier">vips_array_image_new_from_string</span></a><span class="Other">(</span><span class="Identifier">str</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">;</span> <span class="Identifier">flags</span><span class="Other">:</span> <a href="#VipsAccess"><span class="Identifier">VipsAccess</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="types.html#VipsArrayImage"><span class="Identifier">VipsArrayImage</span></a> {.
     <span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span> <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">&quot;vips/vips.h&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -608,7 +611,7 @@
 </div>
 <div id="vips_band_format_is8bit-procs-all">
   <div id="vips_band_format_is8bit,VipsBandFormat">
-  <dt><pre><span class="Keyword">proc</span> <a href="#vips_band_format_is8bit%2CVipsBandFormat"><span class="Identifier">vips_band_format_is8bit</span></a><span class="Other">(</span><span class="Identifier">format</span><span class="Other">:</span> <a href="image.html#VipsBandFormat"><span class="Identifier">VipsBandFormat</span></a><span class="Other">)</span><span class="Other">:</span> <a href="glib/glib.html#gboolean"><span class="Identifier">gboolean</span></a> {.<span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span>
+  <dt><pre><span class="Keyword">proc</span> <a href="#vips_band_format_is8bit%2CVipsBandFormat"><span class="Identifier">vips_band_format_is8bit</span></a><span class="Other">(</span><span class="Identifier">format</span><span class="Other">:</span> <a href="#VipsBandFormat"><span class="Identifier">VipsBandFormat</span></a><span class="Other">)</span><span class="Other">:</span> <a href="glib/glib.html#gboolean"><span class="Identifier">gboolean</span></a> {.<span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span>
     <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">&quot;vips/vips.h&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -620,7 +623,7 @@
 </div>
 <div id="vips_band_format_iscomplex-procs-all">
   <div id="vips_band_format_iscomplex,VipsBandFormat">
-  <dt><pre><span class="Keyword">proc</span> <a href="#vips_band_format_iscomplex%2CVipsBandFormat"><span class="Identifier">vips_band_format_iscomplex</span></a><span class="Other">(</span><span class="Identifier">format</span><span class="Other">:</span> <a href="image.html#VipsBandFormat"><span class="Identifier">VipsBandFormat</span></a><span class="Other">)</span><span class="Other">:</span> <a href="glib/glib.html#gboolean"><span class="Identifier">gboolean</span></a> {.<span class="Identifier">cdecl</span><span class="Other">,</span>
+  <dt><pre><span class="Keyword">proc</span> <a href="#vips_band_format_iscomplex%2CVipsBandFormat"><span class="Identifier">vips_band_format_iscomplex</span></a><span class="Other">(</span><span class="Identifier">format</span><span class="Other">:</span> <a href="#VipsBandFormat"><span class="Identifier">VipsBandFormat</span></a><span class="Other">)</span><span class="Other">:</span> <a href="glib/glib.html#gboolean"><span class="Identifier">gboolean</span></a> {.<span class="Identifier">cdecl</span><span class="Other">,</span>
     <span class="Identifier">importc</span><span class="Other">,</span> <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">&quot;vips/vips.h&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -632,7 +635,7 @@
 </div>
 <div id="vips_band_format_isfloat-procs-all">
   <div id="vips_band_format_isfloat,VipsBandFormat">
-  <dt><pre><span class="Keyword">proc</span> <a href="#vips_band_format_isfloat%2CVipsBandFormat"><span class="Identifier">vips_band_format_isfloat</span></a><span class="Other">(</span><span class="Identifier">format</span><span class="Other">:</span> <a href="image.html#VipsBandFormat"><span class="Identifier">VipsBandFormat</span></a><span class="Other">)</span><span class="Other">:</span> <a href="glib/glib.html#gboolean"><span class="Identifier">gboolean</span></a> {.<span class="Identifier">cdecl</span><span class="Other">,</span>
+  <dt><pre><span class="Keyword">proc</span> <a href="#vips_band_format_isfloat%2CVipsBandFormat"><span class="Identifier">vips_band_format_isfloat</span></a><span class="Other">(</span><span class="Identifier">format</span><span class="Other">:</span> <a href="#VipsBandFormat"><span class="Identifier">VipsBandFormat</span></a><span class="Other">)</span><span class="Other">:</span> <a href="glib/glib.html#gboolean"><span class="Identifier">gboolean</span></a> {.<span class="Identifier">cdecl</span><span class="Other">,</span>
     <span class="Identifier">importc</span><span class="Other">,</span> <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">&quot;vips/vips.h&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -644,7 +647,7 @@
 </div>
 <div id="vips_band_format_isint-procs-all">
   <div id="vips_band_format_isint,VipsBandFormat">
-  <dt><pre><span class="Keyword">proc</span> <a href="#vips_band_format_isint%2CVipsBandFormat"><span class="Identifier">vips_band_format_isint</span></a><span class="Other">(</span><span class="Identifier">format</span><span class="Other">:</span> <a href="image.html#VipsBandFormat"><span class="Identifier">VipsBandFormat</span></a><span class="Other">)</span><span class="Other">:</span> <a href="glib/glib.html#gboolean"><span class="Identifier">gboolean</span></a> {.<span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span>
+  <dt><pre><span class="Keyword">proc</span> <a href="#vips_band_format_isint%2CVipsBandFormat"><span class="Identifier">vips_band_format_isint</span></a><span class="Other">(</span><span class="Identifier">format</span><span class="Other">:</span> <a href="#VipsBandFormat"><span class="Identifier">VipsBandFormat</span></a><span class="Other">)</span><span class="Other">:</span> <a href="glib/glib.html#gboolean"><span class="Identifier">gboolean</span></a> {.<span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span>
     <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">&quot;vips/vips.h&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -656,7 +659,7 @@
 </div>
 <div id="vips_band_format_isuint-procs-all">
   <div id="vips_band_format_isuint,VipsBandFormat">
-  <dt><pre><span class="Keyword">proc</span> <a href="#vips_band_format_isuint%2CVipsBandFormat"><span class="Identifier">vips_band_format_isuint</span></a><span class="Other">(</span><span class="Identifier">format</span><span class="Other">:</span> <a href="image.html#VipsBandFormat"><span class="Identifier">VipsBandFormat</span></a><span class="Other">)</span><span class="Other">:</span> <a href="glib/glib.html#gboolean"><span class="Identifier">gboolean</span></a> {.<span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span>
+  <dt><pre><span class="Keyword">proc</span> <a href="#vips_band_format_isuint%2CVipsBandFormat"><span class="Identifier">vips_band_format_isuint</span></a><span class="Other">(</span><span class="Identifier">format</span><span class="Other">:</span> <a href="#VipsBandFormat"><span class="Identifier">VipsBandFormat</span></a><span class="Other">)</span><span class="Other">:</span> <a href="glib/glib.html#gboolean"><span class="Identifier">gboolean</span></a> {.<span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span>
     <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">&quot;vips/vips.h&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -729,7 +732,7 @@
 <div id="vips_image_decode_predict-procs-all">
   <div id="vips_image_decode_predict,ptr.VipsImage,ptr.cint,ptr.VipsBandFormat">
   <dt><pre><span class="Keyword">proc</span> <a href="#vips_image_decode_predict%2Cptr.VipsImage%2Cptr.cint%2Cptr.VipsBandFormat"><span class="Identifier">vips_image_decode_predict</span></a><span class="Other">(</span><span class="Identifier">img</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span> <span class="Identifier">bands</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">cint</span><span class="Other">;</span>
-                               <span class="Identifier">format</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="image.html#VipsBandFormat"><span class="Identifier">VipsBandFormat</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.<span class="Identifier">cdecl</span><span class="Other">,</span>
+                               <span class="Identifier">format</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="#VipsBandFormat"><span class="Identifier">VipsBandFormat</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.<span class="Identifier">cdecl</span><span class="Other">,</span>
     <span class="Identifier">importc</span><span class="Other">,</span> <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">&quot;vips/vips.h&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -742,7 +745,7 @@
 <div id="vips_image_encode-procs-all">
   <div id="vips_image_encode,ptr.VipsImage,ptr.ptr.VipsImage,VipsCoding">
   <dt><pre><span class="Keyword">proc</span> <a href="#vips_image_encode%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2CVipsCoding"><span class="Identifier">vips_image_encode</span></a><span class="Other">(</span><span class="Identifier">img</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span> <span class="Identifier">outImg</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span>
-                       <span class="Identifier">coding</span><span class="Other">:</span> <a href="image.html#VipsCoding"><span class="Identifier">VipsCoding</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.<span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span>
+                       <span class="Identifier">coding</span><span class="Other">:</span> <a href="#VipsCoding"><span class="Identifier">VipsCoding</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.<span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span>
     <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">&quot;vips/vips.h&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -999,7 +1002,7 @@
   <div id="vips_image_new_from_memory,pointer,csize_t,cint,cint,cint,VipsBandFormat">
   <dt><pre><span class="Keyword">proc</span> <a href="#vips_image_new_from_memory%2Cpointer%2Ccsize_t%2Ccint%2Ccint%2Ccint%2CVipsBandFormat"><span class="Identifier">vips_image_new_from_memory</span></a><span class="Other">(</span><span class="Identifier">data</span><span class="Other">:</span> <span class="Identifier">pointer</span><span class="Other">;</span> <span class="Identifier">size</span><span class="Other">:</span> <span class="Identifier">csize_t</span><span class="Other">;</span>
                                 <span class="Identifier">width</span><span class="Other">,</span> <span class="Identifier">height</span><span class="Other">,</span> <span class="Identifier">bands</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span>
-                                <span class="Identifier">format</span><span class="Other">:</span> <a href="image.html#VipsBandFormat"><span class="Identifier">VipsBandFormat</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a> {.<span class="Identifier">cdecl</span><span class="Other">,</span>
+                                <span class="Identifier">format</span><span class="Other">:</span> <a href="#VipsBandFormat"><span class="Identifier">VipsBandFormat</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a> {.<span class="Identifier">cdecl</span><span class="Other">,</span>
     <span class="Identifier">importc</span><span class="Other">,</span> <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">&quot;vips/vips.h&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -1013,7 +1016,7 @@
   <div id="vips_image_new_from_memory_copy,pointer,csize_t,cint,cint,cint,VipsBandFormat">
   <dt><pre><span class="Keyword">proc</span> <a href="#vips_image_new_from_memory_copy%2Cpointer%2Ccsize_t%2Ccint%2Ccint%2Ccint%2CVipsBandFormat"><span class="Identifier">vips_image_new_from_memory_copy</span></a><span class="Other">(</span><span class="Identifier">data</span><span class="Other">:</span> <span class="Identifier">pointer</span><span class="Other">;</span> <span class="Identifier">size</span><span class="Other">:</span> <span class="Identifier">csize_t</span><span class="Other">;</span>
                                      <span class="Identifier">width</span><span class="Other">,</span> <span class="Identifier">height</span><span class="Other">,</span> <span class="Identifier">bands</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span>
-                                     <span class="Identifier">format</span><span class="Other">:</span> <a href="image.html#VipsBandFormat"><span class="Identifier">VipsBandFormat</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a> {.
+                                     <span class="Identifier">format</span><span class="Other">:</span> <a href="#VipsBandFormat"><span class="Identifier">VipsBandFormat</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a> {.
     <span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span> <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">&quot;vips/vips.h&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -1283,7 +1286,7 @@
 <div id="vips_reorder_prepare_many-procs-all">
   <div id="vips_reorder_prepare_many,ptr.VipsImage,ptr.ptr.VipsRegion,ptr.VipsRect">
   <dt><pre><span class="Keyword">proc</span> <a href="#vips_reorder_prepare_many%2Cptr.VipsImage%2Cptr.ptr.VipsRegion%2Cptr.VipsRect"><span class="Identifier">vips_reorder_prepare_many</span></a><span class="Other">(</span><span class="Identifier">image</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span>
-                               <span class="Identifier">regions</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsRegion"><span class="Identifier">VipsRegion</span></a><span class="Other">;</span> <span class="Identifier">r</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="image.html#VipsRect"><span class="Identifier">VipsRect</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.
+                               <span class="Identifier">regions</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsRegion"><span class="Identifier">VipsRegion</span></a><span class="Other">;</span> <span class="Identifier">r</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="#VipsRect"><span class="Identifier">VipsRect</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.
     <span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span> <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">&quot;vips/vips.h&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -1338,7 +1341,7 @@
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2025-09-22 16:43:04 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2026-07-25 07:22:30 UTC</small>
       </div>
     </div>
   </div>

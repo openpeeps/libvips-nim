@@ -16,13 +16,16 @@
 <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH4QQQEwksSS9ZWwAAAk1JREFUWMPtll2ITVEUx39nn/O7Y5qR8f05wtCUUr6ZIS++8pEnkZInPImneaCQ5METNdOkeFBKUhMPRIkHKfEuUZSUlGlKPN2TrgfncpvmnntnmlEyq1Z7t89/rf9a6+y99oZxGZf/XeIq61EdtgKXgdXA0xrYAvBjOIF1AI9zvjcC74BSpndrJPkBWDScTF8Aa4E3wDlgHbASaANmVqlcCnwHvgDvgVfAJ+AikAAvgfVZwLnSVZHZaOuKoQi3ZOMi4NkYkpe1p4J7A8BpYAD49hfIy/oqG0+hLomiKP2L5L+1ubn5115S+3OAn4EnwBlgMzCjyt6ZAnQCJ4A7wOs88iRJHvw50HoujuPBoCKwHWiosy8MdfZnAdcHk8dxXFJ3VQbQlCTJvRBCGdRbD4M6uc5glpY3eAihpN5S5w12diSEcCCEcKUO4ljdr15T76ur1FDDLIQQ3qv71EdDOe3Kxj3leRXyk+pxdWnFWod6Wt2bY3de3aSuUHcPBVimHs7mK9WrmeOF6lR1o9qnzskh2ar2qm1qizpfXaPeVGdlmGN5pb09qMxz1Xb1kLqgzn1RyH7JUXW52lr5e/Kqi9qpto7V1atuUzfnARrV7jEib1T76gG2qxdGmXyiekkt1GswPTtek0aBfJp6YySGBfWg2tPQ0FAYgf1stUfdmdcjarbYJEniKIq6gY/Aw+zWHAC+p2labGpqiorFYgGYCEzN7oQdQClN07O1/EfDyGgC0ALMBdYAi4FyK+4H3gLPsxfR1zRNi+NP7nH5J+QntnXe5B5mpfQAAAAASUVORK5CYII=">
 
 <!-- CSS -->
-<link rel="stylesheet" type="text/css" href="../../nimdoc.out.css?v=2.2.4">
+<link rel="stylesheet" type="text/css" href="../../nimdoc.out.css?v=2.2.10">
 
 <!-- JS -->
-<script type="text/javascript" src="../../dochack.js?v=2.2.4"></script>
+<script type="text/javascript" src="../../dochack.js?v=2.2.10"></script>
 </head>
 <body>
   <div class="document" id="documentId">
+    <input type="checkbox" id="nav-toggle" hidden>
+    <label for="nav-toggle" id="nav-burger">&#9776;</label>
+    <label for="nav-toggle" id="nav-overlay"></label>
     <div class="container">
       <h1 class="title">libvips/bindings/colour</h1>
       <div class="row">
@@ -376,7 +379,7 @@
   <h1><a class="toc-backref" href="#7">Types</a></h1>
   <dl class="item">
     <div id="VipsIntent">
-  <dt><pre><a href="colour.html#VipsIntent"><span class="Identifier">VipsIntent</span></a> {.<span class="Identifier">size</span><span class="Other">:</span> <span class="DecNumber">4</span>.} <span class="Other">=</span> <span class="Keyword">enum</span>
+  <dt><pre><a href="#VipsIntent"><span class="Identifier">VipsIntent</span></a> {.<span class="Identifier">size</span><span class="Other">:</span> <span class="DecNumber">4</span>.} <span class="Other">=</span> <span class="Keyword">enum</span>
   <span class="Identifier">VIPS_INTENT_PERCEPTUAL</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="Identifier">VIPS_INTENT_RELATIVE</span><span class="Other">,</span> <span class="Identifier">VIPS_INTENT_SATURATION</span><span class="Other">,</span>
   <span class="Identifier">VIPS_INTENT_ABSOLUTE</span><span class="Other">,</span> <span class="Identifier">VIPS_INTENT_AUTO</span> <span class="Other">=</span> <span class="DecNumber">32</span><span class="Other">,</span> <span class="Identifier">VIPS_INTENT_LAST</span></pre></dt>
   <dd>
@@ -386,7 +389,7 @@
   </dd>
 </div>
 <div id="VipsPCS">
-  <dt><pre><a href="colour.html#VipsPCS"><span class="Identifier">VipsPCS</span></a> {.<span class="Identifier">size</span><span class="Other">:</span> <span class="DecNumber">4</span>.} <span class="Other">=</span> <span class="Keyword">enum</span>
+  <dt><pre><a href="#VipsPCS"><span class="Identifier">VipsPCS</span></a> {.<span class="Identifier">size</span><span class="Other">:</span> <span class="DecNumber">4</span>.} <span class="Other">=</span> <span class="Keyword">enum</span>
   <span class="Identifier">VIPS_PCS_LAB</span><span class="Other">,</span> <span class="Identifier">VIPS_PCS_XYZ</span><span class="Other">,</span> <span class="Identifier">VIPS_PCS_LAST</span></pre></dt>
   <dd>
     
@@ -401,7 +404,7 @@
   <h1><a class="toc-backref" href="#10">Consts</a></h1>
   <dl class="item">
     <div id="VIPS_A_X0">
-  <dt><pre><a href="colour.html#VIPS_A_X0"><span class="Identifier">VIPS_A_X0</span></a> <span class="Other">=</span> <span class="FloatNumber">109.8503</span></pre></dt>
+  <dt><pre><a href="#VIPS_A_X0"><span class="Identifier">VIPS_A_X0</span></a> <span class="Other">=</span> <span class="FloatNumber">109.8503</span></pre></dt>
   <dd>
     
     
@@ -409,7 +412,7 @@
   </dd>
 </div>
 <div id="VIPS_A_Y0">
-  <dt><pre><a href="colour.html#VIPS_A_Y0"><span class="Identifier">VIPS_A_Y0</span></a> <span class="Other">=</span> <span class="FloatNumber">100.0</span></pre></dt>
+  <dt><pre><a href="#VIPS_A_Y0"><span class="Identifier">VIPS_A_Y0</span></a> <span class="Other">=</span> <span class="FloatNumber">100.0</span></pre></dt>
   <dd>
     
     
@@ -417,7 +420,7 @@
   </dd>
 </div>
 <div id="VIPS_A_Z0">
-  <dt><pre><a href="colour.html#VIPS_A_Z0"><span class="Identifier">VIPS_A_Z0</span></a> <span class="Other">=</span> <span class="FloatNumber">35.5849</span></pre></dt>
+  <dt><pre><a href="#VIPS_A_Z0"><span class="Identifier">VIPS_A_Z0</span></a> <span class="Other">=</span> <span class="FloatNumber">35.5849</span></pre></dt>
   <dd>
     
     
@@ -425,7 +428,7 @@
   </dd>
 </div>
 <div id="VIPS_B_X0">
-  <dt><pre><a href="colour.html#VIPS_B_X0"><span class="Identifier">VIPS_B_X0</span></a> <span class="Other">=</span> <span class="FloatNumber">99.072</span></pre></dt>
+  <dt><pre><a href="#VIPS_B_X0"><span class="Identifier">VIPS_B_X0</span></a> <span class="Other">=</span> <span class="FloatNumber">99.072</span></pre></dt>
   <dd>
     
     
@@ -433,7 +436,7 @@
   </dd>
 </div>
 <div id="VIPS_B_Y0">
-  <dt><pre><a href="colour.html#VIPS_B_Y0"><span class="Identifier">VIPS_B_Y0</span></a> <span class="Other">=</span> <span class="FloatNumber">100.0</span></pre></dt>
+  <dt><pre><a href="#VIPS_B_Y0"><span class="Identifier">VIPS_B_Y0</span></a> <span class="Other">=</span> <span class="FloatNumber">100.0</span></pre></dt>
   <dd>
     
     
@@ -441,7 +444,7 @@
   </dd>
 </div>
 <div id="VIPS_B_Z0">
-  <dt><pre><a href="colour.html#VIPS_B_Z0"><span class="Identifier">VIPS_B_Z0</span></a> <span class="Other">=</span> <span class="FloatNumber">85.223</span></pre></dt>
+  <dt><pre><a href="#VIPS_B_Z0"><span class="Identifier">VIPS_B_Z0</span></a> <span class="Other">=</span> <span class="FloatNumber">85.223</span></pre></dt>
   <dd>
     
     
@@ -449,7 +452,7 @@
   </dd>
 </div>
 <div id="VIPS_C_X0">
-  <dt><pre><a href="colour.html#VIPS_C_X0"><span class="Identifier">VIPS_C_X0</span></a> <span class="Other">=</span> <span class="FloatNumber">98.07</span></pre></dt>
+  <dt><pre><a href="#VIPS_C_X0"><span class="Identifier">VIPS_C_X0</span></a> <span class="Other">=</span> <span class="FloatNumber">98.07</span></pre></dt>
   <dd>
     
     
@@ -457,7 +460,7 @@
   </dd>
 </div>
 <div id="VIPS_C_Y0">
-  <dt><pre><a href="colour.html#VIPS_C_Y0"><span class="Identifier">VIPS_C_Y0</span></a> <span class="Other">=</span> <span class="FloatNumber">100.0</span></pre></dt>
+  <dt><pre><a href="#VIPS_C_Y0"><span class="Identifier">VIPS_C_Y0</span></a> <span class="Other">=</span> <span class="FloatNumber">100.0</span></pre></dt>
   <dd>
     
     
@@ -465,7 +468,7 @@
   </dd>
 </div>
 <div id="VIPS_C_Z0">
-  <dt><pre><a href="colour.html#VIPS_C_Z0"><span class="Identifier">VIPS_C_Z0</span></a> <span class="Other">=</span> <span class="FloatNumber">118.23</span></pre></dt>
+  <dt><pre><a href="#VIPS_C_Z0"><span class="Identifier">VIPS_C_Z0</span></a> <span class="Other">=</span> <span class="FloatNumber">118.23</span></pre></dt>
   <dd>
     
     
@@ -473,7 +476,7 @@
   </dd>
 </div>
 <div id="VIPS_D50_X0">
-  <dt><pre><a href="colour.html#VIPS_D50_X0"><span class="Identifier">VIPS_D50_X0</span></a> <span class="Other">=</span> <span class="FloatNumber">96.425</span></pre></dt>
+  <dt><pre><a href="#VIPS_D50_X0"><span class="Identifier">VIPS_D50_X0</span></a> <span class="Other">=</span> <span class="FloatNumber">96.425</span></pre></dt>
   <dd>
     
     
@@ -481,7 +484,7 @@
   </dd>
 </div>
 <div id="VIPS_D50_Y0">
-  <dt><pre><a href="colour.html#VIPS_D50_Y0"><span class="Identifier">VIPS_D50_Y0</span></a> <span class="Other">=</span> <span class="FloatNumber">100.0</span></pre></dt>
+  <dt><pre><a href="#VIPS_D50_Y0"><span class="Identifier">VIPS_D50_Y0</span></a> <span class="Other">=</span> <span class="FloatNumber">100.0</span></pre></dt>
   <dd>
     
     
@@ -489,7 +492,7 @@
   </dd>
 </div>
 <div id="VIPS_D50_Z0">
-  <dt><pre><a href="colour.html#VIPS_D50_Z0"><span class="Identifier">VIPS_D50_Z0</span></a> <span class="Other">=</span> <span class="FloatNumber">82.468</span></pre></dt>
+  <dt><pre><a href="#VIPS_D50_Z0"><span class="Identifier">VIPS_D50_Z0</span></a> <span class="Other">=</span> <span class="FloatNumber">82.468</span></pre></dt>
   <dd>
     
     
@@ -497,7 +500,7 @@
   </dd>
 </div>
 <div id="VIPS_D55_X0">
-  <dt><pre><a href="colour.html#VIPS_D55_X0"><span class="Identifier">VIPS_D55_X0</span></a> <span class="Other">=</span> <span class="FloatNumber">95.6831</span></pre></dt>
+  <dt><pre><a href="#VIPS_D55_X0"><span class="Identifier">VIPS_D55_X0</span></a> <span class="Other">=</span> <span class="FloatNumber">95.6831</span></pre></dt>
   <dd>
     
     
@@ -505,7 +508,7 @@
   </dd>
 </div>
 <div id="VIPS_D55_Y0">
-  <dt><pre><a href="colour.html#VIPS_D55_Y0"><span class="Identifier">VIPS_D55_Y0</span></a> <span class="Other">=</span> <span class="FloatNumber">100.0</span></pre></dt>
+  <dt><pre><a href="#VIPS_D55_Y0"><span class="Identifier">VIPS_D55_Y0</span></a> <span class="Other">=</span> <span class="FloatNumber">100.0</span></pre></dt>
   <dd>
     
     
@@ -513,7 +516,7 @@
   </dd>
 </div>
 <div id="VIPS_D55_Z0">
-  <dt><pre><a href="colour.html#VIPS_D55_Z0"><span class="Identifier">VIPS_D55_Z0</span></a> <span class="Other">=</span> <span class="FloatNumber">92.0871</span></pre></dt>
+  <dt><pre><a href="#VIPS_D55_Z0"><span class="Identifier">VIPS_D55_Z0</span></a> <span class="Other">=</span> <span class="FloatNumber">92.0871</span></pre></dt>
   <dd>
     
     
@@ -521,7 +524,7 @@
   </dd>
 </div>
 <div id="VIPS_D65_X0">
-  <dt><pre><a href="colour.html#VIPS_D65_X0"><span class="Identifier">VIPS_D65_X0</span></a> <span class="Other">=</span> <span class="FloatNumber">95.047</span></pre></dt>
+  <dt><pre><a href="#VIPS_D65_X0"><span class="Identifier">VIPS_D65_X0</span></a> <span class="Other">=</span> <span class="FloatNumber">95.047</span></pre></dt>
   <dd>
     
     
@@ -529,7 +532,7 @@
   </dd>
 </div>
 <div id="VIPS_D65_Y0">
-  <dt><pre><a href="colour.html#VIPS_D65_Y0"><span class="Identifier">VIPS_D65_Y0</span></a> <span class="Other">=</span> <span class="FloatNumber">100.0</span></pre></dt>
+  <dt><pre><a href="#VIPS_D65_Y0"><span class="Identifier">VIPS_D65_Y0</span></a> <span class="Other">=</span> <span class="FloatNumber">100.0</span></pre></dt>
   <dd>
     
     
@@ -537,7 +540,7 @@
   </dd>
 </div>
 <div id="VIPS_D65_Z0">
-  <dt><pre><a href="colour.html#VIPS_D65_Z0"><span class="Identifier">VIPS_D65_Z0</span></a> <span class="Other">=</span> <span class="FloatNumber">108.8827</span></pre></dt>
+  <dt><pre><a href="#VIPS_D65_Z0"><span class="Identifier">VIPS_D65_Z0</span></a> <span class="Other">=</span> <span class="FloatNumber">108.8827</span></pre></dt>
   <dd>
     
     
@@ -545,7 +548,7 @@
   </dd>
 </div>
 <div id="VIPS_D75_X0">
-  <dt><pre><a href="colour.html#VIPS_D75_X0"><span class="Identifier">VIPS_D75_X0</span></a> <span class="Other">=</span> <span class="FloatNumber">94.9682</span></pre></dt>
+  <dt><pre><a href="#VIPS_D75_X0"><span class="Identifier">VIPS_D75_X0</span></a> <span class="Other">=</span> <span class="FloatNumber">94.9682</span></pre></dt>
   <dd>
     
     
@@ -553,7 +556,7 @@
   </dd>
 </div>
 <div id="VIPS_D75_Y0">
-  <dt><pre><a href="colour.html#VIPS_D75_Y0"><span class="Identifier">VIPS_D75_Y0</span></a> <span class="Other">=</span> <span class="FloatNumber">100.0</span></pre></dt>
+  <dt><pre><a href="#VIPS_D75_Y0"><span class="Identifier">VIPS_D75_Y0</span></a> <span class="Other">=</span> <span class="FloatNumber">100.0</span></pre></dt>
   <dd>
     
     
@@ -561,7 +564,7 @@
   </dd>
 </div>
 <div id="VIPS_D75_Z0">
-  <dt><pre><a href="colour.html#VIPS_D75_Z0"><span class="Identifier">VIPS_D75_Z0</span></a> <span class="Other">=</span> <span class="FloatNumber">122.571</span></pre></dt>
+  <dt><pre><a href="#VIPS_D75_Z0"><span class="Identifier">VIPS_D75_Z0</span></a> <span class="Other">=</span> <span class="FloatNumber">122.571</span></pre></dt>
   <dd>
     
     
@@ -569,7 +572,7 @@
   </dd>
 </div>
 <div id="VIPS_D93_X0">
-  <dt><pre><a href="colour.html#VIPS_D93_X0"><span class="Identifier">VIPS_D93_X0</span></a> <span class="Other">=</span> <span class="FloatNumber">89.74</span></pre></dt>
+  <dt><pre><a href="#VIPS_D93_X0"><span class="Identifier">VIPS_D93_X0</span></a> <span class="Other">=</span> <span class="FloatNumber">89.74</span></pre></dt>
   <dd>
     
     
@@ -577,7 +580,7 @@
   </dd>
 </div>
 <div id="VIPS_D93_Y0">
-  <dt><pre><a href="colour.html#VIPS_D93_Y0"><span class="Identifier">VIPS_D93_Y0</span></a> <span class="Other">=</span> <span class="FloatNumber">100.0</span></pre></dt>
+  <dt><pre><a href="#VIPS_D93_Y0"><span class="Identifier">VIPS_D93_Y0</span></a> <span class="Other">=</span> <span class="FloatNumber">100.0</span></pre></dt>
   <dd>
     
     
@@ -585,7 +588,7 @@
   </dd>
 </div>
 <div id="VIPS_D93_Z0">
-  <dt><pre><a href="colour.html#VIPS_D93_Z0"><span class="Identifier">VIPS_D93_Z0</span></a> <span class="Other">=</span> <span class="FloatNumber">130.77</span></pre></dt>
+  <dt><pre><a href="#VIPS_D93_Z0"><span class="Identifier">VIPS_D93_Z0</span></a> <span class="Other">=</span> <span class="FloatNumber">130.77</span></pre></dt>
   <dd>
     
     
@@ -593,7 +596,7 @@
   </dd>
 </div>
 <div id="VIPS_D3250_X0">
-  <dt><pre><a href="colour.html#VIPS_D3250_X0"><span class="Identifier">VIPS_D3250_X0</span></a> <span class="Other">=</span> <span class="FloatNumber">105.659</span></pre></dt>
+  <dt><pre><a href="#VIPS_D3250_X0"><span class="Identifier">VIPS_D3250_X0</span></a> <span class="Other">=</span> <span class="FloatNumber">105.659</span></pre></dt>
   <dd>
     
     
@@ -601,7 +604,7 @@
   </dd>
 </div>
 <div id="VIPS_D3250_Y0">
-  <dt><pre><a href="colour.html#VIPS_D3250_Y0"><span class="Identifier">VIPS_D3250_Y0</span></a> <span class="Other">=</span> <span class="FloatNumber">100.0</span></pre></dt>
+  <dt><pre><a href="#VIPS_D3250_Y0"><span class="Identifier">VIPS_D3250_Y0</span></a> <span class="Other">=</span> <span class="FloatNumber">100.0</span></pre></dt>
   <dd>
     
     
@@ -609,7 +612,7 @@
   </dd>
 </div>
 <div id="VIPS_D3250_Z0">
-  <dt><pre><a href="colour.html#VIPS_D3250_Z0"><span class="Identifier">VIPS_D3250_Z0</span></a> <span class="Other">=</span> <span class="FloatNumber">45.8501</span></pre></dt>
+  <dt><pre><a href="#VIPS_D3250_Z0"><span class="Identifier">VIPS_D3250_Z0</span></a> <span class="Other">=</span> <span class="FloatNumber">45.8501</span></pre></dt>
   <dd>
     
     
@@ -617,7 +620,7 @@
   </dd>
 </div>
 <div id="VIPS_E_X0">
-  <dt><pre><a href="colour.html#VIPS_E_X0"><span class="Identifier">VIPS_E_X0</span></a> <span class="Other">=</span> <span class="FloatNumber">100.0</span></pre></dt>
+  <dt><pre><a href="#VIPS_E_X0"><span class="Identifier">VIPS_E_X0</span></a> <span class="Other">=</span> <span class="FloatNumber">100.0</span></pre></dt>
   <dd>
     
     
@@ -625,7 +628,7 @@
   </dd>
 </div>
 <div id="VIPS_E_Y0">
-  <dt><pre><a href="colour.html#VIPS_E_Y0"><span class="Identifier">VIPS_E_Y0</span></a> <span class="Other">=</span> <span class="FloatNumber">100.0</span></pre></dt>
+  <dt><pre><a href="#VIPS_E_Y0"><span class="Identifier">VIPS_E_Y0</span></a> <span class="Other">=</span> <span class="FloatNumber">100.0</span></pre></dt>
   <dd>
     
     
@@ -633,7 +636,7 @@
   </dd>
 </div>
 <div id="VIPS_E_Z0">
-  <dt><pre><a href="colour.html#VIPS_E_Z0"><span class="Identifier">VIPS_E_Z0</span></a> <span class="Other">=</span> <span class="FloatNumber">100.0</span></pre></dt>
+  <dt><pre><a href="#VIPS_E_Z0"><span class="Identifier">VIPS_E_Z0</span></a> <span class="Other">=</span> <span class="FloatNumber">100.0</span></pre></dt>
   <dd>
     
     
@@ -1378,7 +1381,7 @@
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2025-09-22 16:43:04 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2026-07-25 07:22:30 UTC</small>
       </div>
     </div>
   </div>

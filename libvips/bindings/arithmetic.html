@@ -16,13 +16,16 @@
 <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH4QQQEwksSS9ZWwAAAk1JREFUWMPtll2ITVEUx39nn/O7Y5qR8f05wtCUUr6ZIS++8pEnkZInPImneaCQ5METNdOkeFBKUhMPRIkHKfEuUZSUlGlKPN2TrgfncpvmnntnmlEyq1Z7t89/rf9a6+y99oZxGZf/XeIq61EdtgKXgdXA0xrYAvBjOIF1AI9zvjcC74BSpndrJPkBWDScTF8Aa4E3wDlgHbASaANmVqlcCnwHvgDvgVfAJ+AikAAvgfVZwLnSVZHZaOuKoQi3ZOMi4NkYkpe1p4J7A8BpYAD49hfIy/oqG0+hLomiKP2L5L+1ubn5115S+3OAn4EnwBlgMzCjyt6ZAnQCJ4A7wOs88iRJHvw50HoujuPBoCKwHWiosy8MdfZnAdcHk8dxXFJ3VQbQlCTJvRBCGdRbD4M6uc5glpY3eAihpN5S5w12diSEcCCEcKUO4ljdr15T76ur1FDDLIQQ3qv71EdDOe3Kxj3leRXyk+pxdWnFWod6Wt2bY3de3aSuUHcPBVimHs7mK9WrmeOF6lR1o9qnzskh2ar2qm1qizpfXaPeVGdlmGN5pb09qMxz1Xb1kLqgzn1RyH7JUXW52lr5e/Kqi9qpto7V1atuUzfnARrV7jEib1T76gG2qxdGmXyiekkt1GswPTtek0aBfJp6YySGBfWg2tPQ0FAYgf1stUfdmdcjarbYJEniKIq6gY/Aw+zWHAC+p2labGpqiorFYgGYCEzN7oQdQClN07O1/EfDyGgC0ALMBdYAi4FyK+4H3gLPsxfR1zRNi+NP7nH5J+QntnXe5B5mpfQAAAAASUVORK5CYII=">
 
 <!-- CSS -->
-<link rel="stylesheet" type="text/css" href="../../nimdoc.out.css?v=2.2.4">
+<link rel="stylesheet" type="text/css" href="../../nimdoc.out.css?v=2.2.10">
 
 <!-- JS -->
-<script type="text/javascript" src="../../dochack.js?v=2.2.4"></script>
+<script type="text/javascript" src="../../dochack.js?v=2.2.10"></script>
 </head>
 <body>
   <div class="document" id="documentId">
+    <input type="checkbox" id="nav-toggle" hidden>
+    <label for="nav-toggle" id="nav-burger">&#9776;</label>
+    <label for="nav-toggle" id="nav-overlay"></label>
     <div class="container">
       <h1 class="title">libvips/bindings/arithmetic</h1>
       <div class="row">
@@ -611,7 +614,7 @@
   <h1><a class="toc-backref" href="#7">Types</a></h1>
   <dl class="item">
     <div id="VipsOperationBoolean">
-  <dt><pre><a href="arithmetic.html#VipsOperationBoolean"><span class="Identifier">VipsOperationBoolean</span></a> <span class="Other">=</span> <span class="Keyword">enum</span>
+  <dt><pre><a href="#VipsOperationBoolean"><span class="Identifier">VipsOperationBoolean</span></a> <span class="Other">=</span> <span class="Keyword">enum</span>
   <span class="Identifier">VIPS_OPERATION_BOOLEAN_AND</span><span class="Other">,</span> <span class="Identifier">VIPS_OPERATION_BOOLEAN_OR</span><span class="Other">,</span>
   <span class="Identifier">VIPS_OPERATION_BOOLEAN_EOR</span><span class="Other">,</span> <span class="Identifier">VIPS_OPERATION_BOOLEAN_LSHIFT</span><span class="Other">,</span>
   <span class="Identifier">VIPS_OPERATION_BOOLEAN_RSHIFT</span><span class="Other">,</span> <span class="Identifier">VIPS_OPERATION_BOOLEAN_LAST</span></pre></dt>
@@ -622,7 +625,7 @@
   </dd>
 </div>
 <div id="VipsOperationComplex">
-  <dt><pre><a href="arithmetic.html#VipsOperationComplex"><span class="Identifier">VipsOperationComplex</span></a> <span class="Other">=</span> <span class="Keyword">enum</span>
+  <dt><pre><a href="#VipsOperationComplex"><span class="Identifier">VipsOperationComplex</span></a> <span class="Other">=</span> <span class="Keyword">enum</span>
   <span class="Identifier">VIPS_OPERATION_COMPLEX_POLAR</span><span class="Other">,</span> <span class="Identifier">VIPS_OPERATION_COMPLEX_RECT</span><span class="Other">,</span>
   <span class="Identifier">VIPS_OPERATION_COMPLEX_CONJ</span><span class="Other">,</span> <span class="Identifier">VIPS_OPERATION_COMPLEX_LAST</span></pre></dt>
   <dd>
@@ -632,7 +635,7 @@
   </dd>
 </div>
 <div id="VipsOperationComplex2">
-  <dt><pre><a href="arithmetic.html#VipsOperationComplex2"><span class="Identifier">VipsOperationComplex2</span></a> <span class="Other">=</span> <span class="Keyword">enum</span>
+  <dt><pre><a href="#VipsOperationComplex2"><span class="Identifier">VipsOperationComplex2</span></a> <span class="Other">=</span> <span class="Keyword">enum</span>
   <span class="Identifier">VIPS_OPERATION_COMPLEX2_CROSS_PHASE</span><span class="Other">,</span> <span class="Identifier">VIPS_OPERATION_COMPLEX2_LAST</span></pre></dt>
   <dd>
     
@@ -641,7 +644,7 @@
   </dd>
 </div>
 <div id="VipsOperationComplexget">
-  <dt><pre><a href="arithmetic.html#VipsOperationComplexget"><span class="Identifier">VipsOperationComplexget</span></a> <span class="Other">=</span> <span class="Keyword">enum</span>
+  <dt><pre><a href="#VipsOperationComplexget"><span class="Identifier">VipsOperationComplexget</span></a> <span class="Other">=</span> <span class="Keyword">enum</span>
   <span class="Identifier">VIPS_OPERATION_COMPLEXGET_REAL</span><span class="Other">,</span> <span class="Identifier">VIPS_OPERATION_COMPLEXGET_IMAG</span><span class="Other">,</span>
   <span class="Identifier">VIPS_OPERATION_COMPLEXGET_LAST</span></pre></dt>
   <dd>
@@ -651,7 +654,7 @@
   </dd>
 </div>
 <div id="VipsOperationMath">
-  <dt><pre><a href="arithmetic.html#VipsOperationMath"><span class="Identifier">VipsOperationMath</span></a> <span class="Other">=</span> <span class="Keyword">enum</span>
+  <dt><pre><a href="#VipsOperationMath"><span class="Identifier">VipsOperationMath</span></a> <span class="Other">=</span> <span class="Keyword">enum</span>
   <span class="Identifier">VIPS_OPERATION_MATH_SIN</span><span class="Other">,</span> <span class="Identifier">VIPS_OPERATION_MATH_COS</span><span class="Other">,</span> <span class="Identifier">VIPS_OPERATION_MATH_TAN</span><span class="Other">,</span>
   <span class="Identifier">VIPS_OPERATION_MATH_ASIN</span><span class="Other">,</span> <span class="Identifier">VIPS_OPERATION_MATH_ACOS</span><span class="Other">,</span> <span class="Identifier">VIPS_OPERATION_MATH_ATAN</span><span class="Other">,</span>
   <span class="Identifier">VIPS_OPERATION_MATH_LOG</span><span class="Other">,</span> <span class="Identifier">VIPS_OPERATION_MATH_LOG10</span><span class="Other">,</span> <span class="Identifier">VIPS_OPERATION_MATH_EXP</span><span class="Other">,</span>
@@ -665,7 +668,7 @@
   </dd>
 </div>
 <div id="VipsOperationMath2">
-  <dt><pre><a href="arithmetic.html#VipsOperationMath2"><span class="Identifier">VipsOperationMath2</span></a> <span class="Other">=</span> <span class="Keyword">enum</span>
+  <dt><pre><a href="#VipsOperationMath2"><span class="Identifier">VipsOperationMath2</span></a> <span class="Other">=</span> <span class="Keyword">enum</span>
   <span class="Identifier">VIPS_OPERATION_MATH2_POW</span><span class="Other">,</span> <span class="Identifier">VIPS_OPERATION_MATH2_WOP</span><span class="Other">,</span>
   <span class="Identifier">VIPS_OPERATION_MATH2_ATAN2</span><span class="Other">,</span> <span class="Identifier">VIPS_OPERATION_MATH2_LAST</span></pre></dt>
   <dd>
@@ -675,7 +678,7 @@
   </dd>
 </div>
 <div id="VipsOperationRelational">
-  <dt><pre><a href="arithmetic.html#VipsOperationRelational"><span class="Identifier">VipsOperationRelational</span></a> <span class="Other">=</span> <span class="Keyword">enum</span>
+  <dt><pre><a href="#VipsOperationRelational"><span class="Identifier">VipsOperationRelational</span></a> <span class="Other">=</span> <span class="Keyword">enum</span>
   <span class="Identifier">VIPS_OPERATION_RELATIONAL_EQUAL</span><span class="Other">,</span> <span class="Identifier">VIPS_OPERATION_RELATIONAL_NOTEQ</span><span class="Other">,</span>
   <span class="Identifier">VIPS_OPERATION_RELATIONAL_LESS</span><span class="Other">,</span> <span class="Identifier">VIPS_OPERATION_RELATIONAL_LESSEQ</span><span class="Other">,</span>
   <span class="Identifier">VIPS_OPERATION_RELATIONAL_MORE</span><span class="Other">,</span> <span class="Identifier">VIPS_OPERATION_RELATIONAL_MOREEQ</span><span class="Other">,</span>
@@ -687,7 +690,7 @@
   </dd>
 </div>
 <div id="VipsOperationRound">
-  <dt><pre><a href="arithmetic.html#VipsOperationRound"><span class="Identifier">VipsOperationRound</span></a> <span class="Other">=</span> <span class="Keyword">enum</span>
+  <dt><pre><a href="#VipsOperationRound"><span class="Identifier">VipsOperationRound</span></a> <span class="Other">=</span> <span class="Keyword">enum</span>
   <span class="Identifier">VIPS_OPERATION_ROUND_RINT</span><span class="Other">,</span> <span class="Identifier">VIPS_OPERATION_ROUND_CEIL</span><span class="Other">,</span>
   <span class="Identifier">VIPS_OPERATION_ROUND_FLOOR</span><span class="Other">,</span> <span class="Identifier">VIPS_OPERATION_ROUND_LAST</span></pre></dt>
   <dd>
@@ -876,7 +879,7 @@
 <div id="vips_boolean-procs-all">
   <div id="vips_boolean,ptr.VipsImage,ptr.VipsImage,ptr.ptr.VipsImage,VipsOperationBoolean">
   <dt><pre><span class="Keyword">proc</span> <a href="#vips_boolean%2Cptr.VipsImage%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2CVipsOperationBoolean"><span class="Identifier">vips_boolean</span></a><span class="Other">(</span><span class="Identifier">left</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span> <span class="Identifier">right</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span>
-                  <span class="Identifier">res</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span> <span class="Identifier">boolean</span><span class="Other">:</span> <a href="arithmetic.html#VipsOperationBoolean"><span class="Identifier">VipsOperationBoolean</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.
+                  <span class="Identifier">res</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span> <span class="Identifier">boolean</span><span class="Other">:</span> <a href="#VipsOperationBoolean"><span class="Identifier">VipsOperationBoolean</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -889,7 +892,7 @@
 <div id="vips_boolean_const1-procs-all">
   <div id="vips_boolean_const1,ptr.VipsImage,ptr.ptr.VipsImage,VipsOperationBoolean,cdouble">
   <dt><pre><span class="Keyword">proc</span> <a href="#vips_boolean_const1%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2CVipsOperationBoolean%2Ccdouble"><span class="Identifier">vips_boolean_const1</span></a><span class="Other">(</span><span class="Identifier">input</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span> <span class="Identifier">res</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span>
-                         <span class="Identifier">boolean</span><span class="Other">:</span> <a href="arithmetic.html#VipsOperationBoolean"><span class="Identifier">VipsOperationBoolean</span></a><span class="Other">;</span> <span class="Identifier">c</span><span class="Other">:</span> <span class="Identifier">cdouble</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.
+                         <span class="Identifier">boolean</span><span class="Other">:</span> <a href="#VipsOperationBoolean"><span class="Identifier">VipsOperationBoolean</span></a><span class="Other">;</span> <span class="Identifier">c</span><span class="Other">:</span> <span class="Identifier">cdouble</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -926,7 +929,7 @@
 <div id="vips_complex-procs-all">
   <div id="vips_complex,ptr.VipsImage,ptr.ptr.VipsImage,VipsOperationComplex">
   <dt><pre><span class="Keyword">proc</span> <a href="#vips_complex%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2CVipsOperationComplex"><span class="Identifier">vips_complex</span></a><span class="Other">(</span><span class="Identifier">input</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span> <span class="Identifier">res</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span>
-                  <span class="Identifier">cmplx</span><span class="Other">:</span> <a href="arithmetic.html#VipsOperationComplex"><span class="Identifier">VipsOperationComplex</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+                  <span class="Identifier">cmplx</span><span class="Other">:</span> <a href="#VipsOperationComplex"><span class="Identifier">VipsOperationComplex</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
     <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -939,7 +942,7 @@
 <div id="vips_complex2-procs-all">
   <div id="vips_complex2,ptr.VipsImage,ptr.VipsImage,ptr.ptr.VipsImage,VipsOperationComplex2">
   <dt><pre><span class="Keyword">proc</span> <a href="#vips_complex2%2Cptr.VipsImage%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2CVipsOperationComplex2"><span class="Identifier">vips_complex2</span></a><span class="Other">(</span><span class="Identifier">left</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span> <span class="Identifier">right</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span>
-                   <span class="Identifier">res</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span> <span class="Identifier">cmplx</span><span class="Other">:</span> <a href="arithmetic.html#VipsOperationComplex2"><span class="Identifier">VipsOperationComplex2</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.
+                   <span class="Identifier">res</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span> <span class="Identifier">cmplx</span><span class="Other">:</span> <a href="#VipsOperationComplex2"><span class="Identifier">VipsOperationComplex2</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -965,7 +968,7 @@
 <div id="vips_complexget-procs-all">
   <div id="vips_complexget,ptr.VipsImage,ptr.ptr.VipsImage,VipsOperationComplexget">
   <dt><pre><span class="Keyword">proc</span> <a href="#vips_complexget%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2CVipsOperationComplexget"><span class="Identifier">vips_complexget</span></a><span class="Other">(</span><span class="Identifier">input</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span> <span class="Identifier">res</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span>
-                     <span class="Identifier">get</span><span class="Other">:</span> <a href="arithmetic.html#VipsOperationComplexget"><span class="Identifier">VipsOperationComplexget</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+                     <span class="Identifier">get</span><span class="Other">:</span> <a href="#VipsOperationComplexget"><span class="Identifier">VipsOperationComplexget</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
     <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -1424,7 +1427,7 @@
 <div id="vips_math-procs-all">
   <div id="vips_math,ptr.VipsImage,ptr.ptr.VipsImage,VipsOperationMath">
   <dt><pre><span class="Keyword">proc</span> <a href="#vips_math%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2CVipsOperationMath"><span class="Identifier">vips_math</span></a><span class="Other">(</span><span class="Identifier">input</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span> <span class="Identifier">res</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span>
-               <span class="Identifier">math</span><span class="Other">:</span> <a href="arithmetic.html#VipsOperationMath"><span class="Identifier">VipsOperationMath</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+               <span class="Identifier">math</span><span class="Other">:</span> <a href="#VipsOperationMath"><span class="Identifier">VipsOperationMath</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
     <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -1437,7 +1440,7 @@
 <div id="vips_math2-procs-all">
   <div id="vips_math2,ptr.VipsImage,ptr.VipsImage,ptr.ptr.VipsImage,VipsOperationMath2">
   <dt><pre><span class="Keyword">proc</span> <a href="#vips_math2%2Cptr.VipsImage%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2CVipsOperationMath2"><span class="Identifier">vips_math2</span></a><span class="Other">(</span><span class="Identifier">left</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span> <span class="Identifier">right</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span>
-                <span class="Identifier">res</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span> <span class="Identifier">math2</span><span class="Other">:</span> <a href="arithmetic.html#VipsOperationMath2"><span class="Identifier">VipsOperationMath2</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.
+                <span class="Identifier">res</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span> <span class="Identifier">math2</span><span class="Other">:</span> <a href="#VipsOperationMath2"><span class="Identifier">VipsOperationMath2</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -1450,7 +1453,7 @@
 <div id="vips_math2_const-procs-all">
   <div id="vips_math2_const,ptr.VipsImage,ptr.ptr.VipsImage,VipsOperationMath2,ptr.cdouble,cint">
   <dt><pre><span class="Keyword">proc</span> <a href="#vips_math2_const%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2CVipsOperationMath2%2Cptr.cdouble%2Ccint"><span class="Identifier">vips_math2_const</span></a><span class="Other">(</span><span class="Identifier">input</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span> <span class="Identifier">res</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span>
-                      <span class="Identifier">math2</span><span class="Other">:</span> <a href="arithmetic.html#VipsOperationMath2"><span class="Identifier">VipsOperationMath2</span></a><span class="Other">;</span> <span class="Identifier">c</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">cdouble</span><span class="Other">;</span> <span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.
+                      <span class="Identifier">math2</span><span class="Other">:</span> <a href="#VipsOperationMath2"><span class="Identifier">VipsOperationMath2</span></a><span class="Other">;</span> <span class="Identifier">c</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">cdouble</span><span class="Other">;</span> <span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -1463,7 +1466,7 @@
 <div id="vips_math2_const1-procs-all">
   <div id="vips_math2_const1,ptr.VipsImage,ptr.ptr.VipsImage,VipsOperationMath2,cdouble">
   <dt><pre><span class="Keyword">proc</span> <a href="#vips_math2_const1%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2CVipsOperationMath2%2Ccdouble"><span class="Identifier">vips_math2_const1</span></a><span class="Other">(</span><span class="Identifier">input</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span> <span class="Identifier">res</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span>
-                       <span class="Identifier">math2</span><span class="Other">:</span> <a href="arithmetic.html#VipsOperationMath2"><span class="Identifier">VipsOperationMath2</span></a><span class="Other">;</span> <span class="Identifier">c</span><span class="Other">:</span> <span class="Identifier">cdouble</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.
+                       <span class="Identifier">math2</span><span class="Other">:</span> <a href="#VipsOperationMath2"><span class="Identifier">VipsOperationMath2</span></a><span class="Other">;</span> <span class="Identifier">c</span><span class="Other">:</span> <span class="Identifier">cdouble</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -1851,7 +1854,7 @@
 <div id="vips_round-procs-all">
   <div id="vips_round,ptr.VipsImage,ptr.ptr.VipsImage,VipsOperationRound">
   <dt><pre><span class="Keyword">proc</span> <a href="#vips_round%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2CVipsOperationRound"><span class="Identifier">vips_round</span></a><span class="Other">(</span><span class="Identifier">input</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span> <span class="Identifier">res</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span>
-                <span class="Identifier">round</span><span class="Other">:</span> <a href="arithmetic.html#VipsOperationRound"><span class="Identifier">VipsOperationRound</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+                <span class="Identifier">round</span><span class="Other">:</span> <a href="#VipsOperationRound"><span class="Identifier">VipsOperationRound</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
     <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -2043,7 +2046,7 @@
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2025-09-22 16:43:04 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2026-07-25 07:22:30 UTC</small>
       </div>
     </div>
   </div>

@@ -1,0 +1,11 @@
+nimTitle	filter	libvips/api/filter.html	module libvips/api/filter		0
+nim	sharpen	libvips/api/filter.html#sharpen,Image	proc sharpen(img: Image): Image		4
+nim	blur	libvips/api/filter.html#blur,Image,float64	proc blur(img: Image; sigma: float64 = 1.0): Image		10
+nim	invert	libvips/api/filter.html#invert,Image	proc invert(img: Image): Image		16
+nim	gamma	libvips/api/filter.html#gamma,Image,float64	proc gamma(img: Image; exponent: float64 = 2.2): Image		22
+nim	sobel	libvips/api/filter.html#sobel,Image	proc sobel(img: Image): Image		28
+nim	scharr	libvips/api/filter.html#scharr,Image	proc scharr(img: Image): Image		34
+nim	prewitt	libvips/api/filter.html#prewitt,Image	proc prewitt(img: Image): Image		40
+nim	canny	libvips/api/filter.html#canny,Image	proc canny(img: Image): Image		46
+nim	absolute	libvips/api/filter.html#absolute,Image	proc absolute(img: Image): Image		52
+nim	clamp	libvips/api/filter.html#clamp,Image	proc clamp(img: Image): Image		58

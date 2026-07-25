@@ -16,13 +16,16 @@
 <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH4QQQEwksSS9ZWwAAAk1JREFUWMPtll2ITVEUx39nn/O7Y5qR8f05wtCUUr6ZIS++8pEnkZInPImneaCQ5METNdOkeFBKUhMPRIkHKfEuUZSUlGlKPN2TrgfncpvmnntnmlEyq1Z7t89/rf9a6+y99oZxGZf/XeIq61EdtgKXgdXA0xrYAvBjOIF1AI9zvjcC74BSpndrJPkBWDScTF8Aa4E3wDlgHbASaANmVqlcCnwHvgDvgVfAJ+AikAAvgfVZwLnSVZHZaOuKoQi3ZOMi4NkYkpe1p4J7A8BpYAD49hfIy/oqG0+hLomiKP2L5L+1ubn5115S+3OAn4EnwBlgMzCjyt6ZAnQCJ4A7wOs88iRJHvw50HoujuPBoCKwHWiosy8MdfZnAdcHk8dxXFJ3VQbQlCTJvRBCGdRbD4M6uc5glpY3eAihpN5S5w12diSEcCCEcKUO4ljdr15T76ur1FDDLIQQ3qv71EdDOe3Kxj3leRXyk+pxdWnFWod6Wt2bY3de3aSuUHcPBVimHs7mK9WrmeOF6lR1o9qnzskh2ar2qm1qizpfXaPeVGdlmGN5pb09qMxz1Xb1kLqgzn1RyH7JUXW52lr5e/Kqi9qpto7V1atuUzfnARrV7jEib1T76gG2qxdGmXyiekkt1GswPTtek0aBfJp6YySGBfWg2tPQ0FAYgf1stUfdmdcjarbYJEniKIq6gY/Aw+zWHAC+p2labGpqiorFYgGYCEzN7oQdQClN07O1/EfDyGgC0ALMBdYAi4FyK+4H3gLPsxfR1zRNi+NP7nH5J+QntnXe5B5mpfQAAAAASUVORK5CYII=">
 
 <!-- CSS -->
-<link rel="stylesheet" type="text/css" href="../../nimdoc.out.css?v=2.2.4">
+<link rel="stylesheet" type="text/css" href="../../nimdoc.out.css?v=2.2.10">
 
 <!-- JS -->
-<script type="text/javascript" src="../../dochack.js?v=2.2.4"></script>
+<script type="text/javascript" src="../../dochack.js?v=2.2.10"></script>
 </head>
 <body>
   <div class="document" id="documentId">
+    <input type="checkbox" id="nav-toggle" hidden>
+    <label for="nav-toggle" id="nav-burger">&#9776;</label>
+    <label for="nav-toggle" id="nav-overlay"></label>
     <div class="container">
       <h1 class="title">libvips/bindings/operation</h1>
       <div class="row">
@@ -222,7 +225,7 @@
   <h1><a class="toc-backref" href="#7">Types</a></h1>
   <dl class="item">
     <div id="VipsOperation">
-  <dt><pre><a href="operation.html#VipsOperation"><span class="Identifier">VipsOperation</span></a> <span class="Other">=</span> <span class="Keyword">object</span>
+  <dt><pre><a href="#VipsOperation"><span class="Identifier">VipsOperation</span></a> <span class="Other">=</span> <span class="Keyword">object</span>
   <span class="Identifier">parent_instance</span><span class="Operator">*</span><span class="Other">:</span> <a href="object.html#VipsObject"><span class="Identifier">VipsObject</span></a>
   <span class="Identifier">hash</span><span class="Operator">*</span><span class="Other">:</span> <a href="glib/glib.html#guint"><span class="Identifier">guint</span></a>
   <span class="Identifier">found_hash</span><span class="Operator">*</span><span class="Other">:</span> <a href="glib/glib.html#gboolean"><span class="Identifier">gboolean</span></a>
@@ -234,7 +237,7 @@
   </dd>
 </div>
 <div id="VipsOperationBuildFn">
-  <dt><pre><a href="operation.html#VipsOperationBuildFn"><span class="Identifier">VipsOperationBuildFn</span></a> <span class="Other">=</span> <span class="Keyword">proc</span> <span class="Other">(</span><span class="Identifier">object</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="object.html#VipsObject"><span class="Identifier">VipsObject</span></a><span class="Other">)</span><span class="Other">:</span> <a href="glib/glib.html#gboolean"><span class="Identifier">gboolean</span></a> {.<span class="Identifier">cdecl</span>.}</pre></dt>
+  <dt><pre><a href="#VipsOperationBuildFn"><span class="Identifier">VipsOperationBuildFn</span></a> <span class="Other">=</span> <span class="Keyword">proc</span> <span class="Other">(</span><span class="Identifier">object</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="object.html#VipsObject"><span class="Identifier">VipsObject</span></a><span class="Other">)</span><span class="Other">:</span> <a href="glib/glib.html#gboolean"><span class="Identifier">gboolean</span></a> {.<span class="Identifier">cdecl</span>.}</pre></dt>
   <dd>
     
     
@@ -242,12 +245,12 @@
   </dd>
 </div>
 <div id="VipsOperationClass">
-  <dt><pre><a href="operation.html#VipsOperationClass"><span class="Identifier">VipsOperationClass</span></a> <span class="Other">=</span> <span class="Keyword">object</span>
+  <dt><pre><a href="#VipsOperationClass"><span class="Identifier">VipsOperationClass</span></a> <span class="Other">=</span> <span class="Keyword">object</span>
   <span class="Identifier">parent_class</span><span class="Operator">*</span><span class="Other">:</span> <a href="object.html#VipsObjectClass"><span class="Identifier">VipsObjectClass</span></a>
-  <span class="Identifier">usage</span><span class="Operator">*</span><span class="Other">:</span> <span class="Keyword">proc</span> <span class="Other">(</span><span class="Identifier">cls</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="operation.html#VipsOperationClass"><span class="Identifier">VipsOperationClass</span></a><span class="Other">;</span> <span class="Identifier">buf</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="buf.html#VipsBuf"><span class="Identifier">VipsBuf</span></a><span class="Other">)</span> {.<span class="Identifier">cdecl</span>.}
-  <span class="Identifier">get_flags</span><span class="Operator">*</span><span class="Other">:</span> <span class="Keyword">proc</span> <span class="Other">(</span><span class="Identifier">operation</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="operation.html#VipsOperation"><span class="Identifier">VipsOperation</span></a><span class="Other">)</span><span class="Other">:</span> <a href="operation.html#VipsOperationFlags"><span class="Identifier">VipsOperationFlags</span></a> {.<span class="Identifier">cdecl</span>.}
-  <span class="Identifier">flags</span><span class="Operator">*</span><span class="Other">:</span> <a href="operation.html#VipsOperationFlags"><span class="Identifier">VipsOperationFlags</span></a>
-  <span class="Identifier">invalidate</span><span class="Operator">*</span><span class="Other">:</span> <span class="Keyword">proc</span> <span class="Other">(</span><span class="Identifier">operation</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="operation.html#VipsOperation"><span class="Identifier">VipsOperation</span></a><span class="Other">)</span> {.<span class="Identifier">cdecl</span>.}</pre></dt>
+  <span class="Identifier">usage</span><span class="Operator">*</span><span class="Other">:</span> <span class="Keyword">proc</span> <span class="Other">(</span><span class="Identifier">cls</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="#VipsOperationClass"><span class="Identifier">VipsOperationClass</span></a><span class="Other">;</span> <span class="Identifier">buf</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="buf.html#VipsBuf"><span class="Identifier">VipsBuf</span></a><span class="Other">)</span> {.<span class="Identifier">cdecl</span>.}
+  <span class="Identifier">get_flags</span><span class="Operator">*</span><span class="Other">:</span> <span class="Keyword">proc</span> <span class="Other">(</span><span class="Identifier">operation</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="#VipsOperation"><span class="Identifier">VipsOperation</span></a><span class="Other">)</span><span class="Other">:</span> <a href="#VipsOperationFlags"><span class="Identifier">VipsOperationFlags</span></a> {.<span class="Identifier">cdecl</span>.}
+  <span class="Identifier">flags</span><span class="Operator">*</span><span class="Other">:</span> <a href="#VipsOperationFlags"><span class="Identifier">VipsOperationFlags</span></a>
+  <span class="Identifier">invalidate</span><span class="Operator">*</span><span class="Other">:</span> <span class="Keyword">proc</span> <span class="Other">(</span><span class="Identifier">operation</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="#VipsOperation"><span class="Identifier">VipsOperation</span></a><span class="Other">)</span> {.<span class="Identifier">cdecl</span>.}</pre></dt>
   <dd>
     
     
@@ -255,7 +258,7 @@
   </dd>
 </div>
 <div id="VipsOperationFlags">
-  <dt><pre><a href="operation.html#VipsOperationFlags"><span class="Identifier">VipsOperationFlags</span></a> {.<span class="Identifier">size</span><span class="Other">:</span> <span class="DecNumber">4</span>.} <span class="Other">=</span> <span class="Keyword">enum</span>
+  <dt><pre><a href="#VipsOperationFlags"><span class="Identifier">VipsOperationFlags</span></a> {.<span class="Identifier">size</span><span class="Other">:</span> <span class="DecNumber">4</span>.} <span class="Other">=</span> <span class="Keyword">enum</span>
   <span class="Identifier">VIPS_OPERATION_NONE</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="Identifier">VIPS_OPERATION_SEQUENTIAL</span> <span class="Other">=</span> <span class="DecNumber">1</span><span class="Other">,</span>
   <span class="Identifier">VIPS_OPERATION_SEQUENTIAL_UNBUFFERED</span> <span class="Other">=</span> <span class="DecNumber">2</span><span class="Other">,</span> <span class="Identifier">VIPS_OPERATION_NOCACHE</span> <span class="Other">=</span> <span class="DecNumber">4</span><span class="Other">,</span>
   <span class="Identifier">VIPS_OPERATION_DEPRECATED</span> <span class="Other">=</span> <span class="DecNumber">8</span><span class="Other">,</span> <span class="Identifier">VIPS_OPERATION_UNTRUSTED</span> <span class="Other">=</span> <span class="DecNumber">16</span><span class="Other">,</span>
@@ -334,7 +337,7 @@
 </div>
 <div id="vips_cache_operation_build-procs-all">
   <div id="vips_cache_operation_build,ptr.VipsOperation">
-  <dt><pre><span class="Keyword">proc</span> <a href="#vips_cache_operation_build%2Cptr.VipsOperation"><span class="Identifier">vips_cache_operation_build</span></a><span class="Other">(</span><span class="Identifier">operation</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="operation.html#VipsOperation"><span class="Identifier">VipsOperation</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="operation.html#VipsOperation"><span class="Identifier">VipsOperation</span></a> {.
+  <dt><pre><span class="Keyword">proc</span> <a href="#vips_cache_operation_build%2Cptr.VipsOperation"><span class="Identifier">vips_cache_operation_build</span></a><span class="Other">(</span><span class="Identifier">operation</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="#VipsOperation"><span class="Identifier">VipsOperation</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="#VipsOperation"><span class="Identifier">VipsOperation</span></a> {.
     <span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span> <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">&quot;vips/vips.h&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -346,7 +349,7 @@
 </div>
 <div id="vips_cache_operation_buildp-procs-all">
   <div id="vips_cache_operation_buildp,ptr.ptr.VipsOperation">
-  <dt><pre><span class="Keyword">proc</span> <a href="#vips_cache_operation_buildp%2Cptr.ptr.VipsOperation"><span class="Identifier">vips_cache_operation_buildp</span></a><span class="Other">(</span><span class="Identifier">operation</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Keyword">ptr</span> <a href="operation.html#VipsOperation"><span class="Identifier">VipsOperation</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.
+  <dt><pre><span class="Keyword">proc</span> <a href="#vips_cache_operation_buildp%2Cptr.ptr.VipsOperation"><span class="Identifier">vips_cache_operation_buildp</span></a><span class="Other">(</span><span class="Identifier">operation</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Keyword">ptr</span> <a href="#VipsOperation"><span class="Identifier">VipsOperation</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.
     <span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span> <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">&quot;vips/vips.h&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -442,7 +445,7 @@
 </div>
 <div id="vips_call_argv-procs-all">
   <div id="vips_call_argv,ptr.VipsOperation,cint,cstringArray">
-  <dt><pre><span class="Keyword">proc</span> <a href="#vips_call_argv%2Cptr.VipsOperation%2Ccint%2CcstringArray"><span class="Identifier">vips_call_argv</span></a><span class="Other">(</span><span class="Identifier">operation</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="operation.html#VipsOperation"><span class="Identifier">VipsOperation</span></a><span class="Other">;</span> <span class="Identifier">argc</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">argv</span><span class="Other">:</span> <span class="Identifier">cstringArray</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.
+  <dt><pre><span class="Keyword">proc</span> <a href="#vips_call_argv%2Cptr.VipsOperation%2Ccint%2CcstringArray"><span class="Identifier">vips_call_argv</span></a><span class="Other">(</span><span class="Identifier">operation</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="#VipsOperation"><span class="Identifier">VipsOperation</span></a><span class="Other">;</span> <span class="Identifier">argc</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">argv</span><span class="Other">:</span> <span class="Identifier">cstringArray</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.
     <span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span> <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">&quot;vips/vips.h&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -454,7 +457,7 @@
 </div>
 <div id="vips_call_options-procs-all">
   <div id="vips_call_options,ptr.GOptionGroup,ptr.VipsOperation">
-  <dt><pre><span class="Keyword">proc</span> <a href="#vips_call_options%2Cptr.GOptionGroup%2Cptr.VipsOperation"><span class="Identifier">vips_call_options</span></a><span class="Other">(</span><span class="Identifier">group</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="glib/glib.html#GOptionGroup"><span class="Identifier">GOptionGroup</span></a><span class="Other">;</span> <span class="Identifier">operation</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="operation.html#VipsOperation"><span class="Identifier">VipsOperation</span></a><span class="Other">)</span> {.
+  <dt><pre><span class="Keyword">proc</span> <a href="#vips_call_options%2Cptr.GOptionGroup%2Cptr.VipsOperation"><span class="Identifier">vips_call_options</span></a><span class="Other">(</span><span class="Identifier">group</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="glib/glib.html#GOptionGroup"><span class="Identifier">GOptionGroup</span></a><span class="Other">;</span> <span class="Identifier">operation</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="#VipsOperation"><span class="Identifier">VipsOperation</span></a><span class="Other">)</span> {.
     <span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span> <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">&quot;vips/vips.h&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -466,7 +469,7 @@
 </div>
 <div id="vips_call_required_optional-procs-all">
   <div id="vips_call_required_optional,ptr.ptr.VipsOperation,va_list,va_list">
-  <dt><pre><span class="Keyword">proc</span> <a href="#vips_call_required_optional%2Cptr.ptr.VipsOperation%2Cva_list%2Cva_list"><span class="Identifier">vips_call_required_optional</span></a><span class="Other">(</span><span class="Identifier">operation</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Keyword">ptr</span> <a href="operation.html#VipsOperation"><span class="Identifier">VipsOperation</span></a><span class="Other">;</span>
+  <dt><pre><span class="Keyword">proc</span> <a href="#vips_call_required_optional%2Cptr.ptr.VipsOperation%2Cva_list%2Cva_list"><span class="Identifier">vips_call_required_optional</span></a><span class="Other">(</span><span class="Identifier">operation</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Keyword">ptr</span> <a href="#VipsOperation"><span class="Identifier">VipsOperation</span></a><span class="Other">;</span>
                                  <span class="Identifier">required</span><span class="Other">:</span> <a href="types.html#va_list"><span class="Identifier">va_list</span></a><span class="Other">;</span> <span class="Identifier">optional</span><span class="Other">:</span> <a href="types.html#va_list"><span class="Identifier">va_list</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.
     <span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span> <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">&quot;vips/vips.h&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
@@ -540,7 +543,7 @@
 </div>
 <div id="vips_operation_call_valist-procs-all">
   <div id="vips_operation_call_valist,ptr.VipsOperation,va_list">
-  <dt><pre><span class="Keyword">proc</span> <a href="#vips_operation_call_valist%2Cptr.VipsOperation%2Cva_list"><span class="Identifier">vips_operation_call_valist</span></a><span class="Other">(</span><span class="Identifier">operation</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="operation.html#VipsOperation"><span class="Identifier">VipsOperation</span></a><span class="Other">;</span> <span class="Identifier">ap</span><span class="Other">:</span> <a href="types.html#va_list"><span class="Identifier">va_list</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.
+  <dt><pre><span class="Keyword">proc</span> <a href="#vips_operation_call_valist%2Cptr.VipsOperation%2Cva_list"><span class="Identifier">vips_operation_call_valist</span></a><span class="Other">(</span><span class="Identifier">operation</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="#VipsOperation"><span class="Identifier">VipsOperation</span></a><span class="Other">;</span> <span class="Identifier">ap</span><span class="Other">:</span> <a href="types.html#va_list"><span class="Identifier">va_list</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.
     <span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span> <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">&quot;vips/vips.h&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -552,7 +555,7 @@
 </div>
 <div id="vips_operation_class_print_usage-procs-all">
   <div id="vips_operation_class_print_usage,ptr.VipsOperationClass">
-  <dt><pre><span class="Keyword">proc</span> <a href="#vips_operation_class_print_usage%2Cptr.VipsOperationClass"><span class="Identifier">vips_operation_class_print_usage</span></a><span class="Other">(</span><span class="Identifier">operation_class</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="operation.html#VipsOperationClass"><span class="Identifier">VipsOperationClass</span></a><span class="Other">)</span> {.
+  <dt><pre><span class="Keyword">proc</span> <a href="#vips_operation_class_print_usage%2Cptr.VipsOperationClass"><span class="Identifier">vips_operation_class_print_usage</span></a><span class="Other">(</span><span class="Identifier">operation_class</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="#VipsOperationClass"><span class="Identifier">VipsOperationClass</span></a><span class="Other">)</span> {.
     <span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span> <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">&quot;vips/vips.h&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -564,7 +567,7 @@
 </div>
 <div id="vips_operation_get_flags-procs-all">
   <div id="vips_operation_get_flags,ptr.VipsOperation">
-  <dt><pre><span class="Keyword">proc</span> <a href="#vips_operation_get_flags%2Cptr.VipsOperation"><span class="Identifier">vips_operation_get_flags</span></a><span class="Other">(</span><span class="Identifier">operation</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="operation.html#VipsOperation"><span class="Identifier">VipsOperation</span></a><span class="Other">)</span><span class="Other">:</span> <a href="operation.html#VipsOperationFlags"><span class="Identifier">VipsOperationFlags</span></a> {.
+  <dt><pre><span class="Keyword">proc</span> <a href="#vips_operation_get_flags%2Cptr.VipsOperation"><span class="Identifier">vips_operation_get_flags</span></a><span class="Other">(</span><span class="Identifier">operation</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="#VipsOperation"><span class="Identifier">VipsOperation</span></a><span class="Other">)</span><span class="Other">:</span> <a href="#VipsOperationFlags"><span class="Identifier">VipsOperationFlags</span></a> {.
     <span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span> <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">&quot;vips/vips.h&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -588,7 +591,7 @@
 </div>
 <div id="vips_operation_invalidate-procs-all">
   <div id="vips_operation_invalidate,ptr.VipsOperation">
-  <dt><pre><span class="Keyword">proc</span> <a href="#vips_operation_invalidate%2Cptr.VipsOperation"><span class="Identifier">vips_operation_invalidate</span></a><span class="Other">(</span><span class="Identifier">operation</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="operation.html#VipsOperation"><span class="Identifier">VipsOperation</span></a><span class="Other">)</span> {.<span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span>
+  <dt><pre><span class="Keyword">proc</span> <a href="#vips_operation_invalidate%2Cptr.VipsOperation"><span class="Identifier">vips_operation_invalidate</span></a><span class="Other">(</span><span class="Identifier">operation</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="#VipsOperation"><span class="Identifier">VipsOperation</span></a><span class="Other">)</span> {.<span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span>
     <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">&quot;vips/vips.h&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -600,7 +603,7 @@
 </div>
 <div id="vips_operation_new-procs-all">
   <div id="vips_operation_new,cstring">
-  <dt><pre><span class="Keyword">proc</span> <a href="#vips_operation_new%2Ccstring"><span class="Identifier">vips_operation_new</span></a><span class="Other">(</span><span class="Identifier">name</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="operation.html#VipsOperation"><span class="Identifier">VipsOperation</span></a> {.<span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span>
+  <dt><pre><span class="Keyword">proc</span> <a href="#vips_operation_new%2Ccstring"><span class="Identifier">vips_operation_new</span></a><span class="Other">(</span><span class="Identifier">name</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="#VipsOperation"><span class="Identifier">VipsOperation</span></a> {.<span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span>
     <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">&quot;vips/vips.h&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -620,7 +623,7 @@
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2025-09-22 16:43:04 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2026-07-25 07:22:30 UTC</small>
       </div>
     </div>
   </div>

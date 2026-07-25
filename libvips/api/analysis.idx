@@ -1,0 +1,8 @@
+nimTitle	analysis	libvips/api/analysis.html	module libvips/api/analysis		0
+nim	avg	libvips/api/analysis.html#avg,Image	proc avg(img: Image): float64		4
+nim	min	libvips/api/analysis.html#min,Image	proc min(img: Image): float64		10
+nim	max	libvips/api/analysis.html#max,Image	proc max(img: Image): float64		16
+nim	deviate	libvips/api/analysis.html#deviate,Image	proc deviate(img: Image): float64		22
+nim	histogram	libvips/api/analysis.html#histogram,Image	proc histogram(img: Image): Image		28
+nim	findTrim	libvips/api/analysis.html#findTrim,Image	proc findTrim(img: Image): tuple[left, top, width, height: int]		34
+nim	getPoint	libvips/api/analysis.html#getPoint,Image,int,int	proc getPoint(img: Image; x, y: int): seq[cdouble]		40

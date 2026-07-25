@@ -154,3 +154,13 @@ nim	vips_jxlsave_target	libvips/bindings/foreign.html#vips_jxlsave_target,ptr.Vi
 nim	vips_dzsave	libvips/bindings/foreign.html#vips_dzsave,ptr.VipsImage,cstring	proc vips_dzsave(input: ptr VipsImage; name: cstring): cint		324
 nim	vips_dzsave_buffer	libvips/bindings/foreign.html#vips_dzsave_buffer,ptr.VipsImage,ptr.pointer,ptr.csize_t	proc vips_dzsave_buffer(input: ptr VipsImage; buf: ptr pointer; len: ptr csize_t): cint		325
 nim	vips_dzsave_target	libvips/bindings/foreign.html#vips_dzsave_target,ptr.VipsImage,ptr.VipsTarget	proc vips_dzsave_target(input: ptr VipsImage; target: ptr VipsTarget): cint		326
+nim	vips_jpegsave_safe	libvips/bindings/foreign.html#vips_jpegsave_safe,ptr.VipsImage,cstring	proc vips_jpegsave_safe(input: ptr VipsImage; filename: cstring): cint		329
+nim	vips_jpegsave_buffer_safe	libvips/bindings/foreign.html#vips_jpegsave_buffer_safe,ptr.VipsImage,ptr.pointer,ptr.csize_t	proc vips_jpegsave_buffer_safe(input: ptr VipsImage; buf: ptr pointer;\n                          len: ptr csize_t): cint		332
+nim	vips_pngsave_safe	libvips/bindings/foreign.html#vips_pngsave_safe,ptr.VipsImage,cstring	proc vips_pngsave_safe(input: ptr VipsImage; filename: cstring): cint		335
+nim	vips_pngsave_buffer_safe	libvips/bindings/foreign.html#vips_pngsave_buffer_safe,ptr.VipsImage,ptr.pointer,ptr.csize_t	proc vips_pngsave_buffer_safe(input: ptr VipsImage; buf: ptr pointer;\n                         len: ptr csize_t): cint		338
+nim	vips_webpsave_safe	libvips/bindings/foreign.html#vips_webpsave_safe,ptr.VipsImage,cstring	proc vips_webpsave_safe(input: ptr VipsImage; filename: cstring): cint		341
+nim	vips_webpsave_buffer_safe	libvips/bindings/foreign.html#vips_webpsave_buffer_safe,ptr.VipsImage,ptr.pointer,ptr.csize_t	proc vips_webpsave_buffer_safe(input: ptr VipsImage; buf: ptr pointer;\n                          len: ptr csize_t): cint		344
+nim	vips_tiffsave_safe	libvips/bindings/foreign.html#vips_tiffsave_safe,ptr.VipsImage,cstring	proc vips_tiffsave_safe(input: ptr VipsImage; filename: cstring): cint		347
+nim	vips_heifsave_safe	libvips/bindings/foreign.html#vips_heifsave_safe,ptr.VipsImage,cstring	proc vips_heifsave_safe(input: ptr VipsImage; filename: cstring): cint		350
+nim	vips_jxlsave_safe	libvips/bindings/foreign.html#vips_jxlsave_safe,ptr.VipsImage,cstring	proc vips_jxlsave_safe(input: ptr VipsImage; filename: cstring): cint		353
+nim	vips_gifsave_safe	libvips/bindings/foreign.html#vips_gifsave_safe,ptr.VipsImage,cstring	proc vips_gifsave_safe(input: ptr VipsImage; filename: cstring): cint		356

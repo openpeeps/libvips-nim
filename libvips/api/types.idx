@@ -1,0 +1,12 @@
+nimTitle	types	libvips/api/types.html	module libvips/api/types		0
+nim	VipsError	libvips/api/types.html#VipsError	object VipsError		8
+nim	VAlignTop	libvips/api/types.html#VAlignTop	VerticalAlignment.VAlignTop		9
+nim	VAlignCenter	libvips/api/types.html#VAlignCenter	VerticalAlignment.VAlignCenter		9
+nim	VAlignBottom	libvips/api/types.html#VAlignBottom	VerticalAlignment.VAlignBottom		9
+nim	VerticalAlignment	libvips/api/types.html#VerticalAlignment	enum VerticalAlignment		9
+nim	HAlignLeft	libvips/api/types.html#HAlignLeft	HorizontalAlignment.HAlignLeft		10
+nim	HAlignCenter	libvips/api/types.html#HAlignCenter	HorizontalAlignment.HAlignCenter		10
+nim	HAlignRight	libvips/api/types.html#HAlignRight	HorizontalAlignment.HAlignRight		10
+nim	HorizontalAlignment	libvips/api/types.html#HorizontalAlignment	enum HorizontalAlignment		10
+nim	vipsErrorContext	libvips/api/types.html#vipsErrorContext,string	proc vipsErrorContext(op: string): string		12
+nim	checkVips	libvips/api/types.html#checkVips,cint,string	proc checkVips(rc: cint; op: string)		17
