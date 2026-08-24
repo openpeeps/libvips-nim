@@ -198,6 +198,9 @@ proc c_vips_hough_line(input: ptr VipsImage, res: ptr ptr VipsImage): cint {.imp
 proc c_vips_hough_circle(input: ptr VipsImage, res: ptr ptr VipsImage): cint {.importc: "vips_hough_circle", varargs.}
 proc c_vips_project(input: ptr VipsImage, columns: ptr ptr VipsImage, rows: ptr ptr VipsImage): cint {.importc: "vips_project", varargs.}
 proc c_vips_profile(input: ptr VipsImage, columns: ptr ptr VipsImage, rows: ptr ptr VipsImage): cint {.importc: "vips_profile", varargs.}
+proc c_vips_hist_cum(input: ptr VipsImage, output: ptr ptr VipsImage): cint {.importc: "vips_hist_cum", varargs.}
+proc c_vips_hist_norm(input: ptr VipsImage, output: ptr ptr VipsImage): cint {.importc: "vips_hist_norm", varargs.}
+proc c_vips_maplut(input: ptr VipsImage, output: ptr ptr VipsImage, lut: ptr VipsImage): cint {.importc: "vips_maplut", varargs.}
 {.pop.}
 
 
@@ -406,6 +409,9 @@ proc vips_hist_find*(input: ptr VipsImage, res: ptr ptr VipsImage): cint =
   c_vips_hist_find(input, res, nil)
 proc vips_hist_find_ndim*(input: ptr VipsImage, res: ptr ptr VipsImage): cint =
   c_vips_hist_find_ndim(input, res, nil)
+
+proc vips_hist_find_ndim*(input: ptr VipsImage, res: ptr ptr VipsImage, bins: cint): cint =
+  c_vips_hist_find_ndim(input, res, "bins", bins, nil)
 proc vips_hist_find_indexed*(input: ptr VipsImage, index: ptr VipsImage, res: ptr ptr VipsImage): cint =
   c_vips_hist_find_indexed(input, index, res, nil)
 proc vips_hough_line*(input: ptr VipsImage, res: ptr ptr VipsImage): cint =
@@ -416,3 +422,12 @@ proc vips_project*(input: ptr VipsImage, columns: ptr ptr VipsImage, rows: ptr p
   c_vips_project(input, columns, rows, nil)
 proc vips_profile*(input: ptr VipsImage, columns: ptr ptr VipsImage, rows: ptr ptr VipsImage): cint =
   c_vips_profile(input, columns, rows, nil)
+
+proc vips_hist_cum*(input: ptr VipsImage, output: ptr ptr VipsImage): cint =
+  c_vips_hist_cum(input, output, nil)
+
+proc vips_hist_norm*(input: ptr VipsImage, output: ptr ptr VipsImage): cint =
+  c_vips_hist_norm(input, output, nil)
+
+proc vips_maplut*(input: ptr VipsImage, output: ptr ptr VipsImage, lut: ptr VipsImage): cint =
+  c_vips_maplut(input, output, lut, nil)

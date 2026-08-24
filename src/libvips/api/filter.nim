@@ -21,7 +21,7 @@ proc invert*(img: Image): Image =
 
 proc gamma*(img: Image, exponent: float64 = 2.2): Image =
   var outPtr: ptr VipsImage
-  let rc = vips_gamma(img.v, addr outPtr)
+  let rc = vips_gamma(img.v, addr outPtr, exponent.cdouble)
   checkVips(rc, "gamma")
   Image(v: outPtr)
 

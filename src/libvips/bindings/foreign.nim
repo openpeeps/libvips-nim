@@ -329,29 +329,56 @@ proc vips_dzsave_target*(input: ptr VipsImage, target: ptr VipsTarget): cint {.i
 proc vips_jpegsave_safe*(input: ptr VipsImage, filename: cstring): cint =
   vips_jpegsave(input, filename, nil)
 
+proc vips_jpegsave_safe*(input: ptr VipsImage, filename: cstring, quality: cint): cint =
+  vips_jpegsave(input, filename, "Q", quality, nil)
+
 proc vips_jpegsave_buffer_safe*(input: ptr VipsImage, buf: ptr pointer, len: ptr csize_t): cint =
   vips_jpegsave_buffer(input, buf, len, nil)
+
+proc vips_jpegsave_buffer_safe*(input: ptr VipsImage, buf: ptr pointer, len: ptr csize_t, quality: cint): cint =
+  vips_jpegsave_buffer(input, buf, len, "Q", quality, nil)
 
 proc vips_pngsave_safe*(input: ptr VipsImage, filename: cstring): cint =
   vips_pngsave(input, filename, nil)
 
+proc vips_pngsave_safe*(input: ptr VipsImage, filename: cstring, compression: cint): cint =
+  vips_pngsave(input, filename, "compression", compression, nil)
+
 proc vips_pngsave_buffer_safe*(input: ptr VipsImage, buf: ptr pointer, len: ptr csize_t): cint =
   vips_pngsave_buffer(input, buf, len, nil)
+
+proc vips_pngsave_buffer_safe*(input: ptr VipsImage, buf: ptr pointer, len: ptr csize_t, compression: cint): cint =
+  vips_pngsave_buffer(input, buf, len, "compression", compression, nil)
 
 proc vips_webpsave_safe*(input: ptr VipsImage, filename: cstring): cint =
   vips_webpsave(input, filename, nil)
 
+proc vips_webpsave_safe*(input: ptr VipsImage, filename: cstring, quality: cint): cint =
+  vips_webpsave(input, filename, "Q", quality, nil)
+
 proc vips_webpsave_buffer_safe*(input: ptr VipsImage, buf: ptr pointer, len: ptr csize_t): cint =
   vips_webpsave_buffer(input, buf, len, nil)
+
+proc vips_webpsave_buffer_safe*(input: ptr VipsImage, buf: ptr pointer, len: ptr csize_t, quality: cint): cint =
+  vips_webpsave_buffer(input, buf, len, "Q", quality, nil)
 
 proc vips_tiffsave_safe*(input: ptr VipsImage, filename: cstring): cint =
   vips_tiffsave(input, filename, nil)
 
+proc vips_tiffsave_safe*(input: ptr VipsImage, filename: cstring, compression: cint): cint =
+  vips_tiffsave(input, filename, "compression", compression, nil)
+
 proc vips_heifsave_safe*(input: ptr VipsImage, filename: cstring): cint =
   vips_heifsave(input, filename, nil)
 
+proc vips_heifsave_safe*(input: ptr VipsImage, filename: cstring, quality: cint): cint =
+  vips_heifsave(input, filename, "Q", quality, nil)
+
 proc vips_jxlsave_safe*(input: ptr VipsImage, filename: cstring): cint =
   vips_jxlsave(input, filename, nil)
+
+proc vips_jxlsave_safe*(input: ptr VipsImage, filename: cstring, quality: cint): cint =
+  vips_jxlsave(input, filename, "Q", quality, nil)
 
 proc vips_gifsave_safe*(input: ptr VipsImage, filename: cstring): cint =
   vips_gifsave(input, filename, nil)

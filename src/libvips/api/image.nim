@@ -102,3 +102,50 @@ proc scale*(img: Image): Image =
   let rc = vips_scale(img.v, addr outPtr)
   checkVips(rc, "scale")
   Image(v: outPtr)
+
+proc getMetadata*(img: Image, field: string): string =
+  var res: cstring
+  let rc = vips_image_get_as_string(img.v, field.cstring, addr res)
+  if rc != 0:
+    raise newException(VipsError, "get metadata: " & field)
+  $res
+
+proc setMetadata*(img: Image, field, value: string) =
+  vips_image_set_string(img.v, field.cstring, value.cstring)
+
+proc getMetadataInt*(img: Image, field: string): int =
+  var res: cint
+  let rc = vips_image_get_int(img.v, field.cstring, addr res)
+  if rc != 0:
+    raise newException(VipsError, "get int metadata: " & field)
+  res.int
+
+proc setMetadataInt*(img: Image, field: string, value: int) =
+  vips_image_set_int(img.v, field.cstring, value.cint)
+
+proc getMetadataDouble*(img: Image, field: string): float =
+  var res: cdouble
+  let rc = vips_image_get_double(img.v, field.cstring, addr res)
+  if rc != 0:
+    raise newException(VipsError, "get double metadata: " & field)
+  res.float
+
+proc setMetadataDouble*(img: Image, field: string, value: float) =
+  vips_image_set_double(img.v, field.cstring, value.cdouble)
+
+proc removeMetadata*(img: Image, field: string): bool =
+  vips_image_remove(img.v, field.cstring)
+
+proc stripMetadata*(img: Image): Image =
+  var outPtr: ptr VipsImage
+  let rc = vips_copy(img.v, addr outPtr)
+  checkVips(rc, "copy for metadata strip")
+  result = Image(v: outPtr)
+  let fields = vips_image_get_fields(img.v)
+  if fields != nil:
+    var i = 0
+    while fields[i] != nil:
+      let fieldName = $fields[i]
+      if fieldName != VIPS_META_ORIENTATION:
+        discard vips_image_remove(result.v, fieldName.cstring)
+      inc i

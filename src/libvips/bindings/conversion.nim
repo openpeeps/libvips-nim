@@ -184,6 +184,9 @@ proc vips_copy_file*(input: ptr VipsImage, output: ptr ptr VipsImage): cint =
   
 proc vips_embed*(input: ptr VipsImage, output: ptr ptr VipsImage, x, y, width, height: cint): cint =
   c_vips_embed(input, output, x, y, width, height, nil)
+
+proc vips_embed*(input: ptr VipsImage, output: ptr ptr VipsImage, x, y, width, height: cint, extend: VipsExtend): cint =
+  c_vips_embed(input, output, x, y, width, height, "extend", extend.cint, nil)
   
 proc vips_gravity*(input: ptr VipsImage, output: ptr ptr VipsImage, direction: VipsCompassDirection, width, height: cint): cint =
   c_vips_gravity(input, output, direction, width, height, nil)
@@ -208,6 +211,9 @@ proc vips_crop*(input: ptr VipsImage, output: ptr ptr VipsImage, left, top, widt
   
 proc vips_smartcrop*(input: ptr VipsImage, output: ptr ptr VipsImage, width, height: cint): cint =
   c_vips_smartcrop(input, output, width, height, nil)
+
+proc vips_smartcrop*(input: ptr VipsImage, output: ptr ptr VipsImage, width, height: cint, interesting: VipsInteresting): cint =
+  c_vips_smartcrop(input, output, width, height, "interesting", interesting.cint, nil)
   
 proc vips_extract_band*(input: ptr VipsImage, output: ptr ptr VipsImage, band: cint): cint =
   c_vips_extract_band(input, output, band, nil)
@@ -360,3 +366,6 @@ proc vips_falsecolour*(input: ptr VipsImage, output: ptr ptr VipsImage): cint =
   
 proc vips_gamma*(input: ptr VipsImage, output: ptr ptr VipsImage): cint =
   c_vips_gamma(input, output, nil)
+
+proc vips_gamma*(input: ptr VipsImage, output: ptr ptr VipsImage, ex: cdouble): cint =
+  c_vips_gamma(input, output, "exponent", ex, nil)

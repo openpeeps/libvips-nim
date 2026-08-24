@@ -53,7 +53,7 @@ proc crop*(img: Image, width, height: int): Image =
 proc smartCrop*(img: Image, width, height: int,
     interesting: VipsInteresting = VIPS_INTERESTING_ATTENTION): Image =
   var outPtr: ptr VipsImage
-  let rc = vips_smartcrop(img.v, addr outPtr, width.cint, height.cint)
+  let rc = vips_smartcrop(img.v, addr outPtr, width.cint, height.cint, interesting)
   checkVips(rc, "smart crop")
   Image(v: outPtr)
 
@@ -84,6 +84,54 @@ proc autorotate*(img: Image): Image =
 proc embed*(img: Image, x, y, width, height: int,
     extend: VipsExtend = VIPS_EXTEND_BLACK): Image =
   var outPtr: ptr VipsImage
-  let rc = vips_embed(img.v, addr outPtr, x.cint, y.cint, width.cint, height.cint)
+  let rc = vips_embed(img.v, addr outPtr, x.cint, y.cint, width.cint, height.cint, extend)
   checkVips(rc, "embed")
+  Image(v: outPtr)
+
+proc join*(img1, img2: Image, direction: VipsDirection): Image =
+  var outPtr: ptr VipsImage
+  let rc = vips_join(img1.v, img2.v, addr outPtr, direction)
+  checkVips(rc, "join images")
+  Image(v: outPtr)
+
+proc joinHorizontal*(img1, img2: Image): Image =
+  img1.join(img2, VIPS_DIRECTION_HORIZONTAL)
+
+proc joinVertical*(img1, img2: Image): Image =
+  img1.join(img2, VIPS_DIRECTION_VERTICAL)
+
+proc arrayJoin*(images: openArray[Image], direction: VipsDirection): Image =
+  if images.len == 0:
+    raise newException(ValueError, "arrayJoin: at least one image required")
+  if images.len == 1: return images[0]
+  var ptrs = newSeq[ptr VipsImage](images.len)
+  for i, img in images: ptrs[i] = img.v
+  var outPtr: ptr VipsImage
+  let rc = vips_arrayjoin(addr ptrs[0], addr outPtr, images.len.cint)
+  checkVips(rc, "array join")
+  Image(v: outPtr)
+
+proc replicate*(img: Image, across, down: int): Image =
+  var outPtr: ptr VipsImage
+  let rc = vips_replicate(img.v, addr outPtr, across.cint, down.cint)
+  checkVips(rc, "replicate")
+  Image(v: outPtr)
+
+proc zoom*(img: Image, xFactor, yFactor: int): Image =
+  var outPtr: ptr VipsImage
+  let rc = vips_zoom(img.v, addr outPtr, xFactor.cint, yFactor.cint)
+  checkVips(rc, "zoom")
+  Image(v: outPtr)
+
+proc subsample*(img: Image, xFactor, yFactor: int): Image =
+  var outPtr: ptr VipsImage
+  let rc = vips_subsample(img.v, addr outPtr, xFactor.cint, yFactor.cint)
+  checkVips(rc, "subsample")
+  Image(v: outPtr)
+
+proc gravityCrop*(img: Image, width, height: int,
+    direction: VipsCompassDirection = VIPS_COMPASS_DIRECTION_CENTRE): Image =
+  var outPtr: ptr VipsImage
+  let rc = vips_gravity(img.v, addr outPtr, direction, width.cint, height.cint)
+  checkVips(rc, "gravity crop")
   Image(v: outPtr)

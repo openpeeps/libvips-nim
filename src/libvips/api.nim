@@ -6,7 +6,8 @@ import libvips/api/colour
 import libvips/api/filter
 import libvips/api/composite
 import libvips/api/analysis
+import libvips/api/tuning
 import libvips/watermark
 
-export types, image, io, transform, colour, filter, composite, analysis
+export types, image, io, transform, colour, filter, composite, analysis, tuning
 export watermark

@@ -10,7 +10,12 @@ proc addAlpha*(img: Image): Image =
 
 proc flatten*(img: Image, background: openArray[cdouble] = @[0.0, 0.0, 0.0]): Image =
   var outPtr: ptr VipsImage
+  var bg = @background
+  let bgImg = vips_image_new_from_image(img.v, unsafeAddr bg[0], bg.len.cint)
+  if bgImg == nil:
+    raise newException(VipsError, "flatten: failed to create background image")
   let rc = vips_flatten(img.v, addr outPtr)
+  g_object_unref(cast[pointer](bgImg))
   checkVips(rc, "flatten alpha")
   Image(v: outPtr)
 
@@ -114,4 +119,24 @@ proc bandMean*(img: Image): Image =
   var outPtr: ptr VipsImage
   let rc = vips_bandmean(img.v, addr outPtr)
   checkVips(rc, "band mean")
+  Image(v: outPtr)
+
+proc ifThenElse*(condition, ifTrue, ifFalse: Image): Image =
+  var outPtr: ptr VipsImage
+  let rc = vips_ifthenelse(condition.v, ifTrue.v, ifFalse.v, addr outPtr)
+  checkVips(rc, "if then else")
+  Image(v: outPtr)
+
+proc recomb*(img: Image, matrix: array[3, array[3, float]]): Image =
+  var flat: seq[cdouble]
+  for row in matrix:
+    for val in row:
+      flat.add(val.cdouble)
+  var matImg = vips_image_new_from_image(img.v, unsafeAddr flat[0], 9.cint)
+  if matImg == nil:
+    raise newException(VipsError, "recomb: failed to create matrix image")
+  var outPtr: ptr VipsImage
+  let rc = vips_recomb(img.v, addr outPtr, matImg)
+  g_object_unref(cast[pointer](matImg))
+  checkVips(rc, "recomb")
   Image(v: outPtr)
