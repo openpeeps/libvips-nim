@@ -15,6 +15,14 @@ nim	thumbnail	libvips/api/transform.html#thumbnail,Image,int,int	proc thumbnail(
 nim	extractBand	libvips/api/transform.html#extractBand,Image,int	proc extractBand(img: Image; band: int): Image		72
 nim	autorotate	libvips/api/transform.html#autorotate,Image	proc autorotate(img: Image): Image		78
 nim	embed	libvips/api/transform.html#embed,Image,int,int,int,int,VipsExtend	proc embed(img: Image; x, y, width, height: int;\n      extend: VipsExtend = VIPS_EXTEND_BLACK): Image		84
+nim	join	libvips/api/transform.html#join,Image,Image,VipsDirection	proc join(img1, img2: Image; direction: VipsDirection): Image		91
+nim	joinHorizontal	libvips/api/transform.html#joinHorizontal,Image,Image	proc joinHorizontal(img1, img2: Image): Image		97
+nim	joinVertical	libvips/api/transform.html#joinVertical,Image,Image	proc joinVertical(img1, img2: Image): Image		100
+nim	arrayJoin	libvips/api/transform.html#arrayJoin,openArray[Image],VipsDirection	proc arrayJoin(images: openArray[Image]; direction: VipsDirection): Image		103
+nim	replicate	libvips/api/transform.html#replicate,Image,int,int	proc replicate(img: Image; across, down: int): Image		114
+nim	zoom	libvips/api/transform.html#zoom,Image,int,int	proc zoom(img: Image; xFactor, yFactor: int): Image		120
+nim	subsample	libvips/api/transform.html#subsample,Image,int,int	proc subsample(img: Image; xFactor, yFactor: int): Image		126
+nim	gravityCrop	libvips/api/transform.html#gravityCrop,Image,int,int,VipsCompassDirection	proc gravityCrop(img: Image; width, height: int;\n            direction: VipsCompassDirection = VIPS_COMPASS_DIRECTION_CENTRE): Image		132
 nimgrp	thumbnail	libvips/api/transform.html#thumbnail-procs-all	proc		60
 nimgrp	resize	libvips/api/transform.html#resize-procs-all	proc		4
 nimgrp	crop	libvips/api/transform.html#crop-procs-all	proc		42

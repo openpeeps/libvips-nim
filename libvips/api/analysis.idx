@@ -1,8 +1,19 @@
 nimTitle	analysis	libvips/api/analysis.html	module libvips/api/analysis		0
-nim	avg	libvips/api/analysis.html#avg,Image	proc avg(img: Image): float64		4
-nim	min	libvips/api/analysis.html#min,Image	proc min(img: Image): float64		10
-nim	max	libvips/api/analysis.html#max,Image	proc max(img: Image): float64		16
-nim	deviate	libvips/api/analysis.html#deviate,Image	proc deviate(img: Image): float64		22
-nim	histogram	libvips/api/analysis.html#histogram,Image	proc histogram(img: Image): Image		28
-nim	findTrim	libvips/api/analysis.html#findTrim,Image	proc findTrim(img: Image): tuple[left, top, width, height: int]		34
-nim	getPoint	libvips/api/analysis.html#getPoint,Image,int,int	proc getPoint(img: Image; x, y: int): seq[cdouble]		40
+nim	avg	libvips/api/analysis.html#avg,Image	proc avg(img: Image): float64		7
+nim	min	libvips/api/analysis.html#min,Image	proc min(img: Image): float64		13
+nim	max	libvips/api/analysis.html#max,Image	proc max(img: Image): float64		19
+nim	deviate	libvips/api/analysis.html#deviate,Image	proc deviate(img: Image): float64		25
+nim	histogram	libvips/api/analysis.html#histogram,Image	proc histogram(img: Image): Image		31
+nim	stats	libvips/api/analysis.html#stats,Image	proc stats(img: Image): seq[seq[float64]]		37
+nim	histogramData	libvips/api/analysis.html#histogramData,Image,int	proc histogramData(img: Image; bins: int = 256): seq[float64]		51
+nim	cumulativeHistogram	libvips/api/analysis.html#cumulativeHistogram,Image,int	proc cumulativeHistogram(img: Image; bins: int = 256): seq[float64]		63
+nim	ColorEntry	libvips/api/analysis.html#ColorEntry	tuple ColorEntry		71
+nim	dE76	libvips/api/analysis.html#dE76	DeltaEMode.dE76		72
+nim	dE00	libvips/api/analysis.html#dE00	DeltaEMode.dE00		72
+nim	dECMC	libvips/api/analysis.html#dECMC	DeltaEMode.dECMC		72
+nim	DeltaEMode	libvips/api/analysis.html#DeltaEMode	enum DeltaEMode		72
+nim	dominantColors	libvips/api/analysis.html#dominantColors,Image,int,int	proc dominantColors(img: Image; count: int = 5; accuracy: int = 10): seq[ColorEntry]		75
+nim	deltaE	libvips/api/analysis.html#deltaE,Image,Image,DeltaEMode	proc deltaE(img1, img2: Image; mode: DeltaEMode = dE76): float64		97
+nim	equalize	libvips/api/analysis.html#equalize,Image	proc equalize(img: Image): Image		109
+nim	findTrim	libvips/api/analysis.html#findTrim,Image	proc findTrim(img: Image): tuple[left, top, width, height: int]		124
+nim	getPoint	libvips/api/analysis.html#getPoint,Image,int,int	proc getPoint(img: Image; x, y: int): seq[cdouble]		130

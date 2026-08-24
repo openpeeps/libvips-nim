@@ -1,0 +1,11 @@
+nimTitle	tuning	libvips/api/tuning.html	module libvips/api/tuning		0
+nim	setCache	libvips/api/tuning.html#setCache,int,int,int	proc setCache(maxImages: int = 0; maxMemory: int = 0; maxFiles: int = 0)		3
+nim	setConcurrency	libvips/api/tuning.html#setConcurrency,int	proc setConcurrency(workers: int)		11
+nim	getConcurrency	libvips/api/tuning.html#getConcurrency	proc getConcurrency(): int		14
+nim	cacheSetMax	libvips/api/tuning.html#cacheSetMax,int	proc cacheSetMax(max: int)		17
+nim	cacheSetMaxMemory	libvips/api/tuning.html#cacheSetMaxMemory,int	proc cacheSetMaxMemory(maxMem: int)		20
+nim	cacheSetMaxFiles	libvips/api/tuning.html#cacheSetMaxFiles,int	proc cacheSetMaxFiles(maxFiles: int)		23
+nim	cacheGetMax	libvips/api/tuning.html#cacheGetMax	proc cacheGetMax(): int		26
+nim	cacheGetSize	libvips/api/tuning.html#cacheGetSize	proc cacheGetSize(): int		29
+nim	vectorSetEnabled	libvips/api/tuning.html#vectorSetEnabled,bool	proc vectorSetEnabled(enabled: bool)		32
+nim	vectorIsEnabled	libvips/api/tuning.html#vectorIsEnabled	proc vectorIsEnabled(): bool		35

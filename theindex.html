@@ -28,7 +28,7 @@
     <label for="nav-toggle" id="nav-overlay"></label>
     <div class="container">
       <h1 class="title">Index</h1>
-      Modules: <a href="index.html">libvips</a>, <a href="libvips/api.html">libvips/api</a>, <a href="libvips/api/analysis.html">libvips/api/analysis</a>, <a href="libvips/api/colour.html">libvips/api/colour</a>, <a href="libvips/api/composite.html">libvips/api/composite</a>, <a href="libvips/api/filter.html">libvips/api/filter</a>, <a href="libvips/api/image.html">libvips/api/image</a>, <a href="libvips/api/io.html">libvips/api/io</a>, <a href="libvips/api/transform.html">libvips/api/transform</a>, <a href="libvips/api/types.html">libvips/api/types</a>, <a href="libvips/bindings/arithmetic.html">libvips/bindings/arithmetic</a>, <a href="libvips/bindings/basic.html">libvips/bindings/basic</a>, <a href="libvips/bindings/buf.html">libvips/bindings/buf</a>, <a href="libvips/bindings/colour.html">libvips/bindings/colour</a>, <a href="libvips/bindings/conversion.html">libvips/bindings/conversion</a>, <a href="libvips/bindings/convolution.html">libvips/bindings/convolution</a>, <a href="libvips/bindings/create.html">libvips/bindings/create</a>, <a href="libvips/bindings/error.html">libvips/bindings/error</a>, <a href="libvips/bindings/foreign.html">libvips/bindings/foreign</a>, <a href="libvips/bindings/glib/glib.html">libvips/bindings/glib/glib</a>, <a href="libvips/bindings/header.html">libvips/bindings/header</a>, <a href="libvips/bindings/image.html">libvips/bindings/image</a>, <a href="libvips/bindings/object.html">libvips/bindings/object</a>, <a href="libvips/bindings/operation.html">libvips/bindings/operation</a>, <a href="libvips/bindings/resample.html">libvips/bindings/resample</a>, <a href="libvips/bindings/types.html">libvips/bindings/types</a>, <a href="libvips/bindings/vector.html">libvips/bindings/vector</a>, <a href="libvips/bindings/vips.html">libvips/bindings/vips</a>, <a href="libvips/watermark.html">libvips/watermark</a>.<br/><p /><h2>API symbols</h2>
+      Modules: <a href="index.html">libvips</a>, <a href="libvips/api.html">libvips/api</a>, <a href="libvips/api/analysis.html">libvips/api/analysis</a>, <a href="libvips/api/colour.html">libvips/api/colour</a>, <a href="libvips/api/composite.html">libvips/api/composite</a>, <a href="libvips/api/filter.html">libvips/api/filter</a>, <a href="libvips/api/image.html">libvips/api/image</a>, <a href="libvips/api/io.html">libvips/api/io</a>, <a href="libvips/api/transform.html">libvips/api/transform</a>, <a href="libvips/api/tuning.html">libvips/api/tuning</a>, <a href="libvips/api/types.html">libvips/api/types</a>, <a href="libvips/bindings/arithmetic.html">libvips/bindings/arithmetic</a>, <a href="libvips/bindings/basic.html">libvips/bindings/basic</a>, <a href="libvips/bindings/buf.html">libvips/bindings/buf</a>, <a href="libvips/bindings/colour.html">libvips/bindings/colour</a>, <a href="libvips/bindings/conversion.html">libvips/bindings/conversion</a>, <a href="libvips/bindings/convolution.html">libvips/bindings/convolution</a>, <a href="libvips/bindings/create.html">libvips/bindings/create</a>, <a href="libvips/bindings/error.html">libvips/bindings/error</a>, <a href="libvips/bindings/foreign.html">libvips/bindings/foreign</a>, <a href="libvips/bindings/glib/glib.html">libvips/bindings/glib/glib</a>, <a href="libvips/bindings/header.html">libvips/bindings/header</a>, <a href="libvips/bindings/image.html">libvips/bindings/image</a>, <a href="libvips/bindings/object.html">libvips/bindings/object</a>, <a href="libvips/bindings/operation.html">libvips/bindings/operation</a>, <a href="libvips/bindings/resample.html">libvips/bindings/resample</a>, <a href="libvips/bindings/types.html">libvips/bindings/types</a>, <a href="libvips/bindings/vector.html">libvips/bindings/vector</a>, <a href="libvips/bindings/vips.html">libvips/bindings/vips</a>, <a href="libvips/watermark.html">libvips/watermark</a>.<br/><p /><h2>API symbols</h2>
 <dl><dt><a name="absolute" href="#absolute"><span>absolute:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="filter: proc absolute(img: Image): Image" href="libvips/api/filter.html#absolute%2CImage">filter: proc absolute(img: Image): Image</a></li>
@@ -36,6 +36,10 @@
 <dt><a name="addAlpha" href="#addAlpha"><span>addAlpha:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="composite: proc addAlpha(img: Image): Image" href="libvips/api/composite.html#addAlpha%2CImage">composite: proc addAlpha(img: Image): Image</a></li>
+          </ul></dd>
+<dt><a name="arrayJoin" href="#arrayJoin"><span>arrayJoin:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="transform: proc arrayJoin(images: openArray[Image]; direction: VipsDirection): Image" href="libvips/api/transform.html#arrayJoin%2CopenArray%5BImage%5D%2CVipsDirection">transform: proc arrayJoin(images: openArray[Image]; direction: VipsDirection): Image</a></li>
           </ul></dd>
 <dt><a name="autorotate" href="#autorotate"><span>autorotate:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -107,6 +111,26 @@
 <li><a class="reference external"
           data-doc-search-tag="filter: proc blur(img: Image; sigma: float64 = 1.0): Image" href="libvips/api/filter.html#blur%2CImage%2Cfloat64">filter: proc blur(img: Image; sigma: float64 = 1.0): Image</a></li>
           </ul></dd>
+<dt><a name="cacheGetMax" href="#cacheGetMax"><span>cacheGetMax:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="tuning: proc cacheGetMax(): int" href="libvips/api/tuning.html#cacheGetMax">tuning: proc cacheGetMax(): int</a></li>
+          </ul></dd>
+<dt><a name="cacheGetSize" href="#cacheGetSize"><span>cacheGetSize:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="tuning: proc cacheGetSize(): int" href="libvips/api/tuning.html#cacheGetSize">tuning: proc cacheGetSize(): int</a></li>
+          </ul></dd>
+<dt><a name="cacheSetMax" href="#cacheSetMax"><span>cacheSetMax:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="tuning: proc cacheSetMax(max: int)" href="libvips/api/tuning.html#cacheSetMax%2Cint">tuning: proc cacheSetMax(max: int)</a></li>
+          </ul></dd>
+<dt><a name="cacheSetMaxFiles" href="#cacheSetMaxFiles"><span>cacheSetMaxFiles:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="tuning: proc cacheSetMaxFiles(maxFiles: int)" href="libvips/api/tuning.html#cacheSetMaxFiles%2Cint">tuning: proc cacheSetMaxFiles(maxFiles: int)</a></li>
+          </ul></dd>
+<dt><a name="cacheSetMaxMemory" href="#cacheSetMaxMemory"><span>cacheSetMaxMemory:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="tuning: proc cacheSetMaxMemory(maxMem: int)" href="libvips/api/tuning.html#cacheSetMaxMemory%2Cint">tuning: proc cacheSetMaxMemory(maxMem: int)</a></li>
+          </ul></dd>
 <dt><a name="canny" href="#canny"><span>canny:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="filter: proc canny(img: Image): Image" href="libvips/api/filter.html#canny%2CImage">filter: proc canny(img: Image): Image</a></li>
@@ -123,6 +147,10 @@
 <li><a class="reference external"
           data-doc-search-tag="filter: proc clamp(img: Image): Image" href="libvips/api/filter.html#clamp%2CImage">filter: proc clamp(img: Image): Image</a></li>
           </ul></dd>
+<dt><a name="ColorEntry" href="#ColorEntry"><span>ColorEntry:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="analysis: tuple ColorEntry" href="libvips/api/analysis.html#ColorEntry">analysis: tuple ColorEntry</a></li>
+          </ul></dd>
 <dt><a name="composite" href="#composite"><span>composite:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="composite: proc composite(img: Image; overlay: Image; mode: VipsBlendMode; x: int = 0;
@@ -138,6 +166,10 @@
           data-doc-search-tag="transform: proc crop(img: Image; width, height: int): Image" href="libvips/api/transform.html#crop%2CImage%2Cint%2Cint">transform: proc crop(img: Image; width, height: int): Image</a></li>
           <li><a class="reference external"
           data-doc-search-tag="transform: proc crop(img: Image; left, top, width, height: int): Image" href="libvips/api/transform.html#crop%2CImage%2Cint%2Cint%2Cint%2Cint">transform: proc crop(img: Image; left, top, width, height: int): Image</a></li>
+          </ul></dd>
+<dt><a name="cumulativeHistogram" href="#cumulativeHistogram"><span>cumulativeHistogram:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="analysis: proc cumulativeHistogram(img: Image; bins: int = 256): seq[float64]" href="libvips/api/analysis.html#cumulativeHistogram%2CImage%2Cint">analysis: proc cumulativeHistogram(img: Image; bins: int = 256): seq[float64]</a></li>
           </ul></dd>
 <dt><a name="c_vips_affine" href="#c_vips_affine"><span>c_vips_affine:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -219,9 +251,33 @@
                         width: cint): cint" href="libvips/bindings/resample.html#c_vips_thumbnail_source%2Cptr.VipsSource%2Cptr.ptr.VipsImage%2Ccint">resample: proc c_vips_thumbnail_source(source: ptr VipsSource; output: ptr ptr VipsImage;
                         width: cint): cint</a></li>
           </ul></dd>
+<dt><a name="dE00" href="#dE00"><span>dE00:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="analysis: DeltaEMode.dE00" href="libvips/api/analysis.html#dE00">analysis: DeltaEMode.dE00</a></li>
+          </ul></dd>
+<dt><a name="dE76" href="#dE76"><span>dE76:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="analysis: DeltaEMode.dE76" href="libvips/api/analysis.html#dE76">analysis: DeltaEMode.dE76</a></li>
+          </ul></dd>
+<dt><a name="dECMC" href="#dECMC"><span>dECMC:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="analysis: DeltaEMode.dECMC" href="libvips/api/analysis.html#dECMC">analysis: DeltaEMode.dECMC</a></li>
+          </ul></dd>
+<dt><a name="deltaE" href="#deltaE"><span>deltaE:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="analysis: proc deltaE(img1, img2: Image; mode: DeltaEMode = dE76): float64" href="libvips/api/analysis.html#deltaE%2CImage%2CImage%2CDeltaEMode">analysis: proc deltaE(img1, img2: Image; mode: DeltaEMode = dE76): float64</a></li>
+          </ul></dd>
+<dt><a name="DeltaEMode" href="#DeltaEMode"><span>DeltaEMode:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="analysis: enum DeltaEMode" href="libvips/api/analysis.html#DeltaEMode">analysis: enum DeltaEMode</a></li>
+          </ul></dd>
 <dt><a name="deviate" href="#deviate"><span>deviate:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="analysis: proc deviate(img: Image): float64" href="libvips/api/analysis.html#deviate%2CImage">analysis: proc deviate(img: Image): float64</a></li>
+          </ul></dd>
+<dt><a name="dominantColors" href="#dominantColors"><span>dominantColors:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="analysis: proc dominantColors(img: Image; count: int = 5; accuracy: int = 10): seq[ColorEntry]" href="libvips/api/analysis.html#dominantColors%2CImage%2Cint%2Cint">analysis: proc dominantColors(img: Image; count: int = 5; accuracy: int = 10): seq[ColorEntry]</a></li>
           </ul></dd>
 <dt><a name="embed" href="#embed"><span>embed:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -232,6 +288,10 @@
 <dt><a name="enableVipsAcceleration" href="#enableVipsAcceleration"><span>enableVipsAcceleration:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="image: proc enableVipsAcceleration(numWorkers: int)" href="libvips/api/image.html#enableVipsAcceleration%2Cint">image: proc enableVipsAcceleration(numWorkers: int)</a></li>
+          </ul></dd>
+<dt><a name="equalize" href="#equalize"><span>equalize:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="analysis: proc equalize(img: Image): Image" href="libvips/api/analysis.html#equalize%2CImage">analysis: proc equalize(img: Image): Image</a></li>
           </ul></dd>
 <dt><a name="extractBand" href="#extractBand"><span>extractBand:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -273,6 +333,22 @@
 <li><a class="reference external"
           data-doc-search-tag="glib: type gboolean" href="libvips/bindings/glib/glib.html#gboolean">glib: type gboolean</a></li>
           </ul></dd>
+<dt><a name="getConcurrency" href="#getConcurrency"><span>getConcurrency:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="tuning: proc getConcurrency(): int" href="libvips/api/tuning.html#getConcurrency">tuning: proc getConcurrency(): int</a></li>
+          </ul></dd>
+<dt><a name="getMetadata" href="#getMetadata"><span>getMetadata:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="image: proc getMetadata(img: Image; field: string): string" href="libvips/api/image.html#getMetadata%2CImage%2Cstring">image: proc getMetadata(img: Image; field: string): string</a></li>
+          </ul></dd>
+<dt><a name="getMetadataDouble" href="#getMetadataDouble"><span>getMetadataDouble:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="image: proc getMetadataDouble(img: Image; field: string): float" href="libvips/api/image.html#getMetadataDouble%2CImage%2Cstring">image: proc getMetadataDouble(img: Image; field: string): float</a></li>
+          </ul></dd>
+<dt><a name="getMetadataInt" href="#getMetadataInt"><span>getMetadataInt:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="image: proc getMetadataInt(img: Image; field: string): int" href="libvips/api/image.html#getMetadataInt%2CImage%2Cstring">image: proc getMetadataInt(img: Image; field: string): int</a></li>
+          </ul></dd>
 <dt><a name="getPoint" href="#getPoint"><span>getPoint:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="analysis: proc getPoint(img: Image; x, y: int): seq[cdouble]" href="libvips/api/analysis.html#getPoint%2CImage%2Cint%2Cint">analysis: proc getPoint(img: Image; x, y: int): seq[cdouble]</a></li>
@@ -312,6 +388,12 @@
 <dt><a name="GParamSpec" href="#GParamSpec"><span>GParamSpec:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="glib: object GParamSpec" href="libvips/bindings/glib/glib.html#GParamSpec">glib: object GParamSpec</a></li>
+          </ul></dd>
+<dt><a name="gravityCrop" href="#gravityCrop"><span>gravityCrop:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="transform: proc gravityCrop(img: Image; width, height: int;
+            direction: VipsCompassDirection = VIPS_COMPASS_DIRECTION_CENTRE): Image" href="libvips/api/transform.html#gravityCrop%2CImage%2Cint%2Cint%2CVipsCompassDirection">transform: proc gravityCrop(img: Image; width, height: int;
+            direction: VipsCompassDirection = VIPS_COMPASS_DIRECTION_CENTRE): Image</a></li>
           </ul></dd>
 <dt><a name="GSList" href="#GSList"><span>GSList:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -365,6 +447,10 @@
 <li><a class="reference external"
           data-doc-search-tag="analysis: proc histogram(img: Image): Image" href="libvips/api/analysis.html#histogram%2CImage">analysis: proc histogram(img: Image): Image</a></li>
           </ul></dd>
+<dt><a name="histogramData" href="#histogramData"><span>histogramData:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="analysis: proc histogramData(img: Image; bins: int = 256): seq[float64]" href="libvips/api/analysis.html#histogramData%2CImage%2Cint">analysis: proc histogramData(img: Image; bins: int = 256): seq[float64]</a></li>
+          </ul></dd>
 <dt><a name="HorizontalAlignment" href="#HorizontalAlignment"><span>HorizontalAlignment:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="types: enum HorizontalAlignment" href="libvips/api/types.html#HorizontalAlignment">types: enum HorizontalAlignment</a></li>
@@ -380,6 +466,10 @@
 <dt><a name="iccTransform" href="#iccTransform"><span>iccTransform:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="colour: proc iccTransform(img: Image; outputProfile: string): Image" href="libvips/api/colour.html#iccTransform%2CImage%2Cstring">colour: proc iccTransform(img: Image; outputProfile: string): Image</a></li>
+          </ul></dd>
+<dt><a name="ifThenElse" href="#ifThenElse"><span>ifThenElse:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="composite: proc ifThenElse(condition, ifTrue, ifFalse: Image): Image" href="libvips/api/composite.html#ifThenElse%2CImage%2CImage%2CImage">composite: proc ifThenElse(condition, ifTrue, ifFalse: Image): Image</a></li>
           </ul></dd>
 <dt><a name="Image" href="#Image"><span>Image:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -397,6 +487,18 @@
 <li><a class="reference external"
           data-doc-search-tag="filter: proc invert(img: Image): Image" href="libvips/api/filter.html#invert%2CImage">filter: proc invert(img: Image): Image</a></li>
           </ul></dd>
+<dt><a name="join" href="#join"><span>join:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="transform: proc join(img1, img2: Image; direction: VipsDirection): Image" href="libvips/api/transform.html#join%2CImage%2CImage%2CVipsDirection">transform: proc join(img1, img2: Image; direction: VipsDirection): Image</a></li>
+          </ul></dd>
+<dt><a name="joinHorizontal" href="#joinHorizontal"><span>joinHorizontal:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="transform: proc joinHorizontal(img1, img2: Image): Image" href="libvips/api/transform.html#joinHorizontal%2CImage%2CImage">transform: proc joinHorizontal(img1, img2: Image): Image</a></li>
+          </ul></dd>
+<dt><a name="joinVertical" href="#joinVertical"><span>joinVertical:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="transform: proc joinVertical(img1, img2: Image): Image" href="libvips/api/transform.html#joinVertical%2CImage%2CImage">transform: proc joinVertical(img1, img2: Image): Image</a></li>
+          </ul></dd>
 <dt><a name="jpegDefaultQuality" href="#jpegDefaultQuality"><span>jpegDefaultQuality:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="io: const jpegDefaultQuality" href="libvips/api/io.html#jpegDefaultQuality">io: const jpegDefaultQuality</a></li>
@@ -404,6 +506,10 @@
 <dt><a name="jxlDefaultQuality" href="#jxlDefaultQuality"><span>jxlDefaultQuality:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="io: const jxlDefaultQuality" href="libvips/api/io.html#jxlDefaultQuality">io: const jxlDefaultQuality</a></li>
+          </ul></dd>
+<dt><a name="loadGIF" href="#loadGIF"><span>loadGIF:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="io: proc loadGIF(path: string): Image" href="libvips/api/io.html#loadGIF%2Cstring">io: proc loadGIF(path: string): Image</a></li>
           </ul></dd>
 <dt><a name="max" href="#max"><span>max:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -461,6 +567,18 @@
 <li><a class="reference external"
           data-doc-search-tag="basic: type PVipsTarget" href="libvips/bindings/basic.html#PVipsTarget">basic: type PVipsTarget</a></li>
           </ul></dd>
+<dt><a name="recomb" href="#recomb"><span>recomb:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="composite: proc recomb(img: Image; matrix: array[3, array[3, float]]): Image" href="libvips/api/composite.html#recomb%2CImage%2Carray%5B%2Carray%5B%2Cfloat%5D%5D">composite: proc recomb(img: Image; matrix: array[3, array[3, float]]): Image</a></li>
+          </ul></dd>
+<dt><a name="removeMetadata" href="#removeMetadata"><span>removeMetadata:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="image: proc removeMetadata(img: Image; field: string): bool" href="libvips/api/image.html#removeMetadata%2CImage%2Cstring">image: proc removeMetadata(img: Image; field: string): bool</a></li>
+          </ul></dd>
+<dt><a name="replicate" href="#replicate"><span>replicate:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="transform: proc replicate(img: Image; across, down: int): Image" href="libvips/api/transform.html#replicate%2CImage%2Cint%2Cint">transform: proc replicate(img: Image; across, down: int): Image</a></li>
+          </ul></dd>
 <dt><a name="resize" href="#resize"><span>resize:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="transform: proc resize(img: Image; scale: float): Image" href="libvips/api/transform.html#resize%2CImage%2Cfloat">transform: proc resize(img: Image; scale: float): Image</a></li>
@@ -482,6 +600,10 @@
 <dt><a name="saveAVIF" href="#saveAVIF"><span>saveAVIF:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="io: proc saveAVIF(img: Image; path: string; quality: range[0 .. 100] = avifDefaultQuality)" href="libvips/api/io.html#saveAVIF%2CImage%2Cstring%2Crange%5B%5D">io: proc saveAVIF(img: Image; path: string; quality: range[0 .. 100] = avifDefaultQuality)</a></li>
+          </ul></dd>
+<dt><a name="saveGIF" href="#saveGIF"><span>saveGIF:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="io: proc saveGIF(img: Image; path: string)" href="libvips/api/io.html#saveGIF%2CImage%2Cstring">io: proc saveGIF(img: Image; path: string)</a></li>
           </ul></dd>
 <dt><a name="saveHEIF" href="#saveHEIF"><span>saveHEIF:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -525,6 +647,26 @@
 <li><a class="reference external"
           data-doc-search-tag="filter: proc scharr(img: Image): Image" href="libvips/api/filter.html#scharr%2CImage">filter: proc scharr(img: Image): Image</a></li>
           </ul></dd>
+<dt><a name="setCache" href="#setCache"><span>setCache:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="tuning: proc setCache(maxImages: int = 0; maxMemory: int = 0; maxFiles: int = 0)" href="libvips/api/tuning.html#setCache%2Cint%2Cint%2Cint">tuning: proc setCache(maxImages: int = 0; maxMemory: int = 0; maxFiles: int = 0)</a></li>
+          </ul></dd>
+<dt><a name="setConcurrency" href="#setConcurrency"><span>setConcurrency:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="tuning: proc setConcurrency(workers: int)" href="libvips/api/tuning.html#setConcurrency%2Cint">tuning: proc setConcurrency(workers: int)</a></li>
+          </ul></dd>
+<dt><a name="setMetadata" href="#setMetadata"><span>setMetadata:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="image: proc setMetadata(img: Image; field, value: string)" href="libvips/api/image.html#setMetadata%2CImage%2Cstring%2Cstring">image: proc setMetadata(img: Image; field, value: string)</a></li>
+          </ul></dd>
+<dt><a name="setMetadataDouble" href="#setMetadataDouble"><span>setMetadataDouble:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="image: proc setMetadataDouble(img: Image; field: string; value: float)" href="libvips/api/image.html#setMetadataDouble%2CImage%2Cstring%2Cfloat">image: proc setMetadataDouble(img: Image; field: string; value: float)</a></li>
+          </ul></dd>
+<dt><a name="setMetadataInt" href="#setMetadataInt"><span>setMetadataInt:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="image: proc setMetadataInt(img: Image; field: string; value: int)" href="libvips/api/image.html#setMetadataInt%2CImage%2Cstring%2Cint">image: proc setMetadataInt(img: Image; field: string; value: int)</a></li>
+          </ul></dd>
 <dt><a name="sharpen" href="#sharpen"><span>sharpen:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="filter: proc sharpen(img: Image): Image" href="libvips/api/filter.html#sharpen%2CImage">filter: proc sharpen(img: Image): Image</a></li>
@@ -543,6 +685,18 @@
 <li><a class="reference external"
           data-doc-search-tag="image: proc space(img: Image): VipsInterpretation" href="libvips/api/image.html#space%2CImage">image: proc space(img: Image): VipsInterpretation</a></li>
           </ul></dd>
+<dt><a name="stats" href="#stats"><span>stats:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="analysis: proc stats(img: Image): seq[seq[float64]]" href="libvips/api/analysis.html#stats%2CImage">analysis: proc stats(img: Image): seq[seq[float64]]</a></li>
+          </ul></dd>
+<dt><a name="stripMetadata" href="#stripMetadata"><span>stripMetadata:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="image: proc stripMetadata(img: Image): Image" href="libvips/api/image.html#stripMetadata%2CImage">image: proc stripMetadata(img: Image): Image</a></li>
+          </ul></dd>
+<dt><a name="subsample" href="#subsample"><span>subsample:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="transform: proc subsample(img: Image; xFactor, yFactor: int): Image" href="libvips/api/transform.html#subsample%2CImage%2Cint%2Cint">transform: proc subsample(img: Image; xFactor, yFactor: int): Image</a></li>
+          </ul></dd>
 <dt><a name="text" href="#text"><span>text:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="image: proc text(text: string): Image" href="libvips/api/image.html#text%2Cstring">image: proc text(text: string): Image</a></li>
@@ -552,6 +706,12 @@
           data-doc-search-tag="transform: proc thumbnail(img: Image; size: int): Image" href="libvips/api/transform.html#thumbnail%2CImage%2Cint">transform: proc thumbnail(img: Image; size: int): Image</a></li>
           <li><a class="reference external"
           data-doc-search-tag="transform: proc thumbnail(img: Image; width, height: int): Image" href="libvips/api/transform.html#thumbnail%2CImage%2Cint%2Cint">transform: proc thumbnail(img: Image; width, height: int): Image</a></li>
+          </ul></dd>
+<dt><a name="thumbnailFromBuffer" href="#thumbnailFromBuffer"><span>thumbnailFromBuffer:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="io: proc thumbnailFromBuffer(buf: seq[uint8]; width: int): Image" href="libvips/api/io.html#thumbnailFromBuffer%2Cseq%5Buint8%5D%2Cint">io: proc thumbnailFromBuffer(buf: seq[uint8]; width: int): Image</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="io: proc thumbnailFromBuffer(buf: seq[uint8]; width, height: int): Image" href="libvips/api/io.html#thumbnailFromBuffer%2Cseq%5Buint8%5D%2Cint%2Cint">io: proc thumbnailFromBuffer(buf: seq[uint8]; width, height: int): Image</a></li>
           </ul></dd>
 <dt><a name="thumbnailFromFile" href="#thumbnailFromFile"><span>thumbnailFromFile:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -614,6 +774,14 @@
 <dt><a name="va_list" href="#va_list"><span>va_list:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="types: object va_list" href="libvips/bindings/types.html#va_list">types: object va_list</a></li>
+          </ul></dd>
+<dt><a name="vectorIsEnabled" href="#vectorIsEnabled"><span>vectorIsEnabled:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="tuning: proc vectorIsEnabled(): bool" href="libvips/api/tuning.html#vectorIsEnabled">tuning: proc vectorIsEnabled(): bool</a></li>
+          </ul></dd>
+<dt><a name="vectorSetEnabled" href="#vectorSetEnabled"><span>vectorSetEnabled:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="tuning: proc vectorSetEnabled(enabled: bool)" href="libvips/api/tuning.html#vectorSetEnabled%2Cbool">tuning: proc vectorSetEnabled(enabled: bool)</a></li>
           </ul></dd>
 <dt><a name="VerticalAlignment" href="#VerticalAlignment"><span>VerticalAlignment:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -1886,6 +2054,10 @@
           data-doc-search-tag="conversion: proc vips_embed(input: ptr VipsImage; output: ptr ptr VipsImage;
            x, y, width, height: cint): cint" href="libvips/bindings/conversion.html#vips_embed%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2Ccint%2Ccint%2Ccint%2Ccint">conversion: proc vips_embed(input: ptr VipsImage; output: ptr ptr VipsImage;
            x, y, width, height: cint): cint</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_embed(input: ptr VipsImage; output: ptr ptr VipsImage;
+           x, y, width, height: cint; extend: VipsExtend): cint" href="libvips/bindings/conversion.html#vips_embed%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2Ccint%2Ccint%2Ccint%2Ccint%2CVipsExtend">conversion: proc vips_embed(input: ptr VipsImage; output: ptr ptr VipsImage;
+           x, y, width, height: cint; extend: VipsExtend): cint</a></li>
           </ul></dd>
 <dt><a name="vips_eorimage" href="#vips_eorimage"><span>vips_eorimage:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -2272,6 +2444,8 @@
 <dt><a name="vips_gamma" href="#vips_gamma"><span>vips_gamma:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="conversion: proc vips_gamma(input: ptr VipsImage; output: ptr ptr VipsImage): cint" href="libvips/bindings/conversion.html#vips_gamma%2Cptr.VipsImage%2Cptr.ptr.VipsImage">conversion: proc vips_gamma(input: ptr VipsImage; output: ptr ptr VipsImage): cint</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_gamma(input: ptr VipsImage; output: ptr ptr VipsImage; ex: cdouble): cint" href="libvips/bindings/conversion.html#vips_gamma%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2Ccdouble">conversion: proc vips_gamma(input: ptr VipsImage; output: ptr ptr VipsImage; ex: cdouble): cint</a></li>
           </ul></dd>
 <dt><a name="vips_gaussblur" href="#vips_gaussblur"><span>vips_gaussblur:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -2386,10 +2560,16 @@
 <dt><a name="vips_heifsave_safe" href="#vips_heifsave_safe"><span>vips_heifsave_safe:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="foreign: proc vips_heifsave_safe(input: ptr VipsImage; filename: cstring): cint" href="libvips/bindings/foreign.html#vips_heifsave_safe%2Cptr.VipsImage%2Ccstring">foreign: proc vips_heifsave_safe(input: ptr VipsImage; filename: cstring): cint</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="foreign: proc vips_heifsave_safe(input: ptr VipsImage; filename: cstring; quality: cint): cint" href="libvips/bindings/foreign.html#vips_heifsave_safe%2Cptr.VipsImage%2Ccstring%2Ccint">foreign: proc vips_heifsave_safe(input: ptr VipsImage; filename: cstring; quality: cint): cint</a></li>
           </ul></dd>
 <dt><a name="vips_heifsave_target" href="#vips_heifsave_target"><span>vips_heifsave_target:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="foreign: proc vips_heifsave_target(input: ptr VipsImage; target: ptr VipsTarget): cint" href="libvips/bindings/foreign.html#vips_heifsave_target%2Cptr.VipsImage%2Cptr.VipsTarget">foreign: proc vips_heifsave_target(input: ptr VipsImage; target: ptr VipsTarget): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_hist_cum" href="#vips_hist_cum"><span>vips_hist_cum:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arithmetic: proc vips_hist_cum(input: ptr VipsImage; output: ptr ptr VipsImage): cint" href="libvips/bindings/arithmetic.html#vips_hist_cum%2Cptr.VipsImage%2Cptr.ptr.VipsImage">arithmetic: proc vips_hist_cum(input: ptr VipsImage; output: ptr ptr VipsImage): cint</a></li>
           </ul></dd>
 <dt><a name="vips_hist_find" href="#vips_hist_find"><span>vips_hist_find:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -2404,6 +2584,12 @@
 <dt><a name="vips_hist_find_ndim" href="#vips_hist_find_ndim"><span>vips_hist_find_ndim:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="arithmetic: proc vips_hist_find_ndim(input: ptr VipsImage; res: ptr ptr VipsImage): cint" href="libvips/bindings/arithmetic.html#vips_hist_find_ndim%2Cptr.VipsImage%2Cptr.ptr.VipsImage">arithmetic: proc vips_hist_find_ndim(input: ptr VipsImage; res: ptr ptr VipsImage): cint</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="arithmetic: proc vips_hist_find_ndim(input: ptr VipsImage; res: ptr ptr VipsImage; bins: cint): cint" href="libvips/bindings/arithmetic.html#vips_hist_find_ndim%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2Ccint">arithmetic: proc vips_hist_find_ndim(input: ptr VipsImage; res: ptr ptr VipsImage; bins: cint): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_hist_norm" href="#vips_hist_norm"><span>vips_hist_norm:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arithmetic: proc vips_hist_norm(input: ptr VipsImage; output: ptr ptr VipsImage): cint" href="libvips/bindings/arithmetic.html#vips_hist_norm%2Cptr.VipsImage%2Cptr.ptr.VipsImage">arithmetic: proc vips_hist_norm(input: ptr VipsImage; output: ptr ptr VipsImage): cint</a></li>
           </ul></dd>
 <dt><a name="vips_hough_circle" href="#vips_hough_circle"><span>vips_hough_circle:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -3114,6 +3300,10 @@
           data-doc-search-tag="foreign: proc vips_jpegsave_buffer_safe(input: ptr VipsImage; buf: ptr pointer;
                           len: ptr csize_t): cint" href="libvips/bindings/foreign.html#vips_jpegsave_buffer_safe%2Cptr.VipsImage%2Cptr.pointer%2Cptr.csize_t">foreign: proc vips_jpegsave_buffer_safe(input: ptr VipsImage; buf: ptr pointer;
                           len: ptr csize_t): cint</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="foreign: proc vips_jpegsave_buffer_safe(input: ptr VipsImage; buf: ptr pointer;
+                          len: ptr csize_t; quality: cint): cint" href="libvips/bindings/foreign.html#vips_jpegsave_buffer_safe%2Cptr.VipsImage%2Cptr.pointer%2Cptr.csize_t%2Ccint">foreign: proc vips_jpegsave_buffer_safe(input: ptr VipsImage; buf: ptr pointer;
+                          len: ptr csize_t; quality: cint): cint</a></li>
           </ul></dd>
 <dt><a name="vips_jpegsave_mime" href="#vips_jpegsave_mime"><span>vips_jpegsave_mime:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -3122,6 +3312,8 @@
 <dt><a name="vips_jpegsave_safe" href="#vips_jpegsave_safe"><span>vips_jpegsave_safe:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="foreign: proc vips_jpegsave_safe(input: ptr VipsImage; filename: cstring): cint" href="libvips/bindings/foreign.html#vips_jpegsave_safe%2Cptr.VipsImage%2Ccstring">foreign: proc vips_jpegsave_safe(input: ptr VipsImage; filename: cstring): cint</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="foreign: proc vips_jpegsave_safe(input: ptr VipsImage; filename: cstring; quality: cint): cint" href="libvips/bindings/foreign.html#vips_jpegsave_safe%2Cptr.VipsImage%2Ccstring%2Ccint">foreign: proc vips_jpegsave_safe(input: ptr VipsImage; filename: cstring; quality: cint): cint</a></li>
           </ul></dd>
 <dt><a name="vips_jpegsave_target" href="#vips_jpegsave_target"><span>vips_jpegsave_target:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -3150,6 +3342,8 @@
 <dt><a name="vips_jxlsave_safe" href="#vips_jxlsave_safe"><span>vips_jxlsave_safe:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="foreign: proc vips_jxlsave_safe(input: ptr VipsImage; filename: cstring): cint" href="libvips/bindings/foreign.html#vips_jxlsave_safe%2Cptr.VipsImage%2Ccstring">foreign: proc vips_jxlsave_safe(input: ptr VipsImage; filename: cstring): cint</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="foreign: proc vips_jxlsave_safe(input: ptr VipsImage; filename: cstring; quality: cint): cint" href="libvips/bindings/foreign.html#vips_jxlsave_safe%2Cptr.VipsImage%2Ccstring%2Ccint">foreign: proc vips_jxlsave_safe(input: ptr VipsImage; filename: cstring; quality: cint): cint</a></li>
           </ul></dd>
 <dt><a name="vips_jxlsave_target" href="#vips_jxlsave_target"><span>vips_jxlsave_target:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -3328,6 +3522,10 @@
 <dt><a name="vips_mapim" href="#vips_mapim"><span>vips_mapim:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="resample: proc vips_mapim(input: ptr VipsImage; output: ptr ptr VipsImage; index: ptr VipsImage): cint" href="libvips/bindings/resample.html#vips_mapim%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2Cptr.VipsImage">resample: proc vips_mapim(input: ptr VipsImage; output: ptr ptr VipsImage; index: ptr VipsImage): cint</a></li>
+          </ul></dd>
+<dt><a name="vips_maplut" href="#vips_maplut"><span>vips_maplut:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arithmetic: proc vips_maplut(input: ptr VipsImage; output: ptr ptr VipsImage; lut: ptr VipsImage): cint" href="libvips/bindings/arithmetic.html#vips_maplut%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2Cptr.VipsImage">arithmetic: proc vips_maplut(input: ptr VipsImage; output: ptr ptr VipsImage; lut: ptr VipsImage): cint</a></li>
           </ul></dd>
 <dt><a name="vips_mask_butterworth" href="#vips_mask_butterworth"><span>vips_mask_butterworth:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -4138,10 +4336,16 @@
           data-doc-search-tag="foreign: proc vips_pngsave_buffer_safe(input: ptr VipsImage; buf: ptr pointer;
                          len: ptr csize_t): cint" href="libvips/bindings/foreign.html#vips_pngsave_buffer_safe%2Cptr.VipsImage%2Cptr.pointer%2Cptr.csize_t">foreign: proc vips_pngsave_buffer_safe(input: ptr VipsImage; buf: ptr pointer;
                          len: ptr csize_t): cint</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="foreign: proc vips_pngsave_buffer_safe(input: ptr VipsImage; buf: ptr pointer;
+                         len: ptr csize_t; compression: cint): cint" href="libvips/bindings/foreign.html#vips_pngsave_buffer_safe%2Cptr.VipsImage%2Cptr.pointer%2Cptr.csize_t%2Ccint">foreign: proc vips_pngsave_buffer_safe(input: ptr VipsImage; buf: ptr pointer;
+                         len: ptr csize_t; compression: cint): cint</a></li>
           </ul></dd>
 <dt><a name="vips_pngsave_safe" href="#vips_pngsave_safe"><span>vips_pngsave_safe:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="foreign: proc vips_pngsave_safe(input: ptr VipsImage; filename: cstring): cint" href="libvips/bindings/foreign.html#vips_pngsave_safe%2Cptr.VipsImage%2Ccstring">foreign: proc vips_pngsave_safe(input: ptr VipsImage; filename: cstring): cint</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="foreign: proc vips_pngsave_safe(input: ptr VipsImage; filename: cstring; compression: cint): cint" href="libvips/bindings/foreign.html#vips_pngsave_safe%2Cptr.VipsImage%2Ccstring%2Ccint">foreign: proc vips_pngsave_safe(input: ptr VipsImage; filename: cstring; compression: cint): cint</a></li>
           </ul></dd>
 <dt><a name="vips_pngsave_target" href="#vips_pngsave_target"><span>vips_pngsave_target:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -4532,6 +4736,10 @@
           data-doc-search-tag="conversion: proc vips_smartcrop(input: ptr VipsImage; output: ptr ptr VipsImage;
                width, height: cint): cint" href="libvips/bindings/conversion.html#vips_smartcrop%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2Ccint%2Ccint">conversion: proc vips_smartcrop(input: ptr VipsImage; output: ptr ptr VipsImage;
                width, height: cint): cint</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="conversion: proc vips_smartcrop(input: ptr VipsImage; output: ptr ptr VipsImage;
+               width, height: cint; interesting: VipsInteresting): cint" href="libvips/bindings/conversion.html#vips_smartcrop%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2Ccint%2Ccint%2CVipsInteresting">conversion: proc vips_smartcrop(input: ptr VipsImage; output: ptr ptr VipsImage;
+               width, height: cint; interesting: VipsInteresting): cint</a></li>
           </ul></dd>
 <dt><a name="vips_sobel" href="#vips_sobel"><span>vips_sobel:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -4684,6 +4892,8 @@
 <dt><a name="vips_tiffsave_safe" href="#vips_tiffsave_safe"><span>vips_tiffsave_safe:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="foreign: proc vips_tiffsave_safe(input: ptr VipsImage; filename: cstring): cint" href="libvips/bindings/foreign.html#vips_tiffsave_safe%2Cptr.VipsImage%2Ccstring">foreign: proc vips_tiffsave_safe(input: ptr VipsImage; filename: cstring): cint</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="foreign: proc vips_tiffsave_safe(input: ptr VipsImage; filename: cstring; compression: cint): cint" href="libvips/bindings/foreign.html#vips_tiffsave_safe%2Cptr.VipsImage%2Ccstring%2Ccint">foreign: proc vips_tiffsave_safe(input: ptr VipsImage; filename: cstring; compression: cint): cint</a></li>
           </ul></dd>
 <dt><a name="vips_tiffsave_target" href="#vips_tiffsave_target"><span>vips_tiffsave_target:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -4924,6 +5134,10 @@
           data-doc-search-tag="foreign: proc vips_webpsave_buffer_safe(input: ptr VipsImage; buf: ptr pointer;
                           len: ptr csize_t): cint" href="libvips/bindings/foreign.html#vips_webpsave_buffer_safe%2Cptr.VipsImage%2Cptr.pointer%2Cptr.csize_t">foreign: proc vips_webpsave_buffer_safe(input: ptr VipsImage; buf: ptr pointer;
                           len: ptr csize_t): cint</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="foreign: proc vips_webpsave_buffer_safe(input: ptr VipsImage; buf: ptr pointer;
+                          len: ptr csize_t; quality: cint): cint" href="libvips/bindings/foreign.html#vips_webpsave_buffer_safe%2Cptr.VipsImage%2Cptr.pointer%2Cptr.csize_t%2Ccint">foreign: proc vips_webpsave_buffer_safe(input: ptr VipsImage; buf: ptr pointer;
+                          len: ptr csize_t; quality: cint): cint</a></li>
           </ul></dd>
 <dt><a name="vips_webpsave_mime" href="#vips_webpsave_mime"><span>vips_webpsave_mime:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -4932,6 +5146,8 @@
 <dt><a name="vips_webpsave_safe" href="#vips_webpsave_safe"><span>vips_webpsave_safe:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="foreign: proc vips_webpsave_safe(input: ptr VipsImage; filename: cstring): cint" href="libvips/bindings/foreign.html#vips_webpsave_safe%2Cptr.VipsImage%2Ccstring">foreign: proc vips_webpsave_safe(input: ptr VipsImage; filename: cstring): cint</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="foreign: proc vips_webpsave_safe(input: ptr VipsImage; filename: cstring; quality: cint): cint" href="libvips/bindings/foreign.html#vips_webpsave_safe%2Cptr.VipsImage%2Ccstring%2Ccint">foreign: proc vips_webpsave_safe(input: ptr VipsImage; filename: cstring; quality: cint): cint</a></li>
           </ul></dd>
 <dt><a name="vips_webpsave_target" href="#vips_webpsave_target"><span>vips_webpsave_target:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -5019,11 +5235,15 @@
 <li><a class="reference external"
           data-doc-search-tag="image: proc yres(img: Image): float" href="libvips/api/image.html#yres%2CImage">image: proc yres(img: Image): float</a></li>
           </ul></dd>
+<dt><a name="zoom" href="#zoom"><span>zoom:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="transform: proc zoom(img: Image; xFactor, yFactor: int): Image" href="libvips/api/transform.html#zoom%2CImage%2Cint%2Cint">transform: proc zoom(img: Image; xFactor, yFactor: int): Image</a></li>
+          </ul></dd>
 </dl>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2026-07-25 07:22:38 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2026-08-24 12:53:31 UTC</small>
       </div>
     </div>
   </div>

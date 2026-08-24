@@ -252,6 +252,9 @@
   <li><a class="reference" href="#vips_embed%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2Ccint%2Ccint%2Ccint%2Ccint" title="vips_embed(input: ptr VipsImage; output: ptr ptr VipsImage;
            x, y, width, height: cint): cint">vips_embed(input: ptr VipsImage; output: ptr ptr VipsImage;
            x, y, width, height: cint): cint</a></li>
+<li><a class="reference" href="#vips_embed%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2Ccint%2Ccint%2Ccint%2Ccint%2CVipsExtend" title="vips_embed(input: ptr VipsImage; output: ptr ptr VipsImage;
+           x, y, width, height: cint; extend: VipsExtend): cint">vips_embed(input: ptr VipsImage; output: ptr ptr VipsImage;
+           x, y, width, height: cint; extend: VipsExtend): cint</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">vips_extract_area
@@ -280,6 +283,7 @@
 </ul>
 <ul class="simple nested-toc-section">vips_gamma
   <li><a class="reference" href="#vips_gamma%2Cptr.VipsImage%2Cptr.ptr.VipsImage" title="vips_gamma(input: ptr VipsImage; output: ptr ptr VipsImage): cint">vips_gamma(input: ptr VipsImage; output: ptr ptr VipsImage): cint</a></li>
+<li><a class="reference" href="#vips_gamma%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2Ccdouble" title="vips_gamma(input: ptr VipsImage; output: ptr ptr VipsImage; ex: cdouble): cint">vips_gamma(input: ptr VipsImage; output: ptr ptr VipsImage; ex: cdouble): cint</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">vips_gravity
@@ -362,6 +366,9 @@
   <li><a class="reference" href="#vips_smartcrop%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2Ccint%2Ccint" title="vips_smartcrop(input: ptr VipsImage; output: ptr ptr VipsImage;
                width, height: cint): cint">vips_smartcrop(input: ptr VipsImage; output: ptr ptr VipsImage;
                width, height: cint): cint</a></li>
+<li><a class="reference" href="#vips_smartcrop%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2Ccint%2Ccint%2CVipsInteresting" title="vips_smartcrop(input: ptr VipsImage; output: ptr ptr VipsImage;
+               width, height: cint; interesting: VipsInteresting): cint">vips_smartcrop(input: ptr VipsImage; output: ptr ptr VipsImage;
+               width, height: cint; interesting: VipsInteresting): cint</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">vips_subsample
@@ -923,6 +930,16 @@
     
   </dd>
 </div>
+<div id="vips_embed,ptr.VipsImage,ptr.ptr.VipsImage,cint,cint,cint,cint,VipsExtend">
+  <dt><pre><span class="Keyword">proc</span> <a href="#vips_embed%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2Ccint%2Ccint%2Ccint%2Ccint%2CVipsExtend"><span class="Identifier">vips_embed</span></a><span class="Other">(</span><span class="Identifier">input</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span> <span class="Identifier">output</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span>
+                <span class="Identifier">x</span><span class="Other">,</span> <span class="Identifier">y</span><span class="Other">,</span> <span class="Identifier">width</span><span class="Other">,</span> <span class="Identifier">height</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">extend</span><span class="Other">:</span> <a href="#VipsExtend"><span class="Identifier">VipsExtend</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    
+    
+  </dd>
+</div>
 
 </div>
 <div id="vips_extract_area-procs-all">
@@ -990,6 +1007,15 @@
 <div id="vips_gamma-procs-all">
   <div id="vips_gamma,ptr.VipsImage,ptr.ptr.VipsImage">
   <dt><pre><span class="Keyword">proc</span> <a href="#vips_gamma%2Cptr.VipsImage%2Cptr.ptr.VipsImage"><span class="Identifier">vips_gamma</span></a><span class="Other">(</span><span class="Identifier">input</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span> <span class="Identifier">output</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    
+    
+  </dd>
+</div>
+<div id="vips_gamma,ptr.VipsImage,ptr.ptr.VipsImage,cdouble">
+  <dt><pre><span class="Keyword">proc</span> <a href="#vips_gamma%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2Ccdouble"><span class="Identifier">vips_gamma</span></a><span class="Other">(</span><span class="Identifier">input</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span> <span class="Identifier">output</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span> <span class="Identifier">ex</span><span class="Other">:</span> <span class="Identifier">cdouble</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -1218,6 +1244,16 @@
     
   </dd>
 </div>
+<div id="vips_smartcrop,ptr.VipsImage,ptr.ptr.VipsImage,cint,cint,VipsInteresting">
+  <dt><pre><span class="Keyword">proc</span> <a href="#vips_smartcrop%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2Ccint%2Ccint%2CVipsInteresting"><span class="Identifier">vips_smartcrop</span></a><span class="Other">(</span><span class="Identifier">input</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span> <span class="Identifier">output</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span>
+                    <span class="Identifier">width</span><span class="Other">,</span> <span class="Identifier">height</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">;</span> <span class="Identifier">interesting</span><span class="Other">:</span> <a href="#VipsInteresting"><span class="Identifier">VipsInteresting</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    
+    
+  </dd>
+</div>
 
 </div>
 <div id="vips_subsample-procs-all">
@@ -1314,7 +1350,7 @@
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2026-07-25 07:22:38 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2026-08-24 12:53:31 UTC</small>
       </div>
     </div>
   </div>

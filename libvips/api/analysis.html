@@ -59,14 +59,41 @@
 </li>
 <li>
   <details open>
+    <summary><a class="reference reference-toplevel" href="#7" id="57">Types</a></summary>
+    <ul class="simple simple-toc-section">
+      <li><a class="reference" href="#ColorEntry" title="ColorEntry = tuple[r, g, b: uint8, count: int]">ColorEntry</a></li>
+<li><a class="reference" href="#DeltaEMode" title="DeltaEMode = enum
+  dE76, dE00, dECMC">DeltaEMode</a></li>
+
+    </ul>
+  </details>
+</li>
+<li>
+  <details open>
     <summary><a class="reference reference-toplevel" href="#12" id="62">Procs</a></summary>
     <ul class="simple simple-toc-section">
       <ul class="simple nested-toc-section">avg
   <li><a class="reference" href="#avg%2CImage" title="avg(img: Image): float64">avg(img: Image): float64</a></li>
 
 </ul>
+<ul class="simple nested-toc-section">cumulativeHistogram
+  <li><a class="reference" href="#cumulativeHistogram%2CImage%2Cint" title="cumulativeHistogram(img: Image; bins: int = 256): seq[float64]">cumulativeHistogram(img: Image; bins: int = 256): seq[float64]</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">deltaE
+  <li><a class="reference" href="#deltaE%2CImage%2CImage%2CDeltaEMode" title="deltaE(img1, img2: Image; mode: DeltaEMode = dE76): float64">deltaE(img1, img2: Image; mode: DeltaEMode = dE76): float64</a></li>
+
+</ul>
 <ul class="simple nested-toc-section">deviate
   <li><a class="reference" href="#deviate%2CImage" title="deviate(img: Image): float64">deviate(img: Image): float64</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">dominantColors
+  <li><a class="reference" href="#dominantColors%2CImage%2Cint%2Cint" title="dominantColors(img: Image; count: int = 5; accuracy: int = 10): seq[ColorEntry]">dominantColors(img: Image; count: int = 5; accuracy: int = 10): seq[ColorEntry]</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">equalize
+  <li><a class="reference" href="#equalize%2CImage" title="equalize(img: Image): Image">equalize(img: Image): Image</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">findTrim
@@ -81,12 +108,20 @@
   <li><a class="reference" href="#histogram%2CImage" title="histogram(img: Image): Image">histogram(img: Image): Image</a></li>
 
 </ul>
+<ul class="simple nested-toc-section">histogramData
+  <li><a class="reference" href="#histogramData%2CImage%2Cint" title="histogramData(img: Image; bins: int = 256): seq[float64]">histogramData(img: Image; bins: int = 256): seq[float64]</a></li>
+
+</ul>
 <ul class="simple nested-toc-section">max
   <li><a class="reference" href="#max%2CImage" title="max(img: Image): float64">max(img: Image): float64</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">min
   <li><a class="reference" href="#min%2CImage" title="min(img: Image): float64">min(img: Image): float64</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">stats
+  <li><a class="reference" href="#stats%2CImage" title="stats(img: Image): seq[seq[float64]]">stats(img: Image): seq[seq[float64]]</a></li>
 
 </ul>
 
@@ -105,7 +140,30 @@
     <div class="section" id="6">
   <h1><a class="toc-backref" href="#6">Imports</a></h1>
   <dl class="item">
-    <a class="reference external" href="../bindings/vips.html">../bindings/vips</a>, <a class="reference external" href="types.html">types</a>, <a class="reference external" href="image.html">image</a>
+    <a class="reference external" href="../bindings/vips.html">../bindings/vips</a>, <a class="reference external" href="../bindings/glib/glib.html">../bindings/glib/glib</a>, <a class="reference external" href="types.html">types</a>, <a class="reference external" href="image.html">image</a>, <a class="reference external" href="colour.html">colour</a>
+  </dl>
+</div>
+<div class="section" id="7">
+  <h1><a class="toc-backref" href="#7">Types</a></h1>
+  <dl class="item">
+    <div id="ColorEntry">
+  <dt><pre><a href="#ColorEntry"><span class="Identifier">ColorEntry</span></a> <span class="Other">=</span> <span class="Keyword">tuple</span><span class="Other">[</span><span class="Identifier">r</span><span class="Other">,</span> <span class="Identifier">g</span><span class="Other">,</span> <span class="Identifier">b</span><span class="Other">:</span> <span class="Identifier">uint8</span><span class="Other">,</span> <span class="Identifier">count</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">]</span></pre></dt>
+  <dd>
+    
+    
+    
+  </dd>
+</div>
+<div id="DeltaEMode">
+  <dt><pre><a href="#DeltaEMode"><span class="Identifier">DeltaEMode</span></a> <span class="Other">=</span> <span class="Keyword">enum</span>
+  <span class="Identifier">dE76</span><span class="Other">,</span> <span class="Identifier">dE00</span><span class="Other">,</span> <span class="Identifier">dECMC</span></pre></dt>
+  <dd>
+    
+    
+    
+  </dd>
+</div>
+
   </dl>
 </div>
 <div class="section" id="12">
@@ -122,9 +180,56 @@
 </div>
 
 </div>
+<div id="cumulativeHistogram-procs-all">
+  <div id="cumulativeHistogram,Image,int">
+  <dt><pre><span class="Keyword">proc</span> <a href="#cumulativeHistogram%2CImage%2Cint"><span class="Identifier">cumulativeHistogram</span></a><span class="Other">(</span><span class="Identifier">img</span><span class="Other">:</span> <a href="image.html#Image"><span class="Identifier">Image</span></a><span class="Other">;</span> <span class="Identifier">bins</span><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="DecNumber">256</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">float64</span><span class="Other">]</span> {.
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">VipsError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    
+    
+  </dd>
+</div>
+
+</div>
+<div id="deltaE-procs-all">
+  <div id="deltaE,Image,Image,DeltaEMode">
+  <dt><pre><span class="Keyword">proc</span> <a href="#deltaE%2CImage%2CImage%2CDeltaEMode"><span class="Identifier">deltaE</span></a><span class="Other">(</span><span class="Identifier">img1</span><span class="Other">,</span> <span class="Identifier">img2</span><span class="Other">:</span> <a href="image.html#Image"><span class="Identifier">Image</span></a><span class="Other">;</span> <span class="Identifier">mode</span><span class="Other">:</span> <a href="#DeltaEMode"><span class="Identifier">DeltaEMode</span></a> <span class="Other">=</span> <span class="Identifier">dE76</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">float64</span> {.
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">VipsError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    
+    
+  </dd>
+</div>
+
+</div>
 <div id="deviate-procs-all">
   <div id="deviate,Image">
   <dt><pre><span class="Keyword">proc</span> <a href="#deviate%2CImage"><span class="Identifier">deviate</span></a><span class="Other">(</span><span class="Identifier">img</span><span class="Other">:</span> <a href="image.html#Image"><span class="Identifier">Image</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">float64</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">VipsError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    
+    
+  </dd>
+</div>
+
+</div>
+<div id="dominantColors-procs-all">
+  <div id="dominantColors,Image,int,int">
+  <dt><pre><span class="Keyword">proc</span> <a href="#dominantColors%2CImage%2Cint%2Cint"><span class="Identifier">dominantColors</span></a><span class="Other">(</span><span class="Identifier">img</span><span class="Other">:</span> <a href="image.html#Image"><span class="Identifier">Image</span></a><span class="Other">;</span> <span class="Identifier">count</span><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="DecNumber">5</span><span class="Other">;</span> <span class="Identifier">accuracy</span><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="DecNumber">10</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span>
+    <a href="#ColorEntry"><span class="Identifier">ColorEntry</span></a><span class="Other">]</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">VipsError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    
+    
+  </dd>
+</div>
+
+</div>
+<div id="equalize-procs-all">
+  <div id="equalize,Image">
+  <dt><pre><span class="Keyword">proc</span> <a href="#equalize%2CImage"><span class="Identifier">equalize</span></a><span class="Other">(</span><span class="Identifier">img</span><span class="Other">:</span> <a href="image.html#Image"><span class="Identifier">Image</span></a><span class="Other">)</span><span class="Other">:</span> <a href="image.html#Image"><span class="Identifier">Image</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">VipsError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     
@@ -168,6 +273,18 @@
 </div>
 
 </div>
+<div id="histogramData-procs-all">
+  <div id="histogramData,Image,int">
+  <dt><pre><span class="Keyword">proc</span> <a href="#histogramData%2CImage%2Cint"><span class="Identifier">histogramData</span></a><span class="Other">(</span><span class="Identifier">img</span><span class="Other">:</span> <a href="image.html#Image"><span class="Identifier">Image</span></a><span class="Other">;</span> <span class="Identifier">bins</span><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="DecNumber">256</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">float64</span><span class="Other">]</span> {.
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">VipsError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    
+    
+  </dd>
+</div>
+
+</div>
 <div id="max-procs-all">
   <div id="max,Image">
   <dt><pre><span class="Keyword">proc</span> <a href="#max%2CImage"><span class="Identifier">max</span></a><span class="Other">(</span><span class="Identifier">img</span><span class="Other">:</span> <a href="image.html#Image"><span class="Identifier">Image</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">float64</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">VipsError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -190,6 +307,18 @@
 </div>
 
 </div>
+<div id="stats-procs-all">
+  <div id="stats,Image">
+  <dt><pre><span class="Keyword">proc</span> <a href="#stats%2CImage"><span class="Identifier">stats</span></a><span class="Other">(</span><span class="Identifier">img</span><span class="Other">:</span> <a href="image.html#Image"><span class="Identifier">Image</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">float64</span><span class="Other">]</span><span class="Other">]</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">VipsError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    
+    
+  </dd>
+</div>
+
+</div>
 
   </dl>
 </div>
@@ -200,7 +329,7 @@
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2026-07-25 07:22:38 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2026-08-24 12:53:31 UTC</small>
       </div>
     </div>
   </div>

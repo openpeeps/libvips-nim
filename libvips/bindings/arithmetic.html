@@ -275,6 +275,10 @@
               x: cint; y: cint): cint</a></li>
 
 </ul>
+<ul class="simple nested-toc-section">vips_hist_cum
+  <li><a class="reference" href="#vips_hist_cum%2Cptr.VipsImage%2Cptr.ptr.VipsImage" title="vips_hist_cum(input: ptr VipsImage; output: ptr ptr VipsImage): cint">vips_hist_cum(input: ptr VipsImage; output: ptr ptr VipsImage): cint</a></li>
+
+</ul>
 <ul class="simple nested-toc-section">vips_hist_find
   <li><a class="reference" href="#vips_hist_find%2Cptr.VipsImage%2Cptr.ptr.VipsImage" title="vips_hist_find(input: ptr VipsImage; res: ptr ptr VipsImage): cint">vips_hist_find(input: ptr VipsImage; res: ptr ptr VipsImage): cint</a></li>
 
@@ -287,6 +291,11 @@
 </ul>
 <ul class="simple nested-toc-section">vips_hist_find_ndim
   <li><a class="reference" href="#vips_hist_find_ndim%2Cptr.VipsImage%2Cptr.ptr.VipsImage" title="vips_hist_find_ndim(input: ptr VipsImage; res: ptr ptr VipsImage): cint">vips_hist_find_ndim(input: ptr VipsImage; res: ptr ptr VipsImage): cint</a></li>
+<li><a class="reference" href="#vips_hist_find_ndim%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2Ccint" title="vips_hist_find_ndim(input: ptr VipsImage; res: ptr ptr VipsImage; bins: cint): cint">vips_hist_find_ndim(input: ptr VipsImage; res: ptr ptr VipsImage; bins: cint): cint</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">vips_hist_norm
+  <li><a class="reference" href="#vips_hist_norm%2Cptr.VipsImage%2Cptr.ptr.VipsImage" title="vips_hist_norm(input: ptr VipsImage; output: ptr ptr VipsImage): cint">vips_hist_norm(input: ptr VipsImage; output: ptr ptr VipsImage): cint</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">vips_hough_circle
@@ -365,6 +374,10 @@
 </ul>
 <ul class="simple nested-toc-section">vips_lshift_const1
   <li><a class="reference" href="#vips_lshift_const1%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2Ccdouble" title="vips_lshift_const1(input: ptr VipsImage; res: ptr ptr VipsImage; c: cdouble): cint">vips_lshift_const1(input: ptr VipsImage; res: ptr ptr VipsImage; c: cdouble): cint</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">vips_maplut
+  <li><a class="reference" href="#vips_maplut%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2Cptr.VipsImage" title="vips_maplut(input: ptr VipsImage; output: ptr ptr VipsImage; lut: ptr VipsImage): cint">vips_maplut(input: ptr VipsImage; output: ptr ptr VipsImage; lut: ptr VipsImage): cint</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">vips_math
@@ -1177,6 +1190,18 @@
 </div>
 
 </div>
+<div id="vips_hist_cum-procs-all">
+  <div id="vips_hist_cum,ptr.VipsImage,ptr.ptr.VipsImage">
+  <dt><pre><span class="Keyword">proc</span> <a href="#vips_hist_cum%2Cptr.VipsImage%2Cptr.ptr.VipsImage"><span class="Identifier">vips_hist_cum</span></a><span class="Other">(</span><span class="Identifier">input</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span> <span class="Identifier">output</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    
+    
+  </dd>
+</div>
+
+</div>
 <div id="vips_hist_find-procs-all">
   <div id="vips_hist_find,ptr.VipsImage,ptr.ptr.VipsImage">
   <dt><pre><span class="Keyword">proc</span> <a href="#vips_hist_find%2Cptr.VipsImage%2Cptr.ptr.VipsImage"><span class="Identifier">vips_hist_find</span></a><span class="Other">(</span><span class="Identifier">input</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span> <span class="Identifier">res</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.
@@ -1205,6 +1230,27 @@
 <div id="vips_hist_find_ndim-procs-all">
   <div id="vips_hist_find_ndim,ptr.VipsImage,ptr.ptr.VipsImage">
   <dt><pre><span class="Keyword">proc</span> <a href="#vips_hist_find_ndim%2Cptr.VipsImage%2Cptr.ptr.VipsImage"><span class="Identifier">vips_hist_find_ndim</span></a><span class="Other">(</span><span class="Identifier">input</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span> <span class="Identifier">res</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    
+    
+  </dd>
+</div>
+<div id="vips_hist_find_ndim,ptr.VipsImage,ptr.ptr.VipsImage,cint">
+  <dt><pre><span class="Keyword">proc</span> <a href="#vips_hist_find_ndim%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2Ccint"><span class="Identifier">vips_hist_find_ndim</span></a><span class="Other">(</span><span class="Identifier">input</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span> <span class="Identifier">res</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span>
+                         <span class="Identifier">bins</span><span class="Other">:</span> <span class="Identifier">cint</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    
+    
+  </dd>
+</div>
+
+</div>
+<div id="vips_hist_norm-procs-all">
+  <div id="vips_hist_norm,ptr.VipsImage,ptr.ptr.VipsImage">
+  <dt><pre><span class="Keyword">proc</span> <a href="#vips_hist_norm%2Cptr.VipsImage%2Cptr.ptr.VipsImage"><span class="Identifier">vips_hist_norm</span></a><span class="Other">(</span><span class="Identifier">input</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span> <span class="Identifier">output</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
@@ -1416,6 +1462,18 @@
   <div id="vips_lshift_const1,ptr.VipsImage,ptr.ptr.VipsImage,cdouble">
   <dt><pre><span class="Keyword">proc</span> <a href="#vips_lshift_const1%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2Ccdouble"><span class="Identifier">vips_lshift_const1</span></a><span class="Other">(</span><span class="Identifier">input</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span> <span class="Identifier">res</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span> <span class="Identifier">c</span><span class="Other">:</span> <span class="Identifier">cdouble</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    
+    
+  </dd>
+</div>
+
+</div>
+<div id="vips_maplut-procs-all">
+  <div id="vips_maplut,ptr.VipsImage,ptr.ptr.VipsImage,ptr.VipsImage">
+  <dt><pre><span class="Keyword">proc</span> <a href="#vips_maplut%2Cptr.VipsImage%2Cptr.ptr.VipsImage%2Cptr.VipsImage"><span class="Identifier">vips_maplut</span></a><span class="Other">(</span><span class="Identifier">input</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span> <span class="Identifier">output</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">;</span>
+                 <span class="Identifier">lut</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="basic.html#VipsImage"><span class="Identifier">VipsImage</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">cint</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     
@@ -2046,7 +2104,7 @@
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2026-07-25 07:22:38 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2026-08-24 12:53:31 UTC</small>
       </div>
     </div>
   </div>

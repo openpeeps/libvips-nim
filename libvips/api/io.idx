@@ -19,7 +19,12 @@ nim	savePNG	libvips/api/io.html#savePNG,Image,range[]	proc savePNG(img: Image; c
 nim	saveWebP	libvips/api/io.html#saveWebP,Image,range[]	proc saveWebP(img: Image; quality: range[0 .. 100] = webpDefaultQuality): seq[uint8]		65
 nim	thumbnailFromFile	libvips/api/io.html#thumbnailFromFile,string,int	proc thumbnailFromFile(path: string; width: int): Image		74
 nim	thumbnailFromFile	libvips/api/io.html#thumbnailFromFile,string,int,int	proc thumbnailFromFile(path: string; width, height: int): Image		80
+nim	thumbnailFromBuffer	libvips/api/io.html#thumbnailFromBuffer,seq[uint8],int	proc thumbnailFromBuffer(buf: seq[uint8]; width: int): Image		86
+nim	thumbnailFromBuffer	libvips/api/io.html#thumbnailFromBuffer,seq[uint8],int,int	proc thumbnailFromBuffer(buf: seq[uint8]; width, height: int): Image		92
+nim	loadGIF	libvips/api/io.html#loadGIF,string	proc loadGIF(path: string): Image		98
+nim	saveGIF	libvips/api/io.html#saveGIF,Image,string	proc saveGIF(img: Image; path: string)		104
 nimgrp	savewebp	libvips/api/io.html#saveWebP-procs-all	proc		27
+nimgrp	thumbnailfrombuffer	libvips/api/io.html#thumbnailFromBuffer-procs-all	proc		86
 nimgrp	savejpeg	libvips/api/io.html#saveJPEG-procs-all	proc		19
 nimgrp	savepng	libvips/api/io.html#savePNG-procs-all	proc		23
 nimgrp	thumbnailfromfile	libvips/api/io.html#thumbnailFromFile-procs-all	proc		74

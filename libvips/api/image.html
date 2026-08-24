@@ -94,6 +94,18 @@
   <li><a class="reference" href="#fromMemory%2Cseq%5Buint8%5D%2Cint%2Cint%2Cint%2CVipsBandFormat" title="fromMemory(data: seq[uint8]; width, height, bands: int; format: VipsBandFormat): Image">fromMemory(data: seq[uint8]; width, height, bands: int; format: VipsBandFormat): Image</a></li>
 
 </ul>
+<ul class="simple nested-toc-section">getMetadata
+  <li><a class="reference" href="#getMetadata%2CImage%2Cstring" title="getMetadata(img: Image; field: string): string">getMetadata(img: Image; field: string): string</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">getMetadataDouble
+  <li><a class="reference" href="#getMetadataDouble%2CImage%2Cstring" title="getMetadataDouble(img: Image; field: string): float">getMetadataDouble(img: Image; field: string): float</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">getMetadataInt
+  <li><a class="reference" href="#getMetadataInt%2CImage%2Cstring" title="getMetadataInt(img: Image; field: string): int">getMetadataInt(img: Image; field: string): int</a></li>
+
+</ul>
 <ul class="simple nested-toc-section">hasAlpha
   <li><a class="reference" href="#hasAlpha%2CImage" title="hasAlpha(img: Image): bool">hasAlpha(img: Image): bool</a></li>
 
@@ -114,12 +126,32 @@
   <li><a class="reference" href="#orientation%2CImage" title="orientation(img: Image): int">orientation(img: Image): int</a></li>
 
 </ul>
+<ul class="simple nested-toc-section">removeMetadata
+  <li><a class="reference" href="#removeMetadata%2CImage%2Cstring" title="removeMetadata(img: Image; field: string): bool">removeMetadata(img: Image; field: string): bool</a></li>
+
+</ul>
 <ul class="simple nested-toc-section">scale
   <li><a class="reference" href="#scale%2CImage" title="scale(img: Image): Image">scale(img: Image): Image</a></li>
 
 </ul>
+<ul class="simple nested-toc-section">setMetadata
+  <li><a class="reference" href="#setMetadata%2CImage%2Cstring%2Cstring" title="setMetadata(img: Image; field, value: string)">setMetadata(img: Image; field, value: string)</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">setMetadataDouble
+  <li><a class="reference" href="#setMetadataDouble%2CImage%2Cstring%2Cfloat" title="setMetadataDouble(img: Image; field: string; value: float)">setMetadataDouble(img: Image; field: string; value: float)</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">setMetadataInt
+  <li><a class="reference" href="#setMetadataInt%2CImage%2Cstring%2Cint" title="setMetadataInt(img: Image; field: string; value: int)">setMetadataInt(img: Image; field: string; value: int)</a></li>
+
+</ul>
 <ul class="simple nested-toc-section">space
   <li><a class="reference" href="#space%2CImage" title="space(img: Image): VipsInterpretation">space(img: Image): VipsInterpretation</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">stripMetadata
+  <li><a class="reference" href="#stripMetadata%2CImage" title="stripMetadata(img: Image): Image">stripMetadata(img: Image): Image</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">text
@@ -259,6 +291,42 @@
 </div>
 
 </div>
+<div id="getMetadata-procs-all">
+  <div id="getMetadata,Image,string">
+  <dt><pre><span class="Keyword">proc</span> <a href="#getMetadata%2CImage%2Cstring"><span class="Identifier">getMetadata</span></a><span class="Other">(</span><span class="Identifier">img</span><span class="Other">:</span> <a href="#Image"><span class="Identifier">Image</span></a><span class="Other">;</span> <span class="Identifier">field</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">VipsError</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    
+    
+  </dd>
+</div>
+
+</div>
+<div id="getMetadataDouble-procs-all">
+  <div id="getMetadataDouble,Image,string">
+  <dt><pre><span class="Keyword">proc</span> <a href="#getMetadataDouble%2CImage%2Cstring"><span class="Identifier">getMetadataDouble</span></a><span class="Other">(</span><span class="Identifier">img</span><span class="Other">:</span> <a href="#Image"><span class="Identifier">Image</span></a><span class="Other">;</span> <span class="Identifier">field</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">float</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">VipsError</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    
+    
+  </dd>
+</div>
+
+</div>
+<div id="getMetadataInt-procs-all">
+  <div id="getMetadataInt,Image,string">
+  <dt><pre><span class="Keyword">proc</span> <a href="#getMetadataInt%2CImage%2Cstring"><span class="Identifier">getMetadataInt</span></a><span class="Other">(</span><span class="Identifier">img</span><span class="Other">:</span> <a href="#Image"><span class="Identifier">Image</span></a><span class="Other">;</span> <span class="Identifier">field</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">int</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">VipsError</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    
+    
+  </dd>
+</div>
+
+</div>
 <div id="hasAlpha-procs-all">
   <div id="hasAlpha,Image">
   <dt><pre><span class="Keyword">proc</span> <a href="#hasAlpha%2CImage"><span class="Identifier">hasAlpha</span></a><span class="Other">(</span><span class="Identifier">img</span><span class="Other">:</span> <a href="#Image"><span class="Identifier">Image</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -315,6 +383,18 @@
 </div>
 
 </div>
+<div id="removeMetadata-procs-all">
+  <div id="removeMetadata,Image,string">
+  <dt><pre><span class="Keyword">proc</span> <a href="#removeMetadata%2CImage%2Cstring"><span class="Identifier">removeMetadata</span></a><span class="Other">(</span><span class="Identifier">img</span><span class="Other">:</span> <a href="#Image"><span class="Identifier">Image</span></a><span class="Other">;</span> <span class="Identifier">field</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    
+    
+  </dd>
+</div>
+
+</div>
 <div id="scale-procs-all">
   <div id="scale,Image">
   <dt><pre><span class="Keyword">proc</span> <a href="#scale%2CImage"><span class="Identifier">scale</span></a><span class="Other">(</span><span class="Identifier">img</span><span class="Other">:</span> <a href="#Image"><span class="Identifier">Image</span></a><span class="Other">)</span><span class="Other">:</span> <a href="#Image"><span class="Identifier">Image</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">VipsError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -326,9 +406,57 @@
 </div>
 
 </div>
+<div id="setMetadata-procs-all">
+  <div id="setMetadata,Image,string,string">
+  <dt><pre><span class="Keyword">proc</span> <a href="#setMetadata%2CImage%2Cstring%2Cstring"><span class="Identifier">setMetadata</span></a><span class="Other">(</span><span class="Identifier">img</span><span class="Other">:</span> <a href="#Image"><span class="Identifier">Image</span></a><span class="Other">;</span> <span class="Identifier">field</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    
+    
+  </dd>
+</div>
+
+</div>
+<div id="setMetadataDouble-procs-all">
+  <div id="setMetadataDouble,Image,string,float">
+  <dt><pre><span class="Keyword">proc</span> <a href="#setMetadataDouble%2CImage%2Cstring%2Cfloat"><span class="Identifier">setMetadataDouble</span></a><span class="Other">(</span><span class="Identifier">img</span><span class="Other">:</span> <a href="#Image"><span class="Identifier">Image</span></a><span class="Other">;</span> <span class="Identifier">field</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">;</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">float</span><span class="Other">)</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    
+    
+  </dd>
+</div>
+
+</div>
+<div id="setMetadataInt-procs-all">
+  <div id="setMetadataInt,Image,string,int">
+  <dt><pre><span class="Keyword">proc</span> <a href="#setMetadataInt%2CImage%2Cstring%2Cint"><span class="Identifier">setMetadataInt</span></a><span class="Other">(</span><span class="Identifier">img</span><span class="Other">:</span> <a href="#Image"><span class="Identifier">Image</span></a><span class="Other">;</span> <span class="Identifier">field</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">;</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">)</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    
+    
+  </dd>
+</div>
+
+</div>
 <div id="space-procs-all">
   <div id="space,Image">
   <dt><pre><span class="Keyword">proc</span> <a href="#space%2CImage"><span class="Identifier">space</span></a><span class="Other">(</span><span class="Identifier">img</span><span class="Other">:</span> <a href="#Image"><span class="Identifier">Image</span></a><span class="Other">)</span><span class="Other">:</span> <a href="../bindings/image.html#VipsInterpretation"><span class="Identifier">VipsInterpretation</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    
+    
+  </dd>
+</div>
+
+</div>
+<div id="stripMetadata-procs-all">
+  <div id="stripMetadata,Image">
+  <dt><pre><span class="Keyword">proc</span> <a href="#stripMetadata%2CImage"><span class="Identifier">stripMetadata</span></a><span class="Other">(</span><span class="Identifier">img</span><span class="Other">:</span> <a href="#Image"><span class="Identifier">Image</span></a><span class="Other">)</span><span class="Other">:</span> <a href="#Image"><span class="Identifier">Image</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">VipsError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+                                        <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     
@@ -419,7 +547,7 @@
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2026-07-25 07:22:38 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2026-08-24 12:53:31 UTC</small>
       </div>
     </div>
   </div>

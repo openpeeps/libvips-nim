@@ -123,8 +123,16 @@
   <li><a class="reference" href="#flatten%2CImage%2CopenArray%5Bcdouble%5D" title="flatten(img: Image; background: openArray[cdouble] = @[0.0, 0.0, 0.0]): Image">flatten(img: Image; background: openArray[cdouble] = @[0.0, 0.0, 0.0]): Image</a></li>
 
 </ul>
+<ul class="simple nested-toc-section">ifThenElse
+  <li><a class="reference" href="#ifThenElse%2CImage%2CImage%2CImage" title="ifThenElse(condition, ifTrue, ifFalse: Image): Image">ifThenElse(condition, ifTrue, ifFalse: Image): Image</a></li>
+
+</ul>
 <ul class="simple nested-toc-section">premultiply
   <li><a class="reference" href="#premultiply%2CImage" title="premultiply(img: Image): Image">premultiply(img: Image): Image</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">recomb
+  <li><a class="reference" href="#recomb%2CImage%2Carray%5B%2Carray%5B%2Cfloat%5D%5D" title="recomb(img: Image; matrix: array[3, array[3, float]]): Image">recomb(img: Image; matrix: array[3, array[3, float]]): Image</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">unpremultiply
@@ -338,9 +346,33 @@
 </div>
 
 </div>
+<div id="ifThenElse-procs-all">
+  <div id="ifThenElse,Image,Image,Image">
+  <dt><pre><span class="Keyword">proc</span> <a href="#ifThenElse%2CImage%2CImage%2CImage"><span class="Identifier">ifThenElse</span></a><span class="Other">(</span><span class="Identifier">condition</span><span class="Other">,</span> <span class="Identifier">ifTrue</span><span class="Other">,</span> <span class="Identifier">ifFalse</span><span class="Other">:</span> <a href="image.html#Image"><span class="Identifier">Image</span></a><span class="Other">)</span><span class="Other">:</span> <a href="image.html#Image"><span class="Identifier">Image</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">VipsError</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    
+    
+  </dd>
+</div>
+
+</div>
 <div id="premultiply-procs-all">
   <div id="premultiply,Image">
   <dt><pre><span class="Keyword">proc</span> <a href="#premultiply%2CImage"><span class="Identifier">premultiply</span></a><span class="Other">(</span><span class="Identifier">img</span><span class="Other">:</span> <a href="image.html#Image"><span class="Identifier">Image</span></a><span class="Other">)</span><span class="Other">:</span> <a href="image.html#Image"><span class="Identifier">Image</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">VipsError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    
+    
+  </dd>
+</div>
+
+</div>
+<div id="recomb-procs-all">
+  <div id="recomb,Image,array[,array[,float]]">
+  <dt><pre><span class="Keyword">proc</span> <a href="#recomb%2CImage%2Carray%5B%2Carray%5B%2Cfloat%5D%5D"><span class="Identifier">recomb</span></a><span class="Other">(</span><span class="Identifier">img</span><span class="Other">:</span> <a href="image.html#Image"><span class="Identifier">Image</span></a><span class="Other">;</span> <span class="Identifier">matrix</span><span class="Other">:</span> <span class="Identifier">array</span><span class="Other">[</span><span class="DecNumber">3</span><span class="Other">,</span> <span class="Identifier">array</span><span class="Other">[</span><span class="DecNumber">3</span><span class="Other">,</span> <span class="Identifier">float</span><span class="Other">]</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="image.html#Image"><span class="Identifier">Image</span></a> {.
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">VipsError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     
@@ -371,7 +403,7 @@
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2026-07-25 07:22:38 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2026-08-24 12:53:31 UTC</small>
       </div>
     </div>
   </div>

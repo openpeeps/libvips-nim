@@ -19,3 +19,11 @@ nim	yres	libvips/api/image.html#yres,Image	proc yres(img: Image): float		88
 nim	orientation	libvips/api/image.html#orientation,Image	proc orientation(img: Image): int		91
 nim	castUchar	libvips/api/image.html#castUchar,Image	proc castUchar(img: Image): Image		94
 nim	scale	libvips/api/image.html#scale,Image	proc scale(img: Image): Image		100
+nim	getMetadata	libvips/api/image.html#getMetadata,Image,string	proc getMetadata(img: Image; field: string): string		106
+nim	setMetadata	libvips/api/image.html#setMetadata,Image,string,string	proc setMetadata(img: Image; field, value: string)		113
+nim	getMetadataInt	libvips/api/image.html#getMetadataInt,Image,string	proc getMetadataInt(img: Image; field: string): int		116
+nim	setMetadataInt	libvips/api/image.html#setMetadataInt,Image,string,int	proc setMetadataInt(img: Image; field: string; value: int)		123
+nim	getMetadataDouble	libvips/api/image.html#getMetadataDouble,Image,string	proc getMetadataDouble(img: Image; field: string): float		126
+nim	setMetadataDouble	libvips/api/image.html#setMetadataDouble,Image,string,float	proc setMetadataDouble(img: Image; field: string; value: float)		133
+nim	removeMetadata	libvips/api/image.html#removeMetadata,Image,string	proc removeMetadata(img: Image; field: string): bool		136
+nim	stripMetadata	libvips/api/image.html#stripMetadata,Image	proc stripMetadata(img: Image): Image		139

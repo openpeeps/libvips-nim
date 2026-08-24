@@ -61,7 +61,11 @@
   <details open>
     <summary><a class="reference reference-toplevel" href="#12" id="62">Procs</a></summary>
     <ul class="simple simple-toc-section">
-      <ul class="simple nested-toc-section">autorotate
+      <ul class="simple nested-toc-section">arrayJoin
+  <li><a class="reference" href="#arrayJoin%2CopenArray%5BImage%5D%2CVipsDirection" title="arrayJoin(images: openArray[Image]; direction: VipsDirection): Image">arrayJoin(images: openArray[Image]; direction: VipsDirection): Image</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">autorotate
   <li><a class="reference" href="#autorotate%2CImage" title="autorotate(img: Image): Image">autorotate(img: Image): Image</a></li>
 
 </ul>
@@ -92,6 +96,28 @@
   <li><a class="reference" href="#flipVertical%2CImage" title="flipVertical(img: Image): Image">flipVertical(img: Image): Image</a></li>
 
 </ul>
+<ul class="simple nested-toc-section">gravityCrop
+  <li><a class="reference" href="#gravityCrop%2CImage%2Cint%2Cint%2CVipsCompassDirection" title="gravityCrop(img: Image; width, height: int;
+            direction: VipsCompassDirection = VIPS_COMPASS_DIRECTION_CENTRE): Image">gravityCrop(img: Image; width, height: int;
+            direction: VipsCompassDirection = VIPS_COMPASS_DIRECTION_CENTRE): Image</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">join
+  <li><a class="reference" href="#join%2CImage%2CImage%2CVipsDirection" title="join(img1, img2: Image; direction: VipsDirection): Image">join(img1, img2: Image; direction: VipsDirection): Image</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">joinHorizontal
+  <li><a class="reference" href="#joinHorizontal%2CImage%2CImage" title="joinHorizontal(img1, img2: Image): Image">joinHorizontal(img1, img2: Image): Image</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">joinVertical
+  <li><a class="reference" href="#joinVertical%2CImage%2CImage" title="joinVertical(img1, img2: Image): Image">joinVertical(img1, img2: Image): Image</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">replicate
+  <li><a class="reference" href="#replicate%2CImage%2Cint%2Cint" title="replicate(img: Image; across, down: int): Image">replicate(img: Image; across, down: int): Image</a></li>
+
+</ul>
 <ul class="simple nested-toc-section">resize
   <li><a class="reference" href="#resize%2CImage%2Cfloat" title="resize(img: Image; scale: float): Image">resize(img: Image; scale: float): Image</a></li>
 <li><a class="reference" href="#resize%2CImage%2Cint%2Cint" title="resize(img: Image; width, height: int): Image">resize(img: Image; width, height: int): Image</a></li>
@@ -109,9 +135,17 @@
           interesting: VipsInteresting = VIPS_INTERESTING_ATTENTION): Image</a></li>
 
 </ul>
+<ul class="simple nested-toc-section">subsample
+  <li><a class="reference" href="#subsample%2CImage%2Cint%2Cint" title="subsample(img: Image; xFactor, yFactor: int): Image">subsample(img: Image; xFactor, yFactor: int): Image</a></li>
+
+</ul>
 <ul class="simple nested-toc-section">thumbnail
   <li><a class="reference" href="#thumbnail%2CImage%2Cint" title="thumbnail(img: Image; size: int): Image">thumbnail(img: Image; size: int): Image</a></li>
 <li><a class="reference" href="#thumbnail%2CImage%2Cint%2Cint" title="thumbnail(img: Image; width, height: int): Image">thumbnail(img: Image; width, height: int): Image</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">zoom
+  <li><a class="reference" href="#zoom%2CImage%2Cint%2Cint" title="zoom(img: Image; xFactor, yFactor: int): Image">zoom(img: Image; xFactor, yFactor: int): Image</a></li>
 
 </ul>
 
@@ -136,7 +170,19 @@
 <div class="section" id="12">
   <h1><a class="toc-backref" href="#12">Procs</a></h1>
   <dl class="item">
-    <div id="autorotate-procs-all">
+    <div id="arrayJoin-procs-all">
+  <div id="arrayJoin,openArray[Image],VipsDirection">
+  <dt><pre><span class="Keyword">proc</span> <a href="#arrayJoin%2CopenArray%5BImage%5D%2CVipsDirection"><span class="Identifier">arrayJoin</span></a><span class="Other">(</span><span class="Identifier">images</span><span class="Other">:</span> <span class="Identifier">openArray</span><span class="Other">[</span><a href="image.html#Image"><span class="Identifier">Image</span></a><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">direction</span><span class="Other">:</span> <a href="../bindings/conversion.html#VipsDirection"><span class="Identifier">VipsDirection</span></a><span class="Other">)</span><span class="Other">:</span> <a href="image.html#Image"><span class="Identifier">Image</span></a> {.
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ValueError</span><span class="Other">,</span> <span class="Identifier">VipsError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    
+    
+  </dd>
+</div>
+
+</div>
+<div id="autorotate-procs-all">
   <div id="autorotate,Image">
   <dt><pre><span class="Keyword">proc</span> <a href="#autorotate%2CImage"><span class="Identifier">autorotate</span></a><span class="Other">(</span><span class="Identifier">img</span><span class="Other">:</span> <a href="image.html#Image"><span class="Identifier">Image</span></a><span class="Other">)</span><span class="Other">:</span> <a href="image.html#Image"><span class="Identifier">Image</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">VipsError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
@@ -229,6 +275,66 @@
 </div>
 
 </div>
+<div id="gravityCrop-procs-all">
+  <div id="gravityCrop,Image,int,int,VipsCompassDirection">
+  <dt><pre><span class="Keyword">proc</span> <a href="#gravityCrop%2CImage%2Cint%2Cint%2CVipsCompassDirection"><span class="Identifier">gravityCrop</span></a><span class="Other">(</span><span class="Identifier">img</span><span class="Other">:</span> <a href="image.html#Image"><span class="Identifier">Image</span></a><span class="Other">;</span> <span class="Identifier">width</span><span class="Other">,</span> <span class="Identifier">height</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">;</span> <span class="Identifier">direction</span><span class="Other">:</span> <a href="../bindings/conversion.html#VipsCompassDirection"><span class="Identifier">VipsCompassDirection</span></a> <span class="Other">=</span> <span class="Identifier">VIPS_COMPASS_DIRECTION_CENTRE</span><span class="Other">)</span><span class="Other">:</span> <a href="image.html#Image"><span class="Identifier">Image</span></a> {.
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">VipsError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    
+    
+  </dd>
+</div>
+
+</div>
+<div id="join-procs-all">
+  <div id="join,Image,Image,VipsDirection">
+  <dt><pre><span class="Keyword">proc</span> <a href="#join%2CImage%2CImage%2CVipsDirection"><span class="Identifier">join</span></a><span class="Other">(</span><span class="Identifier">img1</span><span class="Other">,</span> <span class="Identifier">img2</span><span class="Other">:</span> <a href="image.html#Image"><span class="Identifier">Image</span></a><span class="Other">;</span> <span class="Identifier">direction</span><span class="Other">:</span> <a href="../bindings/conversion.html#VipsDirection"><span class="Identifier">VipsDirection</span></a><span class="Other">)</span><span class="Other">:</span> <a href="image.html#Image"><span class="Identifier">Image</span></a> {.
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">VipsError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    
+    
+  </dd>
+</div>
+
+</div>
+<div id="joinHorizontal-procs-all">
+  <div id="joinHorizontal,Image,Image">
+  <dt><pre><span class="Keyword">proc</span> <a href="#joinHorizontal%2CImage%2CImage"><span class="Identifier">joinHorizontal</span></a><span class="Other">(</span><span class="Identifier">img1</span><span class="Other">,</span> <span class="Identifier">img2</span><span class="Other">:</span> <a href="image.html#Image"><span class="Identifier">Image</span></a><span class="Other">)</span><span class="Other">:</span> <a href="image.html#Image"><span class="Identifier">Image</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">VipsError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    
+    
+  </dd>
+</div>
+
+</div>
+<div id="joinVertical-procs-all">
+  <div id="joinVertical,Image,Image">
+  <dt><pre><span class="Keyword">proc</span> <a href="#joinVertical%2CImage%2CImage"><span class="Identifier">joinVertical</span></a><span class="Other">(</span><span class="Identifier">img1</span><span class="Other">,</span> <span class="Identifier">img2</span><span class="Other">:</span> <a href="image.html#Image"><span class="Identifier">Image</span></a><span class="Other">)</span><span class="Other">:</span> <a href="image.html#Image"><span class="Identifier">Image</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">VipsError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    
+    
+  </dd>
+</div>
+
+</div>
+<div id="replicate-procs-all">
+  <div id="replicate,Image,int,int">
+  <dt><pre><span class="Keyword">proc</span> <a href="#replicate%2CImage%2Cint%2Cint"><span class="Identifier">replicate</span></a><span class="Other">(</span><span class="Identifier">img</span><span class="Other">:</span> <a href="image.html#Image"><span class="Identifier">Image</span></a><span class="Other">;</span> <span class="Identifier">across</span><span class="Other">,</span> <span class="Identifier">down</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">)</span><span class="Other">:</span> <a href="image.html#Image"><span class="Identifier">Image</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">VipsError</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    
+    
+  </dd>
+</div>
+
+</div>
 <div id="resize-procs-all">
   <div id="resize,Image,float">
   <dt><pre><span class="Keyword">proc</span> <a href="#resize%2CImage%2Cfloat"><span class="Identifier">resize</span></a><span class="Other">(</span><span class="Identifier">img</span><span class="Other">:</span> <a href="image.html#Image"><span class="Identifier">Image</span></a><span class="Other">;</span> <span class="Identifier">scale</span><span class="Other">:</span> <span class="Identifier">float</span><span class="Other">)</span><span class="Other">:</span> <a href="image.html#Image"><span class="Identifier">Image</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">VipsError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
@@ -293,6 +399,18 @@
 </div>
 
 </div>
+<div id="subsample-procs-all">
+  <div id="subsample,Image,int,int">
+  <dt><pre><span class="Keyword">proc</span> <a href="#subsample%2CImage%2Cint%2Cint"><span class="Identifier">subsample</span></a><span class="Other">(</span><span class="Identifier">img</span><span class="Other">:</span> <a href="image.html#Image"><span class="Identifier">Image</span></a><span class="Other">;</span> <span class="Identifier">xFactor</span><span class="Other">,</span> <span class="Identifier">yFactor</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">)</span><span class="Other">:</span> <a href="image.html#Image"><span class="Identifier">Image</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">VipsError</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    
+    
+  </dd>
+</div>
+
+</div>
 <div id="thumbnail-procs-all">
   <div id="thumbnail,Image,int">
   <dt><pre><span class="Keyword">proc</span> <a href="#thumbnail%2CImage%2Cint"><span class="Identifier">thumbnail</span></a><span class="Other">(</span><span class="Identifier">img</span><span class="Other">:</span> <a href="image.html#Image"><span class="Identifier">Image</span></a><span class="Other">;</span> <span class="Identifier">size</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">)</span><span class="Other">:</span> <a href="image.html#Image"><span class="Identifier">Image</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">VipsError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
@@ -314,6 +432,18 @@
 </div>
 
 </div>
+<div id="zoom-procs-all">
+  <div id="zoom,Image,int,int">
+  <dt><pre><span class="Keyword">proc</span> <a href="#zoom%2CImage%2Cint%2Cint"><span class="Identifier">zoom</span></a><span class="Other">(</span><span class="Identifier">img</span><span class="Other">:</span> <a href="image.html#Image"><span class="Identifier">Image</span></a><span class="Other">;</span> <span class="Identifier">xFactor</span><span class="Other">,</span> <span class="Identifier">yFactor</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">)</span><span class="Other">:</span> <a href="image.html#Image"><span class="Identifier">Image</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">VipsError</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    
+    
+  </dd>
+</div>
+
+</div>
 
   </dl>
 </div>
@@ -324,7 +454,7 @@
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2026-07-25 07:22:38 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2026-08-24 12:53:31 UTC</small>
       </div>
     </div>
   </div>
