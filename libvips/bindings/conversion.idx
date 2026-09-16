@@ -7,6 +7,7 @@ nim	VipsAngle	libvips/bindings/conversion.html#VipsAngle	enum VipsAngle		44
 nim	VipsAngle45	libvips/bindings/conversion.html#VipsAngle45	enum VipsAngle45		51
 nim	VipsInteresting	libvips/bindings/conversion.html#VipsInteresting	enum VipsInteresting		62
 nim	VipsBlendMode	libvips/bindings/conversion.html#VipsBlendMode	enum VipsBlendMode		72
+nim	c_vips_copy	libvips/bindings/conversion.html#c_vips_copy,ptr.VipsImage,ptr.ptr.VipsImage	proc c_vips_copy(input: ptr VipsImage; output: ptr ptr VipsImage): cint		102
 nim	vips_copy	libvips/bindings/conversion.html#vips_copy,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_copy(input: ptr VipsImage; output: ptr ptr VipsImage): cint		170
 nim	vips_tilecache	libvips/bindings/conversion.html#vips_tilecache,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_tilecache(input: ptr VipsImage; output: ptr ptr VipsImage): cint		173
 nim	vips_linecache	libvips/bindings/conversion.html#vips_linecache,ptr.VipsImage,ptr.ptr.VipsImage	proc vips_linecache(input: ptr VipsImage; output: ptr ptr VipsImage): cint		176
