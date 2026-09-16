@@ -99,7 +99,7 @@ type
 
 # Function declarations
 {.push cdecl, header: "vips/vips.h".}
-proc c_vips_copy(input: ptr VipsImage, output: ptr ptr VipsImage): cint {.importc: "vips_copy", varargs.}
+proc c_vips_copy*(input: ptr VipsImage, output: ptr ptr VipsImage): cint {.importc: "vips_copy", varargs.}
 proc c_vips_tilecache(input: ptr VipsImage, output: ptr ptr VipsImage): cint {.importc: "vips_tilecache", varargs.}
 proc c_vips_linecache(input: ptr VipsImage, output: ptr ptr VipsImage): cint {.importc: "vips_linecache", varargs.}
 proc c_vips_sequential(input: ptr VipsImage, output: ptr ptr VipsImage): cint {.importc: "vips_sequential", varargs.}

@@ -1,3 +1,4 @@
+import std/os
 import ../bindings/vips
 import ../bindings/glib/glib
 import ./types

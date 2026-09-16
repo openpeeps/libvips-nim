@@ -1,5 +1,5 @@
 # Nim bindings for Libvips
-# 
+#
 # Official Repository: https://github.com/libvips/libvips/
 #
 # (c) 2025 George Lemon | MIT License

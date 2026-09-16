@@ -1,10 +1,13 @@
 # Nim bindings for Libvips
-# 
+#
 # Official Repository: https://github.com/libvips/libvips/
 #
 # (c) 2025 George Lemon | MIT License
 #          Made by Humans from OpenPeeps
 #          https://github.com/openpeeps/libvips-nim
+
+{.passC: gorge("pkg-config --cflags vips").}
+{.passL: gorge("pkg-config --libs vips").}
 
 import basic, header, image, conversion,
     resample, convolution, colour, foreign,
